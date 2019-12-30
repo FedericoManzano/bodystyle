@@ -1,0 +1,34 @@
+/**
+    Input de tipo texto e email
+    con la clase validación para poder mostrar 
+    que la informacion del campo es erronea
+*/
+
+input[type='text'], 
+input[type='email'] {
+    outline: none;
+    background:none;
+    height: 2.1em;
+    width: 100%;
+    border: 1px solid $gris-input;
+    padding: 0.6em;
+    border-radius: 3px;
+    font-size: 1.2em;
+}
+
+input[type='text']:focus, 
+input[type='email']:focus {
+    box-shadow: 0 0 3px 3px rgba(135, 217, 255, 0.5);
+    border: 1px solid rgba(135, 217, 255);
+    z-index: 2;
+}
+
+input[type='text']::placeholder, 
+input[type='email']::placeholder {
+    color: $gris;
+}
+
+.i-error {
+    box-shadow: 0 0 3px 3px rgba(253, 61, 61, 0.5);
+    z-index: 2;
+}

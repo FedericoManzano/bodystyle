@@ -1,5 +1,4 @@
 .pruebaColores {
-    text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
 }
@@ -7,13 +6,11 @@
 
 .pruebaColores div {
     display: flex;
-    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
     align-items: center;
     justify-content: center;
     color: white;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 10px;
 }
 
 .pruebaColores div a {
