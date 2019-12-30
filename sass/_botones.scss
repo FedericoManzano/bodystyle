@@ -33,6 +33,7 @@
     font-size: 1.2em;
     max-width: 140px;
     max-height: 40px;
+    min-width: 140px;
 }
 
 .btn-lg {
@@ -40,6 +41,7 @@
     font-size: 1.3em;
     max-width: 160px;
     max-height: 45px;
+    min-width: 160px;
 }
 
 .btn-sm {
@@ -47,6 +49,7 @@
     font-size: 1.1em;
     max-width: 120px;
     max-height: 35px;
+    min-width: 120px;
 }
 
 .btn-cubrir-sm {
@@ -74,67 +77,67 @@
 
 //Botones fondo rojo
 .btn-rojo {
-    background-color: $rojo;
+    background-color: $btn-rojo;
     color: $blanco;
     font-size: 1.1em;
 }
 
 .btn-rojo:hover {
-    background-color: $rojo-hover;
-    box-shadow: 0 0 3px 3px $rojo-shadow;
+    background-color: $btn-rojo-hover;
+    box-shadow: 0 0 3px 3px $btn-rojo-sombra;
+}
+
+.btn-rojo:active{
+    background-color: $btn-rojo-activo;
 }
 
 // Botones fondo verde
 .btn-verde {
-    background-color: $verde;
-    color: white;
+    background-color: $btn-verde;
+    color: $blanco;
     font-size: 1.1em;
 }
 
 .btn-verde:hover {
-    background-color: $verde-claro;
-    box-shadow: 0 0 3px 3px rgba(0, 187, 156, 0.5);
+    background-color: $btn-verde-hover;
+    box-shadow: 0 0 3px 3px $btn-verde-sombra;
 }
 
-
-.btn-verde:active {
-    background-color: rgb(0, 255, 157);
+.btn-verde:active{
+    background-color: $btn-verde-activo;
 }
 
 // botones fondo azul
 .btn-azul {
-    background-color: $celeste;
-    color: white;
+    background-color: $btn-azul;
+    color: $blanco;
     font-size: 1.1em;
 }
 
 .btn-azul:hover {
-    background-color: rgb(44, 134, 252);
-    box-shadow: 0 0 3px 3px rgba(44, 134, 252, 0.500);
+    background-color: $btn-azul-hover;
+    box-shadow: 0 0 3px 3px $btn-azul-sombra;
 }
 
-
-.btn-azul:active {
-    background-color: rgb(85, 144, 255);
+.btn-azul:active{
+    background-color: $btn-azul-activo;
 }
 
 // Botones grises
 .btn-gris {
-    background-color: $gris-claro;
-    color: $gris-oscuro;
-    border: 1px solid $gris-oscuro;
+    background-color: $btn-gris;
+    color: $negro;
     font-size: 1.1em;
 }
 
 .btn-gris:hover {
-    background-color: rgb(14, 17, 20);
+    background-color: $btn-gris-hover;
     color: $blanco;
-    box-shadow: 0 0 3px 3px rgba(14, 17, 20, .500);
+    box-shadow: 0 0 3px 3px $btn-gris-sombra;
 }
 
-
-.btn-gris:active {
-    background-color: rgb(75, 75, 75);
+.btn-gris:active{
+    background-color: $btn-gris-activo;
 }
 
 
@@ -144,56 +147,74 @@
 
 //Botones fondo rojo
 .btn-rojo-o {
-    border: 1px solid $rojo;
-    color: $rojo;
+    border: 1px solid $btn-rojo;
+    color: $btn-rojo;
     font-size: 1.1em;
 }
 
 .btn-rojo-o:hover {
-    background-color:$rojo;
+    background-color:$btn-rojo-hover;
     color: $blanco;
-    box-shadow: 0 0 3px 3px rgba(226, 52, 52, 0.500);
+    box-shadow: 0 0 3px 3px $btn-rojo-sombra;
 }
+
+.btn-rojo-o:active{
+    background-color: $btn-rojo-activo;
+}
+
 
 // Botones fondo verde
 .btn-verde-o {
-    border:1px solid $verde;
-    color: $verde;
+    border:1px solid $btn-verde;
+    color: $btn-verde;
     font-size: 1.1em;
 }
 
 .btn-verde-o:hover {
-    background-color: $verde;
+    background-color: $btn-verde-hover;
     color: $blanco;
-    box-shadow: 0 0 3px 3px rgba(0, 187, 156, 0.500);
+    box-shadow: 0 0 3px 3px $btn-verde-sombra;
 }
+
+.btn-verde-o:active{
+    background-color: $btn-verde-activo;
+}
+
 
 
 // botones fondo azul
 .btn-azul-o {
-    border: 1px solid $celeste;
-    color: $celeste;
+    border:1px solid $btn-azul;
+    color: $btn-azul;
     font-size: 1.1em;
 }
 
 .btn-azul-o:hover {
-    background-color:$celeste;
+    background-color: $btn-azul-hover;
     color: $blanco;
-    box-shadow: 0 0 3px 3px rgba(95, 164, 255, 0.500);
+    box-shadow: 0 0 3px 3px $btn-azul-sombra;
+}
+
+.btn-azul-o:active{
+    background-color: $btn-azul-activo;
 }
 
 
 // Botones grises
 .btn-gris-o {
-    border: 1px solid $gris-oscuro;
-    color: $gris-oscuro;
+    border:1px solid $btn-gris-hover;
+    color: $btn-gris-hover;
     font-size: 1.1em;
 }
 
 .btn-gris-o:hover {
-    background-color: rgb(14, 17, 20);
+    background-color: $btn-gris-hover;
     color: $blanco;
-    box-shadow: 0 0 3px 3px rgba(14, 17, 20, 0.500);
+    box-shadow: 0 0 3px 3px $btn-gris-sombra;
+}
+
+.btn-gris-o:active{
+    background-color: $btn-gris-activo;
 }
 
 

@@ -1,9 +1,4 @@
 
-// Colores primarios
-$rojo: rgb(187, 24, 24);
-$rojo-hover: rgb(226, 52, 52);
-$rojo-shadow: rgba(226, 52, 52, 0.5);
-
 $azul: #1045B7;
 $amarillo: rgb(217, 247, 97);
 $verde: #009c80;
@@ -36,3 +31,64 @@ $gris-azulado: rgb(44, 48, 65);
 $gris-azulado-oscuro: rgb(21, 22, 26);
 $gris-negro: rgb(17, 17, 17);
 
+/* Colores Botones */
+//Boton rojo
+$btn-rojo: rgb(187, 24, 24);
+$btn-rojo-hover: rgb(226, 52, 52);
+$btn-rojo-activo: rgb(253, 78, 78);
+$btn-rojo-sombra: rgba(226, 52, 52, .5);
+
+
+// Boton Verde
+$btn-verde: rgb(0, 156, 128);
+$btn-verde-hover: rgb(1, 187, 153);
+$btn-verde-activo: rgb(0, 211, 172);
+$btn-verde-sombra:rgb(0, 223, 182, .5); 
+
+// Boton Azul
+$btn-azul: rgb(0, 108, 255 );
+$btn-azul-hover: rgb(41, 130, 255);
+$btn-azul-activo: rgb(65, 144, 255);
+$btn-azul-sombra:rgb(41, 130, 255, .5); 
+
+// Boton Azul
+$btn-gris: rgb(236, 236, 236);
+$btn-gris-hover: rgb(37, 37, 37);
+$btn-gris-activo: rgb(53, 54, 54);
+$btn-gris-sombra:rgba(0, 0, 0, 0.5); 
+
+/* Fondos */
+// Escalas de rojos
+$fd-rojo: rgb(187, 24, 24);
+$fd-rojo-c: rgb(245, 21, 21);
+$fd-rojo-o: rgb(80, 0, 0);
+$fd-rojo-t: rgba(187, 24, 24, 0.644);
+
+//Escalas de verde
+$fd-verde: rgb(0, 110, 92);
+$fd-verde-c: rgb(0, 187, 156);
+$fd-verde-o: rgb(7, 58, 49);
+$fd-verde-t: rgba(0, 110, 92, .5);
+$fd-verde-az: rgb(0, 42, 48);
+$fd-verde-t: rgba(0, 110, 92, .5);
+
+
+//Escalas de azules
+$fd-azul: rgb(16, 69, 183);
+$fd-azul-c: rgb(0, 108, 255);
+$fd-azul-o: rgb(0, 32, 102);
+$fd-azul-ve: rgb(6, 38, 63);
+$fd-azul-ve-s: rgb(0,44,56);
+$fd-azul-ve-c: rgb(19, 67, 80);
+$fd-azul-t: rgba(16, 69, 183, .5);
+
+
+// Escalas de Grises
+$fd-gris: rgb(128, 128, 128);
+$fd-gris-c: rgb(236, 236, 236);
+$fd-gris-o: rgb(33, 33, 33);
+$fd-gris-az-c: rgb(40, 46, 66);
+$fd-gris-az:rgb(30, 32, 41);
+$fd-gris-az-o: rgb(21, 22, 26);
+$fd-gris-n: rgb(17, 17, 17);
+$fd-gris-t: rgba(128, 128, 128, .5);

@@ -3,16 +3,104 @@
 */
 
 
+/***
+    Fondos color rojo
+*/
 .fd-rojo {
-    background-color: $rojo;
+    background-color: $fd-rojo;
 }
+
+.fd-rojo-c {
+    background-color: $fd-rojo-c;
+}
+
+.fd-rojo-o {
+    background-color: $fd-rojo-o;
+}
+
+.fd-rojo-t {
+    background-color: $fd-rojo-t;
+}
+/**********************************************************************/
 
 .fd-azul {
-    background-color: $azul;
+    background-color: $fd-azul;
 }
 
-.fd-amarillo {
-    background-color: $amarillo;
+.fd-azul-c {
+    background-color: $fd-azul-c;
+}
+
+.fd-azul-o{
+    background-color: $fd-azul-o;
+}
+
+.fd-azul-ve {
+    background-color: $fd-azul-ve;
+}
+
+.fd-azul-ve-s {
+    background-color: $fd-azul-ve-s;
+}
+
+.fd-azul-ve-c {
+    background-color: $fd-azul-ve-c;
+}
+
+.fd-azul-t {
+    background-color: $fd-azul-t;
+}
+
+/*************************************************
+    Verder
+*/
+.fd-verde {
+    background-color: $fd-verde;
+}
+.fd-verde-c {
+    background-color: $fd-verde-c;
+}
+
+.fd-verde-o {
+    background-color: $fd-verde-o;
+}
+
+.fd-verde-t {
+    background-color: $fd-verde-t;
+}
+.fd-verde-az {
+    background-color: $fd-verde-az;
+}
+/******************************************/
+
+.fd-gris {
+    background-color: $fd-gris;
+}
+.fd-gris-c {
+    background-color: $fd-gris-c;
+}
+
+.fd-gris-o {
+    background-color: $fd-gris-o;
+}
+
+.fd-gris-t {
+    background-color: $fd-gris-t;
+}
+.fd-gris-az {
+    background-color: $fd-gris-az;
+}
+
+.fd-gris-az-c {
+    background-color: $fd-gris-az-c;
+}
+
+.fd-gris-az-o {
+    background-color: $fd-gris-az-o;
+}
+
+.fd-gris-n {
+    background-color: $fd-gris-n;
 }
 
 .fd-blanco {
@@ -22,74 +110,5 @@
 .fd-negro {
     background-color: $negro;
 }
-
-.fd-verde {
-    background-color: $verde;
-}
-
-.fd-av-o {
-    background-color: $azul-verdozo-oscuro;
-}
-
-.fd-av-s {
-    background-color: $azul-verdozo-simple;
-}
-
-.fd-av-c {
-    background-color: $azul-verdozo-claro;
-}
-
-.fd-celeste {
-    background-color: $celeste;
-}
-
-.fd-vc {
-    background-color: $verde-claro;
-}
-
-.fd-vo {
-    background-color: $verde-oscuro;
-}
-
-.fd-va {
-    background-color: $verde-azulado;
-}
-
-.fd-va-o {
-    background-color: $verde-azulado-oscuro;
-}
-
-.fd-va-c {
-    background-color: $verde-azulado-claro;
-}
-
-.fd-gris {
-    background-color: $gris;
-}
-
-.fd-gc {
-    background-color: $gris-claro;
-}
-
-.fd-go {
-    background-color: $gris-oscuro;
-}
-
-.fd-ga-c {
-    background-color: $gris-azulado-claro;
-}
-
-.fd-ga {
-    background-color: $gris-azulado;
-}
-
-.fd-ga-o {
-    background-color: $gris-azulado-oscuro;
-}
-
-.fd-gn {
-    background-color: $gris-negro;
-}
-
 
 
