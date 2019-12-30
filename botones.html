@@ -13,99 +13,108 @@
             display: grid;
             grid-gap: 5px;
             grid-template-columns: repeat(4, 1fr);
-            justify-content: space-around;
+            justify-content: start;
         }
 
-        .componente a {
-            grid-column-start: 1 span 1;
+        
 
+        @media (max-width: 1024px) {
+            .componente {
+                grid-template-columns: repeat(1, 1fr);
+
+            }
+            .componente div {
+                grid-column: 1 / 3;
+            }
         }
+
+        
     </style>
 </head>
 
 <body>
     <div class="mar-5 a-centrado contenedor">
         <h3 class="f-grosor-2 mar-2 t-may ">Botones Llenos</h3>
-        <div class=" mar-2 componente">
-            <a class="btn-sm btn-rojo mi-1">Rojo</a>
-            <a class="btn-sm btn-verde mi-1">Verde</a>
-            <a class="btn-sm btn-gris mi-1">Gris</a>
-            <a class="btn-sm btn-azul mi-1">Azul</a>
+        <div class=" mar-2 fila">
+            <a class="btn-sm btn-rojo mi-1 cs-12 cm-3 ">Rojo</a>
+            <a class="btn-sm btn-verde mi-1 cs-12 cm-3 ">Verde</a>
+            <a class="btn-sm btn-gris mi-1 cs-12 cm-3 ">Gris</a>
+            <a class="btn-sm btn-azul mi-1 cs-12 cm-3 ">Azul</a>
         </div>
 
-        <div class=" componente mar-2">
-            <a class="btn btn-rojo mi-1">Rojo</a>
-            <a class="btn btn-verde mi-1">Verde</a>
-            <a class="btn btn-gris mi-1">Gris</a>
-            <a class="btn btn-azul mi-1">Azul</a>
+        <div class=" fila mar-2">
+            <a class="btn btn-rojo mi-1 cs-12 cm-3">Rojo</a>
+            <a class="btn btn-verde mi-1 cs-12 cm-3">Verde</a>
+            <a class="btn btn-gris mi-1 cs-12 cm-3">Gris</a>
+            <a class="btn btn-azul mi-1 cs-12 cm-3">Azul</a>
         </div>
-        <div class=" componente mar-2">
-            <a class="btn-lg btn-rojo mi-1">Rojo</a>
-            <a class="btn-lg btn-verde mi-1">Verde</a>
-            <a class="btn-lg btn-gris mi-1">Gris</a>
-            <a class="btn-lg btn-azul mi-1">Azul</a>
+        <div class=" fila mar-2">
+            <a class="btn-lg btn-rojo mi-1 cs-12 cm-3">Rojo</a>
+            <a class="btn-lg btn-verde mi-1 cs-12 cm-3">Verde</a>
+            <a class="btn-lg btn-gris mi-1 cs-12 cm-3">Gris</a>
+            <a class="btn-lg btn-azul mi-1 cs-12 cm-3">Azul</a>
         </div>
 
         <h3 class="f-grosor-2 mar-2 t-may ">Botones Llenos 100%</h3>
-        <div class=" componente mar-2">
-            <a class="btn-cubrir-sm btn-rojo mi-1">Rojo</a>
-            <a class="btn-cubrir-sm btn-verde mi-1">Verde</a>
-            <a class="btn-cubrir-sm btn-gris mi-1">Gris</a>
-            <a class="btn-cubrir-sm btn-azul mi-1">Azul</a>
+        <div class=" fila mar-2">
+            <a class="btn-cubrir-sm btn-rojo mi-1 cs-12">Rojo</a>
+            <a class="btn-cubrir-sm btn-verde mi-1 cs-12">Verde</a>
+            <a class="btn-cubrir-sm btn-gris mi-1 cs-12">Gris</a>
+            <a class="btn-cubrir-sm btn-azul mi-1 cs-12">Azul</a>
         </div>
-        <div class=" componente mar-2">
-            <a class="btn-cubrir btn-rojo mi-1">Rojo</a>
-            <a class="btn-cubrir btn-verde mi-1">Verde</a>
-            <a class="btn-cubrir btn-gris mi-1">Gris</a>
-            <a class="btn-cubrir btn-azul mi-1">Azul</a>
+        <div class=" fila mar-2">
+            <a class="btn-cubrir btn-rojo mi-1 cs-12">Rojo</a>
+            <a class="btn-cubrir btn-verde mi-1 cs-12">Verde</a>
+            <a class="btn-cubrir btn-gris mi-1 cs-12">Gris</a>
+            <a class="btn-cubrir btn-azul mi-1 cs-12">Azul</a>
         </div>
-        <div class=" componente mar-2">
-            <a class="btn-cubrir-lg btn-rojo mi-1">Rojo</a>
-            <a class="btn-cubrir-lg btn-verde mi-1">Verde</a>
-            <a class="btn-cubrir-lg btn-gris mi-1">Gris</a>
-            <a class="btn-cubrir-lg btn-azul mi-1">Azul</a>
+        <div class=" fila mar-2">
+            <a class="btn-cubrir-lg btn-rojo mi-1 cs-12">Rojo</a>
+            <a class="btn-cubrir-lg btn-verde mi-1 cs-12">Verde</a>
+            <a class="btn-cubrir-lg btn-gris mi-1 cs-12">Gris</a>
+            <a class="btn-cubrir-lg btn-azul mi-1 cs-12">Azul</a>
         </div>
 
         <h3 class="f-grosor-2 mar-2 t-may ">Botones Linea</h3>
 
-        <div class=" mar-2 componente">
-            <a class="btn-sm btn-rojo-o mi-1">Rojo</a>
-            <a class="btn-sm btn-verde-o mi-1">Verde</a>
-            <a class="btn-sm btn-gris-o mi-1">Gris</a>
-            <a class="btn-sm btn-azul-o mi-1">Azul</a>
+        <div class=" mar-2 fila">
+            <a class="btn-sm btn-rojo-o mi-1 cs-12 cm-3">Rojo</a>
+            <a class="btn-sm btn-verde-o mi-1 cs-12 cm-3">Verde</a>
+            <a class="btn-sm btn-gris-o mi-1 cs-12 cm-3">Gris</a>
+            <a class="btn-sm btn-azul-o mi-1 cs-12 cm-3">Azul</a>
         </div>
 
-        <div class="mar-2 componente">
-            <a class="btn btn-rojo-o mi-1">Rojo</a>
-            <a class="btn btn-verde-o mi-1">Verde</a>
-            <a class="btn btn-gris-o mi-1">Gris</a>
-            <a class="btn btn-azul-o mi-1">Azul</a>
+        <div class="mar-2 fila">
+            <a class="btn btn-rojo-o mi-1 cs-12 cm-3">Rojo</a>
+            <a class="btn btn-verde-o mi-1 cs-12 cm-3">Verde</a>
+            <a class="btn btn-gris-o mi-1 cs-12 cm-3">Gris</a>
+            <a class="btn btn-azul-o mi-1 cs-12 cm-3">Azul</a>
         </div>
 
-        <div class="mar-2 componente">
-            <a class="btn-lg btn-rojo-o mi-1">Rojo</a>
-            <a class="btn-lg btn-verde-o mi-1">Verde</a>
-            <a class="btn-lg btn-gris-o mi-1">Gris</a>
-            <a class="btn-lg btn-azul-o mi-1">Azul</a>
+        <div class="mar-2 fila">
+            <a class="btn-lg btn-rojo-o mi-1 cs-12 cm-3">Rojo</a>
+            <a class="btn-lg btn-verde-o mi-1 cs-12 cm-3">Verde</a>
+            <a class="btn-lg btn-gris-o mi-1 cs-12 cm-3">Gris</a>
+            <a class="btn-lg btn-azul-o mi-1 cs-12 cm-3">Azul</a>
         </div>
         <h3 class="f-grosor-2 mar-2 t-may ">Botones Linea 100%</h3>
-        <div class="mar-2 componente">
-            <a class="btn-cubrir-sm btn-rojo-o mi-1">Rojo</a>
-            <a class="btn-cubrir-sm  btn-verde-o mi-1">Verde</a>
-            <a class="btn-cubrir-sm  btn-gris-o mi-1">Gris</a>
-            <a class="btn-cubrir-sm  btn-azul-o mi-1">Azul</a>
+        <div class="mar-2 fila">
+            <a class="btn-cubrir-sm btn-rojo-o mi-1 cs-12">Rojo</a>
+            <a class="btn-cubrir-sm  btn-verde-o mi-1 cs-12">Verde</a>
+            <a class="btn-cubrir-sm  btn-gris-o mi-1 cs-12">Gris</a>
+            <a class="btn-cubrir-sm  btn-azul-o mi-1 cs-12">Azul</a>
         </div>
-        <div class="mar-2 componente">
-            <a class="btn-cubrir btn-rojo-o mi-1">Rojo</a>
-            <a class="btn-cubrir  btn-verde-o mi-1">Verde</a>
-            <a class="btn-cubrir  btn-gris-o mi-1">Gris</a>
-            <a class="btn-cubrir  btn-azul-o mi-1">Azul</a>
+        <div class="mar-2 fila">
+            <a class="btn-cubrir btn-rojo-o mi-1 cs-12">Rojo</a>
+            <a class="btn-cubrir  btn-verde-o mi-1 cs-12">Verde</a>
+            <a class="btn-cubrir  btn-gris-o mi-1 cs-12">Gris</a>
+            <a class="btn-cubrir  btn-azul-o mi-1 cs-12">Azul</a>
         </div>
-        <div class="mar-2 mab-5 componente">
-            <a class="btn-cubrir-lg btn-rojo-o mi-1">Rojo</a>
-            <a class="btn-cubrir-lg  btn-verde-o mi-1">Verde</a>
-            <a class="btn-cubrir-lg  btn-gris-o mi-1">Gris</a>
-            <a class="btn-cubrir-lg  btn-azul-o mi-1">Azul</a>
+        <div class="mar-2 mab-5 fila">
+            <a class="btn-cubrir-lg btn-rojo-o mi-1 cs-12">Rojo</a>
+            <a class="btn-cubrir-lg  btn-verde-o mi-1 cs-12">Verde</a>
+            <a class="btn-cubrir-lg  btn-gris-o mi-1 cs-12">Gris</a>
+            <a class="btn-cubrir-lg  btn-azul-o mi-1 cs-12">Azul</a>
         </div>
     </div>
 </body>

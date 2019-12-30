@@ -1,0 +1,54 @@
+/****
+    Grilla para acomodar los elementos dentro del sitio
+
+*/
+
+
+.fila {
+    display: grid;
+    grid-gap: 0.6em;
+    grid-template-columns: repeat(12, 1fr);   
+    
+    @for $i from 1 through 12 {
+        @for $i from 1 through 12 {
+            .cs-#{$i} { 
+                grid-column: span $i;
+            }
+        } 
+
+        @for $i from 1 through 12 {
+            .cm-#{$i} { 
+                grid-column: span $i;
+            }
+        }
+        @for $i from 1 through 12 {
+            .cl-#{$i} { 
+                grid-column: span $i;
+            }
+        }
+
+    } 
+
+    @media (max-width: 1100px){
+        @for $i from 1 through 12 {
+            .cs-#{$i} { 
+                grid-column: span $i;
+            }
+        }
+
+        @for $i from 1 through 12 {
+            .cm-#{$i} { 
+                grid-column: span $i;
+            }
+        } 
+    }
+
+    @media (max-width: 768px){
+        
+        @for $i from 1 through 12 {
+            .cs-#{$i} { 
+                grid-column: span $i;
+            }
+        } 
+    }
+}
