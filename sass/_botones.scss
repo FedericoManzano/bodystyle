@@ -1,0 +1,195 @@
+/**
+    Estilos de botones
+    Tres tamaños btn-sm btm btm-lg
+*****************************************************************/
+
+.btn {
+    outline: none;
+    border: none;
+    background: none;
+    border: none;
+    padding: 9px 25px;
+    font-size: 1.2em;
+    border-radius: 3px;
+    display: block;
+    cursor: pointer;
+}
+
+.btn-lg {
+    outline: none;
+    border: none;
+    background: none;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.3em;
+    border-radius: 3px;
+    display: block;
+    cursor: pointer;
+}
+
+.btn-sm {
+    outline: none;
+    border: none;
+    background: none;
+    border: none;
+    padding: 7px 18px;
+    font-size: 1.3em;
+    border-radius: 3px;
+    display: block;
+    cursor: pointer;
+}
+
+.cubrir {
+    display: block;
+    width: 100%;
+}
+
+
+//Botones fondo rojo
+.btn-rojo {
+    background-color: $rojo;
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn-rojo:hover {
+    background-color: rgb(226, 52, 52);
+    box-shadow: 0 0 3px 3px rgba(226, 52, 52, 0.5);
+}
+
+
+.btn-rojo:active {
+    background-color: rgb(255, 0, 0);
+}
+
+
+// Botones fondo verde
+.btn-verde {
+    background-color: $verde;
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn-verde:hover {
+    background-color: $verde-claro;
+    box-shadow: 0 0 3px 3px rgba(0, 187, 156, 0.5);
+}
+
+
+.btn-verde:active {
+    background-color: rgb(0, 255, 157);
+}
+
+// botones fondo azul
+.btn-azul {
+    background-color: $celeste;
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn-azul:hover {
+    background-color: rgb(44, 134, 252);
+    box-shadow: 0 0 3px 3px rgba(44, 134, 252, 0.500);
+}
+
+
+.btn-azul:active {
+    background-color: rgb(85, 144, 255);
+}
+
+// Botones grises
+.btn-gris {
+    background-color: $gris-claro;
+    color: $gris-oscuro;
+    border: 1px solid $gris-oscuro;
+    font-size: 1.1em;
+}
+
+.btn-gris:hover {
+    background-color: rgb(14, 17, 20);
+    color: $blanco;
+    box-shadow: 0 0 3px 3px rgba(14, 17, 20, .500);
+}
+
+
+.btn-gris:active {
+    background-color: rgb(75, 75, 75);
+}
+
+
+/******************************************
+    Botones sin color de fondo
+*/
+
+//Botones fondo rojo
+.btn-rojo-o {
+    border: 1px solid $rojo;
+    color: $rojo;
+    font-size: 1.1em;
+}
+
+.btn-rojo-o:hover {
+    background-color:$rojo;
+    color: $blanco;
+    box-shadow: 0 0 3px 3px rgba(226, 52, 52, 0.500);
+}
+
+
+.btn-rojo-o:active {
+    border:1px solid rgb(255, 0, 0);
+}
+
+
+// Botones fondo verde
+.btn-verde-o {
+    border:1px solid $verde;
+    color: $verde;
+    font-size: 1.1em;
+}
+
+.btn-verde-o:hover {
+    background-color: $verde;
+    color: $blanco;
+    box-shadow: 0 0 3px 3px rgba(0, 187, 156, 0.500);
+}
+
+
+.btn-verde-o:active {
+    border:1px solid rgb(0, 255, 157);
+}
+
+// botones fondo azul
+.btn-azul-o {
+    border: 1px solid $celeste;
+    color: $celeste;
+    font-size: 1.1em;
+}
+
+.btn-azul-o:hover {
+    background-color:$celeste;
+    color: $blanco;
+    box-shadow: 0 0 3px 3px rgba(95, 164, 255, 0.500);
+}
+
+
+.btn-azul-o:active {
+    border:1px solid rgb(82, 157, 255);
+}
+
+// Botones grises
+.btn-gris-o {
+    border: 1px solid $gris-oscuro;
+    color: $gris-oscuro;
+    font-size: 1.1em;
+}
+
+.btn-gris-o:hover {
+    background-color: rgb(14, 17, 20);
+    color: $blanco;
+    box-shadow: 0 0 3px 3px rgba(14, 17, 20, 0.500);
+}
+
+
+.btn-gris-o:active {
+    background-color: rgb(75, 75, 75);
+}
