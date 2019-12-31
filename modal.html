@@ -10,27 +10,41 @@
 </head>
 
 <body>
-    <a class="btn btn-rojo activar-modal1">Activar</a>
-    <div class="modal-1">
-        <div class="complemento"></div>
-        <div class="modal-ventana-1">
+    <a  class="btn btn-rojo activar-modal" data-target="#modal1">Activar</a>
+    <a  class="btn btn-rojo activar-modal" data-target="#modal2">Activar2</a>
+
+
+    <div id="modal1" class="modal">
+        <div class="modal-ventana">
             <h3 class="f-grosor-2">Ventana Modal Ejemplo</h3>
             <p>A partir de hoy rebaja del 50% en todos los productos de la galería</p>
-            
+
             <h4 class="c-rojo t-may mar-1 mab-1">Suscribete!!!</h4>
             <div class="g-input g-input-caja-izquierda">
                 <span>@</span>
                 <input type="text" placeholder="nombre@mail.com">
             </div>
             <div class="mar-2 a-items-cent-just">
-                    <a href="" class="btn btn-rojo">Enviar</a>
+                <a href="" class="btn btn-rojo">Enviar</a>
             </div>
-           
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-ventana">
+            <h3 class="f-grosor-2">Ventana Modal Ejemplo</h3>
+            <div class="g-input g-input-caja-izquierda">
+                <span>@</span>
+                <input type="text" placeholder="nombre@mail.com">
+            </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/bodystyle.js"></script>
+    <script> 
+        BS.ModalInit()
+    </script>
 </body>
 
 </html>

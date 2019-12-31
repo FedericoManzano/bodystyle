@@ -1579,7 +1579,7 @@ input[type=url]::placeholder {
 }
 .g-input span {
   letter-spacing: 0;
-  height: 2.1358em;
+  height: 2.1em;
   font-size: 1.2em;
   padding: 0.5em 0.8em;
   color: #333333;
@@ -1615,7 +1615,7 @@ input[type=url]::placeholder {
 /*
     Ventanas modal 
 */
-.modal-1 {
+.modal {
   /* Posicionamiento del fondo */
   position: absolute;
   top: 0;
@@ -1630,22 +1630,19 @@ input[type=url]::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
 }
-.modal-1 .modal-ventana-1 {
-  max-width: 380px;
+.modal .modal-ventana {
   padding: 1.5em;
-  text-align: center;
   background-color: #ececec;
   z-index: 4;
   border-radius: 3px;
   box-shadow: 0 0 15px 5px #212121;
 }
-.modal-1 .modal-ventana-1 h3 {
+.modal .modal-ventana h3 {
   font-weight: 200;
   margin-bottom: 20px;
 }
-.modal-1 .complemento {
+.modal .complemento {
   position: absolute;
   top: 0;
   bottom: 0;

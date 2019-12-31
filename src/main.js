@@ -4,24 +4,27 @@ import Sidebar from "./modulos/Sidebar"
 import Modal from "./modulos/Modal"
 
 
-Modal.iniciar()
-
-
 (function(){
     
     var MenuSuperior = ()=> MenuResp.iniciar()
 
     var SidebarInit = () => Sidebar.inicializar()
 
+    var ModalInit = function(conf){
+        Modal.iniciar(conf)
+    }
+
     var AutoInit = ()=> {
         MenuSuperior()
         SidebarInit()
+        ModalInit()
     }
 
     var BS = {
         MenuSuperior: () => MenuSuperior(),
         SidebarInit: () => SidebarInit(),
-        AutoInit: () => AutoInit()
+        AutoInit: () => AutoInit(),
+        ModalInit: (config) => ModalInit(config)
     }
 
     window.BS = BS
