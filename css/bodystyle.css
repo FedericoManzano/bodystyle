@@ -36,53 +36,53 @@ html, body {
 *   h1 => .h6
 ********************************************************************************************/
 h1, .h1 {
-  font-size: 2.3em !important;
-  font-weight: 700 !important;
+  font-size: 2.3em;
+  font-weight: 700;
 }
 
 h2, .h2 {
-  font-size: 2.2em !important;
-  font-weight: 700 !important;
+  font-size: 2.2em;
+  font-weight: 700;
 }
 
 h3, .h3 {
-  font-size: 1.8em !important;
-  font-weight: 600 !important;
+  font-size: 1.8em;
+  font-weight: 600;
 }
 
 h4, .h4 {
-  font-size: 1.2em !important;
-  font-weight: 600 !important;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 h5, .h5 {
-  font-size: 1.1em !important;
-  font-weight: 600 !important;
+  font-size: 1.1em;
+  font-weight: 600;
 }
 
 h6, .h6 {
-  font-size: 1em !important;
-  font-weight: 500 !important;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 ul, ol {
-  list-style: none !important;
+  list-style: none;
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /*******************************************************************************************
 *   Etiquetas P
 ********************************************************************************************/
 p, .p {
-  font-size: 1em !important;
+  font-size: 1em;
 }
 
 span {
-  font-size: 1em !important;
-  font-weight: 100 !important;
+  font-size: 1em;
+  font-weight: 100;
 }
 
 /*CSS */
@@ -162,7 +162,7 @@ span {
 }
 
 .c-rojo {
-  color: #9b8f8f !important;
+  color: #a70f0f !important;
 }
 
 .c-azul {
@@ -1579,9 +1579,9 @@ input[type=url]::placeholder {
 }
 .g-input span {
   letter-spacing: 0;
-  height: 2.1346em;
+  height: 2.1358em;
   font-size: 1.2em;
-  padding: 0 0.8em;
+  padding: 0.5em 0.8em;
   color: #333333;
   background: #acacac;
   display: flex;
@@ -1610,6 +1610,48 @@ input[type=url]::placeholder {
 }
 .g-input-caja-derecha span {
   border-radius: 0 0.5em 0.5em 0;
+}
+
+/*
+    Ventanas modal 
+*/
+.modal-1 {
+  /* Posicionamiento del fondo */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Fondo con poca opacidad*/
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Por encima de los elementos*/
+  z-index: 1;
+  /* Display para ubicar elementos*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal-1 .modal-ventana-1 {
+  max-width: 380px;
+  padding: 1.5em;
+  text-align: center;
+  background-color: #ececec;
+  z-index: 4;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 5px #212121;
+}
+.modal-1 .modal-ventana-1 h3 {
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.modal-1 .complemento {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 
 /***
