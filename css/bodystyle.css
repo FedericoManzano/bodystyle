@@ -147,6 +147,26 @@ span {
   text-transform: lowercase;
 }
 
+.c-blanco {
+  color: white;
+}
+
+.c-negro {
+  color: black;
+}
+
+.c-rojo {
+  color: red;
+}
+
+.c-azul {
+  color: blue;
+}
+
+.c-verde {
+  color: green;
+}
+
 /**
     Alineamiento de elementos dentro de un contenedor
     Teniendo en cuenta que 1em = 16px
@@ -274,6 +294,18 @@ span {
   padding-top: 2.5em;
 }
 
+.par-5 {
+  padding-top: 3em;
+}
+
+.par-6 {
+  padding-top: 3.5em;
+}
+
+.par-7 {
+  padding-top: 4em;
+}
+
 /**
     Propiedades para añadir margin a los elementos
 */
@@ -383,8 +415,9 @@ span {
 */
 .fila {
   display: grid;
-  grid-gap: 0.6em;
+  grid-gap: 20px;
   grid-template-columns: repeat(12, 1fr);
+  align-items: center;
 }
 .fila .cs-1 {
   grid-column: span 1;
@@ -2132,7 +2165,10 @@ span {
     que la informacion del campo es erronea
 */
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=url] {
   outline: none;
   height: 2.1em;
   width: 100%;
@@ -2143,20 +2179,174 @@ input[type=email] {
 }
 
 input[type=text]:focus,
-input[type=email]:focus {
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=url]:focus {
   box-shadow: 0 0 3px 3px rgba(135, 217, 255, 0.5);
   border: 1px solid #87d9ff;
   z-index: 2;
 }
 
 input[type=text]::placeholder,
-input[type=email]::placeholder {
+input[type=email]::placeholder,
+input[type=number]::placeholder,
+input[type=password]::placeholder,
+input[type=url]::placeholder {
   color: grey;
 }
 
 .i-error {
   box-shadow: 0 0 3px 3px rgba(253, 61, 61, 0.5);
   z-index: 2;
+}
+
+/**
+    Grupos de Input personalizador por la libreria 
+    span + input 
+*/
+.g-input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.g-input span {
+  letter-spacing: 0;
+  height: 2.1346em;
+  font-size: 1.2em;
+  padding: 0 0.8em;
+  color: #333333;
+  background: #acacac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.g-input-caja-izquierda input[type=text],
+.g-input-caja-izquierda input[type=email],
+.g-input-caja-izquierda input[type=number],
+.g-input-caja-izquierda input[type=password],
+.g-input-caja-izquierda input[type=url] {
+  border-radius: 0 0.2em 0.2em 0;
+}
+.g-input-caja-izquierda span {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.g-input-caja-derecha input[type=text],
+.g-input-caja-derecha input[type=email],
+.g-input-caja-derecha input[type=number],
+.g-input-caja-derecha input[type=password],
+.g-input-caja-derecha input[type=url] {
+  border-radius: 0.2em 0 0 0.2em;
+}
+.g-input-caja-derecha span {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+/***
+    Nav responsive para paginas principales
+    Incluye barra lateral
+*/
+.menu-superior {
+  /* Propiedades de toda la barra de menu*/
+  width: 100%;
+  height: 3em;
+  max-height: 3.5em;
+  user-select: none;
+  position: fixed;
+}
+.menu-superior .menu-contenedor {
+  width: 70%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  margin: auto;
+}
+.menu-superior .menu-contenedor .menu-nav-icono {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+.menu-superior .menu-contenedor .menu-nav-icono a {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.menu-superior .menu-contenedor .menu-listado {
+  grid-column-start: 12;
+  grid-column-end: 12;
+}
+.menu-superior .menu-contenedor .menu-listado ul {
+  display: flex;
+  align-items: center;
+}
+.menu-superior .menu-contenedor .menu-listado ul li a {
+  display: block;
+  padding: 0.9em 1.2em;
+  color: white;
+}
+.menu-superior .menu-contenedor .menu-listado ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menu-superior .menu-contenedor .menu-listado label {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1024px) {
+  .menu-superior .menu-contenedor .menu-listado ul {
+    display: none;
+  }
+  .menu-superior .menu-contenedor .menu-listado label {
+    display: block;
+  }
+}
+
+.menu-lateral {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.445);
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+}
+.menu-lateral .menu-listado-lateral {
+  width: 240px;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: -240px;
+  transition: 0.5s all;
+  padding-top: 3em;
+}
+.menu-lateral .menu-listado-lateral li a {
+  display: block;
+  padding: 0.8em;
+  color: white;
+}
+.menu-lateral .menu-listado-lateral li a:hover {
+  background-color: rgba(0, 0, 0, 0.384);
+}
+.menu-lateral .complemento {
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked ~ .menu-listado-lateral {
+  left: 0px;
 }
 
 /*# sourceMappingURL=bodystyle.css.map */

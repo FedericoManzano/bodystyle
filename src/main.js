@@ -1,4 +1,3 @@
-import mostrarMensaje from "./modulos/pruebaSaludo"
+import MenuResp from "./modulos/menuResponsive"
 
-
-mostrarMensaje.inicializar()
+MenuResp.iniciar()

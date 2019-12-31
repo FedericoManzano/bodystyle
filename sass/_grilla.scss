@@ -3,12 +3,12 @@
 
 */
 
-
 .fila {
     display: grid;
-    grid-gap: 0.6em;
+    grid-gap: 20px;
     grid-template-columns: repeat(12, 1fr);   
-    
+    align-items: center;
+
     @for $i from 1 through 12 {
         @for $i from 1 through 12 {
             .cs-#{$i} { 
@@ -44,7 +44,6 @@
     }
 
     @media (max-width: 768px){
-        
         @for $i from 1 through 12 {
             .cs-#{$i} { 
                 grid-column: span $i;

@@ -1,0 +1,117 @@
+/***
+    Nav responsive para paginas principales
+    Incluye barra lateral
+*/
+
+.menu-superior {
+
+    /* Propiedades de toda la barra de menu*/
+    width: 100%;
+    height: 3em;
+    max-height: 3.5em;
+    user-select: none;
+    position: fixed;
+    // Contenedor interno del menu
+    .menu-contenedor {
+        width: 70%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+        margin: auto;
+        
+        .menu-nav-icono {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            a{
+                color: white;
+                font-size: 1.3em;
+                font-weight: 700;
+            }
+        }
+
+        .menu-listado {
+            grid-column-start: 12;
+            grid-column-end: 12;
+
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    a{
+                        display: block;
+                        padding: 0.9em 1.2em;
+                        color: white;
+                    }
+                    a:hover {
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+
+            label {
+                display: none;
+                cursor: pointer;
+            }
+
+            @media(max-width: 1024px){
+                ul{
+                    display: none;
+                }
+                 label {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.menu-lateral {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.445);  
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; 
+    display: none;
+    .menu-listado-lateral{
+        width: 240px;
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: -240px;
+        transition: .5s all;
+        padding-top: 3em;
+        li{
+            a{
+                display: block;
+                padding: 0.8em;
+                color: white;
+            }
+            a:hover {
+                background-color: rgba(0, 0, 0, 0.384);
+            }
+        }
+
+    }
+    .complemento {
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+}
+
+#toggle {
+    display: none;
+}
+#toggle:checked~.menu-listado-lateral {
+    left: 0px;
+}
+
+
+
+
