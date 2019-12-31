@@ -78,6 +78,11 @@ a {
   text-decoration: none;
 }
 
+a:not[href] {
+  color: #9c9c9c;
+  cursor: none;
+}
+
 /*******************************************************************************************
 *   Etiquetas P
 ********************************************************************************************/
@@ -1333,6 +1338,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .btn:hover,
@@ -1527,6 +1533,19 @@ span {
   background-color: white;
   color: black;
   box-shadow: 0 0 3px 3px rgba(212, 212, 212, 0.5);
+}
+
+/***
+    Botones estilo desabilidado
+*/
+.disabilitado {
+  background: #ececec !important;
+  color: gray !important;
+  cursor: default !important;
+}
+
+.disabilitado:hover {
+  box-shadow: none !important;
 }
 
 /**

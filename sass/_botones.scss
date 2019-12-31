@@ -20,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .btn:hover, 
@@ -232,4 +233,17 @@
     background-color: $blanco;
     color: $negro;
     box-shadow: 0 0 3px 3px rgba(212, 212, 212, 0.5);
+}
+
+/***
+    Botones estilo desabilidado
+*/
+.disabilitado {
+    background: $fd-gris-c !important;
+    color: $fd-gris !important;
+    cursor: default !important;
+}
+
+.disabilitado:hover{
+    box-shadow: none !important;
 }
