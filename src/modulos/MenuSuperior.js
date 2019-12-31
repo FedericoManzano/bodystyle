@@ -17,7 +17,7 @@
         })
     }
 
-    var menuResp = {
+    var MenuSuperior = {
         iniciar: function(){
             cargarComplemento()
             aparecerMenu()
@@ -25,7 +25,7 @@
         }
     }
 
-    window.menuResp = menuResp;
+    window.MenuSuperior = MenuSuperior;
 })()
 
-export default menuResp;
+export default MenuSuperior;

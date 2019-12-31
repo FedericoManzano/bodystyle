@@ -94,19 +94,31 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modulos_menuResponsive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modulos/menuResponsive */ \"./src/modulos/menuResponsive.js\");\n\n_modulos_menuResponsive__WEBPACK_IMPORTED_MODULE_0__[\"default\"].iniciar();\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modulos_MenuSuperior__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modulos/MenuSuperior */ \"./src/modulos/MenuSuperior.js\");\n/* harmony import */ var _modulos_Sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modulos/Sidebar */ \"./src/modulos/Sidebar.js\");\n\n //Sidebar.inicializar();\n\n(function () {\n  var _MenuSuperior = function MenuSuperior() {\n    _modulos_MenuSuperior__WEBPACK_IMPORTED_MODULE_0__[\"default\"].iniciar();\n  };\n\n  var _SidebarInit = function SidebarInit() {\n    _modulos_Sidebar__WEBPACK_IMPORTED_MODULE_1__[\"default\"].inicializar();\n  };\n\n  var _AutoInit = function AutoInit() {\n    _MenuSuperior();\n\n    _SidebarInit();\n  };\n\n  var BS = {\n    MenuSuperior: function MenuSuperior() {\n      return _MenuSuperior();\n    },\n    SidebarInit: function SidebarInit() {\n      return _SidebarInit();\n    },\n    AutoInit: function AutoInit() {\n      return _AutoInit();\n    }\n  };\n  window.BS = BS;\n})();\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 
-/***/ "./src/modulos/menuResponsive.js":
-/*!***************************************!*\
-  !*** ./src/modulos/menuResponsive.js ***!
-  \***************************************/
+/***/ "./src/modulos/MenuSuperior.js":
+/*!*************************************!*\
+  !*** ./src/modulos/MenuSuperior.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n(function () {\n  var cargarComplemento = function cargarComplemento() {\n    $(\".menu-lateral\").append(\"<div class='complemento'></div>\");\n  };\n\n  var aparecerMenu = function aparecerMenu() {\n    $(\".toggle\").click(function () {\n      $(\".menu-lateral\").show();\n    });\n  };\n\n  var desaparecerMenu = function desaparecerMenu() {\n    $(\".complemento\").click(function () {\n      $(\".menu-lateral\").hide();\n      $(\"#toggle\").prop(\"checked\", false);\n    });\n  };\n\n  var menuResp = {\n    iniciar: function iniciar() {\n      cargarComplemento();\n      aparecerMenu();\n      desaparecerMenu();\n    }\n  };\n  window.menuResp = menuResp;\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (menuResp);\n\n//# sourceURL=webpack:///./src/modulos/menuResponsive.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n(function () {\n  var cargarComplemento = function cargarComplemento() {\n    $(\".menu-lateral\").append(\"<div class='complemento'></div>\");\n  };\n\n  var aparecerMenu = function aparecerMenu() {\n    $(\".toggle\").click(function () {\n      $(\".menu-lateral\").show();\n    });\n  };\n\n  var desaparecerMenu = function desaparecerMenu() {\n    $(\".complemento\").click(function () {\n      $(\".menu-lateral\").hide();\n      $(\"#toggle\").prop(\"checked\", false);\n    });\n  };\n\n  var MenuSuperior = {\n    iniciar: function iniciar() {\n      cargarComplemento();\n      aparecerMenu();\n      desaparecerMenu();\n    }\n  };\n  window.MenuSuperior = MenuSuperior;\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MenuSuperior);\n\n//# sourceURL=webpack:///./src/modulos/MenuSuperior.js?");
+
+/***/ }),
+
+/***/ "./src/modulos/Sidebar.js":
+/*!********************************!*\
+  !*** ./src/modulos/Sidebar.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n(function () {\n  var estado = false;\n  var cantidad = $(\".item\").lenght;\n  var elementos = new Array(cantidad);\n\n  var inicializarElementos = function inicializarElementos() {\n    for (var i = 0; i < cantidad; i++) {\n      elementos[i] = false;\n    }\n\n    $(\".f-abajo\").hide();\n  };\n\n  var controlSubmenu = function controlSubmenu() {\n    $(\".sidebar-menu > .item\").click(function () {\n      var tocado = $(this).index();\n\n      if (elementos[tocado - 1] === false || elementos[tocado - 1] === undefined) {\n        $(\"#\" + tocado).fadeIn(150);\n        $(\".sidebar-menu .item:nth-child(\" + (tocado + 1) + \") .f-arriba\").hide();\n        $(\".sidebar-menu  .item:nth-child(\" + (tocado + 1) + \") .f-abajo\").show();\n        elementos[tocado - 1] = true;\n      } else {\n        $(\"#\" + tocado).fadeOut(150);\n        $(\".sidebar-menu  .item:nth-child(\" + (tocado + 1) + \") .f-arriba\").show();\n        $(\".sidebar-menu  .item:nth-child(\" + (tocado + 1) + \") .f-abajo\").hide();\n        elementos[tocado - 1] = false;\n      }\n    });\n  };\n\n  var presionaBarra = function presionaBarra() {\n    $(\".label\").click(function () {\n      if (!estado || estado === undefined) {\n        $(\".cerrado\").hide();\n        $(\".abierto\").show();\n        estado = true;\n      } else {\n        $(\".cerrado\").show();\n        $(\".abierto\").hide();\n        estado = false;\n      }\n    });\n  };\n\n  var Sidebar = {\n    inicializar: function inicializar() {\n      presionaBarra();\n      inicializarElementos();\n      controlSubmenu();\n    }\n  };\n  window.Sidebar = Sidebar;\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Sidebar);\n\n//# sourceURL=webpack:///./src/modulos/Sidebar.js?");
 
 /***/ })
 

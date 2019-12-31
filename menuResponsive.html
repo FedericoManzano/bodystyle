@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bodystyle.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
+    <title>Menu Superior</title>
 </head>
 <body>
     <div class="menu-superior fd-azul-ve">
@@ -20,22 +20,27 @@
                     <li><a href="">Servicios</a></li>
                     <li><a href="">Porfolio</a></li>
                     <li><a href="">Contacto</a></li>
+                    <a href="#" class="btn-sm btn-verde">Ingresar</a>
                 </ul>
                 <label for="toggle" class="material-icons c-blanco toggle">menu</label>
             </div>
         </div>
     </div>
 
-    <div class="menu-lateral">
+    <div class="menu-lateral t-may">
         <input type="checkbox" id="toggle">
         <ul class="menu-listado-lateral fd-azul-ve">
             <li><a href="">Inicio</a></li>
             <li><a href="">Servicios</a></li>
             <li><a href="">Porfolio</a></li>
-            <li><a href="">Contacto</a></li>    
+            <li><a href="">Contacto</a></li>  
+            <a href="#" class="btn-cubrir-sm btn-verde">Ingresar</a>  
         </ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/bodystyle.js"></script>
+    <script> 
+        BS.AutoInit()
+    </script>
 </body>
 </html>

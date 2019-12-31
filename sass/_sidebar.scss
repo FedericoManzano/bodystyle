@@ -1,0 +1,77 @@
+/**
+    Sidebar para aplicaciones web con menus acordeon 
+    
+*/
+
+.sidebar {
+    user-select: none;
+    .sidebar-cabecera {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0.8em;
+        color: white;
+        transition: 0.5s all;
+        label[for="toggle"] {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+
+    .sidebar-menu {
+        width: 240px;
+        position: fixed;
+        left: -240px;
+        bottom: 0;
+        top: 0;
+        transition: .5s all;
+        overflow: auto;
+        .logo {
+            padding: 0.475em;
+            display: flex;
+            text-align: center;
+            color: white;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+        .item{
+            .titulo {
+                padding: 0.5em;
+                color: white;
+                border-bottom: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    width: 90%;
+                }
+            }
+            ul {
+                background-color: $fd-azul-ve-c;
+                border-bottom: 1px solid white;
+                display: none;
+                li {
+                    a{
+                        display: block;
+                        color: white;
+                        padding: 0.7em 0.5em;
+                    }
+                    a:hover{
+                        background-color: rgba(0, 0, 0, 0.466);
+                    }
+                }
+            }
+        }
+    }
+
+    #toggle:checked~.sidebar-menu {
+        left: 0;
+    }
+
+    #toggle:checked~.sidebar-cabecera {
+        left: 240px;
+        width: calc(100% - 240px);
+    }
+}
+

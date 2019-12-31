@@ -2002,21 +2002,24 @@ span {
   padding: 5px 18px;
   font-size: 1.1em;
   display: block;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 
 .btn-cubrir {
   padding: 9px 25px;
   font-size: 1.2em;
   display: block;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 
 .btn-cubrir-lg {
   padding: 15px 40px;
   font-size: 1.3em;
   display: block;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 
 .btn-rojo {
@@ -2347,6 +2350,75 @@ input[type=url]::placeholder {
 
 #toggle:checked ~ .menu-listado-lateral {
   left: 0px;
+}
+
+/**
+    Sidebar para aplicaciones web con menus acordeon 
+
+*/
+.sidebar {
+  user-select: none;
+}
+.sidebar .sidebar-cabecera {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.8em;
+  color: white;
+  transition: 0.5s all;
+}
+.sidebar .sidebar-cabecera label[for=toggle] {
+  width: 100%;
+  cursor: pointer;
+}
+.sidebar .sidebar-menu {
+  width: 240px;
+  position: fixed;
+  left: -240px;
+  bottom: 0;
+  top: 0;
+  transition: 0.5s all;
+  overflow: auto;
+}
+.sidebar .sidebar-menu .logo {
+  padding: 0.475em;
+  display: flex;
+  text-align: center;
+  color: white;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+.sidebar .sidebar-menu .item .titulo {
+  padding: 0.5em;
+  color: white;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar .sidebar-menu .item .titulo span {
+  width: 90%;
+}
+.sidebar .sidebar-menu .item ul {
+  background-color: #134350;
+  border-bottom: 1px solid white;
+  display: none;
+}
+.sidebar .sidebar-menu .item ul li a {
+  display: block;
+  color: white;
+  padding: 0.7em 0.5em;
+}
+.sidebar .sidebar-menu .item ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.466);
+}
+.sidebar #toggle:checked ~ .sidebar-menu {
+  left: 0;
+}
+.sidebar #toggle:checked ~ .sidebar-cabecera {
+  left: 240px;
+  width: calc(100% - 240px);
 }
 
 /*# sourceMappingURL=bodystyle.css.map */
