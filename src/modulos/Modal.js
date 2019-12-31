@@ -1,13 +1,14 @@
 (function(){
 
-    var estadoInicial = ({color,texto, ancho, radio, justificacion} = {
-        color: "fd-gris-c",
+    var estadoInicial = ({fondo,texto, ancho, radio, justificacion} = {
+        fondo: "fd-gris-c",
         texto: "c-negro",
         ancho: 350,
         radio: 4,
         justificacion: "a-centrado"
     })=> {
-        $(".modal .modal-ventana").addClass(color)
+        $(".modal").css("opacity", 1)
+        $(".modal .modal-ventana").addClass(fondo)
         $(".modal .modal-ventana").addClass(texto)
         $(".modal .modal-ventana").addClass(justificacion)
         $(".modal .modal-ventana").css("max-width", ancho + "px")

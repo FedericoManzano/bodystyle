@@ -9,6 +9,10 @@
 /**
     Estilos generales afectan a toda la pagina
 */
+@font-face {
+  font-family: "HelveticaNeue-med";
+  src: url("./fonts/HelveticaNeueMed.ttf");
+}
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +21,8 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: Helvetica, sans-serif;
+  font-family: "HelveticaNeue", Helvetica, sans-serif;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -1391,12 +1396,12 @@ span {
 }
 
 .btn-rojo:hover {
-  background-color: #e23434;
-  box-shadow: 0 0 3px 3px rgba(226, 52, 52, 0.5);
+  background-color: #a12323;
+  box-shadow: 0 0 3px 3px rgba(143, 0, 0, 0.5);
 }
 
 .btn-rojo:active {
-  background-color: #fd4e4e;
+  background-color: #bb1818;
 }
 
 .btn-verde {
@@ -1406,12 +1411,12 @@ span {
 }
 
 .btn-verde:hover {
-  background-color: #01bb99;
-  box-shadow: 0 0 3px 3px rgba(0, 223, 182, 0.5);
+  background-color: #00886f;
+  box-shadow: 0 0 3px 3px rgba(0, 179, 146, 0.5);
 }
 
 .btn-verde:active {
-  background-color: #00d3ac;
+  background-color: #009c80;
 }
 
 .btn-azul {
@@ -1421,12 +1426,12 @@ span {
 }
 
 .btn-azul:hover {
-  background-color: #2982ff;
-  box-shadow: 0 0 3px 3px rgba(41, 130, 255, 0.5);
+  background-color: #0054c9;
+  box-shadow: 0 0 3px 3px rgba(0, 93, 223, 0.5);
 }
 
 .btn-azul:active {
-  background-color: #4190ff;
+  background-color: #006cff;
 }
 
 .btn-gris {
@@ -1455,13 +1460,13 @@ span {
 }
 
 .btn-rojo-o:hover {
-  background-color: #e23434;
+  background-color: #a12323;
   color: white;
-  box-shadow: 0 0 3px 3px rgba(226, 52, 52, 0.5);
+  box-shadow: 0 0 3px 3px rgba(143, 0, 0, 0.5);
 }
 
 .btn-rojo-o:active {
-  background-color: #fd4e4e;
+  background-color: #bb1818;
 }
 
 .btn-verde-o {
@@ -1471,13 +1476,13 @@ span {
 }
 
 .btn-verde-o:hover {
-  background-color: #01bb99;
+  background-color: #00886f;
   color: white;
-  box-shadow: 0 0 3px 3px rgba(0, 223, 182, 0.5);
+  box-shadow: 0 0 3px 3px rgba(0, 179, 146, 0.5);
 }
 
 .btn-verde-o:active {
-  background-color: #00d3ac;
+  background-color: #009c80;
 }
 
 .btn-azul-o {
@@ -1487,13 +1492,13 @@ span {
 }
 
 .btn-azul-o:hover {
-  background-color: #2982ff;
+  background-color: #0054c9;
   color: white;
-  box-shadow: 0 0 3px 3px rgba(41, 130, 255, 0.5);
+  box-shadow: 0 0 3px 3px rgba(0, 93, 223, 0.5);
 }
 
 .btn-azul-o:active {
-  background-color: #4190ff;
+  background-color: #006cff;
 }
 
 .btn-gris-o {
@@ -1630,6 +1635,7 @@ input[type=url]::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 .modal .modal-ventana {
   padding: 1.5em;

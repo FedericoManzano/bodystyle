@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bodystyle.css">
+    <link rel="stylesheet" href="../css/bodystyle.css">
     <title>Document</title>
 </head>
 
@@ -41,9 +41,19 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/bodystyle.js"></script>
+    <script src="../js/bodystyle.js"></script>
     <script> 
-        BS.ModalInit()
+        $(document).ready(function(){
+            var conf = {
+                fondo: "fd-gris-az",
+                texto: "c-blanco",
+                ancho: 350,
+                borde: 4,
+                justificacion: "a-centrado"
+            }
+            BS.ModalInit(conf)
+        })
+       
     </script>
 </body>
 
