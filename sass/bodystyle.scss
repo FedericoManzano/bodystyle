@@ -5,15 +5,21 @@
     Version: 1.0.0
 *******************************************************************/
 
-
+/*Estilos generales */
 @import "generales";
+
+/*CSS */
 @import "texto";
 @import "alineamiento";
-@import "grilla";
 @import "colores";
 @import "fondos";
+
+/*Grilla */
+@import "grilla";
+
+/*Componentes */
 @import "botones";
 @import "inputText";
 @import "inputGrupo";
 @import "menuResponsive";
-@import "sidebar"
+@import "sidebar";

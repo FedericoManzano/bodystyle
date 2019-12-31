@@ -1,11 +1,6 @@
 
-
 import MenuResp from "./modulos/MenuSuperior"
 import Sidebar from "./modulos/Sidebar"
-
-
-
-//Sidebar.inicializar();
 
 
 (function(){
@@ -31,3 +26,5 @@ import Sidebar from "./modulos/Sidebar"
 
     window.BS = BS
 })()
+
+export default BS;

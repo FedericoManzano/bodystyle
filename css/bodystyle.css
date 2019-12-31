@@ -5,6 +5,7 @@
     Autor: Fedrico Manzano
     Version: 1.0.0
 *******************************************************************/
+/*Estilos generales */
 /**
     Estilos generales afectan a toda la pagina
 */
@@ -84,6 +85,7 @@ span {
   font-weight: 100 !important;
 }
 
+/*CSS */
 /*
     Trabajando con los textos 
 */
@@ -179,8 +181,8 @@ span {
     Clase contenedor para centrar el contenido dentro de la pagina
 */
 .contenedor {
-  width: 70%;
-  margin: auto;
+  width: 70% !important;
+  margin: auto !important;
 }
 
 /***
@@ -222,9 +224,50 @@ span {
   padding: 2.5em !important;
 }
 
-/**
-    Clases para añadir padding por izquierda de los elementos
-*/
+.p-5 {
+  padding: 3em !important;
+}
+
+.p-6 {
+  padding: 3.5em !important;
+}
+
+.p-7 {
+  padding: 4em !important;
+}
+
+.p-8 {
+  padding: 4.5em !important;
+}
+
+.p-9 {
+  padding: 5em !important;
+}
+
+.p-10 {
+  padding: 5.5em !important;
+}
+
+.p-11 {
+  padding: 6em !important;
+}
+
+.p-12 {
+  padding: 6.5em !important;
+}
+
+.p-13 {
+  padding: 7em !important;
+}
+
+.p-14 {
+  padding: 7.5em !important;
+}
+
+.p-15 {
+  padding: 8em !important;
+}
+
 .pi-1 {
   padding-left: 1em !important;
 }
@@ -241,9 +284,50 @@ span {
   padding-left: 2.5em !important;
 }
 
-/***
-    Clases para añadir padding por derecha de los elementos
-*/
+.pi-5 {
+  padding-left: 3em !important;
+}
+
+.pi-6 {
+  padding-left: 3.5em !important;
+}
+
+.pi-7 {
+  padding-left: 4em !important;
+}
+
+.pi-8 {
+  padding-left: 4.5em !important;
+}
+
+.pi-9 {
+  padding-left: 5em !important;
+}
+
+.pi-10 {
+  padding-left: 5.5em !important;
+}
+
+.pi-11 {
+  padding-left: 6em !important;
+}
+
+.pi-12 {
+  padding-left: 6.5em !important;
+}
+
+.pi-13 {
+  padding-left: 7em !important;
+}
+
+.pi-14 {
+  padding-left: 7.5em !important;
+}
+
+.pi-15 {
+  padding-left: 8em !important;
+}
+
 .pd-1 {
   padding-right: 1em !important;
 }
@@ -260,9 +344,50 @@ span {
   padding-right: 2.5em !important;
 }
 
-/***
-    Clases para añadir padding por abajo de los elementos
-*/
+.pd-5 {
+  padding-right: 3em !important;
+}
+
+.pd-6 {
+  padding-right: 3.5em !important;
+}
+
+.pd-7 {
+  padding-right: 4em !important;
+}
+
+.pd-8 {
+  padding-right: 4.5em !important;
+}
+
+.pd-9 {
+  padding-right: 5em !important;
+}
+
+.pd-10 {
+  padding-right: 5.5em !important;
+}
+
+.pd-11 {
+  padding-right: 6em !important;
+}
+
+.pd-12 {
+  padding-right: 6.5em !important;
+}
+
+.pd-13 {
+  padding-right: 7em !important;
+}
+
+.pd-14 {
+  padding-right: 7.5em !important;
+}
+
+.pd-15 {
+  padding-right: 8em !important;
+}
+
 .pab-1 {
   padding-bottom: 1em !important;
 }
@@ -279,9 +404,50 @@ span {
   padding-bottom: 2.5em !important;
 }
 
-/***
-    Clases para añadir padding por arriba de los elementos
-*/
+.pab-5 {
+  padding-bottom: 3em !important;
+}
+
+.pab-6 {
+  padding-bottom: 3.5em !important;
+}
+
+.pab-7 {
+  padding-bottom: 4em !important;
+}
+
+.pab-8 {
+  padding-bottom: 4.5em !important;
+}
+
+.pab-9 {
+  padding-bottom: 5em !important;
+}
+
+.pab-10 {
+  padding-bottom: 5.5em !important;
+}
+
+.pab-11 {
+  padding-bottom: 6em !important;
+}
+
+.pab-12 {
+  padding-bottom: 6.5em !important;
+}
+
+.pab-13 {
+  padding-bottom: 7em !important;
+}
+
+.pab-14 {
+  padding-bottom: 7.5em !important;
+}
+
+.pab-15 {
+  padding-bottom: 8em !important;
+}
+
 .par-1 {
   padding-top: 1em !important;
 }
@@ -310,109 +476,456 @@ span {
   padding-top: 4em !important;
 }
 
-/**
-    Propiedades para añadir margin a los elementos
-*/
-.m-1 {
-  margin: 0.8em !important;
+.par-8 {
+  padding-top: 4.5em !important;
 }
 
-.m-2 {
+.par-9 {
+  padding-top: 5em !important;
+}
+
+.par-10 {
+  padding-top: 5.5em !important;
+}
+
+.par-11 {
+  padding-top: 6em !important;
+}
+
+.par-12 {
+  padding-top: 6.5em !important;
+}
+
+.par-13 {
+  padding-top: 7em !important;
+}
+
+.par-14 {
+  padding-top: 7.5em !important;
+}
+
+.par-15 {
+  padding-top: 8em !important;
+}
+
+.m-1 {
   margin: 1em !important;
 }
 
+.m-2 {
+  margin: 1.5em !important;
+}
+
 .m-3 {
-  margin: 1.3em !important;
-}
-
-.m-4 {
-  margin: 1.7em !important;
-}
-
-.m-5 {
   margin: 2em !important;
 }
 
-.mi-1 {
-  margin-left: 0.8em !important;
+.m-4 {
+  margin: 2.5em !important;
 }
 
-.mi-2 {
+.m-5 {
+  margin: 3em !important;
+}
+
+.m-6 {
+  margin: 3.5em !important;
+}
+
+.m-7 {
+  margin: 4em !important;
+}
+
+.m-8 {
+  margin: 4.5em !important;
+}
+
+.m-9 {
+  margin: 5em !important;
+}
+
+.m-10 {
+  margin: 5.5em !important;
+}
+
+.m-11 {
+  margin: 6em !important;
+}
+
+.m-12 {
+  margin: 6.5em !important;
+}
+
+.m-13 {
+  margin: 7em !important;
+}
+
+.m-14 {
+  margin: 7.5em !important;
+}
+
+.m-15 {
+  margin: 8em !important;
+}
+
+.mi-1 {
   margin-left: 1em !important;
 }
 
+.mi-2 {
+  margin-left: 1.5em !important;
+}
+
 .mi-3 {
-  margin-left: 1.3em !important;
-}
-
-.mi-4 {
-  margin-left: 1.7em !important;
-}
-
-.mi-5 {
   margin-left: 2em !important;
 }
 
-.md-1 {
-  margin-right: 0.8em !important;
+.mi-4 {
+  margin-left: 2.5em !important;
 }
 
-.md-2 {
+.mi-5 {
+  margin-left: 3em !important;
+}
+
+.mi-6 {
+  margin-left: 3.5em !important;
+}
+
+.mi-7 {
+  margin-left: 4em !important;
+}
+
+.mi-8 {
+  margin-left: 4.5em !important;
+}
+
+.mi-9 {
+  margin-left: 5em !important;
+}
+
+.mi-10 {
+  margin-left: 5.5em !important;
+}
+
+.mi-11 {
+  margin-left: 6em !important;
+}
+
+.mi-12 {
+  margin-left: 6.5em !important;
+}
+
+.mi-13 {
+  margin-left: 7em !important;
+}
+
+.mi-14 {
+  margin-left: 7.5em !important;
+}
+
+.mi-15 {
+  margin-left: 8em !important;
+}
+
+.md-1 {
   margin-right: 1em !important;
 }
 
+.md-2 {
+  margin-right: 1.5em !important;
+}
+
 .md-3 {
-  margin-right: 1.3em !important;
-}
-
-.md-4 {
-  margin-right: 1.7em !important;
-}
-
-.md-5 {
   margin-right: 2em !important;
 }
 
-.mab-1 {
-  margin-bottom: 0.8em !important;
+.md-4 {
+  margin-right: 2.5em !important;
 }
 
-.mab-2 {
-  margin-bottom: 1em !important;
+.md-5 {
+  margin-right: 3em !important;
 }
 
-.mab-3 {
-  margin-bottom: 1.3em !important;
+.md-6 {
+  margin-right: 3.5em !important;
 }
 
-.mab-4 {
-  margin-bottom: 1.7em !important;
+.md-7 {
+  margin-right: 4em !important;
 }
 
-.mab-5 {
-  margin-bottom: 2em !important;
+.md-8 {
+  margin-right: 4.5em !important;
+}
+
+.md-9 {
+  margin-right: 5em !important;
+}
+
+.md-10 {
+  margin-right: 5.5em !important;
+}
+
+.md-11 {
+  margin-right: 6em !important;
+}
+
+.md-12 {
+  margin-right: 6.5em !important;
+}
+
+.md-13 {
+  margin-right: 7em !important;
+}
+
+.md-14 {
+  margin-right: 7.5em !important;
+}
+
+.md-15 {
+  margin-right: 8em !important;
 }
 
 .mar-1 {
-  margin-top: 0.8em !important;
-}
-
-.mar-2 {
   margin-top: 1em !important;
 }
 
+.mar-2 {
+  margin-top: 1.5em !important;
+}
+
 .mar-3 {
-  margin-top: 1.3em !important;
-}
-
-.mar-4 {
-  margin-top: 1.7em !important;
-}
-
-.mar-5 {
   margin-top: 2em !important;
 }
 
+.mar-4 {
+  margin-top: 2.5em !important;
+}
+
+.mar-5 {
+  margin-top: 3em !important;
+}
+
+.mar-6 {
+  margin-top: 3.5em !important;
+}
+
+.mar-7 {
+  margin-top: 4em !important;
+}
+
+.mar-8 {
+  margin-top: 4.5em !important;
+}
+
+.mar-9 {
+  margin-top: 5em !important;
+}
+
+.mar-10 {
+  margin-top: 5.5em !important;
+}
+
+.mar-11 {
+  margin-top: 6em !important;
+}
+
+.mar-12 {
+  margin-top: 6.5em !important;
+}
+
+.mar-13 {
+  margin-top: 7em !important;
+}
+
+.mar-14 {
+  margin-top: 7.5em !important;
+}
+
+.mar-15 {
+  margin-top: 8em !important;
+}
+
+.mab-1 {
+  margin-bottom: 1em !important;
+}
+
+.mab-2 {
+  margin-bottom: 1.5em !important;
+}
+
+.mab-3 {
+  margin-bottom: 2em !important;
+}
+
+.mab-4 {
+  margin-bottom: 2.5em !important;
+}
+
+.mab-5 {
+  margin-bottom: 3em !important;
+}
+
+.mab-6 {
+  margin-bottom: 3.5em !important;
+}
+
+.mab-7 {
+  margin-bottom: 4em !important;
+}
+
+.mab-8 {
+  margin-bottom: 4.5em !important;
+}
+
+.mab-9 {
+  margin-bottom: 5em !important;
+}
+
+.mab-10 {
+  margin-bottom: 5.5em !important;
+}
+
+.mab-11 {
+  margin-bottom: 6em !important;
+}
+
+.mab-12 {
+  margin-bottom: 6.5em !important;
+}
+
+.mab-13 {
+  margin-bottom: 7em !important;
+}
+
+.mab-14 {
+  margin-bottom: 7.5em !important;
+}
+
+.mab-15 {
+  margin-bottom: 8em !important;
+}
+
+/* Colores Botones */
+/* Fondos */
+/***********************************************************************************
+    Colores de fondo para los componentes
+*/
+/***
+    Fondos color rojo
+*/
+.fd-rojo {
+  background-color: #bb1818 !important;
+}
+
+.fd-rojo-c {
+  background-color: #f51515 !important;
+}
+
+.fd-rojo-o {
+  background-color: #500000 !important;
+}
+
+.fd-rojo-t {
+  background-color: rgba(187, 24, 24, 0.644) !important;
+}
+
+/**********************************************************************/
+.fd-azul {
+  background-color: #1045b7 !important;
+}
+
+.fd-azul-c {
+  background-color: #006cff !important;
+}
+
+.fd-azul-o {
+  background-color: #002066 !important;
+}
+
+.fd-azul-ve {
+  background-color: #06263f !important;
+}
+
+.fd-azul-ve-s {
+  background-color: #002c38 !important;
+}
+
+.fd-azul-ve-c {
+  background-color: #134350 !important;
+}
+
+.fd-azul-t {
+  background-color: rgba(16, 69, 183, 0.5) !important;
+}
+
+/*************************************************
+    Verder
+*/
+.fd-verde {
+  background-color: #006e5c !important;
+}
+
+.fd-verde-c {
+  background-color: #00bb9c !important;
+}
+
+.fd-verde-o {
+  background-color: #073a31 !important;
+}
+
+.fd-verde-t {
+  background-color: rgba(0, 110, 92, 0.5) !important;
+}
+
+.fd-verde-az {
+  background-color: #002a30 !important;
+}
+
+/******************************************/
+.fd-gris {
+  background-color: gray !important;
+}
+
+.fd-gris-c {
+  background-color: #ececec !important;
+}
+
+.fd-gris-o {
+  background-color: #212121 !important;
+}
+
+.fd-gris-t {
+  background-color: rgba(128, 128, 128, 0.5) !important;
+}
+
+.fd-gris-az {
+  background-color: #1e2029 !important;
+}
+
+.fd-gris-az-c {
+  background-color: #282e42 !important;
+}
+
+.fd-gris-az-o {
+  background-color: #15161a !important;
+}
+
+.fd-gris-n {
+  background-color: #111111 !important;
+}
+
+.fd-blanco {
+  background-color: white !important;
+}
+
+.fd-negro {
+  background-color: black !important;
+}
+
+/*Grilla */
 /****
     Grilla para acomodar los elementos dentro del sitio
     Contiene 4 medidas disponibles
@@ -793,123 +1306,7 @@ span {
   }
 }
 
-/* Colores Botones */
-/* Fondos */
-/***********************************************************************************
-    Colores de fondo para los componentes
-*/
-/***
-    Fondos color rojo
-*/
-.fd-rojo {
-  background-color: #bb1818 !important;
-}
-
-.fd-rojo-c {
-  background-color: #f51515 !important;
-}
-
-.fd-rojo-o {
-  background-color: #500000 !important;
-}
-
-.fd-rojo-t {
-  background-color: rgba(187, 24, 24, 0.644) !important;
-}
-
-/**********************************************************************/
-.fd-azul {
-  background-color: #1045b7 !important;
-}
-
-.fd-azul-c {
-  background-color: #006cff !important;
-}
-
-.fd-azul-o {
-  background-color: #002066 !important;
-}
-
-.fd-azul-ve {
-  background-color: #06263f !important;
-}
-
-.fd-azul-ve-s {
-  background-color: #002c38 !important;
-}
-
-.fd-azul-ve-c {
-  background-color: #134350 !important;
-}
-
-.fd-azul-t {
-  background-color: rgba(16, 69, 183, 0.5) !important;
-}
-
-/*************************************************
-    Verder
-*/
-.fd-verde {
-  background-color: #006e5c !important;
-}
-
-.fd-verde-c {
-  background-color: #00bb9c !important;
-}
-
-.fd-verde-o {
-  background-color: #073a31 !important;
-}
-
-.fd-verde-t {
-  background-color: rgba(0, 110, 92, 0.5) !important;
-}
-
-.fd-verde-az {
-  background-color: #002a30 !important;
-}
-
-/******************************************/
-.fd-gris {
-  background-color: gray !important;
-}
-
-.fd-gris-c {
-  background-color: #ececec !important;
-}
-
-.fd-gris-o {
-  background-color: #212121 !important;
-}
-
-.fd-gris-t {
-  background-color: rgba(128, 128, 128, 0.5) !important;
-}
-
-.fd-gris-az {
-  background-color: #1e2029 !important;
-}
-
-.fd-gris-az-c {
-  background-color: #282e42 !important;
-}
-
-.fd-gris-az-o {
-  background-color: #15161a !important;
-}
-
-.fd-gris-n {
-  background-color: #111111 !important;
-}
-
-.fd-blanco {
-  background-color: white !important;
-}
-
-.fd-negro {
-  background-color: black !important;
-}
-
+/*Componentes */
 /**
     Estilos de botones
     Tres tamaños btn-sm btm btm-lg
