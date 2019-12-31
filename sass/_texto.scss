@@ -3,78 +3,82 @@
     Trabajando con los textos 
 */
 .a-centrado{
-    text-align: center;
+    text-align: center !important;
 }
 
 .a-derecha {
-    text-align: right;
+    text-align: right !important;
 }
 
 .a-izquierda {
-    text-align: left;
+    text-align: left !important;
 }
 
 .f-grosor-1{
-    font-weight: 100;
+    font-weight: 100 !important;
 }
 
 .f-grosor-2{
-    font-weight: 200;
+    font-weight: 200 !important;
 }
 
 .f-grosor-3{
-    font-weight: 300;
+    font-weight: 300 !important;
 }
 
 .f-grosor-4{
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 
 .f-grosor-5{
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 .f-grosor-6{
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 .f-grosor-7{
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 .f-grosor-8{
-    font-weight: 800;
+    font-weight: 800 !important;
 }
 
 .f-grosor-9{
-    font-weight: 900;
+    font-weight: 900 !important;
 }
 .f-grosor-b{
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .t-may {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
 .t-min {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
+}
+
+.t-cap {
+    text-transform: capitalize !important;
 }
 
 .c-blanco {
-    color: white;
+    color: white !important;
 }
 
 .c-negro {
-    color: black;
+    color: black !important;
 }
 
 .c-rojo {
-    color: red;
+    color: rgb(155, 143, 143) !important;
 }
 
 .c-azul {
-    color: blue
+    color: blue !important
 }
 
 .c-verde {
-    color: green;
+    color: green !important;
 }
