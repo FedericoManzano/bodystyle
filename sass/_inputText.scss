@@ -15,7 +15,11 @@ input[type='url'] {
     border: 1px solid $gris-input;
     padding: 0.6em;
     border-radius: 3px;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-family: "HelveticaNeue", Helvetica, sans-serif;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 input[type='text']:focus, 

@@ -2,10 +2,12 @@
 import MenuResp from "./modulos/MenuSuperior"
 import Sidebar from "./modulos/Sidebar"
 import Modal from "./modulos/Modal"
+import Boton from "./modulos/Boton"
+
 
 
 (function(){
-    
+    Boton.iniciar()
     var MenuSuperior = ()=> MenuResp.iniciar()
 
     var SidebarInit = () => Sidebar.inicializar()

@@ -16,10 +16,10 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
   font-size: 16px;
   font-family: "HelveticaNeue", Helvetica, sans-serif;
   font-weight: 300;
@@ -1352,7 +1352,7 @@ span {
   font-size: 1.2em;
   max-width: 140px !important;
   max-height: 40px !important;
-  min-width: 140px;
+  min-width: 130px;
 }
 
 .btn-lg {
@@ -1360,7 +1360,7 @@ span {
   font-size: 1.3em;
   max-width: 160px !important;
   max-height: 45px !important;
-  min-width: 160px;
+  min-width: 150px;
 }
 
 .btn-sm {
@@ -1368,7 +1368,7 @@ span {
   font-size: 1.1em;
   max-width: 120px !important;
   max-height: 35px !important;
-  min-width: 120px;
+  min-width: 110px;
 }
 
 .btn-cubrir-sm {
@@ -1399,11 +1399,14 @@ span {
   background-color: #bb1818;
   color: white;
   font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .btn-rojo:hover {
   background-color: #a12323;
-  box-shadow: 0 0 3px 3px rgba(143, 0, 0, 0.5);
 }
 
 .btn-rojo:active {
@@ -1414,11 +1417,14 @@ span {
   background-color: #009c80;
   color: white;
   font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .btn-verde:hover {
   background-color: #00886f;
-  box-shadow: 0 0 3px 3px rgba(0, 179, 146, 0.5);
 }
 
 .btn-verde:active {
@@ -1429,11 +1435,14 @@ span {
   background-color: #006cff;
   color: white;
   font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .btn-azul:hover {
   background-color: #0054c9;
-  box-shadow: 0 0 3px 3px rgba(0, 93, 223, 0.5);
 }
 
 .btn-azul:active {
@@ -1441,19 +1450,39 @@ span {
 }
 
 .btn-gris {
-  background-color: #ececec;
-  color: black;
+  background-color: dimgray;
+  color: white;
   font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .btn-gris:hover {
-  background-color: #1e2029;
-  color: white;
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
+  background-color: #3f3f3f;
 }
 
 .btn-gris:active {
-  background-color: #353636;
+  background-color: #0a0a0a;
+}
+
+.btn-negro {
+  background-color: #1a1b24;
+  color: white;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+.btn-negro:hover {
+  background-color: black;
+}
+
+.btn-negro:active {
+  background-color: black;
 }
 
 /******************************************
@@ -1463,6 +1492,10 @@ span {
   border: 1px solid #bb1818;
   color: #bb1818;
   font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .btn-rojo-o:hover {
@@ -1479,12 +1512,16 @@ span {
   border: 1px solid #009c80;
   color: #009c80;
   font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .btn-verde-o:hover {
   background-color: #00886f;
   color: white;
-  box-shadow: 0 0 3px 3px rgba(0, 179, 146, 0.5);
+  box-shadow: 0 0 3px 3px rgba(0, 156, 128, 0.5);
 }
 
 .btn-verde-o:active {
@@ -1495,12 +1532,16 @@ span {
   border: 1px solid #006cff;
   color: #006cff;
   font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .btn-azul-o:hover {
   background-color: #0054c9;
   color: white;
-  box-shadow: 0 0 3px 3px rgba(0, 93, 223, 0.5);
+  box-shadow: 0 0 3px 3px rgba(0, 108, 255, 0.5);
 }
 
 .btn-azul-o:active {
@@ -1508,19 +1549,41 @@ span {
 }
 
 .btn-gris-o {
-  border: 1px solid #1e2029;
-  color: #1e2029;
+  border: 1px solid #212121;
+  color: #212121;
   font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 .btn-gris-o:hover {
-  background-color: #1e2029;
+  background-color: #3f3f3f;
   color: white;
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .btn-gris-o:active {
-  background-color: #353636;
+  background-color: #0f0f0f;
+}
+
+.btn-negro-o {
+  border: 1px solid black;
+  color: black;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+.btn-negro-o:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-negro-o:active {
+  background-color: #0f0f0f;
 }
 
 .btn-blanco-o {
@@ -1564,7 +1627,11 @@ input[type=url] {
   border: 1px solid #a3a3a3;
   padding: 0.6em;
   border-radius: 3px;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-family: "HelveticaNeue", Helvetica, sans-serif;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 input[type=text]:focus,
@@ -1603,7 +1670,7 @@ input[type=url]::placeholder {
 }
 .g-input span {
   letter-spacing: 0;
-  height: 2.1em;
+  height: 1.94em;
   font-size: 1.2em;
   padding: 0.5em 0.8em;
   color: #333333;
@@ -1661,11 +1728,9 @@ input[type=url]::placeholder {
   background-color: #ececec;
   z-index: 4;
   border-radius: 3px;
-  box-shadow: 0 0 15px 5px #212121;
-}
-.modal .modal-ventana h3 {
-  font-weight: 200;
-  margin-bottom: 20px;
+  box-shadow: 0 0 15px 5px #5e5e5e h3;
+  box-shadow-font-weight: 200;
+  box-shadow-margin-bottom: 20px;
 }
 .modal .complemento {
   position: absolute;
@@ -1674,6 +1739,130 @@ input[type=url]::placeholder {
   left: 0;
   right: 0;
   z-index: 2;
+}
+
+.modal1 {
+  /* Posicionamiento del fondo */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Fondo con poca opacidad*/
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Por encima de los elementos*/
+  z-index: 1;
+  /* Display para ubicar elementos*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.modal1 .modal-ventana {
+  padding: 1.5em;
+  background-color: #ececec;
+  z-index: 4;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 5px #5e5e5e;
+  min-width: 350px;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.modal1 .modal-ventana .contenido {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  overflow: auto;
+}
+.modal1 .modal-ventana .contenido .cabecera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding: 0.8em;
+}
+.modal1 .modal-ventana .contenido .cabecera h3 {
+  font-size: 1.1em;
+  width: 90%;
+  font-weight: 600;
+}
+.modal1 .modal-ventana .contenido .cabecera span {
+  font-size: 1em;
+  width: 10%;
+  text-align: right;
+  font-weight: 600;
+  cursor: pointer;
+}
+.modal1 .modal-ventana .contenido .cuerpo {
+  border-bottom: 1px solid lightgrey;
+  padding: 0.8em;
+  overflow: auto;
+  border-bottom: 1px solid lightgrey;
+}
+.modal1 .modal-ventana .contenido .cuerpo p {
+  font-size: 1em;
+  line-height: 23px;
+}
+.modal1 .modal-ventana .contenido .controles {
+  display: flex;
+  padding: 0.8em;
+  justify-content: right;
+}
+
+.modal-registro {
+  /* Posicionamiento del fondo */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Fondo con poca opacidad*/
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Por encima de los elementos*/
+  z-index: 1;
+  /* Display para ubicar elementos*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.modal-registro .modal-ventana {
+  padding: 1.5em;
+  background-color: #ececec;
+  z-index: 4;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 5px #5e5e5e;
+  min-width: 350px;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.modal-registro .modal-ventana .contenido {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  overflow: auto;
+}
+.modal-registro .modal-ventana .contenido .cabecera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding: 0.8em;
+}
+.modal-registro .modal-ventana .contenido .cabecera h3 {
+  font-size: 1.1em;
+  width: 90%;
+  font-weight: 600;
+}
+.modal-registro .modal-ventana .contenido .registro {
+  padding: 1em;
+}
+.modal-registro .modal-ventana .contenido .registro .modal-control {
+  padding: 0.5em 1em;
+}
+.modal-registro .modal-ventana .contenido .registro .modal-controles {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid lightgrey;
 }
 
 /***

@@ -34,7 +34,7 @@
     font-size: 1.2em;
     max-width: 140px !important;
     max-height: 40px !important;
-    min-width: 140px;
+    min-width: 130px;
 }
 
 .btn-lg {
@@ -42,7 +42,7 @@
     font-size: 1.3em;
     max-width: 160px !important;
     max-height: 45px !important;
-    min-width: 160px;
+    min-width: 150px;
 }
 
 .btn-sm {
@@ -50,7 +50,7 @@
     font-size: 1.1em;
     max-width: 120px !important;
     max-height: 35px !important;
-    min-width: 120px;
+    min-width: 110px;
 }
 
 .btn-cubrir-sm {
@@ -84,11 +84,14 @@
     background-color: $btn-rojo;
     color: $blanco;
     font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .btn-rojo:hover {
     background-color: $btn-rojo-hover;
-    box-shadow: 0 0 3px 3px $btn-rojo-sombra;
 }
 
 .btn-rojo:active{
@@ -100,11 +103,14 @@
     background-color: $btn-verde;
     color: $blanco;
     font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .btn-verde:hover {
     background-color: $btn-verde-hover;
-    box-shadow: 0 0 3px 3px $btn-verde-sombra;
 }
 
 .btn-verde:active{
@@ -116,11 +122,14 @@
     background-color: $btn-azul;
     color: $blanco;
     font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .btn-azul:hover {
     background-color: $btn-azul-hover;
-    box-shadow: 0 0 3px 3px $btn-azul-sombra;
 }
 
 .btn-azul:active{
@@ -130,19 +139,41 @@
 // Botones grises
 .btn-gris {
     background-color: $btn-gris;
-    color: $negro;
+    color: $blanco;
     font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .btn-gris:hover {
     background-color: $btn-gris-hover;
-    color: $blanco;
-    box-shadow: 0 0 3px 3px $btn-gris-sombra;
 }
 
 .btn-gris:active{
     background-color: $btn-gris-activo;
 }
+
+
+.btn-negro {
+    background-color: $btn-negro;
+    color: $blanco;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.btn-negro:hover {
+    background-color: $btn-negro-hover;
+}
+
+.btn-negro:active{
+    background-color: $btn-negro-activo;
+}
+
 
 
 /******************************************
@@ -154,6 +185,10 @@
     border: 1px solid $btn-rojo;
     color: $btn-rojo;
     font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .btn-rojo-o:hover {
@@ -172,6 +207,10 @@
     border:1px solid $btn-verde;
     color: $btn-verde;
     font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .btn-verde-o:hover {
@@ -191,6 +230,10 @@
     border:1px solid $btn-azul;
     color: $btn-azul;
     font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .btn-azul-o:hover {
@@ -206,19 +249,42 @@
 
 // Botones grises
 .btn-gris-o {
-    border:1px solid $btn-gris-hover;
-    color: $btn-gris-hover;
+    border:1px solid #212121;
+    color: #212121;
     font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
 .btn-gris-o:hover {
     background-color: $btn-gris-hover;
     color: $blanco;
-    box-shadow: 0 0 3px 3px $btn-gris-sombra;
 }
 
 .btn-gris-o:active{
-    background-color: $btn-gris-activo;
+    background-color: rgb(15, 15, 15);
+}
+
+
+.btn-negro-o {
+    border:1px solid black;
+    color: black;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.btn-negro-o:hover {
+    background-color: black;
+    color: $blanco;
+}
+
+.btn-negro-o:active{
+    background-color: rgb(15, 15, 15);
 }
 
 

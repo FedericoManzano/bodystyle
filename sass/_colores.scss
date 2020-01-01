@@ -43,19 +43,26 @@ $btn-rojo-sombra: rgba(143, 0, 0, 0.5);
 $btn-verde: rgb(0, 156, 128);
 $btn-verde-hover: rgb(0, 136, 111);
 $btn-verde-activo: rgb(0, 156, 128);
-$btn-verde-sombra:rgba(0, 179, 146, 0.5); 
+$btn-verde-sombra:rgba(0, 156, 128, 0.5); 
 
 // Boton Azul
 $btn-azul: rgb(0, 108, 255 );
 $btn-azul-hover: rgb(0, 84, 201);
 $btn-azul-activo: rgb(0, 108, 255 );
-$btn-azul-sombra:rgba(0, 93, 223, 0.5); 
+$btn-azul-sombra:rgb(0, 108, 255 , 0.5); 
 
-// Boton Azul
-$btn-gris: rgb(236, 236, 236);
-$btn-gris-hover: rgb(30, 32, 41);
-$btn-gris-activo: rgb(53, 54, 54);
-$btn-gris-sombra:rgba(0, 0, 0, 0.5); 
+// Boton Gris
+$btn-gris: rgb(105, 105, 105);
+$btn-gris-hover: rgb(63, 63, 63);
+$btn-gris-activo: rgb(10, 10, 10);
+$btn-gris-sombra:rgba(233, 233, 233, 0.5); 
+
+
+$btn-negro: rgb(26, 27, 36);
+$btn-negro-hover: rgb(0, 0, 0);
+$btn-negro-activo: rgb(0, 0, 0);
+$btn-negro-sombra:rgba(65, 65, 65, 0.5); 
+
 
 /* Fondos */
 // Escalas de rojos

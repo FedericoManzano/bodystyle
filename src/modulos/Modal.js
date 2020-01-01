@@ -15,9 +15,16 @@
         $(".modal .modal-ventana").css("border-radius", radio + "px")
         $(".modal").append("<div class='complemento'></div>")
         $(".modal").hide()
+
+
+        $(".modal1").css("opacity", 1)
+        $(".modal1").hide()
+
+        $(".modal-registro").css("opacity", 1)
+        $(".modal-registro").hide()
     }
 
-    var aparecerModal1 = ()=> {
+    var aparecerModal = ()=> {
         $(".activar-modal").click(function(){
             $($(this).data("target")).fadeIn()
         })
@@ -29,11 +36,25 @@
         })
     }
 
+    var desaparecerModal1 = ()=> {
+        $(".modal1 .modal-ventana .contenido .cabecera span").click(function(){
+            $(".modal1").fadeOut(200)
+        })
+    }
+
+    var desaparecerModalRegistro = ()=> {
+        $("#salir-modal-registro").click(function(){
+            $(".modal-registro").fadeOut(200)
+        })
+    }
+
     var Modal = {
         iniciar: function(conf){
             estadoInicial(conf)
-            aparecerModal1()
+            aparecerModal()
             desaparecerModal()
+            desaparecerModal1()
+            desaparecerModalRegistro()
         }
     }
 

@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <a  class="btn btn-rojo activar-modal" data-target="#modal1">Activar</a>
-    <a  class="btn btn-rojo activar-modal" data-target="#modal2">Activar2</a>
-
+    <a class="btn btn-rojo activar-modal" data-target="#modal1">Activar</a>
+    <a class="btn btn-rojo activar-modal" data-target="#modal2">Activar2</a>
+    <a class="btn btn-rojo activar-modal" data-target="#modal-registro">Activar3</a>
 
     <div id="modal1" class="modal">
         <div class="modal-ventana">
@@ -30,20 +30,60 @@
         </div>
     </div>
 
-    <div id="modal2" class="modal">
+    <div id="modal2" class="modal1">
         <div class="modal-ventana">
-            <h3 class="f-grosor-2">Ventana Modal Ejemplo</h3>
-            <div class="g-input g-input-caja-izquierda">
-                <span>@</span>
-                <input type="text" placeholder="nombre@mail.com">
+            <div class="contenido">
+                <div class="cabecera">
+                    <h3>Titulo del Modal</h3>
+                    <span>X</span>
+                </div>
+                <div class="cuerpo">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus esse at eos perspiciatis
+                        repellendus, laborum blanditiis amet voluptate quidem accusantium dolore, atque impedit earum,
+                        in corporis laboriosam consequuntur placeat. Fugit.</p>
+                </div>
+                <div class="controles">
+                    <a class="btn-sm btn-verde" href="#">Enviar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-registro" class="modal-registro">
+        <div class="modal-ventana">
+            <div class="contenido">
+                <div class="cabecera">
+                    <h3>Registro Usuario</h3>
+                </div>
+                <div class="registro">
+                    <div class="modal-control">
+                        <input type="text" placeholder="Usuario">
+                    </div>
+                    <div class="modal-control">
+                        <div class="g-input g-input-caja-izquierda">
+                            <span>@</span>
+                            <input type="email" placeholder="Correo">
+                        </div>
+                    </div>
+                    <div class="modal-control">
+                        <input type="password" placeholder="Clave">
+                    </div>
+                    <div class="modal-control">
+                        <input type="password" placeholder="Repetir Clave">
+                    </div>
+                    <div class="modal-botones a-items-cent-just">
+                        <a href="#" class="btn btn-azul md-1">Enviar</a>
+                        <a id="salir-modal-registro" href="#" class="btn btn-rojo ">Salir</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../js/bodystyle.js"></script>
-    <script> 
-        $(document).ready(function(){
+    <script>
+        $(document).ready(function () {
             var conf = {
                 fondo: "fd-gris-az",
                 texto: "c-blanco",
@@ -53,7 +93,7 @@
             }
             BS.ModalInit(conf)
         })
-       
+
     </script>
 </body>
 
