@@ -1728,9 +1728,11 @@ input[type=url]::placeholder {
   background-color: #ececec;
   z-index: 4;
   border-radius: 3px;
-  box-shadow: 0 0 15px 5px #5e5e5e h3;
-  box-shadow-font-weight: 200;
-  box-shadow-margin-bottom: 20px;
+  box-shadow: 0 0 15px 5px #5e5e5e;
+}
+.modal .modal-ventana h3 {
+  font-weight: 200;
+  margin-bottom: 20px;
 }
 .modal .complemento {
   position: absolute;
@@ -1832,7 +1834,7 @@ input[type=url]::placeholder {
   z-index: 4;
   border-radius: 3px;
   box-shadow: 0 0 15px 5px #5e5e5e;
-  min-width: 350px;
+  min-width: 300px;
   max-width: 400px;
   border-radius: 10px;
   overflow: hidden;
@@ -1860,9 +1862,9 @@ input[type=url]::placeholder {
 .modal-registro .modal-ventana .contenido .registro .modal-control {
   padding: 0.5em 1em;
 }
-.modal-registro .modal-ventana .contenido .registro .modal-controles {
-  padding: 0.5em 1em;
-  border-bottom: 1px solid lightgrey;
+.modal-registro .modal-ventana .contenido .modal-botones {
+  padding: 1em 1em;
+  border-top: 1px solid lightgrey;
 }
 
 /***
