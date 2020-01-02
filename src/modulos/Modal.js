@@ -43,8 +43,8 @@
     }
 
     var desaparecerModalRegistro = ()=> {
-        $("#salir-modal-registro").click(function(){
-            $(".modal-registro").fadeOut(200)
+        $(".desactivar-modal").click(function(){
+            $($(this).data("target")).fadeOut(200)
         })
     }
 

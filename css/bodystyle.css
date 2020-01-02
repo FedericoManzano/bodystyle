@@ -1677,6 +1677,7 @@ input[type=url]::placeholder {
   display: inline-block;
   font-size: 17px;
   padding: 0.5em;
+  padding-right: 17px;
   padding-left: 51px;
   position: relative;
   background-color: rgba(255, 0, 0, 0.404);
@@ -1691,7 +1692,7 @@ input[type=url]::placeholder {
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   user-select: none;
-  width: 100%;
+  max-width: 250px;
 }
 
 .cb-azul,

@@ -13,7 +13,7 @@
     <a class="btn btn-rojo activar-modal" data-target="#modal1">Activar</a>
     <a class="btn btn-rojo activar-modal" data-target="#modal2">Activar2</a>
     <a class="btn btn-rojo activar-modal" data-target="#modal-registro">Activar3</a>
-
+    <a class="btn btn-rojo activar-modal" data-target="#modal-login">Activar3</a>
     <div id="modal1" class="modal">
         <div class="modal-ventana">
             <h3 class="f-grosor-2">Ventana Modal Ejemplo</h3>
@@ -73,12 +73,34 @@
                     </div>
                     <div class="mi-1 mar-1 pd-1 pab-1  check-radio-grupo">
                         <input type="checkbox" id="aceptarCheck">
-                        <label class="cb-verde" for="aceptarCheck">Acepto los terminos y condiciones de uso</label>
+                        <label class="cb-verde" for="aceptarCheck">Acepto los terminos</label>
                     </div>
                 </div>
                 <div class="modal-botones a-items-cent-just">
                     <a href="#" class="btn btn-azul md-1">Enviar</a>
                     <a id="salir-modal-registro" href="#" class="btn btn-rojo ">Salir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-login" class="modal-registro">
+        <div class="modal-ventana">
+            <div class="contenido">
+                <div class="cabecera">
+                    <h3>Registro Usuario</h3>
+                </div>
+                <div class="registro">
+                    <div class="modal-control">
+                        <input type="text" placeholder="Usuario">
+                    </div>
+                    <div class="modal-control">
+                        <input type="password" placeholder="Clave">
+                    </div>
+                </div>
+                <div class="modal-botones a-items-cent-just">
+                    <a href="#" class="btn btn-azul md-1">Enviar</a>
+                    <a id="salir-modal-registro" href="#" class="btn btn-rojo desactivar-modal" data-target="modal-login">Salir</a>
                 </div>
             </div>
         </div>
