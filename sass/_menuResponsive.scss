@@ -32,8 +32,8 @@
 
         .menu-listado {
             grid-column-start: 12;
-            grid-column-end: 12;
-            ul{
+            grid-column-end: 12 ;
+            .lista{
                 display: flex;
                 align-items: center;
                 
@@ -55,7 +55,7 @@
             }
 
             @media(max-width: 1024px){
-                ul{
+                .lista{
                     display: none;
                 }
                  label {

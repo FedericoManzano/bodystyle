@@ -6,6 +6,7 @@
         ancho: 350,
         radio: 4,
         justificacion: "a-centrado"
+        
     })=> {
         $(".modal").css("opacity", 1)
         $(".modal .modal-ventana").addClass(fondo)

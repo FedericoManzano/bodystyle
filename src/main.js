@@ -4,11 +4,12 @@ import Sidebar from "./modulos/Sidebar"
 import Modal from "./modulos/Modal"
 import Boton from "./modulos/Boton"
 import Waves from  "./modulos/Waves"
-
+import DropDown from "./modulos/Dropdown"
 
 (function(){
     Boton.iniciar()
     Waves.iniciar()
+    DropDown.iniciar()
     var MenuSuperior = ()=> MenuResp.iniciar()
 
     var SidebarInit = () => Sidebar.inicializar()
