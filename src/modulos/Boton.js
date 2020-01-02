@@ -1,6 +1,26 @@
 
 
 (function () {
+    const efecto = () => {
+        $(".efecto").click(function(e){
+            var boton = $(this)
+            var elemento = $("<span class='efecto-waves'></span>")
+            var efectoSize = boton.width() * Math.PI;
+            elemento.css({
+                width: 10,
+                height: 10,
+                left: e.offsetX,
+                top: e.offsetY
+            }).appendTo(boton).animate({
+                width: efectoSize,
+                height: efectoSize,
+                opacity: 0
+            }, 500, function(){
+                $(this).remove()
+            })
+        })
+    }
+
     // Boton Rojo
     const btnRojoSombra = "0 0 0px 3px rgba(187, 24, 24, 0.5)";
     
@@ -80,6 +100,7 @@
     const Boton = {
         iniciar: function () {
             seleccionado()
+            efecto()
         }
     }
 
