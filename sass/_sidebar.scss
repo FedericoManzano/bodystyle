@@ -12,7 +12,10 @@
         left: 0;
         padding: 0.8em;
         color: white;
-        transition: 0.5s all;
+        transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
         background-color: $fd-azul-ve;
         label[for="toggle"] {
             width: 100%;
@@ -60,6 +63,10 @@
                         display: block;
                         color: white;
                         padding: 0.7em 0.5em;
+                        transition: all 0.3s ease;
+                        -o-transition: all 0.3s ease;
+                        -moz-transition: all 0.3s ease;
+                        -webkit-transition: all 0.3s ease;
                     }
                     a:hover{
                         background-color: rgba(0, 0, 0, 0.466);

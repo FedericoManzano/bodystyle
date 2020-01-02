@@ -1,6 +1,7 @@
 
 
 (function () {
+    // Boton Rojo
     var btnRojoSombra = "0 0 0px 3px rgba(187, 24, 24, 0.5)";
     
     // Boton Verde

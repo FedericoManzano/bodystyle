@@ -36,13 +36,7 @@
         })
     }
 
-    var desaparecerModal1 = ()=> {
-        $(".modal1 .modal-ventana .contenido .cabecera span").click(function(){
-            $(".modal1").fadeOut(200)
-        })
-    }
-
-    var desaparecerModalRegistro = ()=> {
+    var desaparecerModal_x = ()=> {
         $(".desactivar-modal").click(function(){
             $($(this).data("target")).fadeOut(200)
         })
@@ -53,8 +47,7 @@
             estadoInicial(conf)
             aparecerModal()
             desaparecerModal()
-            desaparecerModal1()
-            desaparecerModalRegistro()
+            desaparecerModal_x()
         }
     }
 

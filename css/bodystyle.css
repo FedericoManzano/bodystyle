@@ -2203,7 +2203,10 @@ input[type=url]::placeholder {
   left: 0;
   padding: 0.8em;
   color: white;
-  transition: 0.5s all;
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   background-color: #06263f;
 }
 .sidebar .sidebar-cabecera label[for=toggle] {
@@ -2250,6 +2253,10 @@ input[type=url]::placeholder {
   display: block;
   color: white;
   padding: 0.7em 0.5em;
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 .sidebar .sidebar-menu .item ul li a:hover {
   background-color: rgba(0, 0, 0, 0.466);
