@@ -27,7 +27,7 @@ input[type='email']:focus,
 input[type='number']:focus, 
 input[type='password']:focus,
 input[type='url']:focus {
-    box-shadow: 0 0 3px 3px rgba(135, 217, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(135, 217, 255, 0.3);
     border: 1px solid rgba(135, 217, 255);
     z-index: 2;
 }
