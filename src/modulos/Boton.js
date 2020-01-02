@@ -2,21 +2,21 @@
 
 (function () {
     // Boton Rojo
-    var btnRojoSombra = "0 0 0px 3px rgba(187, 24, 24, 0.5)";
+    const btnRojoSombra = "0 0 0px 3px rgba(187, 24, 24, 0.5)";
     
     // Boton Verde
-    var btnVerdeSombra = "0 0 0 3px rgba(0, 156, 128, 0.5)"; 
+    const btnVerdeSombra = "0 0 0 3px rgba(0, 156, 128, 0.5)"; 
     
     // Boton Azul
-    var btnAzulSombra = "0 0 0 3px rgba(0, 108, 255 , 0.5)"; 
+    const btnAzulSombra = "0 0 0 3px rgba(0, 108, 255 , 0.5)"; 
     
     // Boton Gris
-    var btnGrisSombra = "0 0 0 3px rgba(105, 105, 105, 0.5)"; 
+    const btnGrisSombra = "0 0 0 3px rgba(105, 105, 105, 0.5)"; 
     
     // Boton Negro 
-    var btnNegroSombra = "0 0 0 3px rgba(65, 65, 65, 0.5)"; 
+    const btnNegroSombra = "0 0 0 3px rgba(65, 65, 65, 0.5)"; 
 
-    var seleccionado = () => {
+    const seleccionado = () => {
 
         $(".btn-rojo").click(function () {
             deselccionado()
@@ -68,7 +68,7 @@
         })
     }
 
-    var deselccionado = () => {
+    const deselccionado = () => {
         $(".btn").css("box-shadow", "none")
         $(".btn-sm").css("box-shadow", "none")
         $(".btn-lg").css("box-shadow", "none")
@@ -77,7 +77,7 @@
         
     }
 
-    var Boton = {
+    const Boton = {
         iniciar: function () {
             seleccionado()
         }

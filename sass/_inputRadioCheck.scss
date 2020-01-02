@@ -214,6 +214,6 @@
 
 .check-radio-grupo input[type="checkbox"]:checked + .cb-blanco,
 .check-radio-grupo input[type="radio"]:checked + .rd-blanco {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
 }

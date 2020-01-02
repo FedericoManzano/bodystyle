@@ -1605,6 +1605,7 @@ span {
   background: #ececec !important;
   color: gray !important;
   cursor: default !important;
+  box-shadow: none !important;
 }
 
 .disabilitado:hover {
@@ -1881,8 +1882,9 @@ input[type=url]::placeholder {
   justify-content: center;
 }
 .g-input span {
+  display: inline-block;
   letter-spacing: 0;
-  height: 1.94em;
+  height: 1.93em;
   font-size: 1.2em;
   padding: 0.5em 0.8em;
   color: #333333;
