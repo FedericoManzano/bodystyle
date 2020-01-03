@@ -2175,7 +2175,7 @@ input[type=url]::placeholder {
 .tarjeta .tarjeta-horizontal .cuerpo {
   width: 60%;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 .tarjeta .tarjeta-horizontal .cuerpo h3 {
   font-weight: 500;
@@ -2185,14 +2185,20 @@ input[type=url]::placeholder {
 .tarjeta .tarjeta-horizontal .cuerpo p {
   font-size: 1em;
 }
-.tarjeta .tarjeta-horizontal:hover .cuerpo {
-  background-color: #045a47;
+.tarjeta .tarjeta-simple {
+  width: 100%;
+  padding: 20px;
+  background-color: #1e2029;
   color: white;
-  border-bottom: 1px solid #003b38;
-  border-top: 1px solid #003b38;
 }
-.tarjeta .tarjeta-horizontal:hover {
-  background-color: #007a60;
+.tarjeta .tarjeta-simple h3 {
+  font-weight: 500;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+.tarjeta .tarjeta-simple p {
+  font-size: 1em;
+  margin-bottom: 20px;
 }
 
 @keyframes aumentar {
@@ -2487,6 +2493,7 @@ input[type=url]::placeholder {
   user-select: none;
 }
 .sidebar .sidebar-cabecera {
+  z-index: 10000;
   width: 100%;
   position: fixed;
   top: 0;
@@ -2504,6 +2511,7 @@ input[type=url]::placeholder {
   cursor: pointer;
 }
 .sidebar .sidebar-menu {
+  z-index: 10000;
   width: 240px;
   position: fixed;
   left: -240px;

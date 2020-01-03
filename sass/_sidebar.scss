@@ -5,7 +5,9 @@
 
 .sidebar {
     user-select: none;
+    
     .sidebar-cabecera {
+        z-index: 10000;
         width: 100%;
         position: fixed;
         top: 0;
@@ -24,6 +26,7 @@
     }
 
     .sidebar-menu {
+        z-index: 10000;
         width: 240px;
         position: fixed;
         left: -240px;

@@ -142,7 +142,7 @@
         .cuerpo {
             width: 60%;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             h3 {
                 font-weight: 500;
                 font-size: 23px;
@@ -153,15 +153,22 @@
             }
         }
     }
-    .tarjeta-horizontal:hover .cuerpo {
-        background-color: rgb(4, 90, 71);
-        color: white;
-        border-bottom: 1px solid rgb(0, 59, 56);
-        border-top: 1px solid rgb(0, 59, 56);
-    }
+    
 
-    .tarjeta-horizontal:hover {
-        background-color: rgb(0, 122, 96);
+    .tarjeta-simple {
+        width: 100%;
+        padding: 20px;
+        background-color: $fd-gris-az;
+        color: white;
+        h3 {
+            font-weight: 500;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
     }
 }
 
