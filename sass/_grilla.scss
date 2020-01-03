@@ -9,7 +9,7 @@
 
 .fila {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
     grid-template-columns: repeat(12, 1fr) !important;   
 
     @for $i from 1 through 12 {

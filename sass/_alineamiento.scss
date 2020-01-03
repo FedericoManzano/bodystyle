@@ -7,8 +7,8 @@
     Clase contenedor para centrar el contenido dentro de la pagina
 */
 .contenedor {
-    width: 70% !important;
-    margin: auto !important;
+    width: 70% ;
+    margin: auto ;
 }
 /***
     Utilizando flexbox para centrar el contenido
@@ -114,4 +114,33 @@ $m: 1;
         margin-bottom: #{$m}em !important;
     }
     $m: $m + .5
+}
+
+
+@media (max-width: 1024px){
+    .contenedor {
+        width: 75% ;
+        margin: auto;
+    }
+}
+
+@media (max-width: 800px){
+    .contenedor {
+        width: 80% ;
+        margin: auto ;
+    }
+}
+
+@media (max-width: 600px){
+    .contenedor {
+        width: 90% ;
+        margin: auto ;
+    }
+}
+
+@media (max-width: 400px){
+    .contenedor {
+        width: 90% ;
+        margin: auto ;
+    }
 }

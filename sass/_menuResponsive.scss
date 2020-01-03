@@ -12,6 +12,7 @@
     user-select: none;
     position: fixed;
     background-color: $fd-azul-ve;
+    z-index: 6;
     .menu-contenedor {
         width: 70%;
         height: 100%;
@@ -85,7 +86,7 @@
     bottom: 0;
     right: 0;
     left: 0; 
-
+   
     /* Por defecto no es visible */
     display: none;
     
@@ -98,6 +99,7 @@
         transition: .5s all;
         padding-top: 3em;
         background-color: $fd-azul-ve;
+        overflow: auto;
         li{
             a{
                 display: block;

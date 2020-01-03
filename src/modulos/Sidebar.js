@@ -8,7 +8,7 @@
             elementos[i] = false
         }
 
-        $(".f-abajo").hide()
+        $(".f-abajo-s").hide()
     }
 
     var controlSubmenu = ()=>{
@@ -16,13 +16,13 @@
             var tocado = $(this).index()
             if(elementos[tocado - 1] === false || elementos[tocado - 1] === undefined){
                 $("#" + (tocado)).fadeIn(150)
-                $(".sidebar-menu .item:nth-child("+ (tocado + 1) +") .f-arriba").hide()
-                $(".sidebar-menu  .item:nth-child("+ (tocado + 1) +") .f-abajo").show()
+                $(".sidebar-menu .item:nth-child("+ (tocado + 1) +") .f-arriba-s").hide()
+                $(".sidebar-menu  .item:nth-child("+ (tocado + 1) +") .f-abajo-s").show()
                 elementos[tocado - 1] = true
             }else{
                 $("#" + (tocado)).fadeOut(150)
-                $(".sidebar-menu  .item:nth-child("+ (tocado + 1) +") .f-arriba").show()
-                $(".sidebar-menu  .item:nth-child("+ (tocado + 1) +") .f-abajo").hide()
+                $(".sidebar-menu  .item:nth-child("+ (tocado + 1) +") .f-arriba-s").show()
+                $(".sidebar-menu  .item:nth-child("+ (tocado + 1) +") .f-abajo-s").hide()
                 elementos[tocado - 1] = false
             }
         })
