@@ -9,7 +9,7 @@ import DropDown from "./modulos/Dropdown"
 (function(){
     Boton.iniciar()
     Waves.iniciar()
-    DropDown.iniciar()
+    
     var MenuSuperior = ()=> MenuResp.iniciar()
 
     var SidebarInit = () => Sidebar.inicializar()
@@ -22,13 +22,19 @@ import DropDown from "./modulos/Dropdown"
         MenuSuperior()
         SidebarInit()
         ModalInit()
+        DropDownInit({})
+    }
+
+    var DropDownInit = (config) => {
+        DropDown.iniciar(config)
     }
 
     var BS = {
         MenuSuperior: () => MenuSuperior(),
         SidebarInit: () => SidebarInit(),
-        AutoInit: () => AutoInit(),
-        ModalInit: (config) => ModalInit(config)
+        ModalInit: (config) => ModalInit(config),
+        DropDownInit: (config) => DropDownInit(config),
+        AutoInit: () => AutoInit()
     }
 
     window.BS = BS

@@ -2,7 +2,7 @@
 .dropdown-toggle {
     position: relative !important; 
     display: block !important;
-    padding-right: 25px !important;
+    padding-right: 40px !important;
     min-width: 120px !important;
 
 }
@@ -14,26 +14,10 @@
     background-color: rgb(235, 235, 235) !important;
     border-radius: 2px !important;
     border: 1px solid black !important; 
-    bottom: -115px !important;
+    bottom: calc(width) !important;
     text-align: left !important;
     z-index: 10 !important;
     display: none; 
-    
-    
-}
-
-.dropdown-toggle::before {
-    content: "";
-    position: absolute;
-    height: 0;
-    width: 0;
-    border-top: 5px solid white;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    right: 12px;
-    top: calc(55% - 4px);
-    
-    
 }
 
 .dropdown ul {
@@ -56,4 +40,27 @@
 
 .dropdown ul li a:hover{
     background-color: rgba(0, 0, 0, 0.411);
+}
+
+
+.f-abajo {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 5px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    right: 20px;
+    top: calc(50% - 5px);
+}
+
+.f-derecha {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid white;
+    border-bottom: 5px solid transparent;
+    right: 20px;
+    top: calc(49% - 5px);
 }
