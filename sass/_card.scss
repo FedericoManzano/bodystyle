@@ -50,23 +50,6 @@
         }
     }
 
-    .tarjeta-img-r:hover {
-        background-color: rgb(14, 121, 121);
-    }
-
-    .tarjeta-img-r:hover .cuerpo {
-        background-color: rgb(10, 80, 80);
-        color: white;
-    }
-
-    .tarjeta-img-r:hover .tarjeta-imagen .imagen-contenedor img {
-        animation: aumentar 5s infinite linear;
-    }
-
-    .tarjeta-img-r:hover .tarjeta-imagen .imagen-contenedor {
-        border: 2px solid black;
-    }
-
     .tarjeta-img-t {
         width: 100%;
         .tarjeta-imagen {
@@ -172,11 +155,3 @@
     }
 }
 
-
-@keyframes aumentar {
-    from {
-        transform: scale(1);
-    }to {
-        transform: scale(1.5);
-    }
-}

@@ -11,39 +11,107 @@
 
 <body>
 
-
-
-    <div class="contenedor mar-5">
-        <div class="fila">
-            <div class="g-input g-input-caja-izquierda cs-12 cm-6">
-                <span>fede</span>
-                <input type="text">
+    <div class="menu-superior-busqueda">
+            <div class="menu-contenedor">
+                    <div class="g-input g-input-buscar">
+                        <input type="text">
+                        <a href="#" class="btn btn-gris fd-rojo c-blanco waves">Buscar</a>
+                    </div>
             </div>
-            <div class="g-input g-input-caja-izquierda cs-12 cm-6">
-                <span>@</span>
-                <input type="text">
-            </div>
-            <div class="g-input g-input-caja-izquierda cs-12 cm-6">
-                <span>@</span>
-                <input type="text">
-            </div>
-            <div class="g-input g-input-caja-derecha cs-12 cm-6">
-                <input type="text">
-                <span>&</span>
-            </div>
-            <div class="g-input g-input-caja-izquierda cs-12 cm-6">
-                <span>http://</span>
-                <input type="url">
-            </div>
-
-            <div class="g-input g-input-caja-derecha cs-12 cm-6">
-                <input type="text">
-                <span>Envio</span>
-            </div>
-        </div>
     </div>
 
+    <div class="menu-superior-busqueda fd-gris-az-o mar-5">
+            <div class="menu-contenedor">
+                    <div class="g-input g-input-buscar">
+                        <input type="text">
+                        <a href="#" class="btn btn-gris">Buscar</a>
+                    </div>
+            </div>
+    </div>
 
+    <div class="menu-superior-busqueda fd-gris-az-o mar-5">
+            <div class="menu-contenedor">
+                <div class="g-input g-input-buscar2">
+                    <input type="text" placeholder="Search...">
+                    <a href="#" class="btn btn-gris">Buscar</a>
+                </div>
+            </div>
+    </div>
+
+    <div class="menu-superior-busqueda fd-gris-az-o mar-5">
+            <div class="menu-contenedor">
+                <div class="g-input1 g-input-buscar3">
+                    <input type="text" placeholder="Search...">
+                    <p href="#" class="dropdown-toggle" data-target="#busqueda"></p>
+                    <a href="#" class="btn btn-gris">Buscar</a>
+                </div>
+            </div>
+    </div>
+
+    <div class="menu-superior-busqueda fd-rojo mar-12">
+            <div class="menu-contenedor">
+                    <div class="g-input g-input-buscar">
+                        <input type="text">
+                        <a href="#" class="btn btn-gris">Buscar</a>
+                    </div>
+            </div>
+    </div>
+
+    <div id="busqueda" class="dropdown">
+        <ul>
+            <li><a href="">Celulares</a></li>
+            <li><a href="">Tablets</a></li>
+            <li><a href="">Discos</a></li>
+            <li><a href="">Muebles</a></li>
+        </ul>
+    </div>
+  
+
+<!--
+    <div class="contenedor mar-5">
+            <div class="fila">
+                <div class="g-input g-input-caja-izquierda cs-12 cm-6">
+                    <span>fede</span>
+                    <input type="text">
+                </div>
+                <div class="g-input g-input-caja-izquierda cs-12 cm-6">
+                    <span>@</span>
+                    <input type="text">
+                </div>
+                <div class="g-input g-input-caja-izquierda cs-12 cm-6">
+                    <span>@</span>
+                    <input type="text">
+                </div>
+                <div class="g-input g-input-caja-derecha cs-12 cm-6">
+                    <input type="text">
+                    <span>&</span>
+                </div>
+                <div class="g-input g-input-caja-izquierda cs-12 cm-6">
+                    <span>http://</span>
+                    <input type="url">
+                </div>
+    
+                <div class="g-input g-input-caja-derecha cs-12 cm-6">
+                    <input type="text">
+                    <span>Envio</span>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="contenedor mar-5">
+            <div class="g-input g-input-buscar">
+                <input type="text">
+                <a href="#" class="btn btn-gris">Buscar</a>
+            </div>
+        </div>
+
+    -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/bodystyle.js"></script>
+    <script>
+        BS.DropDownInit({color: "#000"})
+    </script>
 </body>
 
 </html>
