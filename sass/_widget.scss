@@ -1,0 +1,104 @@
+.widget-sub {
+
+    display: flex;
+    width: 200px;
+    max-width: 200px;
+    height: 50px;
+    user-select: none;
+
+
+    input[type="text"] {
+        min-width: 100px;
+        height: 30px;
+        box-shadow: none;
+        border-radius: 3px 0 0 3px ;
+        color: grey;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    input[type="text"]:focus {
+        border: 1px solid grey;
+    }
+
+    input[type="text"]:read-only {
+        cursor: pointer;
+    }
+
+    
+    .btn-sm,
+    .btn,
+    .btn-lg,
+    .btn-cubrir,
+    .btn-cubrir-sm,
+    .btn-cubrir-lg{
+        border-radius: 0 0 0 0;
+        box-shadow: none !important;
+        height: 30px;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+
+}
+
+.widget-parrafo {
+    display: flex;
+    width: 250px;
+    max-width: 250px;
+    height: 90px;
+    user-select: none;
+    padding: 5px;
+    background-color: rgb(110, 135, 143);
+    border-radius: 3px;
+    cursor: pointer;
+    .contenedor-img {
+        padding: 1px;
+        overflow: hidden;
+        background-color: rgb(209, 209, 209);
+        
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        font-size: 12px;
+        color: rgb(22, 22, 22);
+    }
+}
+
+
+.widget-alerta {
+    padding: 5px;
+    border: 1px solid grey;
+    background-color: rgb(235, 235, 235);
+    color: rgb(34, 34, 34);
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    p {
+        color: #212121;
+        width: 90%;
+    }
+    .box {
+        background-color: rgb(4, 170, 142);
+        color: white;
+        height: 20px;
+        padding: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        min-width: 20px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
