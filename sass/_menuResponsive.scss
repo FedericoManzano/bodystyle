@@ -12,7 +12,7 @@
     user-select: none;
     position: fixed;
     background-color: $fd-azul-ve;
-    z-index: 6;
+    z-index: 100000;
 
 
 
@@ -84,7 +84,7 @@
     max-height: 3.5em;
     user-select: none;
     background-color: $fd-azul-ve;
-    z-index: 6;
+    z-index: 100000;
 
     .menu-contenedor {
         width: 70%;
@@ -125,7 +125,7 @@
    
     /* Por defecto no es visible */
     display: none;
-    
+    z-index: 100;
     .menu-listado-lateral{
         width: 240px;
         position: fixed;
@@ -136,6 +136,7 @@
         padding-top: 3em;
         background-color: $fd-azul-ve;
         overflow: auto;
+        
         li{
             a{
                 display: block;
