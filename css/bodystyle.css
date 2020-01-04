@@ -2655,7 +2655,7 @@ input[type=search]::placeholder {
   align-items: center;
   margin: auto;
 }
-.menu-superior-busqueda .menu-contenedor .g-input, .menu-superior-busqueda .menu-contenedor .g-input1 {
+.menu-superior-busqueda .menu-contenedor .g-input {
   grid-column-start: 1;
   grid-column-end: 12;
 }
