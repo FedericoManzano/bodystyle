@@ -842,6 +842,66 @@ span {
     margin: auto;
   }
 }
+.d-flex {
+  display: flex;
+}
+
+.d-flex-fila {
+  flex-direction: row;
+}
+
+.d-flex-columna {
+  flex-direction: column;
+}
+
+.d-flex-fila-reversa {
+  flex-direction: row-reverse;
+}
+
+.d-flex-columna-reversa {
+  flex-direction: column-reverse;
+}
+
+.just-izquierda {
+  justify-content: flex-start;
+}
+
+.just-derecha {
+  justify-content: flex-end;
+}
+
+.just-centrado {
+  justify-content: center;
+}
+
+.just-cobertura {
+  justify-content: stretch;
+}
+
+.ali-arriba {
+  align-items: flex-start;
+}
+
+.ali-centrada {
+  align-items: center;
+}
+
+.ali-abajo {
+  align-items: flex-end;
+}
+
+.ali-eje-contenido {
+  align-items: baseline;
+}
+
+.ali-eje-covertura {
+  align-items: stretch;
+}
+
+.ali-eje-covertura-uniforme {
+  align-items: space-between;
+}
+
 /* Colores Botones */
 /* Fondos */
 /***********************************************************************************
