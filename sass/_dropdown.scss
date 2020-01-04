@@ -30,7 +30,9 @@
     bottom: calc(width) !important;
     text-align: left !important;
     z-index: 10 !important;
+    text-align: left !important;
     display: none; 
+    z-index: 10;
 }
 
 .dropdown ul {

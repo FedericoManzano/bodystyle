@@ -21,12 +21,13 @@
     justify-content: center;
     align-items: center;
     user-select: none;
+    z-index: 10;
 }
 
 .btn:hover, 
 .btn-lg:hover, 
 .btn-sm:hover {
-    z-index: 2;
+    z-index: 10;
 }
 
 .btn {
@@ -140,7 +141,7 @@
 // Botones grises
 .btn-gris {
     background-color: $btn-gris;
-    color: $blanco;
+    color: $negro;
     font-size: 1.1em;
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -150,6 +151,7 @@
 
 .btn-gris:hover {
     background-color: $btn-gris-hover;
+    color: $blanco;
 }
 
 .btn-gris:active{
@@ -316,3 +318,13 @@
     box-shadow: none !important;
 }
 
+.manejador-botones {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+
+}

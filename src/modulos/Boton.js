@@ -17,55 +17,79 @@
     // Boton Negro 
     const btnNegroSombra = "0 0 0 3px rgba(65, 65, 65, 0.5)"; 
 
+
+
+    const menejador = ()=> {
+        $("body").append("<div class='manejador-botones'></div>");
+        $(".manejador-botones").hide()
+    }
+
+    const cortar = ()=> {
+        $(".manejador-botones").click(function(){
+            deselccionado()
+            $(this).hide()
+        })
+    }
+
     const seleccionado = () => {
 
         $(".btn-rojo").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnRojoSombra)
+            $(".manejador-botones").show()
         })
 
         $(".btn-verde").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnVerdeSombra)
+            $(".manejador-botones").show()
         })
 
         $(".btn-azul").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnAzulSombra)
+            $(".manejador-botones").show()
         })
 
         $(".btn-gris").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnGrisSombra)
+            $(".manejador-botones").show()
         })
 
         $(".btn-negro").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnNegroSombra)
+            $(".manejador-botones").show()
         })
 
         $(".btn-rojo-o").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnRojoSombra)
+            $(".manejador-botones").show()
         })
 
         $(".btn-verde-o").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnVerdeSombra)
+            $(".manejador-botones").show()
         })
 
         $(".btn-azul-o").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnAzulSombra)
+            $(".manejador-botones").show()
         })
 
         $(".btn-gris-o").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnGrisSombra)
+            $(".manejador-botones").show()
         })
         $(".btn-negro-o").click(function () {
             deselccionado()
             $($(this)).css("box-shadow", btnNegroSombra)
+            $(".manejador-botones").show()
         })
     }
 
@@ -80,6 +104,8 @@
 
     const Boton = {
         iniciar: function () {
+            menejador()
+            cortar()
             seleccionado()
         }
     }
