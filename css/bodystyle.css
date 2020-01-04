@@ -854,6 +854,10 @@ span {
   flex-direction: column;
 }
 
+.d-flex-wrap {
+  flex-wrap: wrap;
+}
+
 .d-flex-fila-reversa {
   flex-direction: row-reverse;
 }
