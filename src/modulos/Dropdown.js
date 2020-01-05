@@ -9,13 +9,18 @@
         $(".dropdown-toggle").append("<span class='f-abajo'></span>")
         $(".dropdown-toggle").append("<span class='f-derecha'></span>")
 
-        $(".dropdown-toggle").children(".f-abajo").css("border-top", "solid 5px " + color)
-        $(".dropdown-toggle").children(".f-abajo").css("border-left", "solid 5px " + "transparent")
-        $(".dropdown-toggle").children(".f-abajo").css("border-right", "solid 5px " + "transparent")
 
-        $(".dropdown-toggle").children(".f-derecha").css("border-top", "solid 5px " + "transparent")
-        $(".dropdown-toggle").children(".f-derecha").css("border-botton", "solid 5px " + "transparent")
-        $(".dropdown-toggle").children(".f-derecha").css("border-left", "solid 5px " + color)
+        $(".dropdown-toggle").children(".f-abajo").css({
+            borderTop: "solid 5px " + color,
+            borderRight: "solid 5px transparent",
+            borderLeft: "solid 5px transparent"
+        })
+        $(".dropdown-toggle").children(".f-derecha").css({
+            borderTop: "solid 5px transparent",
+            borderBotton: "solid 5px transparent",
+            borderLeft: "solid 5px " + color
+        })
+
 
         $(".dropdown-toggle .f-abajo").hide() 
 

@@ -2,6 +2,7 @@
 
     var cargarComplemento = ()=> {
         $(".menu-lateral").append("<div class='complemento'></div>")
+        //$(".i-menu").append("<span></span><span></span><span></span>")
     }
 
     var aparecerMenu = () => {

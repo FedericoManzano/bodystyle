@@ -95,6 +95,40 @@ span {
   font-weight: 100;
 }
 
+.f-abajo {
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 20px;
+  top: calc(50% - 5px);
+  border-top: 5px solid white;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.f-derecha {
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 20px;
+  top: calc(50% - 5px);
+  border-left: 5px solid white;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.i-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 6.7px;
+}
+.i-menu span {
+  width: 18px;
+  height: 2px;
+  margin-bottom: 3px;
+  background-color: white;
+}
+
 /*CSS */
 /*
     Trabajando con los textos 
@@ -1460,28 +1494,6 @@ span {
 
 .dropdown ul li a:hover {
   background-color: rgba(0, 0, 0, 0.411);
-}
-
-.f-abajo {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 5px solid white;
-  border-right: solid solid transparent;
-  border-left: 5px solid transparent;
-  right: 20px;
-  top: calc(50% - 5px);
-}
-
-.f-derecha {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid white;
-  right: 20px;
-  top: calc(50% - 5px);
 }
 
 .preloader,
@@ -2867,7 +2879,8 @@ input[type=search]::placeholder {
     display: none;
   }
   .menu-superior .menu-contenedor .menu-listado label {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -2957,15 +2970,15 @@ input[type=search]::placeholder {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
-  width: 100%;
-  padding: 0.8em;
-  color: white;
-  background-color: #06263f;
   transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
+  width: 100%;
+  padding: 0.8em;
+  color: white;
+  background-color: #06263f;
+  z-index: 10000;
 }
 .sidebar .sidebar-cabecera label[for=toggle] {
   width: 100%;
@@ -2976,14 +2989,14 @@ input[type=search]::placeholder {
   top: 0;
   bottom: 0;
   left: -240px;
-  z-index: 10000;
-  width: 240px;
   transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
+  width: 240px;
   overflow: auto;
   background-color: #15161a;
+  z-index: 10000;
 }
 .sidebar .sidebar-menu .logo {
   padding: 0.475em;
@@ -3016,10 +3029,10 @@ input[type=search]::placeholder {
   display: block;
   color: white;
   padding: 0.7em 0.5em;
-  transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 .sidebar .sidebar-menu .item ul li a:hover {
   background-color: rgba(0, 0, 0, 0.466);

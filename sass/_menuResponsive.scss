@@ -67,7 +67,8 @@
                     display: none;
                 }
                  label {
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
                 }
             }
         }

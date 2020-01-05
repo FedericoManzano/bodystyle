@@ -1,17 +1,5 @@
 
 
-@mixin flechas ($bgt, $tipot, $colort, $bgr, $tipor, $colorr, $bgb, $tipob, $colorb, $bgl, $tipol, $colorl ) {
-    position: absolute;
-    @include ancho-alto(0, 0);
-    border-top: $bgt $tipot $colort;
-    border-right: $tipor $tipor $colorr;
-    border-bottom: $bgb $tipob $colorb;
-    border-left: $bgl $tipol $colorl;
-    right: 20px;
-    top: calc(50% - 5px);
-}
-
-
 .dropdown-toggle {
     position: relative !important; 
     display: block !important;
@@ -62,13 +50,4 @@
 
 .dropdown ul li a:hover{
     background-color: rgba(0, 0, 0, 0.411);
-}
-
-
-.f-abajo {
-    @include flechas(5px, solid, white,5px, solid, transparent,null, null, null,5px, solid, transparent);
-}
-
-.f-derecha {
-    @include flechas(5px, solid, transparent,null,null,null,5px, solid, transparent,5px, solid, white);
 }

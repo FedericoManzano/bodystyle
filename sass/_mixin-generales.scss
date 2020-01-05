@@ -25,3 +25,24 @@
     height: $alto;
 }
 
+
+@mixin menu() {
+    display: flex;
+    flex-direction: column;
+    padding: 6.7px;
+
+    span {
+        @include ancho-alto(18px, 2px);
+        margin-bottom: 3px;
+        background-color: white;
+        
+    }
+}
+
+@mixin flechas() {
+    position: absolute;
+    @include ancho-alto(0, 0);
+    right: 20px;
+    top: calc(50% - 5px);
+}
+

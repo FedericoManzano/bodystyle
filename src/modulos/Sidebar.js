@@ -10,25 +10,26 @@
 
         $(".item .titulo").append("<i class='f-abajo'></i>")
         $(".item .titulo").append("<i class='f-derecha'></i>")
+        $(".i-menu").append("<span></span><span></span><span></span>")
+        $(".item .titulo").children(".f-abajo").css({
+            borderTop: "solid 5px #fff",
+            borderRight: "solid 5px transparent",
+            borderLeft: "solid 5px transparent",
+            top: 12,
+            botton: 0,
+            rigth: 10
+        })
+        $(".item .titulo").children(".f-derecha").css({
+            borderTop: "solid 5px transparent",
+            borderBotton: "solid 5px transparent",
+            borderLeft: "solid 5px #fff",
+            top: 12,
+            botton: 0,
+            rigth: 10
+        })
 
-        $(".item .titulo").children(".f-abajo").css("border-top", "solid 5px #fff" )
-        $(".item .titulo").children(".f-abajo").css("border-left", "solid 5px " + "transparent")
-        $(".item .titulo").children(".f-abajo").css("border-right", "solid 5px " + "transparent")
-        $(".item .titulo").children(".f-abajo").css("top", 12)
-        $(".item .titulo").children(".f-abajo").css("botton", 0)
-        $(".item .titulo").children(".f-abajo").css("rigth", 10)
+        $(".f-abajo").hide() 
 
-
-        $(".item .titulo").children(".f-derecha").css("border-top", "solid 5px " + "transparent")
-        $(".item .titulo").children(".f-derecha").css("border-botton", "solid 5px " + "transparent")
-        $(".item .titulo").children(".f-derecha").css("border-left", "solid 5px #fff" )
-        $(".item .titulo").children(".f-derecha").css("top", 12)
-        $(".item .titulo").children(".f-derecha").css("botton", 0)
-        $(".item .titulo").children(".f-derecha").css("rigth", 10)
-
-        $(".item .titulo .f-abajo").hide() 
-
-        $(".f-abajo-s").hide()
     }
 
     var controlSubmenu = ()=>{
