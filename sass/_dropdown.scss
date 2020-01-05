@@ -1,4 +1,17 @@
 
+
+@mixin flechas ($bgt, $tipot, $colort, $bgr, $tipor, $colorr, $bgb, $tipob, $colorb, $bgl, $tipol, $colorl ) {
+    position: absolute;
+    @include ancho-alto(0, 0);
+    border-top: $bgt $tipot $colort;
+    border-right: $tipor $tipor $colorr;
+    border-bottom: $bgb $tipob $colorb;
+    border-left: $bgl $tipol $colorl;
+    right: 20px;
+    top: calc(50% - 5px);
+}
+
+
 .dropdown-toggle {
     position: relative !important; 
     display: block !important;
@@ -9,13 +22,8 @@
 }
 
 .drop {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    @include ancho-alto(100%, 100%);
+    @include posicionamiento-fixed(0,0,0,0);
     z-index: 0;
 }
 
@@ -23,7 +31,7 @@
     position: absolute !important;
     color: black !important;
     min-width: 170px !important;
-   background-color: white !important;
+    background-color: white !important;
     border-radius: 2px !important;
     border: 1px solid black !important; 
     bottom: calc(width) !important;
@@ -58,23 +66,9 @@
 
 
 .f-abajo {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 5px solid white;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    right: 20px;
-    top: calc(50% - 5px);
+    @include flechas(5px, solid, white,5px, solid, transparent,null, null, null,5px, solid, transparent);
 }
 
 .f-derecha {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 5px solid white;
-    border-bottom: 5px solid transparent;
-    right: 20px;
-    top: calc(49% - 5px);
+    @include flechas(5px, solid, transparent,null,null,null,5px, solid, transparent,5px, solid, white);
 }

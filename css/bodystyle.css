@@ -1415,13 +1415,13 @@ span {
 }
 
 .drop {
-  height: 100%;
   width: 100%;
+  height: 100%;
   position: fixed;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   z-index: 0;
 }
 
@@ -1467,8 +1467,8 @@ span {
   width: 0;
   height: 0;
   border-top: 5px solid white;
+  border-right: solid solid transparent;
   border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
   right: 20px;
   top: calc(50% - 5px);
 }
@@ -1478,10 +1478,10 @@ span {
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
-  border-left: 5px solid white;
   border-bottom: 5px solid transparent;
+  border-left: 5px solid white;
   right: 20px;
-  top: calc(49% - 5px);
+  top: calc(50% - 5px);
 }
 
 .preloader,
@@ -1606,7 +1606,7 @@ span {
 }
 
 .progress-bar-lg {
-  height: 12px;
+  height: 15px;
 }
 
 @keyframes aumentar {
@@ -1646,17 +1646,16 @@ span {
 .btn-cubrir,
 .btn-cubrir-sm,
 .btn-cubrir-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   outline: none;
-  border: none;
   background: none;
   border: none;
   display: block;
   cursor: pointer;
   border-radius: 3px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   user-select: none;
   z-index: 10;
 }
@@ -2370,20 +2369,21 @@ input[type=search]::placeholder {
 }
 
 .badges-sub {
-  display: flex;
   width: 200px;
-  max-width: 200px;
   height: 50px;
+  display: flex;
+  max-width: 200px;
   user-select: none;
 }
 .badges-sub input[type=text] {
+  display: flex;
   min-width: 100px;
   height: 30px;
   box-shadow: none;
   border-radius: 3px 0 0 3px;
   color: grey;
   font-size: 10px;
-  text-align: center;
+  align-items: center;
 }
 .badges-sub input[type=text]:focus {
   border: 1px solid grey;
@@ -2397,6 +2397,9 @@ input[type=search]::placeholder {
 .badges-sub .btn-cubrir,
 .badges-sub .btn-cubrir-sm,
 .badges-sub .btn-cubrir-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0 0 0 0;
   box-shadow: none !important;
   height: 30px;
@@ -2413,10 +2416,10 @@ input[type=search]::placeholder {
 }
 
 .badges-parrafo {
-  display: flex;
   width: 270px;
-  max-width: 270px;
   height: 120px;
+  display: flex;
+  max-width: 270px;
   user-select: none;
   padding: 20px;
   background-color: whitesmoke;
@@ -2457,14 +2460,14 @@ input[type=search]::placeholder {
   width: 90%;
 }
 .badges-alerta .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #04aa8e;
   color: white;
   height: 20px;
   padding: 5px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 3px;
   min-width: 20px;
   font-size: 12px;
@@ -2480,9 +2483,10 @@ input[type=search]::placeholder {
   border-radius: 0;
   font-size: 12px;
   width: 20px;
-  min-width: 70px;
+  min-width: 80px;
   z-index: 0;
   box-shadow: none !important;
+  padding: 3px;
 }
 .badges-registro-login .btn-login {
   border-radius: 5px 0 0 5px;
@@ -2539,9 +2543,9 @@ input[type=search]::placeholder {
 .tarjeta .tarjeta-img-r .pie {
   width: 100%;
   display: flex;
-  padding: 20px 15px;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
+  padding: 20px 15px;
 }
 .tarjeta .tarjeta-img-t {
   width: 100%;
@@ -2553,21 +2557,21 @@ input[type=search]::placeholder {
   position: relative;
 }
 .tarjeta .tarjeta-img-t .tarjeta-imagen img {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 .tarjeta .tarjeta-img-t .tarjeta-imagen .covertura {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  right: 0;
   top: -200px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.801);
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   line-height: 25px;
   transition: all 0.3s ease;
@@ -2611,8 +2615,8 @@ input[type=search]::placeholder {
   overflow: hidden;
 }
 .tarjeta .tarjeta-horizontal .tarjeta-imagen img {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 .tarjeta .tarjeta-horizontal .cuerpo {
   width: 60%;
@@ -2950,31 +2954,34 @@ input[type=search]::placeholder {
   user-select: none;
 }
 .sidebar .sidebar-cabecera {
-  z-index: 10000;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10000;
+  width: 100%;
   padding: 0.8em;
   color: white;
+  background-color: #06263f;
   transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
-  background-color: #06263f;
 }
 .sidebar .sidebar-cabecera label[for=toggle] {
   width: 100%;
   cursor: pointer;
 }
 .sidebar .sidebar-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -240px;
   z-index: 10000;
   width: 240px;
-  position: fixed;
-  left: -240px;
-  bottom: 0;
-  top: 0;
-  transition: 0.5s all;
+  transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   overflow: auto;
   background-color: #15161a;
 }
@@ -2988,6 +2995,7 @@ input[type=search]::placeholder {
   background-color: #06263f;
 }
 .sidebar .sidebar-menu .item .titulo {
+  position: relative;
   padding: 0.5em;
   color: white;
   border-bottom: 1px solid black;

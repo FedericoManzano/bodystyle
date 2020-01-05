@@ -1,0 +1,27 @@
+@mixin flex-box-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin posicionamiento-absoluto($top, $rigth, $botton, $left) {
+    position: absolute;
+    top: $top;
+    right: $rigth;
+    bottom: $botton;
+    left: $left;
+}
+
+@mixin posicionamiento-fixed($top, $rigth, $botton, $left) {
+    position: fixed;
+    top: $top;
+    right: $rigth;
+    bottom: $botton;
+    left: $left;
+}
+
+@mixin ancho-alto($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
