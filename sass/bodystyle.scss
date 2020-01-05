@@ -9,16 +9,18 @@
 @import "generales";
 @import "mixin-generales";
 @import "iconos";
-/*CSS */
+
+
+/* CSS */
 @import "texto";
 @import "alineamiento";
 @import "colores";
 @import "fondos";
 
-/*Grilla */
+/* Grilla */
 @import "grilla";
 
-/*Componentes */
+/* Componentes */
 @import "dropdown";
 @import "preloader";
 @import "progressBar";
@@ -32,4 +34,5 @@
 @import "modal";
 @import "menuResponsive";
 @import "sidebar";
+@import "sidebar-fija"
 

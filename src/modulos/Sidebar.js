@@ -11,6 +11,8 @@
         $(".item .titulo").append("<i class='f-abajo'></i>")
         $(".item .titulo").append("<i class='f-derecha'></i>")
         $(".i-menu").append("<span></span><span></span><span></span>")
+
+        
         $(".item .titulo").children(".f-abajo").css({
             borderTop: "solid 5px #fff",
             borderRight: "solid 5px transparent",

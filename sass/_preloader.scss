@@ -1,69 +1,52 @@
 
-$borde-grosor: 6px;
+@mixin preloader ($color){
+    border-radius: 50%;
+    border-top: 6px solid $color;
+    border-left: 6px solid $color;
+    border-bottom: 6px solid $color;
+    animation: girar-preloader 0.5s  0s infinite  linear;
+}
 
 
 .preloader,
 .preloader-sm,
 .preloader-lg {
-    height: 40px;
-    width: 40px;
+    @include ancho-alto(40px, 40px);
     border-radius: 50%;
-    border: $borde-grosor solid rgb(214, 214, 214);
+    border: 6px solid rgb(214, 214, 214);
     position: relative;
 }
 
 .preloader-sm{
-    height: 20px;
-    width: 20px;
+    @include ancho-alto(20px, 20px);
 }
 
 .preloader-lg {
-    height: 60px;
-    width: 60px;
+    @include ancho-alto(60px, 60px);
 }
 
 
 .pre-rojo {
-    border-radius: 50%;
-    border-top: $borde-grosor solid $fd-rojo;
-    border-left: $borde-grosor solid $fd-rojo;
-    border-bottom: $borde-grosor solid $fd-rojo;
-    animation: girar-preloader 0.5s  0s infinite  linear;
+    @include preloader($fd-rojo);
 }
 
 
 .pre-verde {
-    border-radius: 50%;
-    border-top: $borde-grosor solid $fd-verde;
-    border-left: $borde-grosor solid $fd-verde;
-    border-bottom: $borde-grosor solid $fd-verde;
-    animation: girar-preloader 0.5s  0s infinite  linear;
+    @include preloader($fd-verde);
 }
 
 .pre-azul {
-    border-radius: 50%;
-    border-top: $borde-grosor solid $fd-azul-c;
-    border-left: $borde-grosor solid $fd-azul-c;
-    border-bottom: $borde-grosor solid $fd-azul-c;
-    animation: girar-preloader 0.5s  0s infinite  linear;
+    @include preloader($fd-azul-c);
 }
 
 
 .pre-negro {
-    border-radius: 50%;
-    border-top: $borde-grosor solid $fd-gris-n;
-    border-left: $borde-grosor solid $fd-gris-n;
-    border-bottom: $borde-grosor solid $fd-gris-n;
-    animation: girar-preloader 0.5s  0s infinite  linear;
+    @include preloader($fd-gris-n);
 }
 
 
 .pre-gris {
-    border-radius: 50%;
-    border-top: $borde-grosor solid $fd-gris;
-    border-left: $borde-grosor solid $fd-gris;
-    border-bottom: $borde-grosor solid $fd-gris;
-    animation: girar-preloader 0.5s  0s infinite  linear;
+    @include preloader($fd-gris);
 }
 
 
