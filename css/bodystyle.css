@@ -1552,6 +1552,71 @@ span {
     transform: rotate(365deg);
   }
 }
+.progress-bar,
+.progress-bar-sm,
+.progress-bar-lg {
+  width: 100%;
+  height: 10px;
+  background-color: #cccccc;
+  border-radius: 3px;
+}
+.progress-bar .progress-rojo,
+.progress-bar-sm .progress-rojo,
+.progress-bar-lg .progress-rojo {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #bb1818;
+  animation: aumentar 10s 0s 1 linear;
+}
+.progress-bar .progress-verde,
+.progress-bar-sm .progress-verde,
+.progress-bar-lg .progress-verde {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #006e5c;
+  animation: aumentar 10s 0s 1 linear;
+}
+.progress-bar .progress-azul,
+.progress-bar-sm .progress-azul,
+.progress-bar-lg .progress-azul {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #1045b7;
+  animation: aumentar 10s 0s 1 linear;
+}
+.progress-bar .progress-gris,
+.progress-bar-sm .progress-gris,
+.progress-bar-lg .progress-gris {
+  border-radius: 3px;
+  height: 100%;
+  background-color: gray;
+  animation: aumentar 10s 0s 1 linear;
+}
+.progress-bar .progress-negro,
+.progress-bar-sm .progress-negro,
+.progress-bar-lg .progress-negro {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #111111;
+  animation: aumentar 10s 0s 1 linear;
+}
+
+.progress-bar-sm {
+  height: 5px;
+}
+
+.progress-bar-lg {
+  height: 12px;
+}
+
+@keyframes aumentar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 .waves {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -2265,6 +2330,7 @@ input[type=search]::placeholder {
 .g-input-5 input[type=search],
 .g-input-5 input[type=url],
 .g-input-5 input[type=number] {
+  height: 1.6em !important;
   border-radius: 3px 0px 0px 3px;
   height: 2.1em;
 }
@@ -2274,6 +2340,9 @@ input[type=search]::placeholder {
   border-bottom: 1px solid #a3a3a3;
   border-top: 1px solid #a3a3a3;
   border-right: 1px solid #a3a3a3;
+  height: 2.02em !important;
+  max-width: 60px !important;
+  font-size: 14px;
 }
 
 .g-input-6 input[type=text],
@@ -2801,7 +2870,7 @@ input[type=search]::placeholder {
 .menu-superior-busqueda {
   /* Propiedades de toda la barra de menu*/
   width: 100%;
-  height: 3.4em;
+  height: 2.5em;
   max-height: 3.5em;
   user-select: none;
   background-color: #06263f;

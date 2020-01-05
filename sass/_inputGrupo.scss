@@ -154,6 +154,7 @@ $radio-bordes-span-2: 0px 6px 6px 0px;
     .g-input-5 input[type="search"],
     .g-input-5 input[type="url"],
     .g-input-5 input[type="number"] {
+        height: 1.6em !important;
         border-radius: $radio-bordes-input-2;
         height: $altura-input;
     }
@@ -163,6 +164,9 @@ $radio-bordes-span-2: 0px 6px 6px 0px;
         border-bottom: $borde;
         border-top: $borde;
         border-right: $borde;
+        height: 2.02em !important;
+        max-width: 60px !important;
+        font-size: 14px;
     }
 
     .g-input-6 input[type="text"],
