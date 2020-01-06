@@ -257,8 +257,12 @@
 .btn-blanco-o:hover {
     background-color: $blanco;
     color: $negro;
-    box-shadow: 0 0 3px 3px rgba(212, 212, 212, 0.5);
 }
+
+.btn-negro-o:active{
+    background-color: white;
+}
+
 
 /***
     Botones estilo desabilidado

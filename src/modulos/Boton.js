@@ -17,6 +17,8 @@
     // Boton Negro 
     const btnNegroSombra = "0 0 0 3px rgba(65, 65, 65, 0.5)"; 
 
+    // Boton Negro 
+    const btnBlancoSombra = "0 0 0 3px rgba(999, 999, 999, 0.5)"; 
 
 
     const menejador = ()=> {
@@ -91,6 +93,12 @@
             $($(this)).css("box-shadow", btnNegroSombra)
             $(".manejador-botones").show()
         })
+
+        $(".btn-blanco-o").click(function () {
+            deselccionado()
+            $($(this)).css("box-shadow", btnBlancoSombra)
+            $(".manejador-botones").show()
+        })
     }
 
     const deselccionado = () => {
@@ -99,7 +107,6 @@
         $(".btn-lg").css("box-shadow", "none")
         $(".btn-cubrir-sm").css("box-shadow", "none")
         $(".btn-cubrir").css("box-shadow", "none")
-        
     }
 
     const Boton = {

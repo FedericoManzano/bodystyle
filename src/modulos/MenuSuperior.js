@@ -1,19 +1,27 @@
 (function(){
-
+    var estado = 0;
     var cargarComplemento = ()=> {
         $(".menu-lateral").append("<div class='complemento'></div>")
-        //$(".i-menu").append("<span></span><span></span><span></span>")
+        $(".menu-listado .i-menu").append("<span></span><span></span><span></span>")
     }
 
     var aparecerMenu = () => {
         $(".toggle").click(function(){
-            $(".menu-lateral").show()
+            if(estado === 0){
+                $(".menu-lateral").show()
+                estado = 1;
+            }else {
+                $(".menu-lateral").hide()
+                estado = 0;
+            }
+                
         })
     }
 
     var desaparecerMenu = () => {
         $(".complemento").click(function(){
             $(".menu-lateral").hide()
+            estado = 0;
             $("#toggle").prop("checked", false)
         })
     }
