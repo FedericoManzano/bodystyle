@@ -21,8 +21,8 @@
     var desaparecerMenu = () => {
         $(".complemento").click(function(){
             $(".menu-lateral").hide()
-            estado = 0;
             $("#toggle").prop("checked", false)
+            estado = 0;
         })
     }
 

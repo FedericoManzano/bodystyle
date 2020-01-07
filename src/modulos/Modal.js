@@ -23,6 +23,9 @@
 
         $(".modal-registro").css("opacity", 1)
         $(".modal-registro").hide()
+
+        $(".modal-scroll").css("opacity", 1)
+        $(".modal-scroll").hide()
     }
 
     var aparecerModal = ()=> {

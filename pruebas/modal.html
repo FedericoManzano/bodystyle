@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,25 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/bodystyle.css">
     <title>Document</title>
+
+
+    <style>
+        .modal .contenido {
+            padding: 1em;
+            border: 1px solid white
+        }
+
+        .modal .contenido h2{
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <a class="btn btn-rojo activar-modal" data-target="#modal1">Activar</a>
     <a class="btn btn-rojo activar-modal" data-target="#modal2">Activar2</a>
     <a class="btn btn-rojo activar-modal" data-target="#modal-registro">Activar3</a>
-    <a class="btn btn-rojo activar-modal" data-target="#modal-login">Activar3</a>
+    <a class="btn btn-rojo activar-modal" data-target="#modal-login">Activar4</a>
+    <a class="btn btn-rojo activar-modal" data-target="#modal-scroll">Activar4</a>
     <div id="modal1" class="modal">
         <div class="modal-ventana">
-            <h3 class="f-grosor-2">Ventana Modal Ejemplo</h3>
-            <p>A partir de hoy rebaja del 50% en todos los productos de la galería</p>
-
-            <h4 class="c-rojo t-may mar-1 mab-1">Suscribete!!!</h4>
-            <div class="g-input g-input-caja-izquierda">
-                <span>@</span>
-                <input type="text" placeholder="nombre@mail.com">
-            </div>
-            <div class="mar-2 a-items-cent-just">
-                <a href="" class="btn btn-rojo">Enviar</a>
+            <div class="contenido a-centrado">
+                <h2 class="f-grosor-3">Lorem Ipsu</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque rerum dolore fugiat </p>
+                <div class="sus p-1">
+                    <div class="g-input g-input-1 c-negro">
+                        <span class="span">@</span>
+                        <input type="text">
+                    </div>
+                    <a href="#" class="btn-cubrir-sm btn-rojo m-a mar-1">Enviar</a>
+                </div>
+                <p class="c-verde f-grosor-6">Descuento al 60%</p>
             </div>
         </div>
     </div>
@@ -34,7 +48,7 @@
         <div class="modal-ventana">
             <div class="contenido">
                 <div class="cabecera">
-                    <h3>Titulo del Modal</h3>
+                    <h3 >Titulo del Modal</h3>
                     <span class="desactivar-modal" data-target="#modal2">X</span>
                 </div>
                 <div class="cuerpo">
@@ -78,7 +92,8 @@
                 </div>
                 <div class="modal-botones a-items-cent-just">
                     <a href="#" class="btn-sm btn-azul md-1">Enviar</a>
-                    <a id="salir-modal-registro" href="#" data-target="#modal-registro" class="btn-sm btn-rojo desactivar-modal">Salir</a>
+                    <a id="salir-modal-registro" href="#" data-target="#modal-registro"
+                        class="btn-sm btn-rojo desactivar-modal">Salir</a>
                 </div>
             </div>
         </div>
@@ -88,7 +103,7 @@
         <div class="modal-ventana">
             <div class="contenido">
                 <div class="cabecera">
-                    <h3>Login</h3>
+                    <h3 >Login</h3>
                 </div>
                 <div class="registro">
                     <div class="modal-control">
@@ -100,7 +115,34 @@
                 </div>
                 <div class="modal-botones a-items-cent-just">
                     <a href="#" class="btn-sm btn-azul md-1">Enviar</a>
-                    <a  href="#" class="btn-sm btn-rojo desactivar-modal" data-target="#modal-login">Salir</a>
+                    <a href="#" class="btn-sm btn-rojo desactivar-modal" data-target="#modal-login">Salir</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-scroll" class="modal-scroll">
+        <div class="modal-ventana">
+            <div class="contenido">
+                <div class="cabecera">
+                    <h3>Mensaje Scroll</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Voluptatibus unde eius possimus beatae
+                        itaque sint dicta facilis maxime nam mollitia modi odio provident numquam quo, 
+                        sunt esse
+                        cupiditate cumque totam!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, 
+                        autem natus, ea ipsa pariatur officiis quidem numquam dolores corporis facilis quam harum enim. Repellat, ratione qui perferendis debitis iure sed?
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat mollitia porro repellendus! Ex aliquid repellat assumenda nulla, maxime magni? 
+                        Expedita excepturi velit dolore accusantium ratione error modi id minima? Unde!
+                    </p>
+                </div>
+                <div class="modal-botones a-items-cent-just">
+                    <a href="#" class="btn-sm btn-azul md-1">Enviar</a>
+                    <a href="#" class="btn-sm btn-rojo desactivar-modal" data-target="#modal-scroll">Salir</a>
                 </div>
             </div>
         </div>
@@ -113,7 +155,7 @@
             var conf = {
                 fondo: "fd-gris-az",
                 texto: "c-blanco",
-                ancho: 350,
+                ancho: 420,
                 borde: 4,
                 justificacion: "a-centrado"
             }

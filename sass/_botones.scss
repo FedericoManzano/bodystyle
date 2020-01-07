@@ -9,7 +9,6 @@
     outline: none;
     background: none;
     border: none;
-    display: block;
     cursor: pointer;
     border-radius: 3px;
     text-align: center;
@@ -84,15 +83,15 @@
 }
 
 .btn-cubrir-sm {
-    @include btn-cubrir(5px, 18px, 1.1em,block ,90% , auto);
+    @include btn-cubrir(5px, 18px, 1.1em,block ,100%, auto);
 }
 
 .btn-cubrir {
-    @include btn-cubrir(9px, 25px, 1.2em,block ,90% , auto);
+    @include btn-cubrir(9px, 25px, 1.2em,block ,100% , auto);
 }
 
 .btn-cubrir-lg {
-    @include btn-cubrir(15px, 40px , 1.3em,block ,90% , auto);
+    @include btn-cubrir(15px, 40px , 1.3em,block ,100% , auto);
 }
 
 

@@ -8,8 +8,8 @@
             elementos[i] = false
         }
 
-        $(".item .titulo").append("<i class='f-abajo'></i>")
-        $(".item .titulo").append("<i class='f-derecha'></i>")
+        $(".sidebar-menu .item .titulo").append("<i class='f-abajo'></i>")
+        $(".sidebar-menu .item .titulo").append("<i class='f-derecha'></i>")
         $(".sidebar-cabecera .i-menu").append("<span></span><span></span><span></span>")
 
 

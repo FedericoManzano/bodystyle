@@ -11,10 +11,12 @@ import SidebarDesplegable from "./modulos/SidebarDesplegable"
 (function(){
     Boton.iniciar()
     Waves.iniciar()
-    SidebarDesplegable.iniciar()
-    var MenuSuperior = ()=> MenuResp.iniciar()
 
+
+
+    var MenuSuperior = ()=> MenuResp.iniciar()
     var SidebarInit = () => Sidebar.inicializar()
+    var SidebarFijaInit = () => SidebarDesplegable.iniciar()
 
     var ModalInit = function(conf){
         Modal.iniciar(conf)
@@ -25,6 +27,7 @@ import SidebarDesplegable from "./modulos/SidebarDesplegable"
         SidebarInit()
         ModalInit()
         DropDownInit({})
+        SidebarFijaInit()
     }
 
     var DropDownInit = (config) => {
@@ -36,6 +39,7 @@ import SidebarDesplegable from "./modulos/SidebarDesplegable"
         SidebarInit: () => SidebarInit(),
         ModalInit: (config) => ModalInit(config),
         DropDownInit: (config) => DropDownInit(config),
+        SidebarFijaInit: ()=> SidebarFijaInit(),
         AutoInit: () => AutoInit()
     }
 

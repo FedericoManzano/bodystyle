@@ -1,10 +1,11 @@
 
 @mixin sidebar-fija() {
-    @include posicionamiento-fixed(0,null, 0,0);
+    @include posicionamiento-fixed(3em,null, 0,0);
     overflow: auto;
     width: 200px;
     background-color: $fd-gris-az;
     padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 @mixin sidebar-logo() {
@@ -41,6 +42,44 @@
     ul li a:hover,
     ol li a:hover{
         color: rgb(148, 148, 148);
+    }
+}
+
+.barra-superior-fija {
+    height: 3em;
+    background-color: $fd-azul-ve;
+    @include flex-box-centrado();
+    @include posicionamiento-fixed(0,0,null,0);
+    z-index: 100000;
+    .barra-superior-contenedor {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .logo-barra-superior-fija a{
+            font-size: 1.3em;
+            font-weight: 600;
+            color: white;
+        }
+    
+        .lista-barra-superior-fija {
+            
+            ul {
+                display: flex;
+                align-items: center;
+            }
+            ul li a {
+                padding: 1em;
+                font-size: 1em;
+                text-decoration: none;
+                display: block;
+                color: white;
+
+            }
+            ul li a:hover {
+                background-color: rgba(0, 0, 0, 0.493);
+            }
+        }
     }
 }
 
@@ -96,6 +135,10 @@
 
 
 @media(max-width: 1024px){
+
+    .barra-superior-fija {
+        display: none;
+    }
     .sidebar-despleganle {
         display: block;
     }
