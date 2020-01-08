@@ -1,0 +1,139 @@
+/** Borde radio % y px*/
+@for $i from 1 through 50 {
+    .bor-rad-por-#{$i} {
+        border-radius: 0% + $i !important;
+    }
+}
+
+@for $i from 1 through 300 {
+    .bor-rad-#{$i} {
+        border-radius: 0px + $i !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-#{$i} {
+        border: 0px + $i solid rgb(0,0,0);
+    }
+}
+/** Bordes rojos */
+@for $i from 1 through 10 {
+    .bor-rojo-#{$i} {
+        border: 0px + $i solid $fd-rojo;
+    }
+}
+@for $i from 1 through 10 {
+    .bor-rojo-c-#{$i} {
+        border: 0px + $i solid $fd-rojo-c;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-rojo-t-#{$i} {
+        border: 0px + $i solid $fd-rojo-t;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-rojo-o-#{$i} {
+        border: 0px + $i solid $fd-rojo-o;
+    }
+}
+
+/** Bordes rojos verdes*/
+@for $i from 1 through 10 {
+    .bor-verde-#{$i} {
+        border: 0px + $i solid $fd-verde;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-c-#{$i} {
+        border: 0px + $i solid $fd-verde-c;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-o-#{$i} {
+        border: 0px + $i solid $fd-verde-o;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-verde-az-#{$i} {
+        border: 0px + $i solid $fd-verde-az;
+    }
+}
+
+/*bordes azules*/
+@for $i from 1 through 10 {
+    .bor-azul-#{$i} {
+        border: 0px + $i solid $fd-azul;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-ve-#{$i} {
+        border: 0px + $i solid $fd-azul-ve;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-c-#{$i} {
+        border: 0px + $i solid $fd-azul-c;
+    }
+}
+
+
+@for $i from 1 through 10 {
+    .bor-azul-o-#{$i} {
+        border: 0px + $i solid $fd-azul-o;
+    }
+}
+
+
+/** Bordes grises*/
+
+
+@for $i from 1 through 10 {
+    .bor-gris-#{$i} {
+        border: 0px + $i solid $fd-gris;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-gris-n-#{$i} {
+        border: 0px + $i solid $fd-gris-n;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-az-#{$i} {
+        border: 0px + $i solid $fd-gris-az;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-azul-az-o-#{$i} {
+        border: 0px + $i solid $fd-gris-az-o;
+    }
+}
+
+@for $i from 1 through 10 {
+    .bor-blanco-#{$i} {
+        border: 0px + $i solid white;
+    }
+}
+
+// Ancho y alto
+@for $i from 1 through 100 {
+    .ancho-#{$i} {
+        border: 0% + $i;
+    }
+}
+
+@for $i from 1 through 100 {
+    .alto-#{$i} {
+        border: 0% + $i;
+    }
+}
