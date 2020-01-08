@@ -125,15 +125,28 @@
     }
 }
 
+@function isMultiple5($i) { 
+    @return ($i % 5 == 0);   
+}
+
 // Ancho y alto
 @for $i from 1 through 100 {
-    .ancho-#{$i} {
-        border: 0% + $i;
+    @if(isMultiple5($i)){    
+        .ancho-#{$i}{        
+            width: 0% + $i; 
+        }
+    }
+}
+@for $i from 1 through 100 {
+    @if(isMultiple5($i)){    
+        .alto-#{$i}{        
+            height: 0% + $i; 
+        }
     }
 }
 
-@for $i from 1 through 100 {
-    .alto-#{$i} {
-        border: 0% + $i;
+@for $i from 0 through 10 {
+    .opa-#{$i} {
+        opacity: $i / 10;
     }
 }
