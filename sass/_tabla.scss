@@ -37,7 +37,7 @@ table tbody tr td,
 .tabla-azul  tbody tr td,
 .tabla-oscura  thead tr td,
 .tabla-oscura  tbody tr td{
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     border-bottom:  1px solid #212121;
     border-top:  1px solid #212121;
     border-left:  none;
@@ -50,11 +50,6 @@ table tbody tr td{
     border-top: none;
     cursor: pointer;
     color: #212121;
-}
-
-
-table tbody tr:hover > td{
-    background-color: rgb(233, 233, 233);
 }
 
 
@@ -91,14 +86,6 @@ table tbody tr td {
 .tabla-oscura thead tr {
     border-radius: 10px 10px 0 0 ;
     overflow: hidden;
-}
-
-.tabla-oscura thead tr td{
-    padding: 0.3em 1em;
-}
-
-.tabla-oscura tbody tr:hover > td{
-    background-color: rgba(0, 0, 0, 0.384);
 }
 
 
@@ -143,20 +130,11 @@ table tbody tr td {
     overflow: hidden;
 }
 
-.tabla-roja thead tr td{
-    padding: 0.3em 1em;
-}
-
-.tabla-roja tbody tr:hover > td{
-    background-color: rgb(255, 73, 73);
-}
-
-
 // tabla azul
 
 .tabla-azul tbody tr td {
     border-top:  none;
-    background-color: $fd-azul;
+    background-color: $fd-azul-c;
     color: white;
     font-weight: 500;
 }
@@ -168,13 +146,6 @@ table tbody tr td {
     border-bottom:  1px solid #3787ff;
     border-top:  1px solid #3787ff;
 } 
-
-.tabla-azul tbody tr td {
-    border-top:  none;
-    background-color: rgb(153, 194, 255);
-    color: black;
-    font-weight: 500;
-}
 
 .tabla-azul thead tr,
 .tabla-azul tbody tr {
@@ -192,28 +163,12 @@ table tbody tr td {
     overflow: hidden;
 }
 
-.tabla-azul thead tr td{
-    padding: 0.3em 1em;
-}
-
 .selector tbody tr:nth-child(2n+1) >td{
-    background-color: rgba(233, 233, 233, 0.116);
-}
-
-.tabla-azul tbody tr:hover > td{
-    background-color: rgb(1, 45, 70);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.075);
 }
 
 
 // verde 
-
-.tabla-verde tbody tr td {
-    border-top:  none;
-    background-color: $fd-verde;
-    color: white;
-    font-weight: 500;
-}
 
 
 .tabla-verde thead tr td,
@@ -226,7 +181,7 @@ table tbody tr td {
 .tabla-verde tbody tr td {
     border-top:  none;
     background-color: rgb(0, 117, 133);
-    color: black;
+    color: white;
     font-weight: 500;
 }
 
@@ -246,15 +201,15 @@ table tbody tr td {
     overflow: hidden;
 }
 
-.tabla-verde thead tr td{
-    padding: 0.3em 1em;
+
+.hover tbody tr:hover > td{
+    background-color: rgba(0, 0, 0, 0.356)
 }
 
-.tabla-verde tbody tr:hover > td{
-    background-color: rgb(1, 70, 70);
-    color: white;
+.tabla-sm thead tr td,
+.tabla-sm tbody tr td{
+    padding: 0.5em 1em;
 }
-
 
 @media screen and (max-width: 1300px) {
     .tabla-responsive {
