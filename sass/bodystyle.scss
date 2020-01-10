@@ -8,6 +8,7 @@
 /*Estilos generales */
 @import "generales";
 @import "mixin-generales";
+@import "config";
 @import "iconos";
 
 
@@ -34,7 +35,8 @@
 @import "badges";
 @import "card";
 @import "modal";
-@import "menuResponsive";
+@import "menu";
+@import "menu-lateral";
 @import "sidebar";
 @import "sidebar-fija";
 @import "botonFlotante";

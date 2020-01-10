@@ -1,0 +1,34 @@
+.menu-lateral {
+    position: fixed;
+    left: -240px;
+    top: 0;
+    bottom: 0;
+    background-color: $fd-azul-ve;
+    width: 240px;
+    padding-top: 3em;
+    z-index: $altura-menu-laterales;
+    user-select: none;
+    ul {
+        li{
+            a{
+                display: block;
+                padding: 10px;
+                color: white;
+            }
+
+            a:hover{
+                background-color: rgba(0, 0, 0, 0.445);
+            }
+        }
+    }
+    
+}
+
+.complemento {
+    position: absolute;
+    z-index: $altura-complementos;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}

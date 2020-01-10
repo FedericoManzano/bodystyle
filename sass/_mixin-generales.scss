@@ -4,6 +4,18 @@
     align-items: center;
 }
 
+@mixin flex-box-centrado-derecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-box-centrado-izquierda {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 @mixin posicionamiento-absoluto($top, $rigth, $botton, $left) {
     position: absolute;
     top: $top;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bodystyle.css">
+
+
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="menu menu-fixed">
+            <div class="contenedor">
+                <a href="" class="menu-logo">Logo</a>
+                <a class="lateral-boton" data-target="#menu-lateral" href="#!"></a>
+
+                <ul class="derecha lista ocultar-desde-medianos">
+                    <li><a href="#">Documentos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Porfolio</a></li>
+                    <li><a class="dropdown-toggle" data-target="#contacto" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="menu-lateral" class="menu-lateral">
+        <ul>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+        </ul>
+    </div>
+
+    <div id="contacto" class="dropdown">
+        <ul>
+            <li><a href="#!">Item 1</a></li>
+            <li><a href="#!">Item 1</a></li>
+            <li><a href="#!">Item 1</a></li>
+            <li><a href="#!">Item 1</a></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/bodystyle.js"></script>
+    <script>
+        BS.AutoInit()
+    </script>
+</body>
+
+
+</html>

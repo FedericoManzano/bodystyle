@@ -1,28 +1,38 @@
 (function(){
-    var estado = 0;
+
+
+    var estado=0;
     var cargarComplemento = ()=> {
-        $(".menu-lateral").append("<div class='complemento'></div>")
-        $(".menu-listado .i-menu").append("<span></span><span></span><span></span>")
+        $("body").append("<div class='complemento'></div>")
+        $(".lateral-boton").append("<span></span><span></span><span></span>")
     }
 
     var aparecerMenu = () => {
-        $(".toggle").click(function(){
+        $(".lateral-boton").click(function(){
             if(estado === 0){
-                $(".menu-lateral").show()
-                estado = 1;
+                var menuLateral = $($(this).data("target"));
+                menuLateral.animate({
+                    left: 0,
+                }, 500) 
+                $(".complemento").show()
+                estado = 1
             }else {
-                $(".menu-lateral").hide()
-                estado = 0;
+                $(".menu-lateral").animate({
+                    left: -240,
+                }, 500)
+                $(".complemento").hide()
+                estado = 0
             }
-                
+            
         })
     }
 
     var desaparecerMenu = () => {
         $(".complemento").click(function(){
-            $(".menu-lateral").hide()
-            $("#toggle").prop("checked", false)
-            estado = 0;
+            $(".menu-lateral").animate({
+                left: -240,
+            }, 500) 
+            $(this).hide()
         })
     }
 
