@@ -1,0 +1,60 @@
+.btn-flotante {
+    width: 70px;
+    height: 300px;
+    @include posicionamiento-fixed(210px, 0,null,null);
+   
+    z-index: 300000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    user-select: none;
+    .btn,
+    .btn-lg,
+    .btn-sm {
+        border-radius: 0 !important;
+        font-size: 12px !important;
+        padding: 3px !important;
+    }
+
+    .boton-menu {
+        width: 60px;
+        height: 60px;
+        background-color: $fd-rojo;
+        border-radius: 50%;
+        color: white;
+        @include flex-box-centrado();
+        cursor: pointer;
+        font-size: 25px;
+        
+    }
+
+    .boton-menu:hover {
+        background-color: $btn-rojo-hover;
+        box-shadow: 0 0 3px 3px $fd-rojo-t;
+    }
+
+    .submenu {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        .boton-opciones {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            @include flex-box-centrado();
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px 1px black;
+        }
+        .boton-opciones:hover {
+            background-color: rgba(2, 34, 48, 0.877) !important;
+        }
+    }
+
+}

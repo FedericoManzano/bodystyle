@@ -6329,7 +6329,7 @@ table tbody tr td {
     margin-bottom: 0;
   }
 
-  .tabla-responsive > .table > thead > tr > th,
+.tabla-responsive > .table > thead > tr > th,
 .tabla-responsive > .table > tbody > tr > th,
 .tabla-responsive > .table > tfoot > tr > th,
 .tabla-responsive > .table > thead > tr > td,
@@ -12845,6 +12845,66 @@ input[type=search]::placeholder {
   .sidebar-fija {
     display: none;
   }
+}
+.btn-flotante {
+  width: 70px;
+  height: 300px;
+  position: fixed;
+  top: 210px;
+  right: 0;
+  z-index: 300000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  user-select: none;
+}
+.btn-flotante .btn,
+.btn-flotante .btn-lg,
+.btn-flotante .btn-sm {
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  padding: 3px !important;
+}
+.btn-flotante .boton-menu {
+  width: 60px;
+  height: 60px;
+  background-color: #bb1818;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+}
+.btn-flotante .boton-menu:hover {
+  background-color: #a12323;
+  box-shadow: 0 0 3px 3px rgba(255, 0, 0, 0.7);
+}
+.btn-flotante .submenu {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.btn-flotante .submenu .boton-opciones {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px 1px black;
+}
+.btn-flotante .submenu .boton-opciones:hover {
+  background-color: rgba(2, 34, 48, 0.877) !important;
 }
 
 /*# sourceMappingURL=bodystyle.css.map */

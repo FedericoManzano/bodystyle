@@ -6,12 +6,12 @@ import Boton from "./modulos/Boton"
 import Waves from  "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
 import SidebarDesplegable from "./modulos/SidebarDesplegable"
-
+import BotonFlotante from "./modulos/BotonFlotante"
 
 (function(){
     Boton.iniciar()
     Waves.iniciar()
-
+    BotonFlotante.iniciar()
 
 
     var MenuSuperior = ()=> MenuResp.iniciar()
