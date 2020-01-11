@@ -1,0 +1,24 @@
+.ocultar-solo-grandes {
+    @include agregar-a-medida-minima(l){
+        display: none !important;
+    }
+}
+
+
+.ocultar-desde-medianos {
+    @include agregar-a-medida-maxima(m){
+        display: none !important;
+    }
+}
+
+.ocultar-desde-chicos {
+    @include agregar-a-medida-maxima(s){
+        display: none !important;
+    }
+}
+
+.ocultar-desde-x-chicos {
+    @include agregar-a-medida-maxima(xs){
+        display: none !important;
+    }
+}

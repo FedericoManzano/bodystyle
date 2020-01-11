@@ -34,15 +34,14 @@
         @include ancho-alto(18px, 2px);
         margin-bottom: 3px;
         background-color: white;
-        
     }
     width: 80%;
     color: white;
 
-
     @include agregar-a-medida-minima(m){
         display: none !important;
     }
+    z-index: $altura-menu-superiores;
 }
 
 @mixin menu-logo {

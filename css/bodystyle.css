@@ -95,6 +95,18 @@ span {
   font-weight: 100;
 }
 
+.derecha {
+  justify-content: flex-end !important;
+}
+
+.izquierda {
+  justify-content: flex-start !important;
+}
+
+.centrado {
+  justify-content: center !important;
+}
+
 @media (min-width: 1200px) {
   .ocultar-solo-grandes {
     display: none !important;
@@ -117,34 +129,6 @@ span {
   .ocultar-desde-x-chicos {
     display: none !important;
   }
-}
-
-@media (max-width: 1024px) {
-  .mostrar-solo-grandes {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .mostrar-solo-grandes {
-    display: none;
-  }
-}
-@media (max-width: 400px) {
-  .mostrar-solo-grandes {
-    display: none;
-  }
-}
-
-.derecha {
-  justify-content: flex-end !important;
-}
-
-.izquierda {
-  justify-content: flex-start !important;
-}
-
-.centrado {
-  justify-content: center !important;
 }
 
 .f-abajo {
@@ -179,6 +163,30 @@ span {
   height: 2px;
   margin-bottom: 3px;
   background-color: white;
+}
+
+@media (min-width: 1200px) {
+  .ocultar-solo-grandes {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ocultar-desde-medianos {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ocultar-desde-chicos {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .ocultar-desde-x-chicos {
+    display: none !important;
+  }
 }
 
 /* CSS */
@@ -10481,6 +10489,7 @@ input[type=search]::placeholder {
   align-items: flex-end;
   width: 80%;
   color: white;
+  z-index: 100000;
 }
 .menu .lateral-boton span {
   width: 18px;

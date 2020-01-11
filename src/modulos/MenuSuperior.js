@@ -5,6 +5,7 @@
     var cargarComplemento = ()=> {
         $("body").append("<div class='complemento'></div>")
         $(".lateral-boton").append("<span></span><span></span><span></span>")
+        $(".complemento").hide()
     }
 
     var aparecerMenu = () => {

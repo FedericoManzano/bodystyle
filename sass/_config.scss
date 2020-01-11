@@ -10,75 +10,10 @@ $altura-menu-superiores: 100000;
 $altura-menu-laterales: 10000;
 $altura-complementos: 3;
 
-@mixin agregar-a-medida-maxima($tam) { 
-    @if map-has-key($tamaños, $tam) {
-      @media (max-width: #{map-get($tamaños, $tam)}) {
-        @content;
-      }
-    }
-  
-    @else {
-      @warn 
-        "Unfortunately, no value could be retrieved from `#{$tamaños}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
-    }
-};
-
-@mixin agregar-a-medida-minima($tam) { 
-    @if map-has-key($tamaños, $tam) {
-      @media (min-width: #{map-get($tamaños, $tam)}) {
-        @content;
-      }
-    }
-  
-    @else {
-      @warn 
-        "Unfortunately, no value could be retrieved from `#{$tamaños}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
-    }
-};
 
 @function dameMedida($med) {
     @if map-has-key($tamaños, $med) {
         @return map-get($tamaños, $med);
-    }
-}
-
-
-.ocultar-solo-grandes {
-    @include agregar-a-medida-minima(l){
-        display: none !important;
-    }
-}
-
-
-.ocultar-desde-medianos {
-    @include agregar-a-medida-maxima(m){
-        display: none !important;
-    }
-}
-
-.ocultar-desde-chicos {
-    @include agregar-a-medida-maxima(s){
-        display: none !important;
-    }
-}
-
-.ocultar-desde-x-chicos {
-    @include agregar-a-medida-maxima(xs){
-        display: none !important;
-    }
-}
-
-.mostrar-solo-grandes {
-    @include agregar-a-medida-maxima(m){
-        display: none;
-    }
-    @include agregar-a-medida-maxima(s){
-        display: none;
-    }
-    @include agregar-a-medida-maxima(xs){
-        display: none;
     }
 }
 
