@@ -1,28 +1,24 @@
 @mixin agregar-a-medida-maxima($tam) { 
     @if map-has-key($tamaños, $tam) {
-      @media (max-width: #{map-get($tamaños, $tam)}) {
-        @content;
-      }
+        @media (max-width: #{map-get($tamaños, $tam)}) {
+            @content;
+        }
     }
   
     @else {
-      @warn 
-        "Unfortunately, no value could be retrieved from `#{$tamaños}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
+      @warn "El tamaño seleccionado no existe";
     }
 };
 
 @mixin agregar-a-medida-minima($tam) { 
     @if map-has-key($tamaños, $tam) {
-      @media (min-width: #{map-get($tamaños, $tam)}) {
-        @content;
-      }
+        @media (min-width: #{map-get($tamaños, $tam)}) {
+            @content;
+        }
     }
-  
+
     @else {
-      @warn 
-        "Unfortunately, no value could be retrieved from `#{$tamaños}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
+      @warn "El tamaño seleccionado no existe";;
     }
 };
 
@@ -84,29 +80,4 @@
     @include ancho-alto(0, 0);
     right: 20px;
     top: calc(50% - 5px);
-}
-
-.ocultar-solo-grandes {
-    @include agregar-a-medida-minima(l){
-        display: none !important;
-    }
-}
-
-
-.ocultar-desde-medianos {
-    @include agregar-a-medida-maxima(m){
-        display: none !important;
-    }
-}
-
-.ocultar-desde-chicos {
-    @include agregar-a-medida-maxima(s){
-        display: none !important;
-    }
-}
-
-.ocultar-desde-x-chicos {
-    @include agregar-a-medida-maxima(xs){
-        display: none !important;
-    }
 }

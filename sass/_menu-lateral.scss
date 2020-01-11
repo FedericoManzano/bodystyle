@@ -1,12 +1,9 @@
 .menu-lateral {
-    position: fixed;
-    left: -240px;
-    top: 0;
-    bottom: 0;
+    @include posicionamiento-fixed(0,null,0,-240px);
     background-color: $fd-azul-ve;
     width: 240px;
     padding-top: 3em;
-    z-index: $altura-menu-laterales;
+    z-index: superposicion(ml);
     user-select: none;
     ul {
         li{
@@ -26,7 +23,7 @@
 
 .complemento {
     position: absolute;
-    z-index: $altura-complementos;
+    z-index: superposicion(co); ;
     height: 100%;
     width: 100%;
     top: 0;

@@ -32,88 +32,96 @@
     justify-content: center !important;
 }
 
+
+@function inicializarVariable() {
+    @return 1;
+}
+
+@function incrementar($var) {
+    @return $var + 0.5;
+}
+
+
+
 // Clases para agregarle padding a los elementos
-$p: 1;
+$p: inicializarVariable();
 @for $i from 1 through 15 {
     .p-#{$i} { 
         padding: #{$p}em !important;
     }
-    $p: $p + .5
+    $p: incrementar($p);
 } 
 
-$p: 1;
-
+$p: inicializarVariable();
 @for $i from 1 through 15 {
     .pi-#{$i} { 
         padding-left: #{$p}em !important;
     }
-    $p: $p + .5
+    $p: incrementar($p);
 } 
 
-$p: 1;
-
+$p: inicializarVariable();
 @for $i from 1 through 15 {
     .pd-#{$i} { 
         padding-right: #{$p}em !important;
     }
-    $p: $p + .5
+    $p: incrementar($p);
 }
 
-$p: 1;
-
+$p: inicializarVariable();
 @for $i from 1 through 15 {
     .pab-#{$i} { 
         padding-bottom: #{$p}em !important;
     }
-    $p: $p + .5
+    $p: incrementar($p);
 }
 
-$p: 1;
+$p: inicializarVariable();
 @for $i from 1 through 15 {
     .par-#{$i} { 
         padding-top: #{$p}em !important;
     }
-    $p: $p + .5
+    $p: incrementar($p);
 }
 
-$m: 1;
+$m: inicializarVariable();
 @for $i from 1 through 15 {
     .m-#{$i} { 
         margin: #{$m}em !important;
     }
-    $m: $m + .5
+    $m: incrementar($m);
 }
 
-$m: 1;
+$m: inicializarVariable();
 @for $i from 1 through 15 {
     .mi-#{$i} { 
         margin-left: #{$m}em !important;
     }
-    $m: $m + .5
+    $m: incrementar($m);
 }
 
-$m: 1;
+$m: inicializarVariable();
 @for $i from 1 through 15 {
     .md-#{$i} { 
         margin-right: #{$m}em !important;
     }
-    $m: $m + .5
+    $m: incrementar($m);
 }
 
-$m: 1;
+$m: inicializarVariable();
 @for $i from 1 through 15 {
     .mar-#{$i} { 
         margin-top: #{$m}em !important;
     }
-    $m: $m + .5
+    $m: incrementar($m);
 }
 
-$m: 1;
+$m: inicializarVariable();
 @for $i from 1 through 15 {
     .mab-#{$i} { 
         margin-bottom: #{$m}em !important;
     }
-    $m: $m + .5
+    $m: incrementar($m);
 }
 
 
@@ -149,67 +157,154 @@ $m: 1;
     margin:auto;
 }
 
+
+
+
+/**
+
+FLEX BOX
+
+display: flex
+flex-direction: [row, column, row-reverse, column-reverse]  
+    // El eliniamiento es de derecha a izquierda o de arriba  abajo en columna
+
+flex-wrap: [wrap, no-wrap]
+
+wrap:       si el ancho es superior al contenedor se reacomodan 
+            abajo los elementos
+
+no-wrap:    reajusta el ancho de los elementos para acomodarlos en el contenedor
+
+wrap-reverse: Igual que wrap pero con los elementos en reversa 
+
+justify-content: [flex-start, flex-end, center, space-around, space-between]
+        flex-start: alinea al comienzo de contenedor.
+        flex-end: alinea al final del contenedor.
+        center: centra los elementos.
+        space-around: 
+                        distribuye los elementos a lo largo del contenedor.
+        space-between: 
+                        distribuye pero al inicio y al final el espacio es menor.
+                        acomoda desde afuera hacia dentro. si tenemos dos elementos uno lo pone al principo 
+                        y el otro al final
+
+align-items: [flex-start, flex-end, center, stretch, baseline]
+            flex-start: alinea verticalmente el contenido al principio
+            flex-end: alinea verticalmente el contenido al final
+            center: alinea verticalmente centrado (Si es una fila sola)
+                    Mas filas las distribuye uniformemente a los largo del contenedor
+            stretch: Cubre el 100% del eje vertical con los elementos (Elementos tamaño (no-fijo))
+            baseline: Alinea los elementos por el comienzo de la fuente de escritura
+align-content: [los mismo valores] => Filas Grupos de elementos
+*/
+
+
+/****
+
+    Display flex 
+
+*/
 .d-flex {
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
 }
 
-.d-flex-fila {
+/****
+
+    Display flex tipos
+
+*/
+.flex-fila {
     flex-direction: row;
 }
 
-.d-flex-columna {
+.flex-columna {
     flex-direction: column;
 }
 
-.d-flex-wrap {
-    flex-wrap: wrap;
-}
-
-.d-flex-fila-reversa {
+.flex-fila-reversa {
     flex-direction: row-reverse;
 }
 
-.d-flex-columna-reversa {
+.flex-columna-reversa {
     flex-direction: column-reverse;
 }
 
-.just-izquierda {
+.flex-no-wrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-reversa {
+    flex-wrap: wrap-reverse;
+}
+
+
+/***
+    Justificación 
+*/
+.just-inicio {
     justify-content: flex-start;
 }
 
-.just-derecha {
+.just-final {
     justify-content: flex-end;
 }
 
-.just-centrado {
+.just-centrada {
     justify-content: center;
 }
 
 .just-cobertura {
-    justify-content: stretch;
+    justify-content: space-around;
 }
 
-.ali-arriba{
-    align-items: flex-start;
+.just-cobertura-tope {
+    justify-content: space-between;
 }
 
-.ali-centrada{
+/***
+    Aliniamiento
+*/
+
+.ali-centrada {
     align-items: center;
 }
 
-.ali-abajo{
+.ali-inicio {
+    align-items: flex-start;
+}
+
+.ali-final {
     align-items: flex-end;
 }
 
-.ali-eje-contenido {
-    align-items: baseline
+.ali-cobertura {
+    align-items: stretch;
 }
 
-.ali-eje-covertura {
-    align-items: stretch
+.ali-contenido-centrada {
+    align-content: center;
 }
 
-.ali-eje-covertura-uniforme {
-    align-items: space-between;
+.ali-contenido-inicio {
+    align-content: flex-start;
 }
+
+.ali-contenido-final {
+    align-content: flex-end;
+}
+
+.ali-contenido-cobertura {
+    align-content: stretch;
+}
+
+
+
 

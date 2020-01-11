@@ -95,42 +95,6 @@ span {
   font-weight: 100;
 }
 
-.derecha {
-  justify-content: flex-end !important;
-}
-
-.izquierda {
-  justify-content: flex-start !important;
-}
-
-.centrado {
-  justify-content: center !important;
-}
-
-@media (min-width: 1200px) {
-  .ocultar-solo-grandes {
-    display: none !important;
-  }
-}
-
-@media (max-width: 1024px) {
-  .ocultar-desde-medianos {
-    display: none !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .ocultar-desde-chicos {
-    display: none !important;
-  }
-}
-
-@media (max-width: 400px) {
-  .ocultar-desde-x-chicos {
-    display: none !important;
-  }
-}
-
 .f-abajo {
   position: absolute;
   width: 0;
@@ -187,6 +151,18 @@ span {
   .ocultar-desde-x-chicos {
     display: none !important;
   }
+}
+
+.derecha {
+  justify-content: flex-end !important;
+}
+
+.izquierda {
+  justify-content: flex-start !important;
+}
+
+.centrado {
+  justify-content: center !important;
 }
 
 /* CSS */
@@ -275,6 +251,82 @@ span {
 
 .c-verde {
   color: lime !important;
+}
+
+.fz-10 {
+  font-size: 10 !important;
+}
+
+.fz-15 {
+  font-size: 15 !important;
+}
+
+.fz-20 {
+  font-size: 20 !important;
+}
+
+.fz-25 {
+  font-size: 25 !important;
+}
+
+.fz-30 {
+  font-size: 30 !important;
+}
+
+.fz-35 {
+  font-size: 35 !important;
+}
+
+.fz-40 {
+  font-size: 40 !important;
+}
+
+.fz-45 {
+  font-size: 45 !important;
+}
+
+.fz-50 {
+  font-size: 50 !important;
+}
+
+.fz-55 {
+  font-size: 55 !important;
+}
+
+.fz-60 {
+  font-size: 60 !important;
+}
+
+.fz-65 {
+  font-size: 65 !important;
+}
+
+.fz-70 {
+  font-size: 70 !important;
+}
+
+.fz-75 {
+  font-size: 75 !important;
+}
+
+.fz-80 {
+  font-size: 80 !important;
+}
+
+.fz-85 {
+  font-size: 85 !important;
+}
+
+.fz-90 {
+  font-size: 90 !important;
+}
+
+.fz-95 {
+  font-size: 95 !important;
+}
+
+.fz-100 {
+  font-size: 100 !important;
 }
 
 /**
@@ -940,68 +992,145 @@ span {
   margin: auto;
 }
 
+/**
+
+FLEX BOX
+
+display: flex
+flex-direction: [row, column, row-reverse, column-reverse]  
+    // El eliniamiento es de derecha a izquierda o de arriba  abajo en columna
+
+flex-wrap: [wrap, no-wrap]
+
+wrap:       si el ancho es superior al contenedor se reacomodan 
+            abajo los elementos
+
+no-wrap:    reajusta el ancho de los elementos para acomodarlos en el contenedor
+
+wrap-reverse: Igual que wrap pero con los elementos en reversa 
+
+justify-content: [flex-start, flex-end, center, space-around, space-between]
+        flex-start: alinea al comienzo de contenedor.
+        flex-end: alinea al final del contenedor.
+        center: centra los elementos.
+        space-around: 
+                        distribuye los elementos a lo largo del contenedor.
+        space-between: 
+                        distribuye pero al inicio y al final el espacio es menor.
+                        acomoda desde afuera hacia dentro. si tenemos dos elementos uno lo pone al principo 
+                        y el otro al final
+
+align-items: [flex-start, flex-end, center, stretch, baseline]
+            flex-start: alinea verticalmente el contenido al principio
+            flex-end: alinea verticalmente el contenido al final
+            center: alinea verticalmente centrado (Si es una fila sola)
+                    Mas filas las distribuye uniformemente a los largo del contenedor
+            stretch: Cubre el 100% del eje vertical con los elementos (Elementos tamaño (no-fijo))
+            baseline: Alinea los elementos por el comienzo de la fuente de escritura
+align-content: [los mismo valores] => Filas Grupos de elementos
+*/
+/****
+
+    Display flex 
+
+*/
 .d-flex {
   display: flex;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
 }
 
-.d-flex-fila {
+/****
+
+    Display flex tipos
+
+*/
+.flex-fila {
   flex-direction: row;
 }
 
-.d-flex-columna {
+.flex-columna {
   flex-direction: column;
 }
 
-.d-flex-wrap {
-  flex-wrap: wrap;
-}
-
-.d-flex-fila-reversa {
+.flex-fila-reversa {
   flex-direction: row-reverse;
 }
 
-.d-flex-columna-reversa {
+.flex-columna-reversa {
   flex-direction: column-reverse;
 }
 
-.just-izquierda {
+.flex-no-wrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reversa {
+  flex-wrap: wrap-reverse;
+}
+
+/***
+    Justificación 
+*/
+.just-inicio {
   justify-content: flex-start;
 }
 
-.just-derecha {
+.just-final {
   justify-content: flex-end;
 }
 
-.just-centrado {
+.just-centrada {
   justify-content: center;
 }
 
 .just-cobertura {
-  justify-content: stretch;
+  justify-content: space-around;
 }
 
-.ali-arriba {
-  align-items: flex-start;
+.just-cobertura-tope {
+  justify-content: space-between;
 }
 
+/***
+    Aliniamiento
+*/
 .ali-centrada {
   align-items: center;
 }
 
-.ali-abajo {
+.ali-inicio {
+  align-items: flex-start;
+}
+
+.ali-final {
   align-items: flex-end;
 }
 
-.ali-eje-contenido {
-  align-items: baseline;
-}
-
-.ali-eje-covertura {
+.ali-cobertura {
   align-items: stretch;
 }
 
-.ali-eje-covertura-uniforme {
-  align-items: space-between;
+.ali-contenido-centrada {
+  align-content: center;
+}
+
+.ali-contenido-inicio {
+  align-content: flex-start;
+}
+
+.ali-contenido-final {
+  align-content: flex-end;
+}
+
+.ali-contenido-cobertura {
+  align-content: stretch;
 }
 
 /* Colores Botones */
@@ -4304,6 +4433,139 @@ table tbody tr td {
 .tabla-responsive > .table > tbody > tr > td,
 .tabla-responsive > .table > tfoot > tr > td {
     white-space: nowrap;
+  }
+}
+.preloader,
+.preloader-sm,
+.preloader-lg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 6px solid #d6d6d6;
+  position: relative;
+}
+
+.preloader-sm {
+  width: 20px;
+  height: 20px;
+}
+
+.preloader-lg {
+  width: 60px;
+  height: 60px;
+}
+
+.pre-rojo {
+  border-radius: 50%;
+  border-top: 6px solid #bb1818;
+  border-left: 6px solid #bb1818;
+  border-bottom: 6px solid #bb1818;
+  animation: girar-preloader 0.5s 0s infinite linear;
+}
+
+.pre-verde {
+  border-radius: 50%;
+  border-top: 6px solid #006e5c;
+  border-left: 6px solid #006e5c;
+  border-bottom: 6px solid #006e5c;
+  animation: girar-preloader 0.5s 0s infinite linear;
+}
+
+.pre-azul {
+  border-radius: 50%;
+  border-top: 6px solid #006cff;
+  border-left: 6px solid #006cff;
+  border-bottom: 6px solid #006cff;
+  animation: girar-preloader 0.5s 0s infinite linear;
+}
+
+.pre-negro {
+  border-radius: 50%;
+  border-top: 6px solid #111111;
+  border-left: 6px solid #111111;
+  border-bottom: 6px solid #111111;
+  animation: girar-preloader 0.5s 0s infinite linear;
+}
+
+.pre-gris {
+  border-radius: 50%;
+  border-top: 6px solid gray;
+  border-left: 6px solid gray;
+  border-bottom: 6px solid gray;
+  animation: girar-preloader 0.5s 0s infinite linear;
+}
+
+@keyframes girar-preloader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(365deg);
+  }
+}
+.progress-bar,
+.progress-bar-sm,
+.progress-bar-lg {
+  width: 100%;
+  height: 10px;
+  background-color: #cccccc;
+  border-radius: 3px;
+}
+.progress-bar .progress-rojo,
+.progress-bar-sm .progress-rojo,
+.progress-bar-lg .progress-rojo {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #bb1818;
+  animation: aumentar 10s 0s 1 linear;
+}
+.progress-bar .progress-verde,
+.progress-bar-sm .progress-verde,
+.progress-bar-lg .progress-verde {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #006e5c;
+  animation: aumentar 10s 0s 1 linear;
+}
+.progress-bar .progress-azul,
+.progress-bar-sm .progress-azul,
+.progress-bar-lg .progress-azul {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #1045b7;
+  animation: aumentar 10s 0s 1 linear;
+}
+.progress-bar .progress-gris,
+.progress-bar-sm .progress-gris,
+.progress-bar-lg .progress-gris {
+  border-radius: 3px;
+  height: 100%;
+  background-color: gray;
+  animation: aumentar 10s 0s 1 linear;
+}
+.progress-bar .progress-negro,
+.progress-bar-sm .progress-negro,
+.progress-bar-lg .progress-negro {
+  border-radius: 3px;
+  height: 100%;
+  background-color: #111111;
+  animation: aumentar 10s 0s 1 linear;
+}
+
+.progress-bar-sm {
+  height: 5px;
+}
+
+.progress-bar-lg {
+  height: 15px;
+}
+
+@keyframes aumentar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 /* Grilla */
@@ -9013,7 +9275,7 @@ table tbody tr td {
   display: block !important;
   padding-right: 40px !important;
   min-width: 120px !important;
-  z-index: 6;
+  z-index: 1000000;
   cursor: pointer;
 }
 
@@ -9070,139 +9332,6 @@ table tbody tr td {
   background-color: rgba(0, 0, 0, 0.068) !important;
 }
 
-.preloader,
-.preloader-sm,
-.preloader-lg {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 6px solid #d6d6d6;
-  position: relative;
-}
-
-.preloader-sm {
-  width: 20px;
-  height: 20px;
-}
-
-.preloader-lg {
-  width: 60px;
-  height: 60px;
-}
-
-.pre-rojo {
-  border-radius: 50%;
-  border-top: 6px solid #bb1818;
-  border-left: 6px solid #bb1818;
-  border-bottom: 6px solid #bb1818;
-  animation: girar-preloader 0.5s 0s infinite linear;
-}
-
-.pre-verde {
-  border-radius: 50%;
-  border-top: 6px solid #006e5c;
-  border-left: 6px solid #006e5c;
-  border-bottom: 6px solid #006e5c;
-  animation: girar-preloader 0.5s 0s infinite linear;
-}
-
-.pre-azul {
-  border-radius: 50%;
-  border-top: 6px solid #006cff;
-  border-left: 6px solid #006cff;
-  border-bottom: 6px solid #006cff;
-  animation: girar-preloader 0.5s 0s infinite linear;
-}
-
-.pre-negro {
-  border-radius: 50%;
-  border-top: 6px solid #111111;
-  border-left: 6px solid #111111;
-  border-bottom: 6px solid #111111;
-  animation: girar-preloader 0.5s 0s infinite linear;
-}
-
-.pre-gris {
-  border-radius: 50%;
-  border-top: 6px solid gray;
-  border-left: 6px solid gray;
-  border-bottom: 6px solid gray;
-  animation: girar-preloader 0.5s 0s infinite linear;
-}
-
-@keyframes girar-preloader {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(365deg);
-  }
-}
-.progress-bar,
-.progress-bar-sm,
-.progress-bar-lg {
-  width: 100%;
-  height: 10px;
-  background-color: #cccccc;
-  border-radius: 3px;
-}
-.progress-bar .progress-rojo,
-.progress-bar-sm .progress-rojo,
-.progress-bar-lg .progress-rojo {
-  border-radius: 3px;
-  height: 100%;
-  background-color: #bb1818;
-  animation: aumentar 10s 0s 1 linear;
-}
-.progress-bar .progress-verde,
-.progress-bar-sm .progress-verde,
-.progress-bar-lg .progress-verde {
-  border-radius: 3px;
-  height: 100%;
-  background-color: #006e5c;
-  animation: aumentar 10s 0s 1 linear;
-}
-.progress-bar .progress-azul,
-.progress-bar-sm .progress-azul,
-.progress-bar-lg .progress-azul {
-  border-radius: 3px;
-  height: 100%;
-  background-color: #1045b7;
-  animation: aumentar 10s 0s 1 linear;
-}
-.progress-bar .progress-gris,
-.progress-bar-sm .progress-gris,
-.progress-bar-lg .progress-gris {
-  border-radius: 3px;
-  height: 100%;
-  background-color: gray;
-  animation: aumentar 10s 0s 1 linear;
-}
-.progress-bar .progress-negro,
-.progress-bar-sm .progress-negro,
-.progress-bar-lg .progress-negro {
-  border-radius: 3px;
-  height: 100%;
-  background-color: #111111;
-  animation: aumentar 10s 0s 1 linear;
-}
-
-.progress-bar-sm {
-  height: 5px;
-}
-
-.progress-bar-lg {
-  height: 15px;
-}
-
-@keyframes aumentar {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
 .waves {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -10529,9 +10658,9 @@ input[type=search]::placeholder {
 
 .menu-lateral {
   position: fixed;
-  left: -240px;
   top: 0;
   bottom: 0;
+  left: -240px;
   background-color: #06263f;
   width: 240px;
   padding-top: 3em;
@@ -10779,7 +10908,7 @@ input[type=search]::placeholder {
   position: fixed;
   top: 210px;
   right: 0;
-  z-index: 300000;
+  z-index: 30000;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -10796,12 +10925,12 @@ input[type=search]::placeholder {
 .btn-flotante .boton-menu {
   width: 60px;
   height: 60px;
-  background-color: #bb1818;
-  border-radius: 50%;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #bb1818;
+  border-radius: 50%;
+  color: white;
   cursor: pointer;
   font-size: 25px;
 }
@@ -10818,12 +10947,12 @@ input[type=search]::placeholder {
   align-items: center;
 }
 .btn-flotante .submenu .boton-opciones {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;

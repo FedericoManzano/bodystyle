@@ -22,3 +22,16 @@
         display: none !important;
     }
 }
+
+
+.derecha {
+    justify-content: flex-end !important;
+}
+
+.izquierda {
+    justify-content: flex-start !important;
+}
+
+.centrado {
+    justify-content: center !important;
+}

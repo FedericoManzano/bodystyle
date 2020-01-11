@@ -1,9 +1,8 @@
 .btn-flotante {
-    width: 70px;
-    height: 300px;
+    @include ancho-alto(70px, 300px);
     @include posicionamiento-fixed(210px, 0,null,null);
-   
-    z-index: 300000;
+    z-index: superposicion(bf);
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -18,12 +17,11 @@
     }
 
     .boton-menu {
-        width: 60px;
-        height: 60px;
+        @include ancho-alto(60px, 60px);
+        @include flex-box-centrado();
         background-color: $fd-rojo;
         border-radius: 50%;
         color: white;
-        @include flex-box-centrado();
         cursor: pointer;
         font-size: 25px;
         
@@ -41,11 +39,11 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+        
         .boton-opciones {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
             @include flex-box-centrado();
+            @include ancho-alto(40px, 40px);
+            border-radius: 50%;
             color: white;
             cursor: pointer;
             margin-bottom: 10px;
@@ -56,5 +54,8 @@
             background-color: rgba(2, 34, 48, 0.877) !important;
         }
     }
-
 }
+
+
+
+

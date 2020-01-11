@@ -6,7 +6,7 @@
     max-height: 3.5em;
     background-color: $fd-azul-ve;
     padding: 0  1em;
-    z-index: $altura-menu-superiores;
+    z-index: superposicion(ms); // altura menu superior ms
 }
 
 
@@ -41,7 +41,7 @@
     @include agregar-a-medida-minima(m){
         display: none !important;
     }
-    z-index: $altura-menu-superiores;
+    z-index: superposicion(ms);
 }
 
 @mixin menu-logo {

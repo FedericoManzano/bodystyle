@@ -5,27 +5,26 @@ $tamaños:(
     l: 1200px, /// Mayor 
 );
 
+$superposicion:(
+    ms: 100000, // superposición de los menus superiores
+    ml: 10000,  // superposición de los menus laterales
+    co: 3,      // superposición de los complementos
+    bf: 30000,  // superposición de los complementos
+    dd: 1000000 // superposición de los dropdown
+);
 
-$altura-menu-superiores: 100000;
-$altura-menu-laterales: 10000;
-$altura-complementos: 3;
 
+@function superposicion($al) {
+    @if map-has-key($superposicion, $al) {
+        @return map-get($superposicion, $al);
+    }@else {
+        @warn "El componente no existe";
+    }
+}
 
 @function dameMedida($med) {
     @if map-has-key($tamaños, $med) {
         @return map-get($tamaños, $med);
     }
-}
-
-.derecha {
-    justify-content: flex-end !important;
-}
-
-.izquierda {
-    justify-content: flex-start !important;
-}
-
-.centrado {
-    justify-content: center !important;
 }
 

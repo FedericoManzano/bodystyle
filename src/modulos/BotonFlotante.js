@@ -8,10 +8,10 @@
     var eventoClic = () => {
         $(".btn-flotante .boton-menu").click(function(){
             if(presionado === 0){
-                $(".btn-flotante .submenu").slideDown(500);
+                $(".btn-flotante .submenu").slideDown(300);
                 presionado = 1;
             } else {
-                $(".btn-flotante .submenu").slideUp(500);
+                $(".btn-flotante .submenu").slideUp(300);
                 presionado = 0;
             }
         })

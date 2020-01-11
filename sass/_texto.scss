@@ -82,3 +82,15 @@
 .c-verde {
     color: rgb(0, 255, 0) !important;
 }
+
+@function multiplo5($num) {
+    @return $num % 5 == 0;
+}
+
+@for $i from 10 through 100 {
+    @if multiplo5($i) {
+        .fz-#{$i} {
+            font-size: $i !important;
+        }
+    }
+}
