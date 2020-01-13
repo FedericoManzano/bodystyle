@@ -3,15 +3,15 @@
         $(".waves").click(function(e){
             var boton = $(this)
             var elemento = $("<span class='efecto-waves'></span>")
-            var efectoSize = boton.width() * Math.PI;
+            
             elemento.css({
                 width: 10,
                 height: 10,
                 left: e.offsetX,
                 top: e.offsetY
             }).appendTo(boton).animate({
-                width: efectoSize,
-                height: efectoSize,
+                width: 200,
+                height: 200,
                 opacity: 0
             }, 500, function(){
                 $(this).remove()

@@ -1,9 +1,8 @@
 
 .dropdown-toggle {
     position: relative !important; 
-    display: block !important;
+    display: flex !important;
     padding-right: 40px !important;
-    min-width: 120px !important;
     z-index: superposicion(dd);
     cursor: pointer;
 }
@@ -21,7 +20,7 @@
     background-color: white !important;
     border-radius: 4px !important;
     border: 1px solid black !important; 
-    bottom: calc(width) !important;
+    top: 48px !important;
     text-align: left !important;
     z-index: 10 !important;
     text-align: left !important;

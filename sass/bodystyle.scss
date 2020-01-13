@@ -5,15 +5,11 @@
     Version: 1.0.0
 *******************************************************************/
 
-/*Estilos generales */
 @import "generales";
 @import "config";
 @import "mixin-generales";
 @import "iconos";
 @import "screenUtilitarios";
-
-
-/* CSS */
 @import "texto";
 @import "alineamiento";
 @import "colores";
@@ -22,10 +18,7 @@
 @import "tabla";
 @import "preloader";
 @import "progressBar";
-/* Grilla */
 @import "grilla";
-
-/* Componentes */
 @import "dropdown";
 @import "efecto-waves";
 @import "botones";
@@ -40,4 +33,5 @@
 @import "sidebar";
 @import "sidebar-fija";
 @import "botonFlotante";
-
+@import "toast";
+@import "template-formulario";

@@ -10,6 +10,28 @@
     width: 70% ;
     margin: auto ;
 }
+
+
+.contenedor {
+    @include agregar-a-medida-maxima(m){
+        width: 75% ;
+        margin: auto;
+    }  
+}
+
+.contenedor {
+    @include agregar-a-medida-maxima(s){
+        width: 80% ;
+        margin: auto ;
+    }  
+}
+
+.contenedor {
+    @include agregar-a-medida-maxima(xs){
+        width: 90% ;
+        margin: auto ;
+    }  
+}
 /***
     Utilizando flexbox para centrar el contenido
     del contenedor
@@ -125,39 +147,9 @@ $m: inicializarVariable();
 }
 
 
-@media (max-width: 1024px){
-    .contenedor {
-        width: 75% ;
-        margin: auto;
-    }
-}
-
-@media (max-width: 800px){
-    .contenedor {
-        width: 80% ;
-        margin: auto ;
-    }
-}
-
-@media (max-width: 600px){
-    .contenedor {
-        width: 90% ;
-        margin: auto ;
-    }
-}
-
-@media (max-width: 400px){
-    .contenedor {
-        width: 90% ;
-        margin: auto ;
-    }
-}
-
 .m-a {
     margin:auto;
 }
-
-
 
 
 /**
@@ -270,7 +262,7 @@ align-content: [los mismo valores] => Filas Grupos de elementos
 }
 
 /***
-    Aliniamiento
+    Alineamiento
 */
 
 .ali-centrada {

@@ -80,4 +80,5 @@
     @include ancho-alto(0, 0);
     right: 20px;
     top: calc(50% - 5px);
+    display: flex;
 }

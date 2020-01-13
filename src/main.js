@@ -2,17 +2,19 @@
 import MenuResp from "./modulos/MenuSuperior"
 import Sidebar from "./modulos/Sidebar"
 import Modal from "./modulos/Modal"
-import Boton from "./modulos/Boton"
+//import Boton from "./modulos/Boton"
 import Waves from  "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
 import SidebarDesplegable from "./modulos/SidebarDesplegable"
 import BotonFlotante from "./modulos/BotonFlotante"
+import Toast from "./modulos/Toast"
+import TemplateForm from "./modulos/Template-form"
 
 (function(){
-    Boton.iniciar()
+   // Boton.iniciar()
     Waves.iniciar()
     BotonFlotante.iniciar()
-
+    TemplateForm.iniciar()
 
     var MenuSuperior = ()=> MenuResp.iniciar()
     var SidebarInit = () => Sidebar.inicializar()
@@ -40,7 +42,8 @@ import BotonFlotante from "./modulos/BotonFlotante"
         ModalInit: (config) => ModalInit(config),
         DropDownInit: (config) => DropDownInit(config),
         SidebarFijaInit: ()=> SidebarFijaInit(),
-        AutoInit: () => AutoInit()
+        AutoInit: () => AutoInit(),
+        Toast: (html, clases, tiempo) => Toast.ejecutar(html, clases, tiempo)
     }
 
     window.BS = BS
