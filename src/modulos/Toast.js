@@ -5,9 +5,9 @@
         radio: "bor-rad-3",
         colorTexto: "c-blanco"
         }, tiempo = 3000)=> {
-
+        $(".toast").remove();
         $("body").append("<div class='toast'></div>");
-        var t = $("body .toast")
+        var t = $("body .toast:last-child")
         t.html(html)
         t.addClass(clases.color)
         t.addClass(clases.radio)

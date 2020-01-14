@@ -4410,7 +4410,7 @@ table tbody tr td {
   padding: 0.5em 1em;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 800px) {
   .tabla-responsive {
     width: 100%;
     margin-bottom: 15px;
@@ -10638,6 +10638,44 @@ input[type=search]::placeholder {
   left: 0;
 }
 
+.menu-colapso {
+  height: 3em;
+  display: flex;
+  align-items: center;
+  background-color: #06263f;
+  padding: 1em;
+}
+.menu-colapso .menu-boton {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.menu-colapso .menu-boton span {
+  width: 18px;
+  height: 2px;
+  margin-bottom: 3px;
+  background-color: white;
+}
+
+.menu-colapso-contenedor {
+  padding: 30px;
+  border-bottom: 1px solid grey;
+  background-color: #e6e6e6;
+  opacity: 0;
+}
+.menu-colapso-contenedor span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.menu-colapso-contenedor ul li a {
+  display: block;
+  color: #212121;
+  padding: 3px 7px;
+}
+.menu-colapso-contenedor ul li a:hover {
+  color: #1045b7;
+}
+
 .menu-lateral {
   position: fixed;
   top: 0;
@@ -10665,92 +10703,6 @@ input[type=search]::placeholder {
   width: 100%;
   top: 0;
   bottom: 0;
-}
-
-/**
-    Sidebar para aplicaciones web con menus acordeon 
-
-*/
-.sidebar {
-  user-select: none;
-}
-.sidebar .sidebar-cabecera {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  width: 100%;
-  padding: 0.8em;
-  color: white;
-  background-color: #06263f;
-  z-index: 10000;
-}
-.sidebar .sidebar-cabecera label[for=toggle] {
-  width: 100%;
-  cursor: pointer;
-}
-.sidebar .sidebar-menu {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -240px;
-  transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  width: 240px;
-  overflow: auto;
-  background-color: #15161a;
-  z-index: 10000;
-}
-.sidebar .sidebar-menu .logo {
-  padding: 0.475em;
-  display: flex;
-  text-align: center;
-  color: white;
-  font-size: 1.6em;
-  font-weight: 700;
-  background-color: #06263f;
-}
-.sidebar .sidebar-menu .item .titulo {
-  position: relative;
-  padding: 0.5em;
-  color: white;
-  border-bottom: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sidebar .sidebar-menu .item .titulo span {
-  width: 90%;
-}
-.sidebar .sidebar-menu .item ul {
-  background-color: #134350;
-  border-bottom: 1px solid white;
-  display: none;
-  background-color: #06263f;
-}
-.sidebar .sidebar-menu .item ul li a {
-  display: block;
-  color: white;
-  padding: 0.7em 0.5em;
-  transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-}
-.sidebar .sidebar-menu .item ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.466);
-}
-.sidebar #toggle:checked ~ .sidebar-menu {
-  left: 0;
-}
-.sidebar #toggle:checked ~ .sidebar-cabecera {
-  left: 240px;
-  width: calc(100% - 240px);
 }
 
 .barra-superior-fija {
@@ -10884,6 +10836,72 @@ input[type=search]::placeholder {
     display: none;
   }
 }
+.sidebar-barra {
+  width: 100%;
+  min-height: 3em;
+  max-height: 3.5em;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #06263f;
+  transition: all 0.5s ease;
+  z-index: 100000;
+}
+.sidebar-barra .sidebar-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.sidebar-barra .sidebar-menu span {
+  width: 18px;
+  height: 2px;
+  margin-bottom: 3px;
+  background-color: white;
+}
+
+.sidebar-lateral {
+  position: fixed;
+  top: 0em;
+  bottom: 0;
+  left: -240px;
+  width: 240px;
+  background-color: #15161a;
+  transition: all 0.5s ease;
+  z-index: 100000;
+  overflow: auto;
+}
+.sidebar-lateral .titulo {
+  color: white;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+.sidebar-lateral .lista {
+  background-color: #1e2029;
+}
+.sidebar-lateral .lista li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  font-size: 0.8em;
+}
+.sidebar-lateral .lista li a:hover {
+  background-color: rgba(0, 0, 0, 0.418);
+}
+.sidebar-lateral .logo {
+  padding: 0.5em 2em;
+  color: white;
+  background-color: #06263f;
+  font-size: 22px;
+}
+
 .btn-flotante {
   width: 70px;
   height: 300px;
@@ -10955,6 +10973,7 @@ input[type=search]::placeholder {
   background-color: #282e42;
   text-align: center;
   right: 3%;
+  top: 100px;
   color: white;
   animation: subir 1s 0s 1 linear;
   border-radius: 3px;
@@ -10967,7 +10986,7 @@ input[type=search]::placeholder {
     top: 300px;
   }
   to {
-    top: 50px;
+    top: 100px;
   }
 }
 .template-form .template-grupo,

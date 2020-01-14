@@ -1,0 +1,42 @@
+.menu-colapso {
+    height: 3em;
+    display: flex;
+    align-items: center;
+    background-color: $fd-azul-ve;
+    padding: 1em;
+    .menu-boton {
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        span {
+            @include ancho-alto(18px, 2px);
+            margin-bottom: 3px;
+            background-color: white;
+        }
+    }
+}
+
+
+.menu-colapso-contenedor {
+    padding: 30px;
+    border-bottom: 1px solid grey;
+    background-color: rgb(230, 230, 230);
+    opacity: 0;
+    span {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+    ul {
+        li {
+            a{
+                display: block;
+                color: #212121;
+                padding: 3px 7px;
+                &:hover {
+                    color: $fd-azul;
+                }
+            }
+        }
+    }
+}

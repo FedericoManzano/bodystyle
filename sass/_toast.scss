@@ -6,6 +6,7 @@
     background-color: $fd-gris-az-c;
     text-align: center;
     right: 3%;
+    top: 100px;
     color: white;
     animation: subir 1s  0s 1  linear;
     border-radius: 3px;
@@ -19,6 +20,6 @@
     from {
         top: 300px;
     }to {
-        top: 50px;
+        top: 100px;
     }
 }
