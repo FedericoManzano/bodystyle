@@ -9,171 +9,97 @@
         background: none !important;
         border: none !important;
         box-shadow: none !important;
-        bottom: 2px;
+        bottom: 0;
+        padding: 0;
         padding-right: 12px;
         font-size: 16px;
         color: $color;
     }
+
+    input[type='text']:focus + label, 
+    input[type='email']:focus + label,
+    input[type='number']:focus + label,
+    input[type='password']:focus + label,
+    input[type='url']:focus + label,
+    input[type='search']:focus + label {
+        bottom: 35px;
+        font-size: 0.7em;
+    }
 }
 
-@mixin gruposInput (){
-    .template-grupo,
-    .template-grupo-rojo,
-    .template-grupo-verde,
-    .template-grupo-azul,
-    .template-grupo-blanco,
-    .template-grupo-negro,
-    .template-grupo-gris{
-        border-bottom: 1px solid $fd-verde;
-        position: relative;
-        padding: 20px 3px;
-        min-height: 40px;
-        margin: 1em;
+.template-g-blanco,
+.template-g-negro,
+.template-g-azul,
+.template-g-verde,
+.template-g-gris {
+    border-bottom: 1.5px solid black;
+    position: relative;
+    padding: 5px;
+    margin-top: 60px;
+    @include confInput(black);
 
-        input[type='text']:focus, 
-        input[type='email']:focus,
-        input[type='number']:focus,
-        input[type='password']:focus,
-        input[type='url']:focus,
-        input[type='search']:focus {
-            background: none !important;
-            border: none !important;
-            box-shadow: none !important;
-
-        }
-
-        input[type='text']:focus + label, 
-        input[type='email']:focus + label,
-        input[type='number']:focus + label,
-        input[type='password']:focus + label,
-        input[type='url']:focus + label,
-        input[type='search']:focus + label {
-            font-size: 12px;
-            top: -8px;
-        }
-
-        label {
-            position: absolute;
-            color: $fd-verde;
-            top: 12px;
-            left: 12px;
-            transition: top 0.3s linear;
-        }
-
-        .active{
-            font-size: 12px;
-            top: -8px;
-        }
+    label {
+        position: absolute;
+        bottom: 12px;
+        color: black;
+        transition: bottom .5s ease;
     }
 
-    .template-grupo-rojo {
-        border-bottom: 1.5px solid $fd-rojo;
-        label {
-            color: $fd-rojo;
-        }
-    }
+    .active{
+        bottom: 35px;
+        font-size: 0.7em;
 
-    .template-grupo-azul {
-        border-bottom: 1.5px solid $fd-azul;
-        label {
+    }
+}
+
+.template-g-blanco {
+    border-bottom: 1.5px solid rgb(255, 255, 255);
+    label {
+        color: white;
+    }
+}
+
+.template-g-azul {
+    border-bottom: 1.5px solid $fd-azul;
+    label {
+        color: $fd-azul;
+    }
+    
+}
+
+.template-g-verde {
+    border-bottom: 1.5px solid $fd-verde;
+    label {
+        color: $fd-verde;
+    }
+}
+
+.template-g-gris {
+    border-bottom: 1.5px solid $fd-gris;
+    label {
+        color: $fd-gris;
+    }
+}
+
+.template-login {
+    max-width: 350px;
+    padding: 40px;
+    box-shadow: 0px 0px 3px 0.5px rgba(0, 0, 0, 0.397);
+    .titulo {
+        font-size: 30px;
+        font-weight: 300;
+    }
+    .botones {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        .btn{
+            margin-right: 10px;
+            font-size: 1em;
+        }
+        & a:last-child {
+            font-size: 0.8em;
             color: $fd-azul;
         }
     }
-
-    .template-grupo-gris {
-        border-bottom: 1.5px solid $fd-gris-az;
-        label {
-            color: $fd-gris-az;
-        }
-    }
-
-    .template-grupo-blanco {
-        border-bottom: 1.5px solid white;
-        label {
-            color: white;
-        }
-    }
-
-    .template-grupo-verde {
-        border-bottom: 1.5px solid $fd-verde;
-        label {
-            color: $fd-verde;
-        }
-    }
-
-    .template-grupo-negro {
-        border-bottom: 1.5px solid black;
-        label {
-            color: black;
-        }
-    }
-}
-
-
-.template-form {
-    @include gruposInput();
-    @include confInput(black);
-}
-
-.template-form-login-negro,
-.template-form-login-blanco, 
-.template-form-login-azul,
-.template-form-login-gris-oscuro{
-    max-width: 300px;
-    min-width: 250px;
-    padding: 50px 30px;
-    padding-top: 30px;
-    background-color: rgb(0, 0, 0) ;
-    color: white !important;
-    border-radius: 5px;
-    @include gruposInput();
-    @include confInput(white);
-    .btn,
-    .btn-sm, 
-    .btn-lg{
-        margin-top: 1.5em;
-        margin-left: 1em;
-    }
-    h3{
-        margin-left: 0.5em;
-        font-weight: 600;
-    }
-}
-
-.template-form-login-blanco {
-    background-color: rgb(255, 255, 255);
-    color: black !important;
-    border: 1px solid rgb(190, 190, 190);
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322) ;
-    border-radius: 0;
-    @include gruposInput();
-    @include confInput(black);
-}
-
-.template-form-login-negro {
-    background-color: rgb(0, 0, 0);
-    color: white !important;
-    border: 1px solid rgb(0, 0, 0);
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322) ;
-    border-radius: 0;
-    @include gruposInput();
-    @include confInput(white);
-}
-
-.template-form-login-azul {
-    background-color: $fd-azul;
-    color: white !important;
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322) ;
-    border-radius: 0;
-    @include gruposInput();
-    @include confInput(white);
-}
-
-.template-form-login-gris-oscuro {
-    background-color: $fd-gris-az-o;
-    color: white !important;
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322) ;
-    border-radius: 0;
-    @include gruposInput();
-    @include confInput(white);
 }

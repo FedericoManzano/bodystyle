@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?dk1dna');
-  src:  url('fonts/icomoon.eot?dk1dna#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?dk1dna') format('truetype'),
-    url('fonts/icomoon.woff?dk1dna') format('woff'),
-    url('fonts/icomoon.svg?dk1dna#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?s6x2ge');
+  src:  url('fonts/icomoon.eot?s6x2ge#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?s6x2ge') format('truetype'),
+    url('fonts/icomoon.woff?s6x2ge') format('woff'),
+    url('fonts/icomoon.svg?s6x2ge#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 .icon-home3:before {
   content: "\e902";
+}
+.icon-file-text:before {
+  content: "\e922";
 }
 .icon-user:before {
   content: "\e971";
@@ -90,6 +95,21 @@
 }
 .icon-forward2:before {
   content: "\ea1b";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-embed2:before {
+  content: "\ea80";
 }
 .icon-google:before {
   content: "\ea88";

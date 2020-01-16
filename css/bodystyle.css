@@ -9,8 +9,8 @@
     Estilos generales afectan a toda la pagina
 */
 @font-face {
-  font-family: "HelveticaNeue-med";
-  src: url("./fonts/HelveticaNeueMed.ttf");
+  font-family: "HelveticaNeue";
+  src: url("./fonts/HelveticaNeue Ligth.ttf");
 }
 * {
   padding: 0;
@@ -130,7 +130,7 @@ span {
   background-color: white;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .ocultar-solo-grandes {
     display: none !important;
   }
@@ -4410,7 +4410,7 @@ table tbody tr td {
   padding: 0.5em 1em;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 1200px) {
   .tabla-responsive {
     width: 100%;
     margin-bottom: 15px;
@@ -4419,16 +4419,16 @@ table tbody tr td {
     border: 1px solid #ddd;
   }
 
-  .tabla-responsive > .table {
+  .tabla-responsive > table {
     margin-bottom: 0;
   }
 
-  .tabla-responsive > .table > thead > tr > th,
-.tabla-responsive > .table > tbody > tr > th,
-.tabla-responsive > .table > tfoot > tr > th,
-.tabla-responsive > .table > thead > tr > td,
-.tabla-responsive > .table > tbody > tr > td,
-.tabla-responsive > .table > tfoot > tr > td {
+  .tabla-responsive > table > thead > tr > th,
+.tabla-responsive > table > tbody > tr > th,
+.tabla-responsive > table > tfoot > tr > th,
+.tabla-responsive > table > thead > tr > td,
+.tabla-responsive > table > tbody > tr > td,
+.tabla-responsive > table > tfoot > tr > td {
     white-space: nowrap;
   }
 }
@@ -4565,6 +4565,76 @@ table tbody tr td {
     width: 100%;
   }
 }
+.switch-grupo input[type=checkbox] {
+  display: none;
+}
+
+.switch-rojo,
+.switch-negro,
+.switch-verde,
+.switch-azul,
+.switch-gris {
+  height: 15px;
+  width: 40px;
+  background-color: rgba(161, 161, 161, 0.5);
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.switch-rojo::before,
+.switch-negro::before,
+.switch-verde::before,
+.switch-azul::before,
+.switch-gris::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: white;
+  top: -3.5px;
+  left: -1%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.37);
+  transition: left 0.3s ease;
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-rojo {
+  background-color: rgba(238, 0, 0, 0.5);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-rojo::before {
+  background-color: #ee0000;
+  left: calc(100% - 19px);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-negro {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-negro::before {
+  background-color: black;
+  left: calc(100% - 19px);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-verde {
+  background-color: rgba(17, 187, 144, 0.5);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-verde::before {
+  background-color: #11bb90;
+  left: calc(100% - 19px);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-azul {
+  background-color: rgba(0, 72, 155, 0.5);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-azul::before {
+  background-color: #00489b;
+  left: calc(100% - 19px);
+}
+
 /****
     Grilla para acomodar los elementos dentro del sitio
     Contiene 4 medidas disponibles
@@ -9651,7 +9721,8 @@ input[type=email],
 input[type=number],
 input[type=password],
 input[type=url],
-input[type=search] {
+input[type=search],
+textarea {
   outline: none;
   height: 2.1em;
   width: 100%;
@@ -9670,7 +9741,8 @@ input[type=email]:focus,
 input[type=number]:focus,
 input[type=password]:focus,
 input[type=url]:focus,
-input[type=search]:focus {
+input[type=search]:focus,
+textarea:focus {
   box-shadow: 0 0 0 3px rgba(135, 217, 255, 0.3);
   border: 1px solid #87d9ff;
   z-index: 2;
@@ -9681,7 +9753,8 @@ input[type=email]::placeholder,
 input[type=number]::placeholder,
 input[type=password]::placeholder,
 input[type=url]::placeholder,
-input[type=search]::placeholder {
+input[type=search]::placeholder,
+textarea::placeholder {
   color: grey;
 }
 
@@ -9967,106 +10040,59 @@ input[type=search]::placeholder {
   border-right: 1px solid #a3a3a3;
 }
 
-.g-input-3 input[type=text],
-.g-input-3 input[type=email],
-.g-input-3 input[type=search],
-.g-input-3 input[type=url],
-.g-input-3 input[type=number] {
-  border-radius: 0 3px 3px 0;
-  height: 2.1em;
+.contenedor-busqueda {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #06263f;
+  width: 100%;
+  height: 52.5px;
 }
 
-.g-input-3 .span {
-  background-color: #cccccc;
-  min-width: 30px;
-  border-radius: 6px 0 0 6px;
-  border-left: 1px solid #a3a3a3;
-  border-top: 1px solid #a3a3a3;
-  border-bottom: 1px solid #a3a3a3;
+.campo-busqueda {
   position: relative;
+  width: 450px;
+}
+.campo-busqueda .boton-busqueda {
+  padding: 5.8px 10px;
+  width: 80px;
+  border-radius: 0 1px 1px 0;
+  background-color: #474747;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+.campo-busqueda .boton-busqueda:hover {
+  background-color: rgba(0, 0, 0, 0.575) !important;
+}
+.campo-busqueda input[type=search] {
+  height: 30px !important;
+  max-width: 370px !important;
+  position: absolute;
+  border-radius: 1px 0 0 1px;
+  border: 1px solid #474747;
+  left: 0;
+}
+.campo-busqueda input[type=search]:focus {
+  box-shadow: none !important;
+  border: 1px solid #0078c9;
 }
 
-.g-input-3 .dropdown-toggle {
-  background-color: #cccccc;
-  min-width: 30px;
-  border-left: 1px solid #a3a3a3;
-  border-top: 1px solid #a3a3a3;
-  border-bottom: 1px solid #a3a3a3;
-  position: relative;
+@media (max-width: 500px) {
+  .campo-busqueda {
+    width: 320px;
+  }
+  .campo-busqueda .boton-busqueda {
+    width: 80px;
+  }
+  .campo-busqueda input[type=search] {
+    max-width: 240px !important;
+  }
 }
-
-.g-input-4 input[type=text],
-.g-input-4 input[type=email],
-.g-input-4 input[type=search],
-.g-input-4 input[type=url],
-.g-input-4 input[type=number] {
-  border-radius: 0 0 0 0;
-  height: 2.1em;
-  border-right: none;
-}
-
-.g-input-4 .span {
-  background-color: #cccccc;
-  min-width: 30px;
-  border-radius: 6px 0 0 6px;
-  border-left: 1px solid #a3a3a3;
-  border-top: 1px solid #a3a3a3;
-  border-bottom: 1px solid #a3a3a3;
-  position: relative;
-}
-
-.g-input-4 .span-2 {
-  background-color: #cccccc;
-  border-radius: 0px 6px 6px 0px;
-  border-bottom: 1px solid #a3a3a3;
-  border-top: 1px solid #a3a3a3;
-  border-right: 1px solid #a3a3a3;
-}
-
-.g-input-5 input[type=text],
-.g-input-5 input[type=email],
-.g-input-5 input[type=search],
-.g-input-5 input[type=url],
-.g-input-5 input[type=number] {
-  height: 1.6em !important;
-  border-radius: 3px 0px 0px 3px;
-  height: 2.1em;
-}
-
-.g-input-5 .btn {
-  border-radius: 0px 6px 6px 0px;
-  border-bottom: 1px solid #a3a3a3;
-  border-top: 1px solid #a3a3a3;
-  border-right: 1px solid #a3a3a3;
-  height: 2.02em !important;
-  max-width: 60px !important;
-  font-size: 14px;
-}
-
-.g-input-6 input[type=text],
-.g-input-6 input[type=email],
-.g-input-6 input[type=search],
-.g-input-6 input[type=url],
-.g-input-6 input[type=number] {
-  border-radius: 3px 0px 0px 3px;
-  height: 2.1em;
-}
-
-.g-input-6 .btn {
-  border-radius: 0px 6px 6px 0px;
-  border-bottom: 1px solid #a3a3a3;
-  border-top: 1px solid #a3a3a3;
-  border-right: 1px solid #a3a3a3;
-}
-
-.g-input-6 .span {
-  background-color: #cccccc;
-  border-radius: 0;
-  border-bottom: 1px solid #a3a3a3;
-  border-top: 1px solid #a3a3a3;
-  z-index: 10;
-}
-
 .badges-sub {
   width: 200px;
   height: 50px;
@@ -10989,1507 +11015,210 @@ input[type=search]::placeholder {
     top: 100px;
   }
 }
-.template-form .template-grupo,
-.template-form .template-grupo-rojo,
-.template-form .template-grupo-verde,
-.template-form .template-grupo-azul,
-.template-form .template-grupo-blanco,
-.template-form .template-grupo-negro,
-.template-form .template-grupo-gris {
-  border-bottom: 1px solid #006e5c;
-  position: relative;
-  padding: 20px 3px;
-  min-height: 40px;
-  margin: 1em;
+.sidebarFija {
+  position: fixed;
+  top: 0;
+  right: 500;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background-color: #06263f;
+  overflow: auto;
+  padding-bottom: 40px;
+  user-select: none;
+  border-right: 2px solid #008cff;
 }
-.template-form .template-grupo input[type=text]:focus,
-.template-form .template-grupo input[type=email]:focus,
-.template-form .template-grupo input[type=number]:focus,
-.template-form .template-grupo input[type=password]:focus,
-.template-form .template-grupo input[type=url]:focus,
-.template-form .template-grupo input[type=search]:focus,
-.template-form .template-grupo-rojo input[type=text]:focus,
-.template-form .template-grupo-rojo input[type=email]:focus,
-.template-form .template-grupo-rojo input[type=number]:focus,
-.template-form .template-grupo-rojo input[type=password]:focus,
-.template-form .template-grupo-rojo input[type=url]:focus,
-.template-form .template-grupo-rojo input[type=search]:focus,
-.template-form .template-grupo-verde input[type=text]:focus,
-.template-form .template-grupo-verde input[type=email]:focus,
-.template-form .template-grupo-verde input[type=number]:focus,
-.template-form .template-grupo-verde input[type=password]:focus,
-.template-form .template-grupo-verde input[type=url]:focus,
-.template-form .template-grupo-verde input[type=search]:focus,
-.template-form .template-grupo-azul input[type=text]:focus,
-.template-form .template-grupo-azul input[type=email]:focus,
-.template-form .template-grupo-azul input[type=number]:focus,
-.template-form .template-grupo-azul input[type=password]:focus,
-.template-form .template-grupo-azul input[type=url]:focus,
-.template-form .template-grupo-azul input[type=search]:focus,
-.template-form .template-grupo-blanco input[type=text]:focus,
-.template-form .template-grupo-blanco input[type=email]:focus,
-.template-form .template-grupo-blanco input[type=number]:focus,
-.template-form .template-grupo-blanco input[type=password]:focus,
-.template-form .template-grupo-blanco input[type=url]:focus,
-.template-form .template-grupo-blanco input[type=search]:focus,
-.template-form .template-grupo-negro input[type=text]:focus,
-.template-form .template-grupo-negro input[type=email]:focus,
-.template-form .template-grupo-negro input[type=number]:focus,
-.template-form .template-grupo-negro input[type=password]:focus,
-.template-form .template-grupo-negro input[type=url]:focus,
-.template-form .template-grupo-negro input[type=search]:focus,
-.template-form .template-grupo-gris input[type=text]:focus,
-.template-form .template-grupo-gris input[type=email]:focus,
-.template-form .template-grupo-gris input[type=number]:focus,
-.template-form .template-grupo-gris input[type=password]:focus,
-.template-form .template-grupo-gris input[type=url]:focus,
-.template-form .template-grupo-gris input[type=search]:focus {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.template-form .template-grupo input[type=text]:focus + label,
-.template-form .template-grupo input[type=email]:focus + label,
-.template-form .template-grupo input[type=number]:focus + label,
-.template-form .template-grupo input[type=password]:focus + label,
-.template-form .template-grupo input[type=url]:focus + label,
-.template-form .template-grupo input[type=search]:focus + label,
-.template-form .template-grupo-rojo input[type=text]:focus + label,
-.template-form .template-grupo-rojo input[type=email]:focus + label,
-.template-form .template-grupo-rojo input[type=number]:focus + label,
-.template-form .template-grupo-rojo input[type=password]:focus + label,
-.template-form .template-grupo-rojo input[type=url]:focus + label,
-.template-form .template-grupo-rojo input[type=search]:focus + label,
-.template-form .template-grupo-verde input[type=text]:focus + label,
-.template-form .template-grupo-verde input[type=email]:focus + label,
-.template-form .template-grupo-verde input[type=number]:focus + label,
-.template-form .template-grupo-verde input[type=password]:focus + label,
-.template-form .template-grupo-verde input[type=url]:focus + label,
-.template-form .template-grupo-verde input[type=search]:focus + label,
-.template-form .template-grupo-azul input[type=text]:focus + label,
-.template-form .template-grupo-azul input[type=email]:focus + label,
-.template-form .template-grupo-azul input[type=number]:focus + label,
-.template-form .template-grupo-azul input[type=password]:focus + label,
-.template-form .template-grupo-azul input[type=url]:focus + label,
-.template-form .template-grupo-azul input[type=search]:focus + label,
-.template-form .template-grupo-blanco input[type=text]:focus + label,
-.template-form .template-grupo-blanco input[type=email]:focus + label,
-.template-form .template-grupo-blanco input[type=number]:focus + label,
-.template-form .template-grupo-blanco input[type=password]:focus + label,
-.template-form .template-grupo-blanco input[type=url]:focus + label,
-.template-form .template-grupo-blanco input[type=search]:focus + label,
-.template-form .template-grupo-negro input[type=text]:focus + label,
-.template-form .template-grupo-negro input[type=email]:focus + label,
-.template-form .template-grupo-negro input[type=number]:focus + label,
-.template-form .template-grupo-negro input[type=password]:focus + label,
-.template-form .template-grupo-negro input[type=url]:focus + label,
-.template-form .template-grupo-negro input[type=search]:focus + label,
-.template-form .template-grupo-gris input[type=text]:focus + label,
-.template-form .template-grupo-gris input[type=email]:focus + label,
-.template-form .template-grupo-gris input[type=number]:focus + label,
-.template-form .template-grupo-gris input[type=password]:focus + label,
-.template-form .template-grupo-gris input[type=url]:focus + label,
-.template-form .template-grupo-gris input[type=search]:focus + label {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form .template-grupo label,
-.template-form .template-grupo-rojo label,
-.template-form .template-grupo-verde label,
-.template-form .template-grupo-azul label,
-.template-form .template-grupo-blanco label,
-.template-form .template-grupo-negro label,
-.template-form .template-grupo-gris label {
-  position: absolute;
-  color: #006e5c;
-  top: 12px;
-  left: 12px;
-  transition: top 0.3s linear;
-}
-.template-form .template-grupo .active,
-.template-form .template-grupo-rojo .active,
-.template-form .template-grupo-verde .active,
-.template-form .template-grupo-azul .active,
-.template-form .template-grupo-blanco .active,
-.template-form .template-grupo-negro .active,
-.template-form .template-grupo-gris .active {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form .template-grupo-rojo {
-  border-bottom: 1.5px solid #bb1818;
-}
-.template-form .template-grupo-rojo label {
-  color: #bb1818;
-}
-.template-form .template-grupo-azul {
-  border-bottom: 1.5px solid #1045b7;
-}
-.template-form .template-grupo-azul label {
-  color: #1045b7;
-}
-.template-form .template-grupo-gris {
-  border-bottom: 1.5px solid #1e2029;
-}
-.template-form .template-grupo-gris label {
-  color: #1e2029;
-}
-.template-form .template-grupo-blanco {
-  border-bottom: 1.5px solid white;
-}
-.template-form .template-grupo-blanco label {
+.sidebarFija .sedebarLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #008cff;
+  text-align: center;
   color: white;
+  background-color: #122f4b;
+  margin-bottom: 40px;
+  box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.308);
 }
-.template-form .template-grupo-verde {
-  border-bottom: 1.5px solid #006e5c;
+.sidebarFija .sedebarLogo h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
 }
-.template-form .template-grupo-verde label {
-  color: #006e5c;
+.sidebarFija .sedebarLogo span {
+  font-size: 13px;
 }
-.template-form .template-grupo-negro {
-  border-bottom: 1.5px solid black;
+.sidebarFija .titulo {
+  text-transform: uppercase;
+  display: block;
+  color: white;
+  padding: 10px 15px;
+  font-size: 15px;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
 }
-.template-form .template-grupo-negro label {
-  color: black;
+.sidebarFija .lista li a {
+  display: block;
+  color: #ebebeb;
+  padding: 5px 35px;
+  font-size: 14px;
 }
-.template-form input[type=text],
-.template-form input[type=email],
-.template-form input[type=number],
-.template-form input[type=password],
-.template-form input[type=url],
-.template-form input[type=search] {
-  position: absolute;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  bottom: 2px;
-  padding-right: 12px;
-  font-size: 16px;
-  color: black;
+.sidebarFija .lista li a:hover {
+  color: #00fff2;
 }
 
-.template-form-login-negro,
-.template-form-login-blanco,
-.template-form-login-azul,
-.template-form-login-gris-oscuro {
-  max-width: 300px;
-  min-width: 250px;
-  padding: 50px 30px;
-  padding-top: 30px;
-  background-color: black;
-  color: white !important;
-  border-radius: 5px;
-}
-.template-form-login-negro .template-grupo,
-.template-form-login-negro .template-grupo-rojo,
-.template-form-login-negro .template-grupo-verde,
-.template-form-login-negro .template-grupo-azul,
-.template-form-login-negro .template-grupo-blanco,
-.template-form-login-negro .template-grupo-negro,
-.template-form-login-negro .template-grupo-gris,
-.template-form-login-blanco .template-grupo,
-.template-form-login-blanco .template-grupo-rojo,
-.template-form-login-blanco .template-grupo-verde,
-.template-form-login-blanco .template-grupo-azul,
-.template-form-login-blanco .template-grupo-blanco,
-.template-form-login-blanco .template-grupo-negro,
-.template-form-login-blanco .template-grupo-gris,
-.template-form-login-azul .template-grupo,
-.template-form-login-azul .template-grupo-rojo,
-.template-form-login-azul .template-grupo-verde,
-.template-form-login-azul .template-grupo-azul,
-.template-form-login-azul .template-grupo-blanco,
-.template-form-login-azul .template-grupo-negro,
-.template-form-login-azul .template-grupo-gris,
-.template-form-login-gris-oscuro .template-grupo,
-.template-form-login-gris-oscuro .template-grupo-rojo,
-.template-form-login-gris-oscuro .template-grupo-verde,
-.template-form-login-gris-oscuro .template-grupo-azul,
-.template-form-login-gris-oscuro .template-grupo-blanco,
-.template-form-login-gris-oscuro .template-grupo-negro,
-.template-form-login-gris-oscuro .template-grupo-gris {
-  border-bottom: 1px solid #006e5c;
-  position: relative;
-  padding: 20px 3px;
-  min-height: 40px;
-  margin: 1em;
-}
-.template-form-login-negro .template-grupo input[type=text]:focus,
-.template-form-login-negro .template-grupo input[type=email]:focus,
-.template-form-login-negro .template-grupo input[type=number]:focus,
-.template-form-login-negro .template-grupo input[type=password]:focus,
-.template-form-login-negro .template-grupo input[type=url]:focus,
-.template-form-login-negro .template-grupo input[type=search]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=text]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=email]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=number]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=password]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=url]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=search]:focus,
-.template-form-login-negro .template-grupo-verde input[type=text]:focus,
-.template-form-login-negro .template-grupo-verde input[type=email]:focus,
-.template-form-login-negro .template-grupo-verde input[type=number]:focus,
-.template-form-login-negro .template-grupo-verde input[type=password]:focus,
-.template-form-login-negro .template-grupo-verde input[type=url]:focus,
-.template-form-login-negro .template-grupo-verde input[type=search]:focus,
-.template-form-login-negro .template-grupo-azul input[type=text]:focus,
-.template-form-login-negro .template-grupo-azul input[type=email]:focus,
-.template-form-login-negro .template-grupo-azul input[type=number]:focus,
-.template-form-login-negro .template-grupo-azul input[type=password]:focus,
-.template-form-login-negro .template-grupo-azul input[type=url]:focus,
-.template-form-login-negro .template-grupo-azul input[type=search]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=text]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=email]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=number]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=password]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=url]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=search]:focus,
-.template-form-login-negro .template-grupo-negro input[type=text]:focus,
-.template-form-login-negro .template-grupo-negro input[type=email]:focus,
-.template-form-login-negro .template-grupo-negro input[type=number]:focus,
-.template-form-login-negro .template-grupo-negro input[type=password]:focus,
-.template-form-login-negro .template-grupo-negro input[type=url]:focus,
-.template-form-login-negro .template-grupo-negro input[type=search]:focus,
-.template-form-login-negro .template-grupo-gris input[type=text]:focus,
-.template-form-login-negro .template-grupo-gris input[type=email]:focus,
-.template-form-login-negro .template-grupo-gris input[type=number]:focus,
-.template-form-login-negro .template-grupo-gris input[type=password]:focus,
-.template-form-login-negro .template-grupo-gris input[type=url]:focus,
-.template-form-login-negro .template-grupo-gris input[type=search]:focus,
-.template-form-login-blanco .template-grupo input[type=text]:focus,
-.template-form-login-blanco .template-grupo input[type=email]:focus,
-.template-form-login-blanco .template-grupo input[type=number]:focus,
-.template-form-login-blanco .template-grupo input[type=password]:focus,
-.template-form-login-blanco .template-grupo input[type=url]:focus,
-.template-form-login-blanco .template-grupo input[type=search]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=text]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=email]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=number]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=password]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=url]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=search]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=text]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=email]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=number]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=password]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=url]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=search]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=text]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=email]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=number]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=password]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=url]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=search]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=text]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=email]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=number]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=password]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=url]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=search]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=text]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=email]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=number]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=password]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=url]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=search]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=text]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=email]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=number]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=password]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=url]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=search]:focus,
-.template-form-login-azul .template-grupo input[type=text]:focus,
-.template-form-login-azul .template-grupo input[type=email]:focus,
-.template-form-login-azul .template-grupo input[type=number]:focus,
-.template-form-login-azul .template-grupo input[type=password]:focus,
-.template-form-login-azul .template-grupo input[type=url]:focus,
-.template-form-login-azul .template-grupo input[type=search]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=text]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=email]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=number]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=password]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=url]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=search]:focus,
-.template-form-login-azul .template-grupo-verde input[type=text]:focus,
-.template-form-login-azul .template-grupo-verde input[type=email]:focus,
-.template-form-login-azul .template-grupo-verde input[type=number]:focus,
-.template-form-login-azul .template-grupo-verde input[type=password]:focus,
-.template-form-login-azul .template-grupo-verde input[type=url]:focus,
-.template-form-login-azul .template-grupo-verde input[type=search]:focus,
-.template-form-login-azul .template-grupo-azul input[type=text]:focus,
-.template-form-login-azul .template-grupo-azul input[type=email]:focus,
-.template-form-login-azul .template-grupo-azul input[type=number]:focus,
-.template-form-login-azul .template-grupo-azul input[type=password]:focus,
-.template-form-login-azul .template-grupo-azul input[type=url]:focus,
-.template-form-login-azul .template-grupo-azul input[type=search]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=text]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=email]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=number]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=password]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=url]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=search]:focus,
-.template-form-login-azul .template-grupo-negro input[type=text]:focus,
-.template-form-login-azul .template-grupo-negro input[type=email]:focus,
-.template-form-login-azul .template-grupo-negro input[type=number]:focus,
-.template-form-login-azul .template-grupo-negro input[type=password]:focus,
-.template-form-login-azul .template-grupo-negro input[type=url]:focus,
-.template-form-login-azul .template-grupo-negro input[type=search]:focus,
-.template-form-login-azul .template-grupo-gris input[type=text]:focus,
-.template-form-login-azul .template-grupo-gris input[type=email]:focus,
-.template-form-login-azul .template-grupo-gris input[type=number]:focus,
-.template-form-login-azul .template-grupo-gris input[type=password]:focus,
-.template-form-login-azul .template-grupo-gris input[type=url]:focus,
-.template-form-login-azul .template-grupo-gris input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=search]:focus {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.template-form-login-negro .template-grupo input[type=text]:focus + label,
-.template-form-login-negro .template-grupo input[type=email]:focus + label,
-.template-form-login-negro .template-grupo input[type=number]:focus + label,
-.template-form-login-negro .template-grupo input[type=password]:focus + label,
-.template-form-login-negro .template-grupo input[type=url]:focus + label,
-.template-form-login-negro .template-grupo input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=search]:focus + label,
-.template-form-login-azul .template-grupo input[type=text]:focus + label,
-.template-form-login-azul .template-grupo input[type=email]:focus + label,
-.template-form-login-azul .template-grupo input[type=number]:focus + label,
-.template-form-login-azul .template-grupo input[type=password]:focus + label,
-.template-form-login-azul .template-grupo input[type=url]:focus + label,
-.template-form-login-azul .template-grupo input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=search]:focus + label {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-negro .template-grupo label,
-.template-form-login-negro .template-grupo-rojo label,
-.template-form-login-negro .template-grupo-verde label,
-.template-form-login-negro .template-grupo-azul label,
-.template-form-login-negro .template-grupo-blanco label,
-.template-form-login-negro .template-grupo-negro label,
-.template-form-login-negro .template-grupo-gris label,
-.template-form-login-blanco .template-grupo label,
-.template-form-login-blanco .template-grupo-rojo label,
-.template-form-login-blanco .template-grupo-verde label,
-.template-form-login-blanco .template-grupo-azul label,
-.template-form-login-blanco .template-grupo-blanco label,
-.template-form-login-blanco .template-grupo-negro label,
-.template-form-login-blanco .template-grupo-gris label,
-.template-form-login-azul .template-grupo label,
-.template-form-login-azul .template-grupo-rojo label,
-.template-form-login-azul .template-grupo-verde label,
-.template-form-login-azul .template-grupo-azul label,
-.template-form-login-azul .template-grupo-blanco label,
-.template-form-login-azul .template-grupo-negro label,
-.template-form-login-azul .template-grupo-gris label,
-.template-form-login-gris-oscuro .template-grupo label,
-.template-form-login-gris-oscuro .template-grupo-rojo label,
-.template-form-login-gris-oscuro .template-grupo-verde label,
-.template-form-login-gris-oscuro .template-grupo-azul label,
-.template-form-login-gris-oscuro .template-grupo-blanco label,
-.template-form-login-gris-oscuro .template-grupo-negro label,
-.template-form-login-gris-oscuro .template-grupo-gris label {
-  position: absolute;
-  color: #006e5c;
-  top: 12px;
-  left: 12px;
-  transition: top 0.3s linear;
-}
-.template-form-login-negro .template-grupo .active,
-.template-form-login-negro .template-grupo-rojo .active,
-.template-form-login-negro .template-grupo-verde .active,
-.template-form-login-negro .template-grupo-azul .active,
-.template-form-login-negro .template-grupo-blanco .active,
-.template-form-login-negro .template-grupo-negro .active,
-.template-form-login-negro .template-grupo-gris .active,
-.template-form-login-blanco .template-grupo .active,
-.template-form-login-blanco .template-grupo-rojo .active,
-.template-form-login-blanco .template-grupo-verde .active,
-.template-form-login-blanco .template-grupo-azul .active,
-.template-form-login-blanco .template-grupo-blanco .active,
-.template-form-login-blanco .template-grupo-negro .active,
-.template-form-login-blanco .template-grupo-gris .active,
-.template-form-login-azul .template-grupo .active,
-.template-form-login-azul .template-grupo-rojo .active,
-.template-form-login-azul .template-grupo-verde .active,
-.template-form-login-azul .template-grupo-azul .active,
-.template-form-login-azul .template-grupo-blanco .active,
-.template-form-login-azul .template-grupo-negro .active,
-.template-form-login-azul .template-grupo-gris .active,
-.template-form-login-gris-oscuro .template-grupo .active,
-.template-form-login-gris-oscuro .template-grupo-rojo .active,
-.template-form-login-gris-oscuro .template-grupo-verde .active,
-.template-form-login-gris-oscuro .template-grupo-azul .active,
-.template-form-login-gris-oscuro .template-grupo-blanco .active,
-.template-form-login-gris-oscuro .template-grupo-negro .active,
-.template-form-login-gris-oscuro .template-grupo-gris .active {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-negro .template-grupo-rojo,
-.template-form-login-blanco .template-grupo-rojo,
-.template-form-login-azul .template-grupo-rojo,
-.template-form-login-gris-oscuro .template-grupo-rojo {
-  border-bottom: 1.5px solid #bb1818;
-}
-.template-form-login-negro .template-grupo-rojo label,
-.template-form-login-blanco .template-grupo-rojo label,
-.template-form-login-azul .template-grupo-rojo label,
-.template-form-login-gris-oscuro .template-grupo-rojo label {
-  color: #bb1818;
-}
-.template-form-login-negro .template-grupo-azul,
-.template-form-login-blanco .template-grupo-azul,
-.template-form-login-azul .template-grupo-azul,
-.template-form-login-gris-oscuro .template-grupo-azul {
-  border-bottom: 1.5px solid #1045b7;
-}
-.template-form-login-negro .template-grupo-azul label,
-.template-form-login-blanco .template-grupo-azul label,
-.template-form-login-azul .template-grupo-azul label,
-.template-form-login-gris-oscuro .template-grupo-azul label {
-  color: #1045b7;
-}
-.template-form-login-negro .template-grupo-gris,
-.template-form-login-blanco .template-grupo-gris,
-.template-form-login-azul .template-grupo-gris,
-.template-form-login-gris-oscuro .template-grupo-gris {
-  border-bottom: 1.5px solid #1e2029;
-}
-.template-form-login-negro .template-grupo-gris label,
-.template-form-login-blanco .template-grupo-gris label,
-.template-form-login-azul .template-grupo-gris label,
-.template-form-login-gris-oscuro .template-grupo-gris label {
-  color: #1e2029;
-}
-.template-form-login-negro .template-grupo-blanco,
-.template-form-login-blanco .template-grupo-blanco,
-.template-form-login-azul .template-grupo-blanco,
-.template-form-login-gris-oscuro .template-grupo-blanco {
-  border-bottom: 1.5px solid white;
-}
-.template-form-login-negro .template-grupo-blanco label,
-.template-form-login-blanco .template-grupo-blanco label,
-.template-form-login-azul .template-grupo-blanco label,
-.template-form-login-gris-oscuro .template-grupo-blanco label {
-  color: white;
-}
-.template-form-login-negro .template-grupo-verde,
-.template-form-login-blanco .template-grupo-verde,
-.template-form-login-azul .template-grupo-verde,
-.template-form-login-gris-oscuro .template-grupo-verde {
-  border-bottom: 1.5px solid #006e5c;
-}
-.template-form-login-negro .template-grupo-verde label,
-.template-form-login-blanco .template-grupo-verde label,
-.template-form-login-azul .template-grupo-verde label,
-.template-form-login-gris-oscuro .template-grupo-verde label {
-  color: #006e5c;
-}
-.template-form-login-negro .template-grupo-negro,
-.template-form-login-blanco .template-grupo-negro,
-.template-form-login-azul .template-grupo-negro,
-.template-form-login-gris-oscuro .template-grupo-negro {
+.template-g-blanco,
+.template-g-negro,
+.template-g-azul,
+.template-g-verde,
+.template-g-gris {
   border-bottom: 1.5px solid black;
+  position: relative;
+  padding: 5px;
+  margin-top: 60px;
 }
-.template-form-login-negro .template-grupo-negro label,
-.template-form-login-blanco .template-grupo-negro label,
-.template-form-login-azul .template-grupo-negro label,
-.template-form-login-gris-oscuro .template-grupo-negro label {
-  color: black;
-}
-.template-form-login-negro input[type=text],
-.template-form-login-negro input[type=email],
-.template-form-login-negro input[type=number],
-.template-form-login-negro input[type=password],
-.template-form-login-negro input[type=url],
-.template-form-login-negro input[type=search],
-.template-form-login-blanco input[type=text],
-.template-form-login-blanco input[type=email],
-.template-form-login-blanco input[type=number],
-.template-form-login-blanco input[type=password],
-.template-form-login-blanco input[type=url],
-.template-form-login-blanco input[type=search],
-.template-form-login-azul input[type=text],
-.template-form-login-azul input[type=email],
-.template-form-login-azul input[type=number],
-.template-form-login-azul input[type=password],
-.template-form-login-azul input[type=url],
-.template-form-login-azul input[type=search],
-.template-form-login-gris-oscuro input[type=text],
-.template-form-login-gris-oscuro input[type=email],
-.template-form-login-gris-oscuro input[type=number],
-.template-form-login-gris-oscuro input[type=password],
-.template-form-login-gris-oscuro input[type=url],
-.template-form-login-gris-oscuro input[type=search] {
+.template-g-blanco input[type=text],
+.template-g-blanco input[type=email],
+.template-g-blanco input[type=number],
+.template-g-blanco input[type=password],
+.template-g-blanco input[type=url],
+.template-g-blanco input[type=search],
+.template-g-negro input[type=text],
+.template-g-negro input[type=email],
+.template-g-negro input[type=number],
+.template-g-negro input[type=password],
+.template-g-negro input[type=url],
+.template-g-negro input[type=search],
+.template-g-azul input[type=text],
+.template-g-azul input[type=email],
+.template-g-azul input[type=number],
+.template-g-azul input[type=password],
+.template-g-azul input[type=url],
+.template-g-azul input[type=search],
+.template-g-verde input[type=text],
+.template-g-verde input[type=email],
+.template-g-verde input[type=number],
+.template-g-verde input[type=password],
+.template-g-verde input[type=url],
+.template-g-verde input[type=search],
+.template-g-gris input[type=text],
+.template-g-gris input[type=email],
+.template-g-gris input[type=number],
+.template-g-gris input[type=password],
+.template-g-gris input[type=url],
+.template-g-gris input[type=search] {
   position: absolute;
   background: none !important;
   border: none !important;
   box-shadow: none !important;
-  bottom: 2px;
+  bottom: 0;
+  padding: 0;
   padding-right: 12px;
   font-size: 16px;
-  color: white;
+  color: black;
 }
-.template-form-login-negro .btn,
-.template-form-login-negro .btn-sm,
-.template-form-login-negro .btn-lg,
-.template-form-login-blanco .btn,
-.template-form-login-blanco .btn-sm,
-.template-form-login-blanco .btn-lg,
-.template-form-login-azul .btn,
-.template-form-login-azul .btn-sm,
-.template-form-login-azul .btn-lg,
-.template-form-login-gris-oscuro .btn,
-.template-form-login-gris-oscuro .btn-sm,
-.template-form-login-gris-oscuro .btn-lg {
-  margin-top: 1.5em;
-  margin-left: 1em;
+.template-g-blanco input[type=text]:focus + label,
+.template-g-blanco input[type=email]:focus + label,
+.template-g-blanco input[type=number]:focus + label,
+.template-g-blanco input[type=password]:focus + label,
+.template-g-blanco input[type=url]:focus + label,
+.template-g-blanco input[type=search]:focus + label,
+.template-g-negro input[type=text]:focus + label,
+.template-g-negro input[type=email]:focus + label,
+.template-g-negro input[type=number]:focus + label,
+.template-g-negro input[type=password]:focus + label,
+.template-g-negro input[type=url]:focus + label,
+.template-g-negro input[type=search]:focus + label,
+.template-g-azul input[type=text]:focus + label,
+.template-g-azul input[type=email]:focus + label,
+.template-g-azul input[type=number]:focus + label,
+.template-g-azul input[type=password]:focus + label,
+.template-g-azul input[type=url]:focus + label,
+.template-g-azul input[type=search]:focus + label,
+.template-g-verde input[type=text]:focus + label,
+.template-g-verde input[type=email]:focus + label,
+.template-g-verde input[type=number]:focus + label,
+.template-g-verde input[type=password]:focus + label,
+.template-g-verde input[type=url]:focus + label,
+.template-g-verde input[type=search]:focus + label,
+.template-g-gris input[type=text]:focus + label,
+.template-g-gris input[type=email]:focus + label,
+.template-g-gris input[type=number]:focus + label,
+.template-g-gris input[type=password]:focus + label,
+.template-g-gris input[type=url]:focus + label,
+.template-g-gris input[type=search]:focus + label {
+  bottom: 35px;
+  font-size: 0.7em;
 }
-.template-form-login-negro h3,
-.template-form-login-blanco h3,
-.template-form-login-azul h3,
-.template-form-login-gris-oscuro h3 {
-  margin-left: 0.5em;
-  font-weight: 600;
+.template-g-blanco label,
+.template-g-negro label,
+.template-g-azul label,
+.template-g-verde label,
+.template-g-gris label {
+  position: absolute;
+  bottom: 12px;
+  color: black;
+  transition: bottom 0.5s ease;
+}
+.template-g-blanco .active,
+.template-g-negro .active,
+.template-g-azul .active,
+.template-g-verde .active,
+.template-g-gris .active {
+  bottom: 35px;
+  font-size: 0.7em;
 }
 
-.template-form-login-blanco {
-  background-color: white;
-  color: black !important;
-  border: 1px solid #bebebe;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322);
-  border-radius: 0;
-}
-.template-form-login-blanco .template-grupo,
-.template-form-login-blanco .template-grupo-rojo,
-.template-form-login-blanco .template-grupo-verde,
-.template-form-login-blanco .template-grupo-azul,
-.template-form-login-blanco .template-grupo-blanco,
-.template-form-login-blanco .template-grupo-negro,
-.template-form-login-blanco .template-grupo-gris {
-  border-bottom: 1px solid #006e5c;
-  position: relative;
-  padding: 20px 3px;
-  min-height: 40px;
-  margin: 1em;
-}
-.template-form-login-blanco .template-grupo input[type=text]:focus,
-.template-form-login-blanco .template-grupo input[type=email]:focus,
-.template-form-login-blanco .template-grupo input[type=number]:focus,
-.template-form-login-blanco .template-grupo input[type=password]:focus,
-.template-form-login-blanco .template-grupo input[type=url]:focus,
-.template-form-login-blanco .template-grupo input[type=search]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=text]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=email]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=number]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=password]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=url]:focus,
-.template-form-login-blanco .template-grupo-rojo input[type=search]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=text]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=email]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=number]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=password]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=url]:focus,
-.template-form-login-blanco .template-grupo-verde input[type=search]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=text]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=email]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=number]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=password]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=url]:focus,
-.template-form-login-blanco .template-grupo-azul input[type=search]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=text]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=email]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=number]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=password]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=url]:focus,
-.template-form-login-blanco .template-grupo-blanco input[type=search]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=text]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=email]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=number]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=password]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=url]:focus,
-.template-form-login-blanco .template-grupo-negro input[type=search]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=text]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=email]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=number]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=password]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=url]:focus,
-.template-form-login-blanco .template-grupo-gris input[type=search]:focus {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.template-form-login-blanco .template-grupo input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-rojo input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-verde input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-azul input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-blanco input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-negro input[type=search]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=text]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=email]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=number]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=password]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=url]:focus + label,
-.template-form-login-blanco .template-grupo-gris input[type=search]:focus + label {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-blanco .template-grupo label,
-.template-form-login-blanco .template-grupo-rojo label,
-.template-form-login-blanco .template-grupo-verde label,
-.template-form-login-blanco .template-grupo-azul label,
-.template-form-login-blanco .template-grupo-blanco label,
-.template-form-login-blanco .template-grupo-negro label,
-.template-form-login-blanco .template-grupo-gris label {
-  position: absolute;
-  color: #006e5c;
-  top: 12px;
-  left: 12px;
-  transition: top 0.3s linear;
-}
-.template-form-login-blanco .template-grupo .active,
-.template-form-login-blanco .template-grupo-rojo .active,
-.template-form-login-blanco .template-grupo-verde .active,
-.template-form-login-blanco .template-grupo-azul .active,
-.template-form-login-blanco .template-grupo-blanco .active,
-.template-form-login-blanco .template-grupo-negro .active,
-.template-form-login-blanco .template-grupo-gris .active {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-blanco .template-grupo-rojo {
-  border-bottom: 1.5px solid #bb1818;
-}
-.template-form-login-blanco .template-grupo-rojo label {
-  color: #bb1818;
-}
-.template-form-login-blanco .template-grupo-azul {
-  border-bottom: 1.5px solid #1045b7;
-}
-.template-form-login-blanco .template-grupo-azul label {
-  color: #1045b7;
-}
-.template-form-login-blanco .template-grupo-gris {
-  border-bottom: 1.5px solid #1e2029;
-}
-.template-form-login-blanco .template-grupo-gris label {
-  color: #1e2029;
-}
-.template-form-login-blanco .template-grupo-blanco {
+.template-g-blanco {
   border-bottom: 1.5px solid white;
 }
-.template-form-login-blanco .template-grupo-blanco label {
-  color: white;
-}
-.template-form-login-blanco .template-grupo-verde {
-  border-bottom: 1.5px solid #006e5c;
-}
-.template-form-login-blanco .template-grupo-verde label {
-  color: #006e5c;
-}
-.template-form-login-blanco .template-grupo-negro {
-  border-bottom: 1.5px solid black;
-}
-.template-form-login-blanco .template-grupo-negro label {
-  color: black;
-}
-.template-form-login-blanco input[type=text],
-.template-form-login-blanco input[type=email],
-.template-form-login-blanco input[type=number],
-.template-form-login-blanco input[type=password],
-.template-form-login-blanco input[type=url],
-.template-form-login-blanco input[type=search] {
-  position: absolute;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  bottom: 2px;
-  padding-right: 12px;
-  font-size: 16px;
-  color: black;
-}
-
-.template-form-login-negro {
-  background-color: black;
-  color: white !important;
-  border: 1px solid black;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322);
-  border-radius: 0;
-}
-.template-form-login-negro .template-grupo,
-.template-form-login-negro .template-grupo-rojo,
-.template-form-login-negro .template-grupo-verde,
-.template-form-login-negro .template-grupo-azul,
-.template-form-login-negro .template-grupo-blanco,
-.template-form-login-negro .template-grupo-negro,
-.template-form-login-negro .template-grupo-gris {
-  border-bottom: 1px solid #006e5c;
-  position: relative;
-  padding: 20px 3px;
-  min-height: 40px;
-  margin: 1em;
-}
-.template-form-login-negro .template-grupo input[type=text]:focus,
-.template-form-login-negro .template-grupo input[type=email]:focus,
-.template-form-login-negro .template-grupo input[type=number]:focus,
-.template-form-login-negro .template-grupo input[type=password]:focus,
-.template-form-login-negro .template-grupo input[type=url]:focus,
-.template-form-login-negro .template-grupo input[type=search]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=text]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=email]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=number]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=password]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=url]:focus,
-.template-form-login-negro .template-grupo-rojo input[type=search]:focus,
-.template-form-login-negro .template-grupo-verde input[type=text]:focus,
-.template-form-login-negro .template-grupo-verde input[type=email]:focus,
-.template-form-login-negro .template-grupo-verde input[type=number]:focus,
-.template-form-login-negro .template-grupo-verde input[type=password]:focus,
-.template-form-login-negro .template-grupo-verde input[type=url]:focus,
-.template-form-login-negro .template-grupo-verde input[type=search]:focus,
-.template-form-login-negro .template-grupo-azul input[type=text]:focus,
-.template-form-login-negro .template-grupo-azul input[type=email]:focus,
-.template-form-login-negro .template-grupo-azul input[type=number]:focus,
-.template-form-login-negro .template-grupo-azul input[type=password]:focus,
-.template-form-login-negro .template-grupo-azul input[type=url]:focus,
-.template-form-login-negro .template-grupo-azul input[type=search]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=text]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=email]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=number]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=password]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=url]:focus,
-.template-form-login-negro .template-grupo-blanco input[type=search]:focus,
-.template-form-login-negro .template-grupo-negro input[type=text]:focus,
-.template-form-login-negro .template-grupo-negro input[type=email]:focus,
-.template-form-login-negro .template-grupo-negro input[type=number]:focus,
-.template-form-login-negro .template-grupo-negro input[type=password]:focus,
-.template-form-login-negro .template-grupo-negro input[type=url]:focus,
-.template-form-login-negro .template-grupo-negro input[type=search]:focus,
-.template-form-login-negro .template-grupo-gris input[type=text]:focus,
-.template-form-login-negro .template-grupo-gris input[type=email]:focus,
-.template-form-login-negro .template-grupo-gris input[type=number]:focus,
-.template-form-login-negro .template-grupo-gris input[type=password]:focus,
-.template-form-login-negro .template-grupo-gris input[type=url]:focus,
-.template-form-login-negro .template-grupo-gris input[type=search]:focus {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.template-form-login-negro .template-grupo input[type=text]:focus + label,
-.template-form-login-negro .template-grupo input[type=email]:focus + label,
-.template-form-login-negro .template-grupo input[type=number]:focus + label,
-.template-form-login-negro .template-grupo input[type=password]:focus + label,
-.template-form-login-negro .template-grupo input[type=url]:focus + label,
-.template-form-login-negro .template-grupo input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-rojo input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-verde input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-azul input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-blanco input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-negro input[type=search]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=text]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=email]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=number]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=password]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=url]:focus + label,
-.template-form-login-negro .template-grupo-gris input[type=search]:focus + label {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-negro .template-grupo label,
-.template-form-login-negro .template-grupo-rojo label,
-.template-form-login-negro .template-grupo-verde label,
-.template-form-login-negro .template-grupo-azul label,
-.template-form-login-negro .template-grupo-blanco label,
-.template-form-login-negro .template-grupo-negro label,
-.template-form-login-negro .template-grupo-gris label {
-  position: absolute;
-  color: #006e5c;
-  top: 12px;
-  left: 12px;
-  transition: top 0.3s linear;
-}
-.template-form-login-negro .template-grupo .active,
-.template-form-login-negro .template-grupo-rojo .active,
-.template-form-login-negro .template-grupo-verde .active,
-.template-form-login-negro .template-grupo-azul .active,
-.template-form-login-negro .template-grupo-blanco .active,
-.template-form-login-negro .template-grupo-negro .active,
-.template-form-login-negro .template-grupo-gris .active {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-negro .template-grupo-rojo {
-  border-bottom: 1.5px solid #bb1818;
-}
-.template-form-login-negro .template-grupo-rojo label {
-  color: #bb1818;
-}
-.template-form-login-negro .template-grupo-azul {
-  border-bottom: 1.5px solid #1045b7;
-}
-.template-form-login-negro .template-grupo-azul label {
-  color: #1045b7;
-}
-.template-form-login-negro .template-grupo-gris {
-  border-bottom: 1.5px solid #1e2029;
-}
-.template-form-login-negro .template-grupo-gris label {
-  color: #1e2029;
-}
-.template-form-login-negro .template-grupo-blanco {
-  border-bottom: 1.5px solid white;
-}
-.template-form-login-negro .template-grupo-blanco label {
-  color: white;
-}
-.template-form-login-negro .template-grupo-verde {
-  border-bottom: 1.5px solid #006e5c;
-}
-.template-form-login-negro .template-grupo-verde label {
-  color: #006e5c;
-}
-.template-form-login-negro .template-grupo-negro {
-  border-bottom: 1.5px solid black;
-}
-.template-form-login-negro .template-grupo-negro label {
-  color: black;
-}
-.template-form-login-negro input[type=text],
-.template-form-login-negro input[type=email],
-.template-form-login-negro input[type=number],
-.template-form-login-negro input[type=password],
-.template-form-login-negro input[type=url],
-.template-form-login-negro input[type=search] {
-  position: absolute;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  bottom: 2px;
-  padding-right: 12px;
-  font-size: 16px;
+.template-g-blanco label {
   color: white;
 }
 
-.template-form-login-azul {
-  background-color: #1045b7;
-  color: white !important;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322);
-  border-radius: 0;
-}
-.template-form-login-azul .template-grupo,
-.template-form-login-azul .template-grupo-rojo,
-.template-form-login-azul .template-grupo-verde,
-.template-form-login-azul .template-grupo-azul,
-.template-form-login-azul .template-grupo-blanco,
-.template-form-login-azul .template-grupo-negro,
-.template-form-login-azul .template-grupo-gris {
-  border-bottom: 1px solid #006e5c;
-  position: relative;
-  padding: 20px 3px;
-  min-height: 40px;
-  margin: 1em;
-}
-.template-form-login-azul .template-grupo input[type=text]:focus,
-.template-form-login-azul .template-grupo input[type=email]:focus,
-.template-form-login-azul .template-grupo input[type=number]:focus,
-.template-form-login-azul .template-grupo input[type=password]:focus,
-.template-form-login-azul .template-grupo input[type=url]:focus,
-.template-form-login-azul .template-grupo input[type=search]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=text]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=email]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=number]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=password]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=url]:focus,
-.template-form-login-azul .template-grupo-rojo input[type=search]:focus,
-.template-form-login-azul .template-grupo-verde input[type=text]:focus,
-.template-form-login-azul .template-grupo-verde input[type=email]:focus,
-.template-form-login-azul .template-grupo-verde input[type=number]:focus,
-.template-form-login-azul .template-grupo-verde input[type=password]:focus,
-.template-form-login-azul .template-grupo-verde input[type=url]:focus,
-.template-form-login-azul .template-grupo-verde input[type=search]:focus,
-.template-form-login-azul .template-grupo-azul input[type=text]:focus,
-.template-form-login-azul .template-grupo-azul input[type=email]:focus,
-.template-form-login-azul .template-grupo-azul input[type=number]:focus,
-.template-form-login-azul .template-grupo-azul input[type=password]:focus,
-.template-form-login-azul .template-grupo-azul input[type=url]:focus,
-.template-form-login-azul .template-grupo-azul input[type=search]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=text]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=email]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=number]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=password]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=url]:focus,
-.template-form-login-azul .template-grupo-blanco input[type=search]:focus,
-.template-form-login-azul .template-grupo-negro input[type=text]:focus,
-.template-form-login-azul .template-grupo-negro input[type=email]:focus,
-.template-form-login-azul .template-grupo-negro input[type=number]:focus,
-.template-form-login-azul .template-grupo-negro input[type=password]:focus,
-.template-form-login-azul .template-grupo-negro input[type=url]:focus,
-.template-form-login-azul .template-grupo-negro input[type=search]:focus,
-.template-form-login-azul .template-grupo-gris input[type=text]:focus,
-.template-form-login-azul .template-grupo-gris input[type=email]:focus,
-.template-form-login-azul .template-grupo-gris input[type=number]:focus,
-.template-form-login-azul .template-grupo-gris input[type=password]:focus,
-.template-form-login-azul .template-grupo-gris input[type=url]:focus,
-.template-form-login-azul .template-grupo-gris input[type=search]:focus {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.template-form-login-azul .template-grupo input[type=text]:focus + label,
-.template-form-login-azul .template-grupo input[type=email]:focus + label,
-.template-form-login-azul .template-grupo input[type=number]:focus + label,
-.template-form-login-azul .template-grupo input[type=password]:focus + label,
-.template-form-login-azul .template-grupo input[type=url]:focus + label,
-.template-form-login-azul .template-grupo input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-rojo input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-verde input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-azul input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-blanco input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-negro input[type=search]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=text]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=email]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=number]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=password]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=url]:focus + label,
-.template-form-login-azul .template-grupo-gris input[type=search]:focus + label {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-azul .template-grupo label,
-.template-form-login-azul .template-grupo-rojo label,
-.template-form-login-azul .template-grupo-verde label,
-.template-form-login-azul .template-grupo-azul label,
-.template-form-login-azul .template-grupo-blanco label,
-.template-form-login-azul .template-grupo-negro label,
-.template-form-login-azul .template-grupo-gris label {
-  position: absolute;
-  color: #006e5c;
-  top: 12px;
-  left: 12px;
-  transition: top 0.3s linear;
-}
-.template-form-login-azul .template-grupo .active,
-.template-form-login-azul .template-grupo-rojo .active,
-.template-form-login-azul .template-grupo-verde .active,
-.template-form-login-azul .template-grupo-azul .active,
-.template-form-login-azul .template-grupo-blanco .active,
-.template-form-login-azul .template-grupo-negro .active,
-.template-form-login-azul .template-grupo-gris .active {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-azul .template-grupo-rojo {
-  border-bottom: 1.5px solid #bb1818;
-}
-.template-form-login-azul .template-grupo-rojo label {
-  color: #bb1818;
-}
-.template-form-login-azul .template-grupo-azul {
+.template-g-azul {
   border-bottom: 1.5px solid #1045b7;
 }
-.template-form-login-azul .template-grupo-azul label {
+.template-g-azul label {
   color: #1045b7;
-}
-.template-form-login-azul .template-grupo-gris {
-  border-bottom: 1.5px solid #1e2029;
-}
-.template-form-login-azul .template-grupo-gris label {
-  color: #1e2029;
-}
-.template-form-login-azul .template-grupo-blanco {
-  border-bottom: 1.5px solid white;
-}
-.template-form-login-azul .template-grupo-blanco label {
-  color: white;
-}
-.template-form-login-azul .template-grupo-verde {
-  border-bottom: 1.5px solid #006e5c;
-}
-.template-form-login-azul .template-grupo-verde label {
-  color: #006e5c;
-}
-.template-form-login-azul .template-grupo-negro {
-  border-bottom: 1.5px solid black;
-}
-.template-form-login-azul .template-grupo-negro label {
-  color: black;
-}
-.template-form-login-azul input[type=text],
-.template-form-login-azul input[type=email],
-.template-form-login-azul input[type=number],
-.template-form-login-azul input[type=password],
-.template-form-login-azul input[type=url],
-.template-form-login-azul input[type=search] {
-  position: absolute;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  bottom: 2px;
-  padding-right: 12px;
-  font-size: 16px;
-  color: white;
 }
 
-.template-form-login-gris-oscuro {
-  background-color: #15161a;
-  color: white !important;
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.322);
-  border-radius: 0;
-}
-.template-form-login-gris-oscuro .template-grupo,
-.template-form-login-gris-oscuro .template-grupo-rojo,
-.template-form-login-gris-oscuro .template-grupo-verde,
-.template-form-login-gris-oscuro .template-grupo-azul,
-.template-form-login-gris-oscuro .template-grupo-blanco,
-.template-form-login-gris-oscuro .template-grupo-negro,
-.template-form-login-gris-oscuro .template-grupo-gris {
-  border-bottom: 1px solid #006e5c;
-  position: relative;
-  padding: 20px 3px;
-  min-height: 40px;
-  margin: 1em;
-}
-.template-form-login-gris-oscuro .template-grupo input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=search]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=text]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=email]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=number]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=password]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=url]:focus,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=search]:focus {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-.template-form-login-gris-oscuro .template-grupo input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-rojo input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-verde input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-azul input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-blanco input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-negro input[type=search]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=text]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=email]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=number]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=password]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=url]:focus + label,
-.template-form-login-gris-oscuro .template-grupo-gris input[type=search]:focus + label {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-gris-oscuro .template-grupo label,
-.template-form-login-gris-oscuro .template-grupo-rojo label,
-.template-form-login-gris-oscuro .template-grupo-verde label,
-.template-form-login-gris-oscuro .template-grupo-azul label,
-.template-form-login-gris-oscuro .template-grupo-blanco label,
-.template-form-login-gris-oscuro .template-grupo-negro label,
-.template-form-login-gris-oscuro .template-grupo-gris label {
-  position: absolute;
-  color: #006e5c;
-  top: 12px;
-  left: 12px;
-  transition: top 0.3s linear;
-}
-.template-form-login-gris-oscuro .template-grupo .active,
-.template-form-login-gris-oscuro .template-grupo-rojo .active,
-.template-form-login-gris-oscuro .template-grupo-verde .active,
-.template-form-login-gris-oscuro .template-grupo-azul .active,
-.template-form-login-gris-oscuro .template-grupo-blanco .active,
-.template-form-login-gris-oscuro .template-grupo-negro .active,
-.template-form-login-gris-oscuro .template-grupo-gris .active {
-  font-size: 12px;
-  top: -8px;
-}
-.template-form-login-gris-oscuro .template-grupo-rojo {
-  border-bottom: 1.5px solid #bb1818;
-}
-.template-form-login-gris-oscuro .template-grupo-rojo label {
-  color: #bb1818;
-}
-.template-form-login-gris-oscuro .template-grupo-azul {
-  border-bottom: 1.5px solid #1045b7;
-}
-.template-form-login-gris-oscuro .template-grupo-azul label {
-  color: #1045b7;
-}
-.template-form-login-gris-oscuro .template-grupo-gris {
-  border-bottom: 1.5px solid #1e2029;
-}
-.template-form-login-gris-oscuro .template-grupo-gris label {
-  color: #1e2029;
-}
-.template-form-login-gris-oscuro .template-grupo-blanco {
-  border-bottom: 1.5px solid white;
-}
-.template-form-login-gris-oscuro .template-grupo-blanco label {
-  color: white;
-}
-.template-form-login-gris-oscuro .template-grupo-verde {
+.template-g-verde {
   border-bottom: 1.5px solid #006e5c;
 }
-.template-form-login-gris-oscuro .template-grupo-verde label {
+.template-g-verde label {
   color: #006e5c;
 }
-.template-form-login-gris-oscuro .template-grupo-negro {
-  border-bottom: 1.5px solid black;
+
+.template-g-gris {
+  border-bottom: 1.5px solid gray;
 }
-.template-form-login-gris-oscuro .template-grupo-negro label {
-  color: black;
+.template-g-gris label {
+  color: gray;
 }
-.template-form-login-gris-oscuro input[type=text],
-.template-form-login-gris-oscuro input[type=email],
-.template-form-login-gris-oscuro input[type=number],
-.template-form-login-gris-oscuro input[type=password],
-.template-form-login-gris-oscuro input[type=url],
-.template-form-login-gris-oscuro input[type=search] {
-  position: absolute;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  bottom: 2px;
-  padding-right: 12px;
-  font-size: 16px;
-  color: white;
+
+.template-login {
+  max-width: 350px;
+  padding: 40px;
+  box-shadow: 0px 0px 3px 0.5px rgba(0, 0, 0, 0.397);
+}
+.template-login .titulo {
+  font-size: 30px;
+  font-weight: 300;
+}
+.template-login .botones {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+.template-login .botones .btn {
+  margin-right: 10px;
+  font-size: 1em;
+}
+.template-login .botones a:last-child {
+  font-size: 0.8em;
+  color: #1045b7;
 }
 
 /*# sourceMappingURL=bodystyle.css.map */

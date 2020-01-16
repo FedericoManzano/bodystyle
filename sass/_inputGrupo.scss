@@ -50,151 +50,94 @@ $radio-bordes-span-2: 0px 6px 6px 0px;
     }
 }
 
-    .g-input-1 input[type="text"],
-    .g-input-1 input[type="email"],
-    .g-input-1 input[type="search"],
-    .g-input-1 input[type="url"],
-    .g-input-1 input[type="number"] {
-        border-radius: $radio-bordes-input;
-        height: $altura-input;
+.g-input-1 input[type="text"],
+.g-input-1 input[type="email"],
+.g-input-1 input[type="search"],
+.g-input-1 input[type="url"],
+.g-input-1 input[type="number"] {
+    border-radius: $radio-bordes-input;
+    height: $altura-input;
+}
+
+
+.g-input-1 .span  {
+    background-color: rgb(204, 204, 204);
+    border-radius: $radio-bordes-span;
+    border-left: $borde;
+    border-top: $borde;
+    border-bottom: $borde;
+}
+
+.g-input-2 input[type="text"],
+.g-input-2 input[type="email"],
+.g-input-2 input[type="search"],
+.g-input-2 input[type="url"],
+.g-input-2 input[type="number"] {
+    border-radius: $radio-bordes-input-2;
+    height: $altura-input;
+}
+
+.g-input-2 .span  {
+    background-color: rgb(204, 204, 204);
+    border-radius: $radio-bordes-span-2;
+    border-bottom: $borde;
+    border-top: $borde;
+    border-right: $borde;
+}
+
+.contenedor-busqueda {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: $fd-azul-ve;
+    width: 100%;
+    height: 52.5px;
+}
+
+.campo-busqueda {
+    position: relative;
+    width: 450px;
+    .boton-busqueda {
+        padding: 5.8px 10px ;
+        width: 80px;
+        border-radius: 0 1px 1px 0;
+        background-color: rgb(71, 71, 71);
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.575) !important;
+        }
     }
 
-
-    .g-input-1 .span  {
-        background-color: rgb(204, 204, 204);
-        border-radius: $radio-bordes-span;
-        border-left: $borde;
-        border-top: $borde;
-        border-bottom: $borde;
+    input[type="search"] {
+        height: 30px !important;
+        max-width: 370px !important;
+        position: absolute;
+        border-radius: 1px 0 0 1px;
+        border: 1px solid rgb(71, 71, 71);;
+        left: 0;
     }
 
-    .g-input-2 input[type="text"],
-    .g-input-2 input[type="email"],
-    .g-input-2 input[type="search"],
-    .g-input-2 input[type="url"],
-    .g-input-2 input[type="number"] {
-        border-radius: $radio-bordes-input-2;
-        height: $altura-input;
+    input[type="search"]:focus {
+        box-shadow: none !important;
+        border: 1px solid rgb(0, 120, 201);
     }
+}
 
-    .g-input-2 .span  {
-        background-color: rgb(204, 204, 204);
-        border-radius: $radio-bordes-span-2;
-        border-bottom: $borde;
-        border-top: $borde;
-        border-right: $borde;
+@media (max-width:500px){
+    .campo-busqueda {
+        width: 320px;
+        .boton-busqueda {
+            width: 80px;
+        }
+
+        input[type="search"] {
+            max-width: 240px !important;
+        }
     }
-
-
-
-    .g-input-3 input[type="text"],
-    .g-input-3 input[type="email"],
-    .g-input-3 input[type="search"],
-    .g-input-3 input[type="url"],
-    .g-input-3 input[type="number"] {
-        border-radius: $radio-bordes-input;
-        height: $altura-input;
-    }
-
-    .g-input-3 .span  {
-        background-color: rgb(204, 204, 204);
-        min-width: 30px;
-        border-radius: $radio-bordes-span;
-        border-left: $borde;
-        border-top: $borde;
-        border-bottom: $borde;
-        position: relative;
-
-    }
-
-    .g-input-3 .dropdown-toggle  {
-        background-color: rgb(204, 204, 204);
-        min-width: 30px;
-        border-left: $borde;
-        border-top: $borde;
-        border-bottom: $borde;
-        position: relative;
-
-    }
-
-
-    .g-input-4 input[type="text"],
-    .g-input-4 input[type="email"],
-    .g-input-4 input[type="search"],
-    .g-input-4 input[type="url"],
-    .g-input-4 input[type="number"] {
-        border-radius: 0 0 0 0;
-        height: $altura-input;
-        border-right: none;
-    }
-
-    .g-input-4 .span  {
-        background-color: rgb(204, 204, 204);
-        min-width: 30px;
-        border-radius: $radio-bordes-span;
-        border-left: $borde;
-        border-top: $borde;
-        border-bottom: $borde;
-        position: relative;
-
-    }
-
-    .g-input-4 .span-2  {
-        background-color: rgb(204, 204, 204);
-        border-radius: $radio-bordes-span-2;
-        border-bottom: $borde;
-        border-top: $borde;
-        border-right: $borde;
-
-    }
-
-
-    .g-input-5 input[type="text"],
-    .g-input-5 input[type="email"],
-    .g-input-5 input[type="search"],
-    .g-input-5 input[type="url"],
-    .g-input-5 input[type="number"] {
-        height: 1.6em !important;
-        border-radius: $radio-bordes-input-2;
-        height: $altura-input;
-    }
-
-    .g-input-5 .btn {
-        border-radius: $radio-bordes-span-2;
-        border-bottom: $borde;
-        border-top: $borde;
-        border-right: $borde;
-        height: 2.02em !important;
-        max-width: 60px !important;
-        font-size: 14px;
-    }
-
-    .g-input-6 input[type="text"],
-    .g-input-6 input[type="email"],
-    .g-input-6 input[type="search"],
-    .g-input-6 input[type="url"],
-    .g-input-6 input[type="number"] {
-        border-radius: $radio-bordes-input-2;
-        height: $altura-input;
-    }
-
-    .g-input-6 .btn {
-        border-radius: $radio-bordes-span-2;
-        border-bottom: $borde;
-        border-top: $borde;
-        border-right: $borde;
-        
-    }
-
-    .g-input-6 .span {
-        background-color: rgb(204, 204, 204);
-        border-radius: 0;
-        border-bottom: $borde;
-        border-top: $borde;
-        z-index: 10;
-
-    }
-
-
-
-
+}

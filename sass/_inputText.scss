@@ -9,7 +9,8 @@ input[type='email'],
 input[type='number'],
 input[type='password'],
 input[type='url'],
-input[type='search']{
+input[type='search'], 
+textarea{
     outline: none;
     height: 2.1em;
     width: 100%;
@@ -28,7 +29,8 @@ input[type='email']:focus,
 input[type='number']:focus, 
 input[type='password']:focus,
 input[type='url']:focus,
-input[type='search']:focus {
+input[type='search']:focus,
+textarea:focus {
     box-shadow: 0 0 0 3px rgba(135, 217, 255, 0.3);
     border: 1px solid rgba(135, 217, 255);
     z-index: 2;
@@ -39,7 +41,8 @@ input[type='email']::placeholder,
 input[type='number']::placeholder,
 input[type='password']::placeholder,
 input[type='url']::placeholder,
-input[type='search']::placeholder {
+input[type='search']::placeholder,
+textarea::placeholder {
     color: $gris;
 }
 

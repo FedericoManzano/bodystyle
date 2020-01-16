@@ -122,7 +122,6 @@ table tbody tr td {
 
 .tabla-roja thead tr td:nth-child(1),
 .tabla-roja tbody tr td:nth-child(1){
-    
     border-left: none;
 }
 .tabla-roja thead tr {
@@ -211,7 +210,7 @@ table tbody tr td {
     padding: 0.5em 1em;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 1200px) {
     .tabla-responsive {
         width: 100%;
         margin-bottom: 15px;
@@ -219,15 +218,15 @@ table tbody tr td {
         -ms-overflow-style: -ms-autohiding-scrollbar;
         border: 1px solid #ddd;
     }
-    .tabla-responsive > .table {
+    .tabla-responsive > table {
         margin-bottom: 0;
     }
-    .tabla-responsive > .table > thead > tr > th,
-    .tabla-responsive > .table > tbody > tr > th,
-    .tabla-responsive > .table > tfoot > tr > th,
-    .tabla-responsive > .table > thead > tr > td,
-    .tabla-responsive > .table > tbody > tr > td,
-    .tabla-responsive > .table > tfoot > tr > td {
+    .tabla-responsive > table > thead > tr > th,
+    .tabla-responsive > table > tbody > tr > th,
+    .tabla-responsive > table > tfoot > tr > th,
+    .tabla-responsive > table > thead > tr > td,
+    .tabla-responsive > table > tbody > tr > td,
+    .tabla-responsive > table > tfoot > tr > td {
         white-space: nowrap;
     }
 }

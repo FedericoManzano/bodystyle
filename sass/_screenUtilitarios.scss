@@ -1,5 +1,5 @@
 .ocultar-solo-grandes {
-    @include agregar-a-medida-minima(l){
+    @include agregar-a-medida-minima(m){
         display: none !important;
     }
 }

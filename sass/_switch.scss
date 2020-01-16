@@ -1,0 +1,70 @@
+.switch-grupo input[type="checkbox"] {
+    display: none;
+}
+
+.switch-rojo, 
+.switch-negro, 
+.switch-verde, 
+.switch-azul,
+.switch-gris {
+    height: 15px;
+    width: 40px;
+    background-color: rgba(161, 161, 161, 0.5);
+    border-radius: 8px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        top: -3.5px;
+        left: -1%;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.37);
+        transition: left 0.3s ease;
+    }
+}
+
+
+.switch-grupo input[type="checkbox"]:checked + .switch-rojo {
+    background-color: rgba(238, 0, 0, 0.5);
+}
+
+.switch-grupo input[type="checkbox"]:checked + .switch-rojo::before {
+    background-color: rgb(238, 0, 0);
+    left: calc(100% - 19px);
+}
+
+
+.switch-grupo input[type="checkbox"]:checked + .switch-negro {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.switch-grupo input[type="checkbox"]:checked + .switch-negro::before {
+    background-color: rgb(0, 0, 0);
+    left: calc(100% - 19px);
+}
+
+.switch-grupo input[type="checkbox"]:checked + .switch-verde {
+    background-color: rgba(17, 187, 144, 0.5);
+}
+
+.switch-grupo input[type="checkbox"]:checked + .switch-verde::before {
+    background-color: rgb(17, 187, 144);
+    left: calc(100% - 19px);
+}
+
+.switch-grupo input[type="checkbox"]:checked + .switch-azul {
+    background-color: rgba(0, 72, 155, 0.5);
+}
+
+.switch-grupo input[type="checkbox"]:checked + .switch-azul::before {
+    background-color: rgb(0, 72, 155);
+    left: calc(100% - 19px);
+}
+
+
+

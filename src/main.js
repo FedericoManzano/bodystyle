@@ -4,14 +4,13 @@ import Modal from "./modulos/Modal"
 //import Boton from "./modulos/Boton"
 import Waves from  "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
-import SidebarDesplegable from "./modulos/SidebarDesplegable"
 import BotonFlotante from "./modulos/BotonFlotante"
 import Toast from "./modulos/Toast"
 import TemplateForm from "./modulos/Template-form"
 import SidebarBarra from "./modulos/Sidebar-barra"
 import SidebarLateral from "./modulos/Sidebar-lateral"
+import SidebarFija from "./modulos/SidebarFija"
 import MenuColapso from "./modulos/Menu-colapso"
-
 
 
 (function(){
@@ -23,9 +22,17 @@ import MenuColapso from "./modulos/Menu-colapso"
 
 
     var MenuSuperior = ()=> MenuResp.iniciar()
-    var SidebarFijaInit = () => SidebarDesplegable.iniciar()
 
 
+    /**
+     * Sidebar fija 
+     */
+    var SidebarFijaInit = () => SidebarFija.iniciar()
+
+
+    /**
+     * Sidebar movil 
+     */
     var SidebarInit = () => {
         SidebarBarra.iniciar()
         SidebarLateral.iniciar()
@@ -38,10 +45,10 @@ import MenuColapso from "./modulos/Menu-colapso"
 
     var AutoInit = ()=> {
         MenuSuperior()
-        SidebarInit()
+        SidebarInit() // Sidebar Movil
         ModalInit()
         DropDownInit({})
-        SidebarFijaInit()
+        SidebarFijaInit() // Sidebar fija
     }
 
     var DropDownInit = (config) => {
@@ -52,10 +59,10 @@ import MenuColapso from "./modulos/Menu-colapso"
         MenuSuperior: () => MenuSuperior(),
         ModalInit: (config) => ModalInit(config),
         DropDownInit: (config) => DropDownInit(config),
-        SidebarFijaInit: ()=> SidebarFijaInit(),
+        SidebarFijaInit: ()=> SidebarFijaInit() , //Sidebar fija
         AutoInit: () => AutoInit(),
         Toast: (html, clases, tiempo) => Toast.ejecutar(html, clases, tiempo),
-        SidebarInit: () => SidebarInit()
+        SidebarInit: () => SidebarInit() /// Sidebar movil
     }
 
     window.BS = BS
