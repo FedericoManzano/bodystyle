@@ -37,7 +37,7 @@
     }
     width: 80%;
     color: white;
-
+    
     @include agregar-a-medida-minima(m){
         display: none !important;
     }

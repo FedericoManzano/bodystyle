@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/bodystyle.css">
+    <title>Document</title>
+
+
+
+    <style>
+        article {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <article id="articulo1" class="scroll-item">
+            Articulo 1
+        </article>
+        <article id="articulo2" class="scroll-item">
+            Articulo 2
+        </article>
+        <article id="articulo3" class="scroll-item mab-15">
+            Articulo 3
+        </article>
+    </div>
+
+
+
+    <div class="lista-scroll ocultar-desde-medianos">
+        <ul>
+            <li><a href="#articulo1">Inicio</a></li>
+            <li><a href="#articulo2">Servicios</a></li>
+            <li><a href="#articulo3">Porfolio</a></li>
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/bodystyle.js"></script>
+    <script>
+        BS.ScrollSpyInit()
+    </script>
+</body>
+
+</html>

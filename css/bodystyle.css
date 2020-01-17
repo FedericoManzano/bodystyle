@@ -9448,19 +9448,16 @@ table tbody tr td {
 
 .btn {
   padding: 15px 25px !important;
-  max-width: 130px !important;
   max-height: 40px !important;
 }
 
 .btn-lg {
   padding: 24px 40px !important;
-  max-width: 160px !important;
   max-height: 45px !important;
 }
 
 .btn-sm {
   padding: 10px 18px !important;
-  max-width: 110px !important;
   max-height: 35px !important;
 }
 
@@ -10599,6 +10596,27 @@ textarea::placeholder {
   border-top: 1px solid lightgrey;
 }
 
+.tips {
+  position: absolute;
+  min-width: 120px;
+  min-height: 100%;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.863);
+  border-radius: 3px;
+  font-size: 16px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.tips-ele {
+  z-index: 0;
+  position: relative;
+}
+
 .menu {
   display: flex;
   justify-content: center;
@@ -11219,6 +11237,29 @@ textarea::placeholder {
 .template-login .botones a:last-child {
   font-size: 0.8em;
   color: #1045b7;
+}
+
+.lista-scroll {
+  width: 15%;
+  position: fixed;
+  top: 100px;
+  right: 0;
+}
+.lista-scroll ul li a {
+  position: relative;
+  display: block;
+  padding: 6px 15px;
+  color: #5e5e5e;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.elemento-seleccionado {
+  width: 3px;
+  height: 29px;
+  background-color: #006cff;
+  position: absolute;
+  left: 0;
 }
 
 /*# sourceMappingURL=bodystyle.css.map */

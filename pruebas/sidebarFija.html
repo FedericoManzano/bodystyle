@@ -85,10 +85,14 @@
         </ul>
         <a class="titulo" data-target="#menuJS">JavaScript</a>
         <ul class="lista" id="menuJS">
+            <li><a href="#">AutoInit</a></li>
             <li><a href="#">Botón Flotante</a></li>
             <li><a href="#">Dropdown</a></li>
-            <li><a href="#">Waves</a></li>
+            <li><a href="#">Paginación Scroll</a></li>
+            <li><a href="#">Modals</a></li>
+            <li><a href="#">Tips Botones</a></li>
             <li><a href="#">Toast</a></li>
+            <li><a href="#">Waves</a></li>
         </ul>
         <a class="titulo" data-target="#menuComp">Componentes</a>
         <ul class="lista" id="menuComp">
@@ -112,7 +116,7 @@
 
 
     <div class="contenido-pagina">
-        <article class="article">
+        <article id="introduccion" class="article scroll-item">
             <h1>Introducción</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Distinctio optio quaerat magni, reprehenderit
@@ -120,7 +124,7 @@
                 accusantium quos
                 nobis iste at veritatis vitae!</p>
         </article>
-        <article class="article">
+        <article id="botones" class="article scroll-item">
             <h2>Botones</h2>
             <p>En esta sección vamos a ver los diferentes botones de los cuales
                 dispone la libreria <i>BodyStyle</i>.
@@ -162,11 +166,24 @@
 
         </article>
     </div>
-
+    <div class="lista-scroll ocultar-desde-medianos">
+            <ul>
+                <li><a href="#introduccion">Inicio</a></li>
+                <li><a href="#botones">Servicios</a></li>
+                <li><a href="#introduccion">Inicio</a></li>
+                <li><a href="#botones">Servicios</a></li>
+                <li><a href="#introduccion">Inicio</a></li>
+                <li><a href="#botones">Servicios</a></li>
+            </ul>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../js/bodystyle.js"></script>
-    <script>BS.AutoInit()</script>
+    <script>
+    
+    BS.AutoInit()
+    BS.ScrollSpyInit()
+    </script>
 
 
 

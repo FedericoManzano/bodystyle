@@ -1,0 +1,20 @@
+.tips {
+    position: absolute;
+    min-width: 120px;
+    min-height: 100%;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.863);
+    border-radius: 3px;
+    font-size: 16px;
+    z-index: 10;
+    @include flex-box-centrado();
+    transition: all 0.2s ease;
+}
+
+.tips-ele {
+    z-index: 0;
+    position: relative ;
+}
+
+

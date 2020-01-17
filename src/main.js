@@ -1,7 +1,6 @@
 
 import MenuResp from "./modulos/MenuSuperior"
 import Modal from "./modulos/Modal"
-//import Boton from "./modulos/Boton"
 import Waves from  "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
 import BotonFlotante from "./modulos/BotonFlotante"
@@ -11,14 +10,19 @@ import SidebarBarra from "./modulos/Sidebar-barra"
 import SidebarLateral from "./modulos/Sidebar-lateral"
 import SidebarFija from "./modulos/SidebarFija"
 import MenuColapso from "./modulos/Menu-colapso"
+import ScrollSpy from "./modulos/ScrollSpy"
+import ToolTips from "./modulos/ToolTips"
+
 
 
 (function(){
-   // Boton.iniciar()
     Waves.iniciar()
     BotonFlotante.iniciar()
     TemplateForm.iniciar()
     MenuColapso.iniciar()
+    ToolTips.iniciar()
+
+
 
 
     var MenuSuperior = ()=> MenuResp.iniciar()
@@ -39,6 +43,14 @@ import MenuColapso from "./modulos/Menu-colapso"
     }
 
 
+    /**
+     * 
+     * ScrollSpy 
+     */
+    var ScrollSpyInit = () => ScrollSpy.iniciar()
+
+
+
     var ModalInit = function(conf){
         Modal.iniciar(conf)
     }
@@ -49,6 +61,7 @@ import MenuColapso from "./modulos/Menu-colapso"
         ModalInit()
         DropDownInit({})
         SidebarFijaInit() // Sidebar fija
+        ScrollSpyInit()
     }
 
     var DropDownInit = (config) => {
@@ -62,7 +75,8 @@ import MenuColapso from "./modulos/Menu-colapso"
         SidebarFijaInit: ()=> SidebarFijaInit() , //Sidebar fija
         AutoInit: () => AutoInit(),
         Toast: (html, clases, tiempo) => Toast.ejecutar(html, clases, tiempo),
-        SidebarInit: () => SidebarInit() /// Sidebar movil
+        SidebarInit: () => SidebarInit(), /// Sidebar movil
+        ScrollSpyInit: () => ScrollSpyInit()
     }
 
     window.BS = BS
