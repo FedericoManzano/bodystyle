@@ -47,7 +47,7 @@ import ToolTips from "./modulos/ToolTips"
      * 
      * ScrollSpy 
      */
-    var ScrollSpyInit = () => ScrollSpy.iniciar()
+    var ScrollSpyInit = (config) => ScrollSpy.iniciar(config)
 
 
 
@@ -76,7 +76,7 @@ import ToolTips from "./modulos/ToolTips"
         AutoInit: () => AutoInit(),
         Toast: (html, clases, tiempo) => Toast.ejecutar(html, clases, tiempo),
         SidebarInit: () => SidebarInit(), /// Sidebar movil
-        ScrollSpyInit: () => ScrollSpyInit()
+        ScrollSpyInit: (config) => ScrollSpyInit(config)
     }
 
     window.BS = BS
