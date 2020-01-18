@@ -14,12 +14,13 @@
     text-align: center;
     user-select: none;
     z-index: 10;
-    font-size: 1em;
+    font-size: 18px;
     overflow: none;
 }
 
 @mixin estilos-individuales($patb, $palr, $mw, $maxh, $minw,$fz) {
     padding: $patb $palr !important;
+    max-width: 200px;
     max-height: $maxh !important;
 }
 

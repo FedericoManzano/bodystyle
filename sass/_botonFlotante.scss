@@ -1,13 +1,13 @@
 .btn-flotante {
     @include ancho-alto(70px, 300px);
-    @include posicionamiento-fixed(210px, 0,null,null);
+    @include posicionamiento-fixed(210px, 80px,null,null);
     z-index: superposicion(bf);
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     user-select: none;
+   
     .btn,
     .btn-lg,
     .btn-sm {
@@ -38,7 +38,6 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        
         .boton-opciones {
             @include flex-box-centrado();
             @include ancho-alto(40px, 40px);

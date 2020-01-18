@@ -5,15 +5,22 @@
             var posicion = $(this).data("posicion");
             var contenido = $(this).data("tips");
             elemento = $("<div class='tips'></div>")
-            if(posicion === "arriba"){
-                elemento.css("bottom", "calc(100% + 5px)").fadeIn(200)
-            }else if(posicion === 'izquierda'){
-                elemento.css("right", "calc(100% + 5px)").fadeIn(200)
-            }else if(posicion === 'derecha'){
-                elemento.css("left", "calc(100% + 5px)").fadeIn(200)
-            }else if(posicion === 'abajo'){
-                elemento.css("top", "calc(100% + 5px)").fadeIn(200)
+            
+            switch (posicion) {
+                case "arriba":
+                    elemento.css("bottom", "calc(100% + 5px)")
+                  break;
+                case "abajo":
+                    elemento.css("top", "calc(100% + 5px)")
+                  break;
+                case "izquierda":
+                    elemento.css("right", "calc(100% + 5px)")
+                  break;
+                case "derecha":
+                    elemento.css("left", "calc(100% + 5px)")
+                  break;
             }
+
             elemento.html(contenido)
             elemento.appendTo($($(this))).fadeIn(200);
         }, function() {

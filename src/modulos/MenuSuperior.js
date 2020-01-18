@@ -10,7 +10,7 @@
 
     var aparecerMenu = () => {
         $(".lateral-boton").click(function(){
-            if(estado === 0){
+            if(estado === 0 || estado === undefined){
                 var menuLateral = $($(this).data("target"));
                 menuLateral.animate({
                     left: 0,
@@ -34,6 +34,7 @@
                 left: -240,
             }, 500) 
             $(this).hide()
+            estado = 0
         })
     }
 

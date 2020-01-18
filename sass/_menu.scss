@@ -41,7 +41,7 @@
     @include agregar-a-medida-minima(m){
         display: none !important;
     }
-    z-index: superposicion(ms);
+    z-index: 100000000;
 }
 
 @mixin menu-logo {
@@ -60,6 +60,7 @@
 
     .lateral-boton {
         @include menu-lateral-boton();
+        
     }
 
     .lista {

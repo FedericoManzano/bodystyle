@@ -1132,6 +1132,79 @@ align-content: [los mismo valores] => Filas Grupos de elementos
 
 /* Colores Botones */
 /* Fondos */
+.efecto-borde-rojo,
+.efecto-borde-azul,
+.efecto-borde-verde,
+.efecto-borde-negro,
+.efecto-borde-gris,
+.efecto-borde-blanco {
+  position: relative;
+}
+.efecto-borde-rojo::before,
+.efecto-borde-azul::before,
+.efecto-borde-verde::before,
+.efecto-borde-negro::before,
+.efecto-borde-gris::before,
+.efecto-borde-blanco::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.efecto-borde-rojo:hover::before,
+.efecto-borde-azul:hover::before,
+.efecto-borde-verde:hover::before,
+.efecto-borde-negro:hover::before,
+.efecto-borde-gris:hover::before,
+.efecto-borde-blanco:hover::before {
+  width: 100%;
+}
+
+.efecto-borde-rojo::before {
+  background-color: #bb1818;
+}
+
+.efecto-borde-azul::before {
+  background-color: #1045b7;
+}
+
+.efecto-borde-verde::before {
+  background-color: #006e5c;
+}
+
+.efecto-borde-gris::before {
+  background-color: gray;
+}
+
+.efecto-borde-negro::before {
+  background-color: black;
+}
+
+.efecto-borde-blanco::before {
+  background-color: white;
+}
+
+.derecha::before {
+  right: 0 !important;
+}
+
+.izquierda::before {
+  left: 0 !important;
+}
+
+.centro::before {
+  left: 50% !important;
+}
+.centro:hover::before {
+  left: 0 !important;
+}
+
 /** Borde radio % y px*/
 .bor-rad-por-1 {
   border-radius: 1% !important;
@@ -4613,6 +4686,30 @@ table tbody tr td {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.37);
   transition: left 0.3s ease;
 }
+.switch-rojo::after,
+.switch-negro::after,
+.switch-verde::after,
+.switch-azul::after,
+.switch-gris::after {
+  content: "";
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(163, 163, 163, 0.22);
+  top: -3.5px;
+  left: -1%;
+  border-radius: 50%;
+  transform: translate(-11px, -11px);
+  transition: all 0.5s ease;
+  display: none;
+}
+.switch-rojo:active::after,
+.switch-negro:active::after,
+.switch-verde:active::after,
+.switch-azul:active::after,
+.switch-gris:active::after {
+  display: inline-block;
+}
 
 .switch-grupo input[type=checkbox]:checked + .switch-rojo {
   background-color: rgba(238, 0, 0, 0.5);
@@ -4620,6 +4717,11 @@ table tbody tr td {
 
 .switch-grupo input[type=checkbox]:checked + .switch-rojo::before {
   background-color: #ee0000;
+  left: calc(100% - 19px);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-rojo::after {
+  background-color: rgba(238, 0, 0, 0.123);
   left: calc(100% - 19px);
 }
 
@@ -4632,6 +4734,11 @@ table tbody tr td {
   left: calc(100% - 19px);
 }
 
+.switch-grupo input[type=checkbox]:checked + .switch-negro::after {
+  background-color: rgba(0, 0, 0, 0.123);
+  left: calc(100% - 19px);
+}
+
 .switch-grupo input[type=checkbox]:checked + .switch-verde {
   background-color: rgba(17, 187, 144, 0.5);
 }
@@ -4641,12 +4748,22 @@ table tbody tr td {
   left: calc(100% - 19px);
 }
 
+.switch-grupo input[type=checkbox]:checked + .switch-verde::after {
+  background-color: rgba(17, 187, 144, 0.2);
+  left: calc(100% - 19px);
+}
+
 .switch-grupo input[type=checkbox]:checked + .switch-azul {
   background-color: rgba(0, 72, 155, 0.5);
 }
 
 .switch-grupo input[type=checkbox]:checked + .switch-azul::before {
   background-color: #00489b;
+  left: calc(100% - 19px);
+}
+
+.switch-grupo input[type=checkbox]:checked + .switch-azul::after {
+  background-color: rgba(0, 72, 155, 0.123);
   left: calc(100% - 19px);
 }
 
@@ -9350,6 +9467,44 @@ table tbody tr td {
   }
 }
 
+.alerta-roja,
+.alerta-azul,
+.alerta-verde,
+.alerta-blanca,
+.alerta-gris,
+.alerta-negra {
+  display: inline-block;
+  padding: 15px 15px;
+  background-color: whitesmoke !important;
+  border: 1px solid #cccccc !important;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 500;
+  border-left: 4px solid #0050b9 !important;
+}
+
+.alerta-roja {
+  border-left: 4px solid #b90000 !important;
+}
+
+.alerta-verde {
+  border-left: 4px solid #0e7e66 !important;
+}
+
+.alerta-gris {
+  border-left: 4px solid #333333 !important;
+}
+
+.alerta-negra {
+  border-left: 4px solid black !important;
+}
+
+.alerta-blanca {
+  border-left: 4px solid #f0f0f0 !important;
+}
+
 .dropdown-toggle {
   position: relative !important;
   display: flex !important;
@@ -9411,6 +9566,31 @@ table tbody tr td {
   background-color: rgba(0, 0, 0, 0.068) !important;
 }
 
+.img-exp {
+  cursor: zoom-in;
+}
+
+.contenedor-imagen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #646464;
+  z-index: 100000;
+}
+.contenedor-imagen .img-exp img {
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+}
+
 .waves {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -9451,7 +9631,7 @@ table tbody tr td {
   text-align: center;
   user-select: none;
   z-index: 10;
-  font-size: 1em;
+  font-size: 18px;
   overflow: none;
 }
 
@@ -9463,16 +9643,19 @@ table tbody tr td {
 
 .btn {
   padding: 15px 25px !important;
+  max-width: 200px;
   max-height: 40px !important;
 }
 
 .btn-lg {
   padding: 24px 40px !important;
+  max-width: 200px;
   max-height: 45px !important;
 }
 
 .btn-sm {
   padding: 10px 18px !important;
+  max-width: 200px;
   max-height: 35px !important;
 }
 
@@ -10659,7 +10842,7 @@ textarea::placeholder {
   align-items: flex-end;
   width: 80%;
   color: white;
-  z-index: 100000;
+  z-index: 100000000;
 }
 .menu .lateral-boton span {
   width: 18px;
@@ -10718,8 +10901,8 @@ textarea::placeholder {
 
 .menu-colapso-contenedor {
   padding: 30px;
-  border-bottom: 1px solid grey;
-  background-color: #e6e6e6;
+  border-bottom: 1px solid #dadada;
+  background-color: #f7f7f7;
   opacity: 0;
 }
 .menu-colapso-contenedor span {
@@ -10966,7 +11149,7 @@ textarea::placeholder {
   height: 300px;
   position: fixed;
   top: 210px;
-  right: 0;
+  right: 80px;
   z-index: 30000;
   display: flex;
   flex-direction: column;

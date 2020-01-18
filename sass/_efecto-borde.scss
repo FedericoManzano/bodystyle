@@ -1,0 +1,69 @@
+.efecto-borde-rojo,
+.efecto-borde-azul,
+.efecto-borde-verde,
+.efecto-borde-negro,
+.efecto-borde-gris,
+.efecto-borde-blanco{
+    position: relative; 
+    &::before {
+        content: "";
+        width: 0;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+    }
+    &:hover::before {
+        width: 100%;
+    }
+}
+.efecto-borde-rojo::before {
+    background-color: $fd-rojo;
+}
+
+
+.efecto-borde-azul::before {
+    background-color: $fd-azul;
+}
+
+.efecto-borde-verde::before {
+    background-color: $fd-verde;
+}
+
+.efecto-borde-gris::before {
+    background-color: $fd-gris;
+}
+
+.efecto-borde-negro::before {
+    background-color: black;
+}
+
+.efecto-borde-blanco::before {
+    background-color: white;
+}
+
+
+
+.derecha::before {
+    right: 0 !important;
+}
+
+.izquierda::before {
+    left: 0 !important;
+}
+
+.centro {
+    &::before {
+        left: 50% !important;
+    }
+
+    &:hover::before {
+        left: 0 !important;
+    }
+}
+
+
