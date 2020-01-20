@@ -277,6 +277,10 @@ align-content: [los mismo valores] => Filas Grupos de elementos
     align-items: flex-end;
 }
 
+.ali-fuente {
+    align-items: baseline;
+}
+
 .ali-cobertura {
     align-items: stretch;
 }

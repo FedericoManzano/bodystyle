@@ -1,0 +1,150 @@
+.input-range {
+    position: relative;
+
+    
+    span {
+        position: absolute;
+        padding: 10px 20px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        background-color: $fd-gris-az; 
+        color: white;
+        top: -6px;
+        left: calc(100% - 60px);
+        border-radius: 3px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 10px;
+        width: 10px;
+        transform:  rotate(45deg);
+        background-color: $fd-gris-az;
+        bottom: 100%;
+        left: calc(100% - 63px);
+        top: 7px
+    }
+
+    input[type="range"] {
+        -webkit-appearance: none;
+        outline: none;
+        width:90%;
+        height: 3px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    input[type="range"]:hover {
+        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.116);
+    }
+
+    
+    input[type="range"]::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: $fd-verde-c;
+        position: relative;
+        cursor: pointer;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover{
+        box-shadow: 1px 0 10px 5px rgba(12, 151, 144, 0.349);
+    }
+
+    
+}
+@media (max-width: 1024px) {
+    .input-range {
+       input[type="range"] {
+            width:80%;
+        }
+
+
+        span {
+            left: calc(100% - 90px);
+        }
+    
+        &::before {
+            left: calc(100% - 93px);
+        }
+    
+    }
+    
+}
+@media (max-width: 800px) {
+    .input-range {
+       input[type="range"] {
+            width:75%;
+        }
+
+
+        span {
+            left: calc(100% - 103px);
+        }
+    
+        &::before {
+            left: calc(100% - 106px);
+        }
+    
+    }
+    
+}
+@media (max-width: 600px) {
+    .input-range {
+       input[type="range"] {
+            width:70%;
+        }
+
+
+        span {
+            left: calc(100% - 110px);
+        }
+    
+        &::before {
+            left: calc(100% - 113px);
+        }
+    
+    }
+    
+}
+
+
+@media (max-width: 500px) {
+    .input-range {
+       input[type="range"] {
+            width:68%;
+        }
+
+
+        span {
+            left: calc(100% - 90px);
+        }
+    
+        &::before {
+            left: calc(100% - 93px);
+        }
+    
+    }
+    
+}
+@media (max-width: 400px) {
+    .input-range {
+
+        input[type="range"] {
+            width:65%;
+        }
+
+
+        span {
+            left: calc(100% - 80px);
+        }
+    
+        &::before {
+            left: calc(100% - 83px);
+        }
+    }
+}

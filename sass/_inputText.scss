@@ -50,3 +50,14 @@ textarea::placeholder {
     box-shadow: 0 0 3px 3px rgba(253, 61, 61, 0.5);
     z-index: 2;
 }
+
+.input-sm {
+    height: 2.1em !important;
+    font-size: 0.9em !important;
+}
+
+
+.input-lg {
+    height: 2.2em !important;
+    font-size: 1.3em !important;
+}

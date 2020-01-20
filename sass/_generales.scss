@@ -96,3 +96,18 @@ span{
     font-size: 1em ;
     font-weight: 100 ;
 }
+
+
+a.link {
+    color: rgb(0, 102, 185);
+    border-bottom: 1.45px solid rgb(0, 102, 185);
+    line-height: 25px;
+}
+
+a.link:hover {
+    color: rgb(16, 148, 255);
+    border-bottom: 1.45px solid rgb(16, 148, 255);
+    line-height: 25px;
+}
+
+

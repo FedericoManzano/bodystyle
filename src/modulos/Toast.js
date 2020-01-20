@@ -1,4 +1,4 @@
-(function(html, clases, tiempo){
+(function(){
 
     var toast = (html = "Hola soy un toast !", clases = {
         color:"fd-gris-az-c",

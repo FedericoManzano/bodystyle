@@ -5,42 +5,77 @@
     Version: 1.0.0
 *******************************************************************/
 
+
+/**
+    Generales 
+*/
 @import "generales";
 @import "config";
 @import "mixin-generales";
 @import "iconos";
 @import "screenUtilitarios";
-@import "texto";
-@import "alineamiento";
 @import "colores";
-@import "efecto-borde";
-@import "css";
 @import "fondos";
+
+/**
+    Aliniamiento 
+*/
+@import "alineamiento";
+@import "grilla";
+
+/**
+    Utilitarios 
+*/
+@import "texto";
+@import "css";
+
+
+/**
+    CSS 
+*/
+
+@import "efecto-borde";
 @import "tabla";
+@import "alertas";
+@import "badges";
+
+
+/**
+    JS 
+*/
+@import "dropdown";
+@import "efecto-waves";
+@import "imagenes";
+@import "toolTip";
+@import "toast";
+@import "botonFlotante";
+@import "scroollSpy";
+
+/**
+    Componentes
+*/
 @import "preloader";
 @import "progressBar";
-@import "switch";
-@import "grilla";
-@import "alertas";
-@import "dropdown";
-@import "imagenes";
-@import "efecto-waves";
 @import "botones";
-@import "inputText";
-@import "inputRadioCheck";
-@import "inputGrupo";
-@import "badges";
 @import "card";
 @import "modal";
-@import "toolTip";
 @import "menu";
 @import "menu-colapso";
 @import "menu-lateral";
 @import "sidebar-fija";
 @import "sidebar-barra";
 @import "sidebar-lateral";
-@import "botonFlotante";
-@import "toast";
 @import "sidebarFija";
+
+
+/***
+    Formularios
+*/
+@import "switch";
+@import "inputText";
+@import "inputRadioCheck";
+@import "inputGrupo";
 @import "template-formulario";
-@import "scroollSpy";
+@import "select";
+@import "formularios";
+@import "range";

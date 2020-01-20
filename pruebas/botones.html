@@ -13,7 +13,7 @@
     <div class="mar-5 a-centrado contenedor">
         <h3 class="f-grosor-2 mar-2 t-may ">Botones Llenos</h3>
         <div class=" mar-2 fila">
-            <a class="btn-sm btn-rojo  cs-12 cm-2 disabilitado">Rojo</a>
+            <a href="#" class="btn-sm btn-rojo  cs-12 cm-2 deshabilitado">Rojo</a>
             <a class="btn-sm btn-verde waves cs-12 cm-2 ">Verde</a>
             <a class="btn-sm btn-gris efecto cs-12 cm-2 ">Gris</a>
             <a class="btn-sm btn-azul efecto cs-12 cm-2 ">Azul</a>
@@ -107,11 +107,54 @@
                 <a class="btn-cubrir-lg  btn-azul-o mi-1 cs-12">Azul</a>
             </div>
     </div>
+
+    <div class="contenedor m-10">
+        <input  class="btn btn-verde deshabilitado" value="Input"/>
+        
+    </div>
+
+    <div class="contenedor m-10">
+        
+        <input type="text">
+        
+    </div>
+
+
+    <div class="contenedor m-10">
+       
+        <input type="submit" class="deshabilitado">
+        
+    </div>
+
+    <div class="contenedor m-10">
+        <input type="search" >
+    </div>
+    
+
+
+    <div class=" check-radio-grupo  m-4">
+        <input  id="i-radio3" type="radio" name="grupo1">
+        <label for="i-radio3" class="rd-verde">
+            Check
+        </label>
+    </div>
+
+    <div class="contenedor mar-10">
+        <div class="switch-grupo">
+            <input type="checkbox" name="" id="i-cb-1">
+            <label for="i-cb-1" class="switch-rojo"></label>
+        </div>
+    </div>
+
+    <div class="contenedor mar-10">
+        <button class="deshabilitado btn btn-azul">Des</button>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../js/bodystyle.js"></script>
     <script>
-            BS.DropDownInit({color:"#000"})
-        </script>
+            BS.AutoInit()
+
+    </script>
 </body>
 
 </html>

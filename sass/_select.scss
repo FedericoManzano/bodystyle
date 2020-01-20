@@ -1,0 +1,27 @@
+.select,.select-sm, .select-lg {
+    outline: none;
+    background-color: white;
+    line-height: 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid $gris-input;
+    color: #212121;
+    font-size: 18px;
+}
+
+
+.select-sm {
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.select-lg {
+    padding: 13px 10px;
+    font-size: 20px;
+}
+
+
+select:focus {
+    border: 1px solid rgb(0, 127, 211);
+}

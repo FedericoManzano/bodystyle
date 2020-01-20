@@ -16,6 +16,7 @@
     z-index: 10;
     font-size: 18px;
     overflow: none;
+       
 }
 
 @mixin estilos-individuales($patb, $palr, $mw, $maxh, $minw,$fz) {
@@ -35,7 +36,7 @@
 @mixin btn-colores($bg, $color, $fz) {
     background-color: $bg;
     color: $color;
-    box-shadow: 0 0.5px 3px 1px rgba(0, 0, 0, 0.534);
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -51,13 +52,32 @@
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
 }
+button, 
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: none;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    line-height: 10px;
+    width: 100%;
+    max-width: 200px;
+}
+
 
 .btn, 
 .btn-lg, 
 .btn-sm, 
 .btn-cubrir, 
 .btn-cubrir-sm, 
-.btn-cubrir-lg
+.btn-cubrir-lg,
+button
 {
     @include configuracion-botones();
 }
@@ -68,7 +88,7 @@
     z-index: 10;
 }
 
-.btn {
+.btn{
     @include estilos-individuales(15px, 25px,130px ,40px , 130px, 1.2em);
 }
 
@@ -265,15 +285,23 @@
 /***
     Botones estilo desabilidado
 */
-.disabilitado {
+.deshabilitado {
     background: $fd-gris-c !important;
     color: $fd-gris !important;
     cursor: default !important;
     box-shadow: none !important;
+    border: none !important;
+    outline: none;
 }
 
-.disabilitado:hover{
+.deshabilitado:hover{
     box-shadow: none !important;
+    border: none !important;
+}
+
+.deshabilitado:focus{
+    box-shadow: none !important;
+    border: none !important;
 }
 
 .manejador-botones {

@@ -13,15 +13,14 @@ import MenuColapso from "./modulos/Menu-colapso"
 import ScrollSpy from "./modulos/ScrollSpy"
 import ToolTips from "./modulos/ToolTips"
 import Imagenes from "./modulos/Imagenes"
-
+import Range from "./modulos/Range"
 
 (function(){
     Waves.iniciar()
     TemplateForm.iniciar()
     MenuColapso.iniciar()
     ToolTips.iniciar()
-    
-
+    Range.iniciar()
 
 
     var MenuSuperior = ()=> MenuResp.iniciar()
@@ -71,8 +70,36 @@ import Imagenes from "./modulos/Imagenes"
         ScrollSpyInit()
         BotonFlotanteInit()
         ImagenesInit()
+        Deshabilitar()
     }
 
+    var Deshabilitar = () => {
+        $(".deshabilitado").removeAttr("href")
+        $(".deshabilitado").removeAttr("onclick")
+        $(".deshabilitado").attr("readonly","readonly")
+        $(".deshabilitado").attr("readonly","readonly")
+        $(".deshabilitado").click(function(e){
+            e.preventDefault()
+            return
+        })
+        $(".deshabilitado").on("onblur",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onchange",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onfocus",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onreset",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onselect",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onsubmit",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onkeydown",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onkeypress",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onkeyup",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onclick",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("ondblclick",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onmousedown",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onmousemove",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onmouseout",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onmouseover",()=>{e.preventDefault(); return})
+        $(".deshabilitado").on("onmouseup",()=>{e.preventDefault(); return})
+    }
+    
     var DropDownInit = (config) => {
         DropDown.iniciar(config)
     }
@@ -87,7 +114,8 @@ import Imagenes from "./modulos/Imagenes"
         SidebarInit: () => SidebarInit(), /// Sidebar movil
         ScrollSpyInit: (config) => ScrollSpyInit(config),
         BotonFlotanteInit: (config)=> BotonFlotanteInit(config),
-        ImagenesInit: () => ImagenesInit()
+        ImagenesInit: () => ImagenesInit(),
+        Deshabilitar: () => Deshabilitar()
     }
 
     window.BS = BS
