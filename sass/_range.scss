@@ -30,7 +30,7 @@
     input[type="range"] {
         -webkit-appearance: none;
         outline: none;
-        width:90%;
+        width:calc(100% - 80px);
         height: 3px;
         border-radius: 5px;
         background-color: black;
@@ -56,95 +56,4 @@
     }
 
     
-}
-@media (max-width: 1024px) {
-    .input-range {
-       input[type="range"] {
-            width:80%;
-        }
-
-
-        span {
-            left: calc(100% - 90px);
-        }
-    
-        &::before {
-            left: calc(100% - 93px);
-        }
-    
-    }
-    
-}
-@media (max-width: 800px) {
-    .input-range {
-       input[type="range"] {
-            width:75%;
-        }
-
-
-        span {
-            left: calc(100% - 103px);
-        }
-    
-        &::before {
-            left: calc(100% - 106px);
-        }
-    
-    }
-    
-}
-@media (max-width: 600px) {
-    .input-range {
-       input[type="range"] {
-            width:70%;
-        }
-
-
-        span {
-            left: calc(100% - 110px);
-        }
-    
-        &::before {
-            left: calc(100% - 113px);
-        }
-    
-    }
-    
-}
-
-
-@media (max-width: 500px) {
-    .input-range {
-       input[type="range"] {
-            width:68%;
-        }
-
-
-        span {
-            left: calc(100% - 90px);
-        }
-    
-        &::before {
-            left: calc(100% - 93px);
-        }
-    
-    }
-    
-}
-@media (max-width: 400px) {
-    .input-range {
-
-        input[type="range"] {
-            width:65%;
-        }
-
-
-        span {
-            left: calc(100% - 80px);
-        }
-    
-        &::before {
-            left: calc(100% - 83px);
-        }
-    }
 }

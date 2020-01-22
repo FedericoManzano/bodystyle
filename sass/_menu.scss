@@ -18,12 +18,14 @@
             display: block;
             padding: 1em;
             color: white;
+            cursor: pointer;
         }
         a:hover {
             background-color: rgba(0, 0, 0, 0.445);
         }
     }
 }
+
 
 @mixin menu-lateral-boton() {
     display: flex;
@@ -67,6 +69,21 @@
         @include menu-lista();
     }
 
+    .selector-colapso{
+        position: relative;
+        overflow: hidden;
+    }
+
+    .borde-seleccionado {
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        background-color: $fd-azul-c;
+
+    }
+
     .contenedor {
         display: flex;
     }
@@ -74,4 +91,10 @@
 
 .menu-fixed {
     @include posicionamiento-fixed(0,0,null, 0);
+}
+
+
+.colapso {
+    display: none;
+    opacity: 0;
 }

@@ -2,6 +2,40 @@
 
 
     var estado=0;
+    var c = "";
+    //var cantidadSelectores = $(".selector-colapso").lenght;
+    var inicializarColapso = ({color} = {color:"fd-azul-c"}) => {
+        $(".colapso").hide()
+        $(".colapso").css("opacity", 1)
+        c = color 
+        aparecerElemento()
+    }
+
+    var aparecerElemento = () => {
+        var borde = $("<div class='borde-seleccionado'></div>")
+        var men = $(".selector-colapso:first")
+        borde.css("background-color", c)
+        men.append(borde)
+        $((men).data("target")).show()
+    }
+
+    var selectorSeleccionado = () => {
+        $(".selector-colapso").click(function() {
+            $(".borde-seleccionado").remove()
+            var borde = $("<div class='borde-seleccionado'></div>")
+            $(".colapso").hide()
+            borde.css({
+                left: "-100%",
+                backgroundColor: c
+            }).appendTo($(this)).animate({
+                left: 0
+            },300)
+
+            $($(this).data("target")).slideDown(500)
+        })
+    }
+
+
     var cargarComplemento = ()=> {
         $("body").append("<div class='complemento'></div>")
         $(".lateral-boton").append("<span></span><span></span><span></span>")
@@ -39,10 +73,12 @@
     }
 
     var MenuSuperior = {
-        iniciar: function(){
+        iniciar: function(config){
             cargarComplemento()
             aparecerMenu()
             desaparecerMenu()
+            selectorSeleccionado()
+            inicializarColapso(config)
         }
     }
 

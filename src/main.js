@@ -23,7 +23,7 @@ import Range from "./modulos/Range"
     Range.iniciar()
 
 
-    var MenuSuperior = ()=> MenuResp.iniciar()
+    var MenuSuperior = (config)=> MenuResp.iniciar(config)
 
 
     /**
@@ -105,7 +105,7 @@ import Range from "./modulos/Range"
     }
 
     var BS = {
-        MenuSuperior: () => MenuSuperior(),
+        MenuSuperior: (config) => MenuSuperior(config),
         ModalInit: (config) => ModalInit(config),
         DropDownInit: (config) => DropDownInit(config),
         SidebarFijaInit: ()=> SidebarFijaInit() , //Sidebar fija

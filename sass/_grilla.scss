@@ -3,7 +3,7 @@
     Contiene 4 medidas disponibles
     cxs: MxtraSmall para dispositivos de 400px de ancho max
     cs: Small para dispositivos de 768px de ancho max
-    cm: Medium para dispositivos de 1100px de ancho max
+    cm: Medium para dispositivos de 1024px de ancho max
     cl: Large para dispositivos de mas de 1100px de ancho max
 */
 
@@ -74,7 +74,7 @@
 
     
 
-    @media (max-width: 1100px){
+    @media (max-width: dameMedida(m)){
 
         @for $i from 1 through 12 {
             .cxs-#{$i} { 
@@ -122,7 +122,7 @@
         }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: dameMedida(s)){
        
         @for $i from 1 through 12 {
             .cxs-#{$i} { 
@@ -153,7 +153,7 @@
         }
     }
 
-    @media (max-width: 400px){
+    @media (max-width: dameMedida(xs)){
 
         
         @for $i from 1 through 12 {

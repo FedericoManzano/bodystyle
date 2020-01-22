@@ -56,7 +56,7 @@
 
 
 @function inicializarVariable() {
-    @return 1;
+    @return 0;
 }
 
 @function incrementar($var) {
@@ -67,7 +67,7 @@
 
 // Clases para agregarle padding a los elementos
 $p: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .p-#{$i} { 
         padding: #{$p}em !important;
     }
@@ -75,7 +75,7 @@ $p: inicializarVariable();
 } 
 
 $p: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .pi-#{$i} { 
         padding-left: #{$p}em !important;
     }
@@ -83,7 +83,7 @@ $p: inicializarVariable();
 } 
 
 $p: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .pd-#{$i} { 
         padding-right: #{$p}em !important;
     }
@@ -91,7 +91,7 @@ $p: inicializarVariable();
 }
 
 $p: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .pab-#{$i} { 
         padding-bottom: #{$p}em !important;
     }
@@ -99,7 +99,7 @@ $p: inicializarVariable();
 }
 
 $p: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .par-#{$i} { 
         padding-top: #{$p}em !important;
     }
@@ -107,7 +107,7 @@ $p: inicializarVariable();
 }
 
 $m: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .m-#{$i} { 
         margin: #{$m}em !important;
     }
@@ -115,7 +115,7 @@ $m: inicializarVariable();
 }
 
 $m: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .mi-#{$i} { 
         margin-left: #{$m}em !important;
     }
@@ -123,7 +123,7 @@ $m: inicializarVariable();
 }
 
 $m: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .md-#{$i} { 
         margin-right: #{$m}em !important;
     }
@@ -131,7 +131,7 @@ $m: inicializarVariable();
 }
 
 $m: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .mar-#{$i} { 
         margin-top: #{$m}em !important;
     }
@@ -139,62 +139,255 @@ $m: inicializarVariable();
 }
 
 $m: inicializarVariable();
-@for $i from 1 through 15 {
+@for $i from 0 through 15 {
     .mab-#{$i} { 
         margin-bottom: #{$m}em !important;
     }
     $m: incrementar($m);
 }
 
-
 .m-a {
     margin:auto;
 }
 
+@media (max-width: dameMedida(m)){
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .m-m-#{$i} { 
+            margin: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mi-m-#{$i} { 
+            margin-left: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .md-m-#{$i} { 
+            margin-right: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
 
-/**
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mab-m-#{$i} { 
+            margin-bottom: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mar-m-#{$i} { 
+            margin-top: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
 
-FLEX BOX
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .p-m-#{$i} { 
+            padding: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    } 
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pi-m-#{$i} { 
+            padding-left: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    } 
 
-display: flex
-flex-direction: [row, column, row-reverse, column-reverse]  
-    // El eliniamiento es de derecha a izquierda o de arriba  abajo en columna
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pd-m-#{$i} { 
+            padding-right: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
 
-flex-wrap: [wrap, no-wrap]
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pab-m-#{$i} { 
+            padding-bottom: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
 
-wrap:       si el ancho es superior al contenedor se reacomodan 
-            abajo los elementos
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .par-m-#{$i} { 
+            padding-top: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+}
 
-no-wrap:    reajusta el ancho de los elementos para acomodarlos en el contenedor
+@media (max-width: dameMedida(s)){
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .m-s-#{$i} { 
+            margin: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mi-s-#{$i} { 
+            margin-left: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .md-s-#{$i} { 
+            margin-right: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
 
-wrap-reverse: Igual que wrap pero con los elementos en reversa 
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mab-s-#{$i} { 
+            margin-bottom: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mar-s-#{$i} { 
+            margin-top: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
 
-justify-content: [flex-start, flex-end, center, space-around, space-between]
-        flex-start: alinea al comienzo de contenedor.
-        flex-end: alinea al final del contenedor.
-        center: centra los elementos.
-        space-around: 
-                        distribuye los elementos a lo largo del contenedor.
-        space-between: 
-                        distribuye pero al inicio y al final el espacio es menor.
-                        acomoda desde afuera hacia dentro. si tenemos dos elementos uno lo pone al principo 
-                        y el otro al final
 
-align-items: [flex-start, flex-end, center, stretch, baseline]
-            flex-start: alinea verticalmente el contenido al principio
-            flex-end: alinea verticalmente el contenido al final
-            center: alinea verticalmente centrado (Si es una fila sola)
-                    Mas filas las distribuye uniformemente a los largo del contenedor
-            stretch: Cubre el 100% del eje vertical con los elementos (Elementos tamaño (no-fijo))
-            baseline: Alinea los elementos por el comienzo de la fuente de escritura
-align-content: [los mismo valores] => Filas Grupos de elementos
-*/
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .p-s-#{$i} { 
+            padding: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    } 
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pi-s-#{$i} { 
+            padding-left: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    } 
 
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pd-s-#{$i} { 
+            padding-right: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pab-s-#{$i} { 
+            padding-bottom: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .par-s-#{$i} { 
+            padding-top: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+}
+
+@media (max-width: dameMedida(xs)){
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .m-xs-#{$i} { 
+            margin: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mi-xs-#{$i} { 
+            margin-left: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .md-xs-#{$i} { 
+            margin-right: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mab-xs-#{$i} { 
+            margin-bottom: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+    $m: inicializarVariable();
+    @for $i from 0 through 15 {
+        .mar-xs-#{$i} { 
+            margin-top: #{$m}em !important;
+        }
+        $m: incrementar($m);
+    }
+
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .p-xs-#{$i} { 
+            padding: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    } 
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pi-xs-#{$i} { 
+            padding-left: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    } 
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pd-xs-#{$i} { 
+            padding-right: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .pab-xs-#{$i} {
+            padding-bottom: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+
+    $p: inicializarVariable();
+    @for $i from 0 through 15 {
+        .par-xs-#{$i} { 
+            padding-top: #{$p}em !important;
+        }
+        $p: incrementar($p);
+    }
+}
 
 /****
-
     Display flex 
-
 */
 .d-flex {
     display: flex;

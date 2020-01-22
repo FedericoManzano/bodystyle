@@ -3,7 +3,7 @@
 // Input G tipo 1
 $altura-input: 2.1em;
 $altura-span: 2.3em;
-$altura-boton: 2.1em;
+$altura-boton: 2.05em;
 $borde: 1px solid $gris-input;
 $radio-bordes-input: 0 3px 3px 0;
 $radio-bordes-span: 6px 0 0 6px;
@@ -14,10 +14,31 @@ $radio-bordes-input-2: 3px 0px 0px 3px;
 $radio-bordes-span-2: 0px 6px 6px 0px;
 
 
+@mixin elementoDerecha() {
+    border-radius: $radio-bordes-span-2;
+    border-bottom: $borde;
+    border-top: $borde;
+    border-right: $borde;
+}
+
+@mixin elementoIzquierda() {
+    border-radius: $radio-bordes-span;
+    border-left: $borde;
+    border-top: $borde;
+    border-bottom: $borde;
+}
+
+@mixin elementoCentro() {
+    border-radius: 0;
+    border-top: $borde;
+    border-bottom: $borde;
+    border-right: $borde;
+}
+
 .g-input {
     display: flex;
     user-select: none;
-
+    flex-wrap: nowrap;
 
     input[type="text"],
     input[type="email"],
@@ -29,9 +50,8 @@ $radio-bordes-span-2: 0px 6px 6px 0px;
         
     }
 
-    .span {
+    .span-g {
         height: $altura-span;
-        min-width: 40px;
         display: flex;
         align-items: center;
         padding: 0.6em;
@@ -40,7 +60,6 @@ $radio-bordes-span-2: 0px 6px 6px 0px;
 
     .btn {
         height: $altura-boton;
-        min-width: 40px;
         display: flex;
         align-items: center;
         padding: 0.6em;
@@ -60,12 +79,9 @@ $radio-bordes-span-2: 0px 6px 6px 0px;
 }
 
 
-.g-input-1 .span  {
+.g-input-1 .span-g  {
     background-color: rgb(204, 204, 204);
-    border-radius: $radio-bordes-span;
-    border-left: $borde;
-    border-top: $borde;
-    border-bottom: $borde;
+    @include elementoIzquierda();
 }
 
 .g-input-2 input[type="text"],
@@ -77,13 +93,103 @@ $radio-bordes-span-2: 0px 6px 6px 0px;
     height: $altura-input;
 }
 
-.g-input-2 .span  {
+.g-input-2 .span-g  {
     background-color: rgb(204, 204, 204);
-    border-radius: $radio-bordes-span-2;
-    border-bottom: $borde;
-    border-top: $borde;
-    border-right: $borde;
+    @include elementoDerecha();
 }
+
+
+.g-input-3 input[type="text"],
+.g-input-3 input[type="email"],
+.g-input-3 input[type="search"],
+.g-input-3 input[type="url"],
+.g-input-3 input[type="number"] {
+    border-radius: 0;
+    height: $altura-input;
+}
+
+
+.g-input-3 .span-g:first-child{
+    background-color: rgb(204, 204, 204);
+    @include elementoIzquierda();
+}
+
+.g-input-3 .span-g:last-child{
+    background-color: rgb(204, 204, 204);
+    @include elementoDerecha();
+}
+
+
+
+.g-input-4 input[type="text"],
+.g-input-4 input[type="email"],
+.g-input-4 input[type="search"],
+.g-input-4 input[type="url"],
+.g-input-4 input[type="number"] {
+    border-radius: $radio-bordes-input-2;
+    height: $altura-input;
+}
+
+
+.g-input-4 .btn {
+    @include elementoDerecha();
+}
+
+
+
+.g-input-5 input[type="text"],
+.g-input-5 input[type="email"],
+.g-input-5 input[type="search"],
+.g-input-5 input[type="url"],
+.g-input-5 input[type="number"] {
+    border-radius: $radio-bordes-input-2;
+    height: $altura-input;
+}
+
+
+.g-input-5 .btn {
+    @include elementoCentro();
+}
+
+.g-input-5 .btn:last-child {
+    @include elementoDerecha();
+}
+
+
+
+
+.g-input-6 input[type="text"],
+.g-input-6 input[type="email"],
+.g-input-6 input[type="search"],
+.g-input-6 input[type="url"],
+.g-input-6 input[type="number"] {
+    border-radius: $radio-bordes-input-2;
+    height: $altura-input;
+}
+
+
+.g-input-6 .btn {
+    @include elementoCentro();
+}
+
+
+
+
+.g-input-6 .dropdown-toggle {
+    padding-right: 33px !important;
+}
+
+.g-input-6 .dropdown-toggle:hover {
+    background-color: rgb(204, 204, 204);
+    color: black !important;
+}
+
+.g-input-6 .btn:last-child {
+    @include elementoDerecha();
+}
+
+
+
 
 .contenedor-busqueda {
     padding: 10px;
