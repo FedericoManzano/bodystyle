@@ -19,11 +19,13 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    input {
+
+    input, 
+    .input-icon {
         margin-bottom: 10px;
     }
 
-    *:last-child:not(input):not(select){
+    *:last-child:not(input):not(select):not(.input-icon){
         margin-left: 10px;
     }
 
@@ -44,15 +46,16 @@
         align-items: center;
         height: 2.1em;
         min-width: 120px;
+        white-space: nowrap;
     }
 
 
     @media (max-width: dameMedida(s) ){
         display: block;
-        *:last-child:not(input):not(select){
+        *:last-child:not(input):not(select):not(.input-icon){
             margin-left: 0;
         }
-        input {
+        input, .input-icon {
             margin: 0;
             margin-bottom: 10px;
         }

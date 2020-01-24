@@ -1,3 +1,211 @@
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    margin-left: 3px;
+}
+
+.badge-verde {
+    background-color: rgb(30, 190, 142);
+    color: white;
+}
+
+.badge-gris {
+    background-color: rgb(63, 63, 63);
+    color: white
+}
+
+.badge-azul {
+    background-color: rgb(0, 71, 153);
+    color: white
+}
+
+.badge-negro {
+    background-color: rgb(0, 0, 0);
+    color: white
+}
+
+.badge-blanco {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0)
+}
+
+.b-redondo {
+    border-radius: 50%;
+}
+
+.badges-etiqueta-rojo,
+.badges-etiqueta-verde,
+.badges-etiqueta-azul,
+.badges-etiqueta-verde, 
+.badges-etiqueta-gris,
+.badges-etiqueta-negro,
+.badges-etiqueta-blanco{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px 13px;
+    text-align: center;
+    height: 35px;
+    min-width: 170px;
+    max-width: 200px;
+    border-radius: 0 5px 5px 0;
+    display: inline-block;
+    background-color: red;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    &:hover {
+        background-color: rgb(201, 0, 0);
+    }
+
+    &:hover::before {
+        background-color: rgb(201, 0, 0);
+    }
+
+
+    &::before {
+        content: "";
+        width: 24.5px;
+        height: 24.5px;
+        background-color: red;
+        transform: rotate(45deg);
+        left: -12.5px;
+        top: 5px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        width: 13px;
+        height: 13px;
+        background-color: white;
+        position: absolute;
+        left: -3px;
+        top:10px;
+        border-radius: 50%;
+        box-shadow: inset 1px 1px rgba(0, 0, 0, 0.685);
+        z-index: 4;
+    }
+}
+
+
+.badges-etiqueta-verde {
+    background-color: rgb(0, 109, 94);
+
+    &::before {
+        content: "";
+        background-color: rgb(0, 109, 94);
+        
+    }
+
+
+    &:hover {
+        background-color: rgb(0, 77, 66);
+    }
+
+
+    &:hover::before {
+        background-color: rgb(0, 77, 66);
+    }
+}
+
+
+.badges-etiqueta-azul {
+    background-color: rgb(34, 72, 145);
+
+    &::before {
+        content: "";
+        background-color: rgb(34, 72, 145);
+        
+    }
+
+
+    &:hover {
+        background-color: rgb(16, 44, 95);
+    }
+
+
+    &:hover::before {
+        background-color: rgb(16, 44, 95);
+    }
+}
+
+.badges-etiqueta-negro {
+    background-color: rgb(0, 0, 0);
+
+    &::before {
+        content: "";
+        background-color: rgb(0, 0, 0);
+        
+    }
+
+
+    &:hover {
+        background-color: rgb(29, 29, 29);
+    }
+
+
+    &:hover::before {
+        background-color: rgb(29, 29, 29);
+    }
+}
+
+.badges-etiqueta-blanco {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    &::before {
+        content: "";
+        background-color: rgb(255, 255, 255);
+        
+    }
+
+
+    &:hover {
+        background-color: rgb(228, 228, 228);
+    }
+
+
+    &:hover::before {
+        background-color: rgb(228, 228, 228);
+    }
+}
+
+.badges-etiqueta-gris {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    &::before {
+        content: "";
+        background-color: rgb(231, 231, 231);
+        
+    }
+
+
+    &:hover {
+        background-color: rgb(196, 196, 196);
+    }
+
+
+    &:hover::before {
+        background-color: rgb(196, 196, 196);
+    }
+}
+
+
+
+
 .badges-sub {
     @include ancho-alto(200px, 50px);
     display: flex;
@@ -82,59 +290,3 @@
     }
 }
 
-
-.badges-alerta {
-    padding: 5px;
-    border: 1px solid grey;
-    background-color: rgb(235, 235, 235);
-    color: rgb(34, 34, 34);
-    width: 250px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    user-select: none;
-    cursor: pointer;
-    p {
-        color: #212121;
-        width: 90%;
-    }
-    .box {
-        @include flex-box-centrado();
-        background-color: rgb(4, 170, 142);
-        color: white;
-        height: 20px;
-        padding: 5px;
-        text-align: center;
-        border-radius: 3px;
-        min-width: 20px;
-        font-size: 12px;
-        font-weight: bold;
-    }
-}
-
-
-
-.badges-registro-login {
-
-    display: flex !important;
-    .btn, 
-    .btn-sm, 
-    .btn-lg {
-        border-radius: 0 !important;
-        font-size: 12px !important;
-        width: 20px !important;
-        min-width: 80px !important;
-        z-index: 0 !important;
-        box-shadow: none !important;
-        padding: 3px !important;
-    }
-
-    .btn-login {
-        border-radius: 5px 0 0 5px !important;
-        
-    }
-
-    .btn-registro {
-        border-radius: 0px 5px 5px 0px !important;
-    }
-}

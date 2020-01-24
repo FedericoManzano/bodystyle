@@ -36,32 +36,40 @@ $gris-negro: rgb(17, 17, 17);
 $btn-rojo: rgb(187, 24, 24);
 $btn-rojo-hover: rgb(161, 35, 35);
 $btn-rojo-activo: rgb(187, 24, 24);
+$btn-rojo-cargando: rgba(143, 0, 0, 0.5);
 $btn-rojo-sombra: rgba(143, 0, 0, 0.5);
-
-
 // Boton Verde
 $btn-verde: rgb(0, 156, 128);
 $btn-verde-hover: rgb(0, 136, 111);
 $btn-verde-activo: rgb(0, 156, 128);
+$btn-verde-cargando:rgba(0, 156, 128, 0.5); 
 $btn-verde-sombra:rgba(0, 156, 128, 0.5); 
-
 // Boton Azul
 $btn-azul: rgb(0, 108, 255 );
 $btn-azul-hover: rgb(0, 84, 201);
 $btn-azul-activo: rgb(0, 108, 255 );
+$btn-azul-cargando:rgb(0, 108, 255 , 0.5); 
 $btn-azul-sombra:rgb(0, 108, 255 , 0.5); 
-
 // Boton Gris
 $btn-gris: rgb(196, 196, 196);
 $btn-gris-hover: rgb(63, 63, 63);
 $btn-gris-activo: rgb(10, 10, 10);
+$btn-gris-cargando:rgba(233, 233, 233, 0.5); 
 $btn-gris-sombra:rgba(233, 233, 233, 0.5); 
-
 
 $btn-negro: rgb(26, 27, 36);
 $btn-negro-hover: rgb(0, 0, 0);
 $btn-negro-activo: rgb(0, 0, 0);
+$btn-negro-cargando:rgba(65, 65, 65, 0.5); 
 $btn-negro-sombra:rgba(65, 65, 65, 0.5); 
+
+
+$btn-blanco: rgb(255, 255, 255);
+$btn-blanco-hover: rgb(241, 241, 241);
+$btn-blanco-activo: rgb(202, 202, 202);
+$btn-blanco-cargando:rgba(255, 255, 255, 0.5); 
+$btn-blanco-sombra:rgba(255, 255, 255, 0.5); 
+
 
 
 /* Fondos */
@@ -98,4 +106,5 @@ $fd-gris-az-c: rgb(40, 46, 66);
 $fd-gris-az:rgb(30, 32, 41);
 $fd-gris-az-o: rgb(21, 22, 26);
 $fd-gris-n: rgb(17, 17, 17);
-$fd-gris-t: rgba(128, 128, 128, .5);
+$fd-gris-t: rgba(160, 160, 160, 0.5);
+$fd-blanco: rgb(255,255,255);

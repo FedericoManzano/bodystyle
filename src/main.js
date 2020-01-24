@@ -22,7 +22,15 @@ import Range from "./modulos/Range"
     ToolTips.iniciar()
     Range.iniciar()
 
+    var focusInput = () => {
+        $(".input-icon input").focus(function() {
+            $(this).parent().css("border", "1px solid rgba(135, 217, 255)")
+        })
 
+        $(".input-icon input").blur(function() {
+            $(this).parent().css("border", "1px solid rgb(163, 163, 163)")
+        })
+    }
     var MenuSuperior = (config)=> MenuResp.iniciar(config)
 
 
@@ -71,33 +79,48 @@ import Range from "./modulos/Range"
         BotonFlotanteInit()
         ImagenesInit()
         Deshabilitar()
+        focusInput()
     }
 
-    var Deshabilitar = () => {
-        $(".deshabilitado").removeAttr("href")
-        $(".deshabilitado").removeAttr("onclick")
-        $(".deshabilitado").attr("readonly","readonly")
-        $(".deshabilitado").attr("readonly","readonly")
-        $(".deshabilitado").click(function(e){
+
+    var desactivar = (clase) => {
+        $(clase).removeAttr("href")
+        $(clase).removeAttr("onclick")
+        $(clase).attr("readonly","readonly")
+        $(clase).attr("readonly","readonly")
+        $(clase).click(function(e){
             e.preventDefault()
             return
         })
-        $(".deshabilitado").on("onblur",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onchange",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onfocus",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onreset",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onselect",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onsubmit",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onkeydown",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onkeypress",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onkeyup",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onclick",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("ondblclick",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onmousedown",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onmousemove",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onmouseout",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onmouseover",()=>{e.preventDefault(); return})
-        $(".deshabilitado").on("onmouseup",()=>{e.preventDefault(); return})
+        $(clase).on("hover" , function(e){e.preventDefault(); return})
+        $(clase).on("onblur",()=>{e.preventDefault(); return})
+        $(clase).on("onchange",()=>{e.preventDefault(); return})
+        $(clase).on("onfocus",()=>{e.preventDefault(); return})
+        $(clase).on("onreset",()=>{e.preventDefault(); return})
+        $(clase).on("onselect",()=>{e.preventDefault(); return})
+        $(clase).on("onsubmit",()=>{e.preventDefault(); return})
+        $(clase).on("onkeydown",()=>{e.preventDefault(); return})
+        $(clase).on("onkeypress",()=>{e.preventDefault(); return})
+        $(clase).on("onkeyup",()=>{e.preventDefault(); return})
+        $(clase).on("onclick",()=>{e.preventDefault(); return})
+        $(clase).on("ondblclick",()=>{e.preventDefault(); return})
+        $(clase).on("onmousedown",()=>{e.preventDefault(); return})
+        $(clase).on("onmousemove",()=>{e.preventDefault(); return})
+        $(clase).on("onmouseout",()=>{e.preventDefault(); return})
+        $(clase).on("onmouseover",()=>{e.preventDefault(); return})
+        $(clase).on("onmouseup",()=>{e.preventDefault(); return})
+    }
+
+    var Deshabilitar = () => {
+        desactivar(".deshabilitado")
+        desactivar(".input-cargando")
+        desactivar(".input-cargando input")
+        desactivar(".b-rojo-cargando")
+        desactivar(".b-verde-cargando")
+        desactivar(".b-azul-cargando")
+        desactivar(".b-gris-cargando")
+        desactivar(".b-negro-cargando")
+        desactivar(".b-blanco-cargando")
     }
     
     var DropDownInit = (config) => {
@@ -115,7 +138,8 @@ import Range from "./modulos/Range"
         ScrollSpyInit: (config) => ScrollSpyInit(config),
         BotonFlotanteInit: (config)=> BotonFlotanteInit(config),
         ImagenesInit: () => ImagenesInit(),
-        Deshabilitar: () => Deshabilitar()
+        Deshabilitar: () => Deshabilitar(),
+        FocusInput: () => focusInput()
     }
 
     window.BS = BS

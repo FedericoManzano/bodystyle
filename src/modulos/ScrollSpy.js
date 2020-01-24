@@ -57,7 +57,7 @@
     var inicializar = () => {
         $(window).scroll( function(e){
             for(var i = 0; i < cantidad; i++){
-                if($(this).scrollTop() >= $("#" + ids[i]).offset().top){
+                if($(this).scrollTop() >= $("#" + ids[i]).offset().top - 200){
                     seleccionarIndice(i + 1)
                 }
             }

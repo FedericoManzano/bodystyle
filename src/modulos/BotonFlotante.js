@@ -5,14 +5,13 @@
 
 
 
-    var iniciar =  ({colorMenu, alineacion} = {colorMenu: "fd-rojo", alineacion: "vertical"}) => {
-        console.log(alineacion)
+    var iniciar =  ({colorMenu, alineacion, altura} = {colorMenu: "fd-rojo", alineacion: "vertical", altura: 200}) => {
         switch(alineacion) {
             case "horizontal": 
                 $(".btn-flotante").css({
                     transform: "rotate(-90deg)",
-                    right: 150,
-                    top: 300
+                    right: 120,
+                    top: altura
                 })
                 $(".boton-menu").css("transform",  "rotate(90deg)")
                 $(".boton-opciones").css("transform",  "rotate(90deg)")
@@ -20,16 +19,27 @@
             case "horizontalExpandido": 
                 $(".btn-flotante").css({
                     transform: "rotate(-90deg)",
-                    right: 150,
-                    top: 300
+                    right: 120,
+                    top: altura
                 })
                 $(".boton-menu").css("transform",  "rotate(90deg)")
                 $(".boton-opciones").css("transform",  "rotate(180deg)")
                 $(".submenu").css("transform",  "rotate(-90deg)")
             break;
             case "verticalExpandido": 
+                $(".btn-flotante").css({
+                    right: 30,
+                    top: altura
+                })
                 $(".boton-opciones").css("transform",  "rotate(90deg)")
                 $(".submenu").css("transform",  "rotate(-90deg)")
+            break;
+            case "vertical": 
+            $(".btn-flotante").css({
+                    right: 30,
+                    top: altura
+            })
+                
             break;
         }
 

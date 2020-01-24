@@ -4,7 +4,7 @@
     border-top: 5px solid $color;
     border-left: 5px solid $color;
     border-bottom: 5px solid $color;
-    animation: girar-preloader 0.7s  0s infinite  linear;
+    animation: girar-preloader 0.5s  0s infinite  linear;
 }
 
 
@@ -47,6 +47,10 @@
 
 .pre-gris {
     @include preloader($fd-gris);
+}
+
+.pre-blanco {
+    @include preloader(white);
 }
 
 

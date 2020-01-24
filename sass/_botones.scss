@@ -128,6 +128,14 @@ button
     background-color: $btn-rojo-activo;
 }
 
+.b-rojo-cargando{
+    background-color: $btn-rojo-cargando;
+}
+
+.b-rojo-cargando:hover{
+    background-color: $btn-rojo-cargando;
+}
+
 // Botones fondo verde
 .btn-verde {
     @include btn-colores($btn-verde,$blanco , 1.1em);
@@ -141,6 +149,14 @@ button
     background-color: $btn-verde-activo;
 }
 
+.b-verde-cargando{
+    background-color: $btn-verde-cargando;
+}
+
+.b-verde-cargando:hover{
+    background-color: $btn-verde-cargando;
+}
+
 // botones fondo azul
 .btn-azul {
     @include btn-colores($btn-azul,$blanco , 1.1em);
@@ -152,6 +168,14 @@ button
 
 .btn-azul:active{
     background-color: $btn-azul-activo;
+}
+
+.b-azul-cargando{
+    background-color: $btn-azul-cargando;
+}
+
+.b-azul-cargando:hover{
+    background-color: $btn-azul-cargando;
 }
 
 // Botones grises
@@ -168,6 +192,14 @@ button
     background-color: $btn-gris-activo;
 }
 
+.b-gris-cargando{
+    background-color: $btn-gris-cargando;
+}
+
+.b-gris-cargando:hover{
+    background-color: $btn-gris-cargando;
+}
+
 
 .btn-negro {
     @include btn-colores($btn-negro,$blanco , 1.1em);
@@ -180,6 +212,37 @@ button
 .btn-negro:active{
     background-color: $btn-negro-activo;
 }
+
+.b-negro-cargando{
+    background-color: $btn-negro-cargando;
+}
+
+.b-negro-cargando:hover{
+    background-color: $btn-negro-cargando;
+}
+
+
+
+.btn-blanco {
+    @include btn-colores($btn-blanco,$negro , 1.1em);
+}
+
+.btn-blanco:hover {
+    background-color: $btn-blanco-hover;
+}
+
+.btn-blanco:active{
+    background-color: $btn-blanco-activo;
+}
+
+.b-blanco-cargando{
+    background-color: $btn-blanco-cargando;
+}
+
+.b-blanco-cargando:hover{
+    background-color: $btn-blanco-cargando;
+}
+
 
 
 
@@ -244,6 +307,7 @@ button
 .btn-gris-o:hover {
     background-color: $btn-gris-hover;
     color: $blanco;
+    box-shadow: 0 0 3px 3px rgba(150, 150, 150, 0.521);
 }
 
 .btn-gris-o:active{
@@ -256,12 +320,13 @@ button
 }
 
 .btn-negro-o:hover {
-    background-color: black;
+    background-color: rgb(34, 34, 34);
     color: $blanco;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .btn-negro-o:active{
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(0, 0, 0);
 }
 
 
@@ -275,10 +340,13 @@ button
 .btn-blanco-o:hover {
     background-color: $blanco;
     color: $negro;
+    box-shadow: 0 0 3px 3px rgba(238, 238, 238, 0.5);
 }
 
-.btn-negro-o:active{
-    background-color: white;
+.btn-blanco-o:active{
+    background-color: rgb(255, 255, 255);
+    color: white;
+    
 }
 
 
@@ -312,4 +380,53 @@ button
     right: 0;
     z-index: -1;
     height: 100%;
+}
+
+
+.btn-grupo {
+
+    @include flex-box-centrado();
+
+
+
+    .btn,
+    .btn-sm,
+    .btn-lg {
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 14px !important;
+        padding: 6px 10px !important;
+        max-width: 150px;
+        max-height: 27px !important;
+    }
+
+    .btn-rojo,
+    .btn-gris,
+    .btn-verde,
+    .btn-negro,
+    .btn-azul {
+        font-size: 12px !important;
+    }
+
+    .btn-gris {
+        background-color: #3b3b3b;
+        color: white;
+        &:hover {
+            background-color: #111111;
+        }
+    }
+
+    & .btn:first-child,
+    & .btn-sm:first-child,
+    & .btn-lg:first-child{
+        border-radius: 5px 0 0 5px;
+        
+    }
+
+    & .btn:last-child,
+    & .btn-sm:last-child,
+    & .btn-lg:last-child {
+        border-radius: 0 5px 5px 0;
+        border-right: none
+    }
 }
