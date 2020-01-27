@@ -245,7 +245,6 @@ button
 
 
 
-
 /******************************************
     Botones sin color de fondo
 ********************************************/
@@ -350,6 +349,26 @@ button
 }
 
 
+
+
+.btn-mica-o {
+    border: 1px solid $btn-mica;
+    color: $btn-mica;
+    font-size: 1.1em;
+}
+
+.btn-mica-o:hover {
+    background-color: $btn-mica;
+    color: $blanco;
+    box-shadow: 0 0 3px 3px rgba(255, 102, 255, 0.5);
+}
+
+.btn-mica-o:active{
+    background-color: $btn-mica-activo;
+    color: white;
+}
+
+
 /***
     Botones estilo desabilidado
 */
@@ -383,7 +402,9 @@ button
 }
 
 
-.btn-grupo {
+.btn-grupo,
+.btn-grupo-lg,
+.btn-grupo-sm {
 
     @include flex-box-centrado();
 
@@ -428,5 +449,48 @@ button
     & .btn-lg:last-child {
         border-radius: 0 5px 5px 0;
         border-right: none
+    }
+}
+
+
+
+.btn-grupo-lg {
+
+
+    .btn,
+    .btn-sm,
+    .btn-lg {
+        padding: 8px 12px !important;
+        max-width: 160px;
+        max-height: 33px !important;
+    }
+
+    .btn-rojo,
+    .btn-gris,
+    .btn-verde,
+    .btn-negro,
+    .btn-azul {
+        font-size: 15px !important;
+    }
+}
+
+
+.btn-grupo-sm {
+
+
+    .btn,
+    .btn-sm,
+    .btn-lg {
+        padding: 4px 7px !important;
+        max-width: 140px;
+        max-height: 24px !important;
+    }
+
+    .btn-rojo,
+    .btn-gris,
+    .btn-verde,
+    .btn-negro,
+    .btn-azul {
+        font-size: 10px !important;
     }
 }

@@ -3,7 +3,7 @@
 
     var estado=0;
     var c = "";
-    //var cantidadSelectores = $(".selector-colapso").lenght;
+    
     var inicializarColapso = ({color} = {color:"fd-azul-c"}) => {
         $(".colapso").hide()
         $(".colapso").css("opacity", 1)

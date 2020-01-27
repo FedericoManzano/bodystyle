@@ -95,16 +95,14 @@ textarea::placeholder {
             box-shadow: none !important;
             border: none;
         }
+
+        
     }
 
 
     & .elemento:first-child {
         color: rgb(131, 131, 131);
         font-size: 1.1em;
-    }
-
-    &:focus {
-        border: 1px solid rgb(0, 119, 199);
     }
 
     
@@ -116,6 +114,15 @@ textarea::placeholder {
     input[type='search']:focus {
         box-shadow: none !important;
         border: none;
+    }
+
+    input[type='text']:focus ~ .elemento, 
+    input[type='email']:focus + .elemento,
+    input[type='number']:focus + .elemento, 
+    input[type='password']:focus + .elemento,
+    input[type='url']:focus + .elemento,
+    input[type='search']:focus + .elemento{
+        color: #212121;
     }
 }
 

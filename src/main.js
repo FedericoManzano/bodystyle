@@ -14,6 +14,9 @@ import ScrollSpy from "./modulos/ScrollSpy"
 import ToolTips from "./modulos/ToolTips"
 import Imagenes from "./modulos/Imagenes"
 import Range from "./modulos/Range"
+import Slider from "./modulos/Slider"
+
+
 
 (function(){
     Waves.iniciar()
@@ -21,15 +24,23 @@ import Range from "./modulos/Range"
     MenuColapso.iniciar()
     ToolTips.iniciar()
     Range.iniciar()
-
+    
     var focusInput = () => {
         $(".input-icon input").focus(function() {
             $(this).parent().css("border", "1px solid rgba(135, 217, 255)")
+            $(this).parent().children(".elemento").css("color", "#212121")
         })
 
         $(".input-icon input").blur(function() {
             $(this).parent().css("border", "1px solid rgb(163, 163, 163)")
+            if($(this).val() === "")
+                $(this).parent().children(".elemento").css("color", "rgb(131, 131, 131)")
+            else 
+                $(this).parent().children(".elemento").css("color", "#212121")
         })
+
+
+
     }
     var MenuSuperior = (config)=> MenuResp.iniciar(config)
 
@@ -80,6 +91,7 @@ import Range from "./modulos/Range"
         ImagenesInit()
         Deshabilitar()
         focusInput()
+        SliderInit()
     }
 
 
@@ -111,6 +123,10 @@ import Range from "./modulos/Range"
         $(clase).on("onmouseup",()=>{e.preventDefault(); return})
     }
 
+    var SliderInit = (config) => {
+        Slider.iniciar(config)
+    }
+
     var Deshabilitar = () => {
         desactivar(".deshabilitado")
         desactivar(".input-cargando")
@@ -124,6 +140,7 @@ import Range from "./modulos/Range"
     }
     
     var DropDownInit = (config) => {
+        
         DropDown.iniciar(config)
     }
 
@@ -139,7 +156,8 @@ import Range from "./modulos/Range"
         BotonFlotanteInit: (config)=> BotonFlotanteInit(config),
         ImagenesInit: () => ImagenesInit(),
         Deshabilitar: () => Deshabilitar(),
-        FocusInput: () => focusInput()
+        FocusInput: () => focusInput(),
+        SliderInit: (config) => SliderInit(config)
     }
 
     window.BS = BS

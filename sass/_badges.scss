@@ -17,6 +17,11 @@
     color: white;
 }
 
+.badge-rojo {
+    background-color: rgb(212, 28, 28);
+    color: white;
+}
+
 .badge-gris {
     background-color: rgb(63, 63, 63);
     color: white
@@ -41,24 +46,16 @@
     border-radius: 50%;
 }
 
-.badges-etiqueta-rojo,
-.badges-etiqueta-verde,
-.badges-etiqueta-azul,
-.badges-etiqueta-verde, 
-.badges-etiqueta-gris,
-.badges-etiqueta-negro,
-.badges-etiqueta-blanco{
-    font-size: 15px;
-    font-weight: 600;
-    padding: 6px 13px;
-    text-align: center;
-    height: 35px;
+
+.badges-etiqueta,
+.badges-etiqueta-sm,
+.badges-etiqueta-lg{
+    font-size: 14px;
+    padding: 5px 11px;
+    height: 30px;
     min-width: 170px;
     max-width: 200px;
-    border-radius: 0 5px 5px 0;
     display: inline-block;
-    background-color: red;
-    color: white;
     position: relative;
     display: flex;
     align-items: center;
@@ -66,6 +63,105 @@
     cursor: pointer;
     user-select: none;
     z-index: 10;
+
+
+    &::before {
+        content: "";
+        width: 21.6px;
+        height: 21.6px;
+        transform: rotate(45deg);
+        left: -10.5px;
+        top: 4px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-color: white;
+        position: absolute;
+        left: -3px;
+        top:8px;
+        border-radius: 50%;
+        box-shadow: inset 1px 1px rgba(0, 0, 0, 0.685);
+        z-index: 4;
+    }
+}
+
+
+.badges-etiqueta-lg {
+    font-size: 16px;
+    padding: 7px 13px;
+    height: 33px;
+    min-width: 170px;
+    max-width: 210px;
+
+    &::before {
+        content: "";
+        width: 23.5px;
+        height: 23.5px;
+        transform: rotate(45deg);
+        left: -12px;
+        top: 5px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        left: -3px;
+        top:8px;
+    }
+}
+
+
+.badges-etiqueta-sm {
+    font-size: 13px;
+    padding: 4px 10px;
+    height: 28px;
+    min-width: 130px;
+    max-width: 150px;
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        transform: rotate(45deg);
+        left: -10px;
+        top: 4px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        width: 13px;
+        height: 13px;
+        left: -3px;
+        top:7px;
+    }
+}
+
+
+
+.badges-etiqueta-rojo,
+.badges-etiqueta-verde,
+.badges-etiqueta-azul,
+.badges-etiqueta-verde, 
+.badges-etiqueta-gris,
+.badges-etiqueta-negro,
+.badges-etiqueta-blanco{
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    background-color: red;
+    color: white;
+
+
     &:hover {
         background-color: rgb(201, 0, 0);
     }
@@ -77,28 +173,11 @@
 
     &::before {
         content: "";
-        width: 24.5px;
-        height: 24.5px;
         background-color: red;
-        transform: rotate(45deg);
-        left: -12.5px;
-        top: 5px;
-        position: absolute;
         z-index: 2;
     }
 
-    &::after {
-        content: "";
-        width: 13px;
-        height: 13px;
-        background-color: white;
-        position: absolute;
-        left: -3px;
-        top:10px;
-        border-radius: 50%;
-        box-shadow: inset 1px 1px rgba(0, 0, 0, 0.685);
-        z-index: 4;
-    }
+    
 }
 
 

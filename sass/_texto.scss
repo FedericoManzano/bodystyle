@@ -2,15 +2,15 @@
 /*
     Trabajando con los textos 
 */
-.a-centrado{
+.a-c{
     text-align: center !important;
 }
 
-.a-derecha {
+.a-d {
     text-align: right !important;
 }
 
-.a-izquierda {
+.a-i {
     text-align: left !important;
 }
 
@@ -72,15 +72,52 @@
 }
 
 .c-rojo {
-    color: rgb(167, 15, 15) !important;
+    color: $fd-rojo !important;
+}
+
+.c-rojo-c {
+    color: $fd-rojo-c !important;
+}
+
+.c-rojo-o {
+    color: $fd-rojo-o!important;
 }
 
 .c-azul {
-    color: blue !important
+    color: $fd-azul !important
 }
 
+.c-azul-c {
+    color: $fd-azul-c !important
+}
+
+.c-azul-o {
+    color: $fd-azul-o !important
+}
+
+
 .c-verde {
-    color: rgb(0, 255, 0) !important;
+    color: $fd-verde !important;
+}
+
+.c-verde-c {
+    color: $fd-verde-c !important;
+}
+
+.c-verde-o {
+    color: $fd-verde-o !important;
+}
+
+.c-gris {
+    color: $fd-gris !important;
+}
+
+.c-gris-c {
+    color: $fd-gris-c !important;
+}
+
+.c-gris-o {
+    color: $fd-gris-o !important;
 }
 
 @function multiplo5($num) {
@@ -90,7 +127,7 @@
 @for $i from 10 through 100 {
     @if multiplo5($i) {
         .fz-#{$i} {
-            font-size: $i !important;
+            font-size: #{$i}px !important;
         }
     }
 }

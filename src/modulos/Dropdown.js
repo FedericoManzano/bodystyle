@@ -53,8 +53,7 @@
                 boton.children(".f-derecha").show()
                 boton.children(".f-abajo").hide()
                 $(".drop").hide()
-                presionado = 0
-                
+                presionado = 0 
             })
         })
     }

@@ -7,7 +7,15 @@
     var ids = new Array(cantidad)
 
     var inicializarIds = 
-    ({ancho, tamFuente, colorBorde,alturaBorde, separacion, colorSeleccionado, colorNoSeleccionado} = {
+    ({
+        ancho, 
+        tamFuente, 
+        colorBorde,
+        alturaBorde, 
+        separacion, 
+        colorSeleccionado, 
+        colorNoSeleccionado
+    } = {
         ancho: "15%",
         tamFuente: 18,
         colorBorde: "fd-azul-c",

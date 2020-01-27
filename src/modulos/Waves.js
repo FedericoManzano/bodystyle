@@ -3,7 +3,6 @@
         $(".waves").click(function(e){
             var boton = $(this)
             var elemento = $("<span class='efecto-waves'></span>")
-            
             elemento.css({
                 width: 10,
                 height: 10,
