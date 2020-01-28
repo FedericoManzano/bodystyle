@@ -17,3 +17,29 @@
     }
 
 }
+
+.img-red-bor {
+    border-radius: !important;
+}
+
+.usuario-imagen {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 250px;
+    min-width: 160px;
+    img {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+
+    }
+
+    a {
+        display: block;
+        height: 100%;
+        color: black;
+        margin-left: 10px;
+    }
+
+}

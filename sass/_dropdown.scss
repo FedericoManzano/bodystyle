@@ -18,14 +18,15 @@
     color: black !important;
     min-width: 150px !important;
     background-color: white !important;
-    border-radius: 4px !important;
-    border: 1px solid black !important; 
-    top: 48px !important;
+    border: 1px solid rgba(0, 0, 0, 0.301) !important; 
+    top: 35px !important;
     text-align: left !important;
     z-index: 10 !important;
     text-align: left !important;
     display: none; 
     z-index: 1000000;
+    margin: 0;
+    padding: 0;
 }
 
 .dropdown ul {
@@ -44,6 +45,7 @@
     padding: 13px 20px !important;
     font-size: 0.9em !important;
     cursor: pointer !important;
+    margin: 0;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;

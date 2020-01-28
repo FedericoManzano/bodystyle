@@ -18,16 +18,11 @@
         tiempo: 3000,
         select: true
     }) => {
-
-        if(cantidadElementos === 0){
-            alert("No existen elementos en el slider")
-            return
-        }
+        if(cantidadElementos === 0) return
         config.efecto = efecto === undefined ? "lateral": efecto
         config.automatico = automatico === undefined ?  false : automatico
         config.tiempo = tiempo === undefined ? 3000: tiempo
         config.select = select === undefined ? true : select
-        
         for(var i = 0; i < cantidadElementos; i ++){
             if(config.select === true){
                 selectores[i] = $("<span class='selectores'></span>")
@@ -46,6 +41,18 @@
     } 
 
 
+    var salida = () => {
+        $(window).blur(function(){
+            if(config.automatico)
+                pararCronometro()
+        })
+
+        $(window).focus(function(){
+            if(config.automatico)
+                arrancarCronometro()
+        })
+    }
+
     var siguiente = (seleccionado) => {
         return seleccionado + 1 >= cantidadElementos ? 0: seleccionado + 1;
     }
@@ -55,8 +62,8 @@
     }
 
     var efectoFade = ( direccion) => {
-        
-        pararCronometro()
+        if(config.automatico)
+            pararCronometro()
         if(direccion === "derecha") {
             $(elementos[seleccionado]).fadeOut(300)
             $(elementos[siguiente(seleccionado)]).fadeIn(300)
@@ -70,12 +77,13 @@
             $(selectores[atras(seleccionado)]).css("background-color", "orangered")
             seleccionado = atras(seleccionado)
         }
-        arrancarCronometro()
+        if(config.automatico)
+            arrancarCronometro()
     }
 
     var efectoLateral = (sel, direccion) => {
-        
-        pararCronometro()
+        if(config.automatico)
+            pararCronometro()
         if(direccion === "izquierda"){
             $(elementos[sel]).animate({
                 left: "-100%"
@@ -101,7 +109,8 @@
 
             })
         }
-        arrancarCronometro()
+        if(config.automatico)
+            arrancarCronometro()
     }
 
     var pararCronometro = () => {
@@ -124,14 +133,16 @@
 
     var selectores = () => {
         $(".selectores").click(function(){
-            pararCronometro()
+            if(config.automatico)
+                pararCronometro()
             var ind = $(this).index()
             $(elementos[seleccionado]).fadeOut(300)
             $(elementos[ind]).fadeIn(300)
             $(selectores[seleccionado]).css("background-color", "grey")
             $(selectores[ind]).css("background-color", "orangered")
             seleccionado = ind
-            arrancarCronometro()
+            if(config.automatico)
+                arrancarCronometro()
         })
     }
 
@@ -163,6 +174,7 @@
             Inicializar(config)
             botones()
             selectores()
+            salida()
         }
     }
 
