@@ -15,7 +15,7 @@
             border: 1px solid white
         }
 
-        .modal .contenido h2{
+        .modal .contenido h2 {
             margin-bottom: 10px;
         }
     </style>
@@ -24,147 +24,159 @@
 <body>
     <a class="btn btn-rojo activar-modal m-1" data-target="#modal1">Activar</a>
     <a class="btn btn-rojo activar-modal m-1" data-target="#modal2">Activar2</a>
-    <a class="btn btn-rojo activar-modal m-1" data-target="#modal-registro">Activar3</a>
-    <a class="btn btn-rojo activar-modal m-1" data-target="#modal-login">Activar4</a>
+    <a class="btn btn-rojo activar-modal m-1" data-target="#modal3">Activar3</a>
+    <a class="btn btn-rojo activar-modal m-1" data-target="#modal4">Activar4</a>
     <a class="btn btn-rojo activar-modal m-1" data-target="#modal-scroll">Activar4</a>
 
-
-    <div id="modal1" class="modal">
-        <div class="modal-ventana">
-            <div class="contenido a-centrado">
-                <h2 class="f-grosor-3">Lorem Ipsu</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque rerum dolore fugiat </p>
-                <div class="sus p-1">
-                    <div class="g-input g-input-1 c-negro">
-                        <span class="span">@</span>
-                        <input type="text">
-                    </div>
-                    <a href="#" class="btn-cubrir-sm btn-rojo m-a mar-1 waves">Enviar</a>
-                </div>
-                <p class="c-verde f-grosor-6">Descuento al 60%</p>
+    <div class="modal-fondo" id="modal1">
+        <div class="modal fd-azul-ve c-blanco" style="min-width: 350px;">
+            <div class="modal-cabecera">
+                Cabecera
+                <span class="modal-salir c-blanco"></span>
             </div>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal1">
-        <div class="modal-ventana">
-            <div class="contenido">
-                <div class="cabecera">
-                    <h3 >Titulo del Modal</h3>
-                    <span class="desactivar-modal" data-target="#modal2">X</span>
-                </div>
-                <div class="cuerpo">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus esse at eos perspiciatis
-                        repellendus, laborum blanditiis amet voluptate quidem accusantium dolore, atque impedit earum,
-                        in corporis laboriosam consequuntur placeat. Fugit.</p>
-                </div>
-                <div class="controles">
-                    <a class="btn-sm btn-verde" href="#">Enviar</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-registro" class="modal-registro">
-        <div class="modal-ventana">
-            <div class="contenido">
-                <div class="cabecera">
-                    <h3>Registro Usuario</h3>
-                </div>
-                <div class="registro">
-                    <div class="modal-control">
-                        <input type="text" placeholder="Usuario">
-                    </div>
-                    <div class="modal-control">
-                        <div class="g-input g-input-1">
-                            <span class="span">@</span>
-                            <input type="email" placeholder="Correo">
-                        </div>
-                    </div>
-                    <div class="modal-control">
-                        <input type="password" placeholder="Clave">
-                    </div>
-                    <div class="modal-control">
-                        <input type="password" placeholder="Repetir Clave">
-                    </div>
-                    <div class="mi-1 mar-1 pd-1 pab-1  check-radio-grupo">
-                        <input type="checkbox" id="aceptarCheck">
-                        <label class="cb-verde" for="aceptarCheck">Acepto los terminos</label>
-                    </div>
-                </div>
-                <div class="modal-botones a-items-cent-just">
-                    <a href="#" class="btn-sm btn-azul md-1">Enviar</a>
-                    <a id="salir-modal-registro" href="#" data-target="#modal-registro"
-                        class="btn-sm btn-rojo desactivar-modal">Salir</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-login" class="modal-registro">
-        <div class="modal-ventana">
-            <div class="contenido">
-                <div class="cabecera">
-                    <h3 >Login</h3>
-                </div>
-                <div class="registro">
-                    <div class="modal-control">
-                        <input type="text" placeholder="Usuario">
-                    </div>
-                    <div class="modal-control">
-                        <input type="password" placeholder="Clave">
-                    </div>
-                </div>
-                <div class="modal-botones a-items-cent-just">
-                    <a href="#" class="btn-sm btn-azul md-1">Enviar</a>
-                    <a href="#" class="btn-sm btn-rojo desactivar-modal" data-target="#modal-login">Salir</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-scroll" class="modal-scroll">
-        <div class="modal-ventana">
-            <div class="contenido">
-                <div class="cabecera">
-                    <h3>Mensaje Scroll</h3>
-                </div>
-                <div class="cuerpo">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Voluptatibus unde eius possimus beatae
-                        itaque sint dicta facilis maxime nam mollitia modi odio provident numquam quo, 
-                        sunt esse
-                        cupiditate cumque totam!
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, 
-                        autem natus, ea ipsa pariatur officiis quidem numquam dolores corporis facilis quam harum enim. Repellat, ratione qui perferendis debitis iure sed?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat mollitia porro repellendus! Ex aliquid repellat assumenda nulla, maxime magni? 
-                        Expedita excepturi velit dolore accusantium ratione error modi id minima? Unde!
+            <div class="modal-cuerpo">
+                <h4 class="modal-titulo c-blanco">
+                    Titulo del modal
+                </h4>
+                <div class="modal-scroll">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse incidunt ipsum quae doloremque
+                        officia
+                        quaerat rem, facere corrupti est iure tempore dicta doloribus sunt aperiam laborum dolorem
+                        necessitatibus quis quisquam?
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed quas repudiandae rem! Officiis
+                        voluptate officia magnam vel excepturi laboriosam reprehenderit eos animi, explicabo molestias
+                        commodi asperiores dolorum repudiandae nihil et?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti maiores quidem
+                        adipisci autem. Amet illo, suscipit voluptas cum dignissimos adipisci hic, harum tenetur ea
+                        nobis exercitationem veritatis, doloremque dolorum?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti qui ipsum numquam cupiditate,
+                        velit vel laudantium cumque eos saepe vero minima. Hic nostrum, error voluptas mollitia
+                        molestias nobis saepe beatae.
                     </p>
                 </div>
-                <div class="modal-botones a-items-cent-just">
-                    <a href="#" class="btn-sm btn-azul md-1">Enviar</a>
-                    <a href="#" class="btn-sm btn-rojo desactivar-modal" data-target="#modal-scroll">Salir</a>
-                </div>
+    
+            </div>
+            <div class="modal-pie">
+                <a href="#" class="btn btn-rojo bor-pill">Ver mas</a>
+                <a href="#" class="btn btn-verde bor-pill">Ver mas</a>
             </div>
         </div>
     </div>
+
+
+    <div class="modal-fondo" id="modal2">
+        <div class="modal " style="width: 20rem;">
+            <div class="modal-cabecera">
+                Login de Usuario
+                <span class="modal-salir"></span>
+            </div>
+            <div class="modal-cuerpo">
+                <div class="form-grupo">
+                    <label for="usaurio">Usuario</label>
+                    <input type="text" name="usuario" placeholder="Ej:Redondos22">
+                </div>
+                <div class="form-grupo">
+                    <label for="pass">Clave</label>
+                    <input type="password" name="clave">
+                    <small>Desde 10 a 12 caracteres</small>
+                </div>
+                <div class="mar-2">
+                    <a href="#" class="link">Crear cuenta</a>
+                </div>
+
+            </div>
+            <div class="modal-pie">
+                <a href="#" class="btn btn-verde bor-pill">Ingresar</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-fondo" id="modal3">
+        <div class="modal fd-azul-ve c-blanco" style="min-width: 350px;">
+            <div class="modal-cabecera c-blanco">
+                Registro Usuario
+                <span class="modal-salir"></span>
+            </div>
+            <div class="modal-cuerpo">
+                <div class="fila">
+                    <div class="cs-12 cm-6">
+                        <div class="form-grupo">
+                            <label for="correo" class="c-blanco">Correo</label>
+                            <input type="email" name="correo" id="correo" placeholder="jorge@mail.com">
+                        </div>
+                    </div>
+                    <div class="cs-12 cm-6">
+                        <div class="form-grupo">
+                            <label for="usuario" class="c-blanco">Usuario</label>
+                            <input type="text" name="usuario" id="usuario">
+                        </div>
+                    </div>
+
+                    <div class="cs-12 cm-6">
+                        <div class="form-grupo">
+                            <label for="pass" class="c-blanco">Clave</label>
+                            <input type="password" name="clave" id="clave">
+                            <small>De 8 a 10 caracteres alfanuméricos</small>
+                        </div>
+
+                    </div>
+                    <div class="cs-12 cm-6">
+                        <div class="form-grupo">
+                            <label for="repetir" class="c-blanco">Repetir</label>
+                            <input type="password" name="repetir" id="repetir">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="check-radio-grupo mar-2">
+                    <input type="checkbox" name="check" id="acepto">
+                    <label for="acepto" class="cb-blanco">Acepto los términos y condiciones</label>
+                </div>
+            </div>
+            <div class="modal-pie">
+                <a href="#" class="btn btn-verde bor-pill">Ingresar</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal-fondo" id="modal4">
+        <div class="modal a-c fd-gris-az c-blanco" style="max-width: 25rem; min-width: 350px">
+                <div class="modal-cabecera c-blanco">
+                        Promoción
+                    </div>
+            <div class="modal-cuerpo">
+                
+                <p class="mab-3">
+                    Un descuento del <span class="badge badge-rojo bor-pill">50%</span>
+                    en todas las sucursales del país
+                </p>
+                <div class="divisor"></div>
+                <div class="d-flex just-centrada mar-3 mab-3">
+
+                    <div class="g-input g-input-1">
+                        <span class="span-g c-negro">@</span>
+                        <input type="email">
+                    </div>
+                </div>
+                <p class="c-verde-c">
+                    Si le intereza ingrese su correo y oprima el botón enviar.
+                </p>
+            </div>
+            <div class="modal-pie">
+                <a href="#" class="btn btn-azul bor-pill">Enviar</a>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../js/bodystyle.js"></script>
-    <script>
-        $(document).ready(function () {
-            var conf = {
-                fondo: "fd-gris-az",
-                texto: "c-blanco",
-                ancho: 420,
-                borde: 4,
-                justificacion: "a-centrado"
-            }
-            BS.ModalInit(conf)
-        })
-
-    </script>
+    <script>BS.AutoInit()</script>
 </body>
 
 </html>

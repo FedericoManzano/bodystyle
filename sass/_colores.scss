@@ -38,6 +38,10 @@ $btn-rojo-hover: rgb(161, 35, 35);
 $btn-rojo-activo: rgb(187, 24, 24);
 $btn-rojo-cargando: rgba(143, 0, 0, 0.5);
 $btn-rojo-sombra: rgba(143, 0, 0, 0.5);
+
+
+
+
 // Boton Verde
 $btn-verde: rgb(0, 156, 128);
 $btn-verde-hover: rgb(0, 136, 111);
@@ -77,11 +81,17 @@ $btn-mica-cargando:rgba(247, 72, 168, 0.5);
 $btn-mica-sombra:rgba(247, 72, 168, 0.5); 
 
 /* Fondos */
+
+$fd-negro: rgb(0,0,0);
+
+
 // Escalas de rojos
 $fd-rojo: rgb(187, 24, 24);
 $fd-rojo-c: rgb(245, 21, 21);
 $fd-rojo-o: rgb(80, 0, 0);
-$fd-rojo-t: rgba(255, 0, 0, 0.7);
+$fd-rojo-t: rgba(255, 51, 0, 0.7);
+$fd-rojo-an: rgb(255, 17, 0);
+$fd-rojo-ro: rgb(187, 24, 73);
 
 //Escalas de verde
 $fd-verde: rgb(0, 110, 92);
@@ -90,6 +100,7 @@ $fd-verde-o: rgb(7, 58, 49);
 $fd-verde-t: rgba(0, 110, 92, .5);
 $fd-verde-az: rgb(0, 42, 48);
 $fd-verde-t: rgba(0, 110, 92, .7);
+$fd-verde-am: rgb(39, 48, 0);
 
 
 //Escalas de azules
@@ -100,6 +111,8 @@ $fd-azul-ve: rgb(6, 38, 63);
 $fd-azul-ve-s: rgb(0,44,56);
 $fd-azul-ve-c: rgb(19, 67, 80);
 $fd-azul-t: rgba(16, 69, 183, .5);
+$fd-azul-vi: rgb(41, 16, 183);
+
 
 
 // Escalas de Grises
@@ -112,3 +125,29 @@ $fd-gris-az-o: rgb(21, 22, 26);
 $fd-gris-n: rgb(17, 17, 17);
 $fd-gris-t: rgba(160, 160, 160, 0.5);
 $fd-blanco: rgb(255,255,255);
+
+
+// Escalas de violetas
+
+$fd-violeta: rgb(57, 0, 163);
+$fd-violeta-c: rgb(91, 2, 255);
+$fd-violeta-o: rgb(25, 0, 71);
+$fd-violeta-t: rgba(12, 2, 32, 0.7);
+$fd-violeta-az: rgb(16, 1, 58);
+$fd-violeta-ro: rgb(58, 1, 44);
+
+// Escala de naranja 
+$fd-naranja: rgb(212, 72, 16);
+$fd-naranja-o: rgb(141, 28, 0);
+$fd-naranja-c: rgb(252, 94, 55);
+$fd-naranja-t: rgba(212, 71, 16, 0.7);
+$fd-naranja-ro: rgb(212, 45, 16);
+$fd-naranja-am: rgb(240, 116, 0);
+
+// Escala de amarillo 
+$fd-amarillo: rgb(228, 228, 18);
+$fd-amarillo-c: rgb(255, 255, 85);
+$fd-amarillo-o: rgb(119, 119, 0);
+$fd-amarillo-ro: rgb(231, 159, 4);
+$fd-amarillo-ve: rgb(189, 231, 4);
+$fd-amarillo-t: rgba(228, 228, 18, 0.7);

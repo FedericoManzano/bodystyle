@@ -19,7 +19,17 @@
 }
 
 .img-red-bor {
-    border-radius: !important;
+    border-radius: 5px !important;
+}
+
+$radio: 20;
+@for $i from 1 through 100 {
+    .img-redonda-#{$radio} {
+        height: #{$radio}px;
+        width: #{$radio}px;
+        border-radius: 50%;
+    }
+    $radio: $radio +  5;
 }
 
 .usuario-imagen {
@@ -42,4 +52,23 @@
         margin-left: 10px;
     }
 
+}
+
+
+.img-display-enc {
+    padding: 5px !important;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+$display: 8;
+@for $i from 1 through 100 {
+    .img-display-#{$display} {
+        height: #{$display}px;
+        width: #{$display}px;
+    }
+    $display: $display +  8;
+}
+
+.img-responsive {
+    max-width: 100%;
 }

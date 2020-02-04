@@ -15,7 +15,7 @@ import ToolTips from "./modulos/ToolTips"
 import Imagenes from "./modulos/Imagenes"
 import Range from "./modulos/Range"
 import Slider from "./modulos/Slider"
-
+import Lista from "./modulos/Lista"
 
 
 (function(){
@@ -59,6 +59,10 @@ import Slider from "./modulos/Slider"
         SidebarLateral.iniciar()
     }
 
+    var ListaInit = () => {
+        Lista.iniciar()
+    }
+
 
     var BotonFlotanteInit = (config) => {
         BotonFlotante.iniciar(config)
@@ -92,6 +96,7 @@ import Slider from "./modulos/Slider"
         Deshabilitar()
         focusInput()
         SliderInit()
+        ListaInit()
     }
 
 
@@ -140,7 +145,6 @@ import Slider from "./modulos/Slider"
     }
     
     var DropDownInit = (config) => {
-        
         DropDown.iniciar(config)
     }
 
@@ -157,7 +161,8 @@ import Slider from "./modulos/Slider"
         ImagenesInit: () => ImagenesInit(),
         Deshabilitar: () => Deshabilitar(),
         FocusInput: () => focusInput(),
-        SliderInit: (config) => SliderInit(config)
+        SliderInit: (config) => SliderInit(config),
+        ListaInit: () => ListaInit()
     }
 
     window.BS = BS

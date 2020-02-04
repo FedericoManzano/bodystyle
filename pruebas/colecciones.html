@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../css/bodystyle.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="contenedor mar-1">
+        <div class="lista-contenedor l-colapso activo">
+            <div class="lista-cabecera ">
+                Cabecera
+            </div>
+            <div class="lista-item" data-target="#1">
+                <a>Elemento 1 </a>
+            </div>
+            <div class="desplegable" id="1">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At commodi tenetur quidem necessitatibus delectus excepturi quia labore nesciunt aspernatur? Voluptatum amet dolore in et veniam doloribus quod debitis minus modi.</p>
+            </div>
+            <div class="lista-item" data-target="#2">
+                <a>Elemento 2</a>
+            </div>
+            <div class="desplegable" id="2">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At commodi tenetur quidem necessitatibus delectus excepturi quia labore nesciunt aspernatur? Voluptatum amet dolore in et veniam doloribus quod debitis minus modi.</p>
+            </div>
+            <div class="lista-item" data-target="#3">
+                <a>Elemento 3</a>
+            </div>
+            <div class="desplegable" id="3">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At commodi tenetur quidem necessitatibus delectus excepturi quia labore nesciunt aspernatur? Voluptatum amet dolore in et veniam doloribus quod debitis minus modi.</p>
+            </div>
+            <div class="lista-pie ">
+                Pie de la lista
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contenedor mar-1">
+        <div class="lista-contenedor activo">
+            <div class="lista-cabecera fd-verde">
+                Cabecera
+            </div>
+            <div class="lista-item" >
+                <a>Elemento 1 </a>
+            </div>
+
+            <div class="lista-item" >
+                <a>Elemento 2</a>
+            </div>
+
+            <div class="lista-item" >
+                <a>Elemento 3</a>
+            </div>
+
+            <div class="lista-pie fd-verde">
+                Pie de la lista
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor mar-1">
+        <div class="lista-contenedor l-colapso activo">
+            <div class="lista-item" data-target="#5">
+                <a>Elemento 1 </a>
+            </div>
+            <div class="desplegable" id="5">
+               <ul>
+                   <li><a href="#">Servicios</a></li>
+                   <li><a href="#">Porfolio</a></li>
+                   <li><a href="#">Salir</a></li>
+               </ul>
+            </div>
+            <div class="lista-item" data-target="#6">
+                <a>Elemento 2</a>
+            </div>
+            <div class="desplegable" id="6">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At commodi tenetur quidem necessitatibus delectus excepturi quia labore nesciunt aspernatur? Voluptatum amet dolore in et veniam doloribus quod debitis minus modi.</p>
+            </div>
+            <div class="lista-item" data-target="#7">
+                <a>Elemento 3</a>
+            </div>
+            <div class="desplegable" id="7">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At commodi tenetur quidem necessitatibus delectus excepturi quia labore nesciunt aspernatur? Voluptatum amet dolore in et veniam doloribus quod debitis minus modi.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/bodystyle.js"></script>
+    <script>BS.AutoInit()</script>
+</body>
+</html>

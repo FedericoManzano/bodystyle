@@ -29,6 +29,58 @@ textarea{
     @include configInput();
 }
 
+.input-file {
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    opacity: 0;
+}
+
+
+.f-label {
+    position: relative;
+    width: 20%;
+    min-width: 60px !important;
+    appearance: none;
+    padding: 10px;
+    background-color: $fd-azul;
+    color: white;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    border-radius: 3px;
+}
+
+.f-label:hover {
+    background-color: rgb(0, 55, 175);
+}
+
+
+.f-label::before {
+    content: "Seleccione un Archivo";
+    overflow: auto;
+    width: 300%;
+    height: 70%;
+    position: absolute;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    color: rgb(136, 136, 136);;
+    left: calc(100% + 10px);
+    bottom: 0;
+    padding-bottom: 1px;
+    font-size: 15px;
+}
+
+@media (max-width: 500px ){
+    .f-label::before {
+        left: 0;
+        top: calc(100% + 10px);
+    }
+}
+
 input[type='text']:focus, 
 input[type='email']:focus,
 input[type='number']:focus, 

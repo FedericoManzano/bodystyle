@@ -1,181 +1,85 @@
-/*
-    Ventanas modal 
-*/
-
-
-@mixin  modalFondo {
-    /* Posicionamiento del fondo */
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    /* Fondo con poca opacidad*/
-    background-color: rgba(0, 0, 0, .5);
-    /* Por encima de los elementos*/
-    z-index: 1;
-
-    /* Display para ubicar elementos*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-}
-
-@mixin  modalVentana() {
-    padding: 1.5em;
-    background-color: $fd-gris-c;
-    z-index: 4;
-    border-radius: 3px;
-    box-shadow: 0 0 15px 5px rgb(94, 94, 94);
-    min-width: 300px;
-    max-width: 400px;
-    border-radius: 10px;
-    overflow: hidden;
+.modal-fondo {
+    @include posicionamiento-fixed(0,0,0,0);
+    @include flex-box-centrado();
+    background-color: rgba(0, 0, 0, 0.349);
+    z-index: 6;
+    overflow: auto;
+    .complemento {
+        @include posicionamiento-fixed(0,0,0,0);
+        z-index: 8;
+    }
 }
 
 .modal {
-    @include modalFondo();
-    .modal-ventana {
-        padding: 1.5em;
-        background-color: $fd-gris-c;
-        z-index: 4;
-        border-radius: 3px;
-        box-shadow: 0 0 15px 5px rgb(94, 94, 94);
-        h3 {
-            font-weight: 200;
-            margin-bottom: 20px;
-        }
-    }
-    .complemento {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-    }
-}
 
-.modal1 {
-    @include modalFondo();
-    .modal-ventana {
-        @include modalVentana();
-        .contenido {
-            border: 1px solid lightgrey;
-            border-radius: 10px;
-            overflow: auto;
-            .cabecera {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-bottom: 1px solid lightgrey;
-                padding: 0.8em;
-                h3 {
-                    font-size: 1.1em;
-                    width: 90%;
-                    font-weight: 600;
-                }
-                span {
-                    font-size: 1em;
-                    width: 10%;
-                    text-align: right;
-                    font-weight: 600;
-                    cursor: pointer;
-                }
-            }
-            .cuerpo {
-                border-bottom: 1px solid lightgrey;
-                padding: 0.8em;
-                overflow: auto;
-                border-bottom: 1px solid lightgrey;
-                p {
-                    font-size: 1em;
-                    line-height : 23px;
-                }
-            }
-            .controles {
-                display: flex;
-                padding: 0.8em;
-                justify-content: right;
-            }
-        }
+    // Generales
+    width: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    margin: auto;
+    z-index: 10000000;
+    background-color: white;
+
+    .modal-cabecera {
+        padding: 0.8em 1.5em;
+        background-color: rgba(0, 0, 0, 0.034);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+        font-size: 20px;
+    }
+
+    .modal-pie {
+        padding: 0.8em 1.5em;
+        background-color: rgba(0, 0, 0, 0.034);
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid rgba(0, 0, 0, 0.24);
+        font-size: 20px;
+    }
+
+    .modal-cuerpo {
+        padding: 1.5em;
+        line-height: 25px;
+    }
+
+    .modal-titulo {
+        font-size: 22px;
+        color: black;
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
+
+    .modal-scroll {
+        overflow: auto;
+        height: 200px;
+    }
+
+    .modal-salir {
+        height: 0;
+        width: 0;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .modal-salir::before{
+        content: "";
+        height: 3px;
+        width: 15px;
+        position: absolute;
+        background-color: black;
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    .modal-salir::after{
+        content: "";
+        height: 3px;
+        width: 15px;
+        position: absolute;
+        background-color: black;
+        transform: rotate(-45deg);
+        top: 10px;
         
     }
 }
-
-
-.modal-registro {
-    @include modalFondo();
-    .modal-ventana {
-        @include modalVentana();
-        .contenido {
-            border: 1px solid lightgrey;
-            border-radius: 10px;
-            overflow: auto;
-            .cabecera {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-bottom: 1px solid lightgrey;
-                padding: 0.8em;
-                h3 {
-                    font-size: 1.1em;
-                    width: 90%;
-                    font-weight: 600;
-                }
-            }
-            .registro {
-                padding: 1em;
-                .modal-control {
-                    padding: 0.5em 1em;
-                }
-            }
-            .modal-botones {
-                padding: 1em 1em;
-                border-top: 1px solid lightgrey;
-            }
-        }
-    }
-}
-
-.modal-scroll {
-    @include modalFondo();
-    .modal-ventana {
-        @include modalVentana();
-        .contenido {
-            border: 1px solid lightgrey;
-            border-radius: 10px;
-    
-            .cabecera {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-bottom: 1px solid lightgrey;
-                padding: 0.8em;
-                h3 {
-                    font-size: 1.1em;
-                    width: 90%;
-                    font-weight: 600;
-                }
-            }
-            .cuerpo {
-                position: relative;
-                overflow: auto;
-                padding: 1em;
-                max-height: 200px;
-                p {
-                    font-size: 1.1em;
-                    line-height: 25px;
-                }
-            }
-            .modal-botones {
-                padding: 1em 1em;
-                border-top: 1px solid lightgrey;
-            }
-        }
-    }
-}
-
-
