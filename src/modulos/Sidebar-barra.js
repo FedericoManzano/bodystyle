@@ -2,7 +2,8 @@
 
     var corrido = 0;
     var cargarMenu = () => {
-        $(".sidebar-barra .sidebar-menu").append("<span></span><span></span><span></span>");
+        $(".sidebar-barra .sidebar-menu").append(
+            "<span></span><span></span><span></span>");
     }
 
     var correrMenu = () => {

@@ -5,7 +5,9 @@
 
 
 
-    var iniciar =  ({colorMenu, alineacion, altura} = {colorMenu: "fd-rojo", alineacion: "vertical", altura: 200}) => {
+    var iniciar =  ({colorMenu, alineacion, altura} = 
+        {colorMenu: "fd-rojo", alineacion: "vertical", altura: 200}) => 
+    {
         switch(alineacion) {
             case "horizontal": 
                 $(".btn-flotante").css({

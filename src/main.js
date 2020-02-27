@@ -16,7 +16,9 @@ import Imagenes from "./modulos/Imagenes"
 import Range from "./modulos/Range"
 import Slider from "./modulos/Slider"
 import Lista from "./modulos/Lista"
-
+import Select from "./modulos/Select"
+import Descripcion from "./modulos/Descripcion"
+import Paralax from "./modulos/Paralax"
 
 (function(){
     Waves.iniciar()
@@ -24,7 +26,9 @@ import Lista from "./modulos/Lista"
     MenuColapso.iniciar()
     ToolTips.iniciar()
     Range.iniciar()
-    
+    Descripcion.iniciar()
+    Select.iniciar()
+
     var focusInput = () => {
         $(".input-icon input").focus(function() {
             $(this).parent().css("border", "1px solid rgba(135, 217, 255)")
@@ -49,7 +53,7 @@ import Lista from "./modulos/Lista"
      * Sidebar fija 
      */
     var SidebarFijaInit = () => SidebarFija.iniciar()
-
+    var ParalaxInit = () => Paralax.iniciar()
 
     /**
      * Sidebar movil 
@@ -97,6 +101,7 @@ import Lista from "./modulos/Lista"
         focusInput()
         SliderInit()
         ListaInit()
+        ParalaxInit()
     }
 
 
@@ -162,7 +167,8 @@ import Lista from "./modulos/Lista"
         Deshabilitar: () => Deshabilitar(),
         FocusInput: () => focusInput(),
         SliderInit: (config) => SliderInit(config),
-        ListaInit: () => ListaInit()
+        ListaInit: () => ListaInit(),
+        ParalaxInit: () => ParalaxInit()
     }
 
     window.BS = BS

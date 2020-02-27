@@ -28,6 +28,20 @@
   letter-spacing: 1px;
 }
 
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 html, body {
   width: 100% !important;
   height: 100% !important;
@@ -11835,6 +11849,92 @@ table tbody tr td {
   background: none !important;
 }
 
+.descripcion {
+  position: relative;
+}
+.descripcion .descripcion-contenido {
+  position: absolute;
+  min-width: 200px !important;
+  border-radius: 5px;
+  z-index: 100000;
+  text-align: left !important;
+}
+.descripcion .descripcion-contenido .descripcion-cabecera {
+  padding: 10px;
+  background-color: #cccccc;
+  color: black;
+  position: relative;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+.descripcion .descripcion-contenido .descripcion-cuerpo {
+  padding: 10px;
+  font-size: 1em;
+  background-color: #e2e2e2;
+  color: black;
+  line-height: 23px;
+  border-radius: 0 0 5px 5px;
+}
+.descripcion .descripcion-contenido .mueca {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #e2e2e2;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+}
+
+.contenedor-efecto3d {
+  width: 100%;
+  height: 100%;
+  z-index: 30000;
+  cursor: pointer;
+}
+.contenedor-efecto3d .contenedor-secundario {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform: perspective(600px) rotateY(0deg);
+  -moz-transform: perspective(600px) rotateY(0deg);
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  -o-transform: perspective(600px) rotateY(0deg);
+}
+.contenedor-efecto3d .contenedor-secundario .adelante, .contenedor-efecto3d .contenedor-secundario .atras {
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+}
+.contenedor-efecto3d .contenedor-secundario .atras {
+  position: absolute;
+  z-index: 30000;
+  top: 0;
+  bottom: 0;
+  transform: perspective(600px) rotateY(180deg);
+  -moz-transform: perspective(600px) rotateY(180deg);
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  -o-transform: perspective(600px) rotateY(180deg);
+}
+.contenedor-efecto3d:hover .contenedor-secundario {
+  transform: perspective(600px) rotateY(180deg);
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  -moz-transform: perspective(600px) rotateY(180deg);
+  -o-transform: perspective(600px) rotateY(180deg);
+  -webkit-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+  -moz-box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+  box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
+}
+
 /**
     JS 
 */
@@ -13208,6 +13308,17 @@ table tbody tr td {
   left: 0;
 }
 
+.paralax-contenedor {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.paralax {
+  width: 100%;
+  height: 100%;
+}
+
 /**
     Componentes
 */
@@ -13869,6 +13980,8 @@ button {
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.24);
   position: relative;
+  top: 0;
+  background-color: white;
 }
 .tarjeta .tarjeta-titulo {
   font-size: 24px;
@@ -13904,11 +14017,12 @@ button {
 }
 .tarjeta .tarjeta-img {
   overflow: hidden;
-  position: relative;
   width: 100%;
   max-height: 30%;
+  min-height: 30%;
   cursor: pointer;
   color: white;
+  position: relative;
 }
 .tarjeta .tarjeta-img img {
   max-width: 100%;
@@ -14528,8 +14642,7 @@ button {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  min-width: 320px;
+  min-width: 260px;
 }
 .lista-contenedor .lista-cabecera,
 .lista-contenedor .lista-pie {
@@ -14539,6 +14652,7 @@ button {
   color: white;
   font-weight: 600;
   border-radius: 30px 30px 0 0;
+  overflow: hidden;
 }
 .lista-contenedor .lista-pie {
   border-radius: 0 0 30px 30px;
@@ -14551,7 +14665,7 @@ button {
   border-right: 1px solid rgba(0, 0, 0, 0.123);
   display: flex;
   justify-content: space-between;
-  background-color: #dfdfdf;
+  background-color: white;
   position: relative;
   cursor: pointer;
 }
@@ -14566,7 +14680,7 @@ button {
   border-top: 1px solid rgba(0, 0, 0, 0.123);
 }
 .lista-contenedor .desplegable {
-  background-color: whitesmoke;
+  background-color: white;
 }
 .lista-contenedor .desplegable p {
   padding: 5px;
@@ -14826,6 +14940,7 @@ textarea::placeholder {
   padding: 6px 10px;
   justify-content: space-between;
   height: 2.1em;
+  background-color: white;
 }
 .input-icon input[type=text],
 .input-icon input[type=email],
@@ -15329,6 +15444,24 @@ textarea::placeholder {
 
 select:focus {
   border: 1px solid #007fd3;
+}
+
+.select-modificado {
+  appearance: none;
+  border-radius: 3px;
+  height: 2.1em;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  background-color: white;
+  position: relative;
+}
+.select-modificado .listado {
+  position: absolute;
+}
+.select-modificado .listado li {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  color: black;
 }
 
 .form-grupo small {

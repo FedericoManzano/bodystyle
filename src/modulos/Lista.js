@@ -31,8 +31,8 @@
 
     var activo = () => {
         $(".activo .lista-item").click(function(){
-            $(".activo .lista-item").css("background-color", "rgb(228, 228, 228)")
-            $(this).css("background-color", "rgb(200, 200, 200)")
+            $(".activo .lista-item").css("background-color", "rgb(255, 255, 255)")
+            $(this).css("background-color", "rgb(240, 240, 240)")
         })
     }
 

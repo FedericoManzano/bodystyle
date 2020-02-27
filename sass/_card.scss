@@ -6,7 +6,8 @@
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.24);
     position: relative;
-
+    top: 0;
+    background-color: white;
 
 
     .tarjeta-titulo {
@@ -50,12 +51,13 @@
 
     .tarjeta-img {
         overflow: hidden;
-        position: relative;
+     
         width: 100%;
         max-height: 30%;
+        min-height: 30%;
         cursor: pointer;
         color: white;
-    
+        position: relative;
         img {
             max-width: 100%;
             max-height: 100%;

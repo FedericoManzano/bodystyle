@@ -23,7 +23,6 @@
             estadoInicial(conf)
             aparecerModal()
             desaparecerModal()
-            desaparecerModal_x()
         }
     }
 
