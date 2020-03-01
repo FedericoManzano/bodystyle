@@ -16,6 +16,7 @@
     z-index: 10;
     font-size: 18px;
     overflow: none;
+    font-family: "Roboto";
        
 }
 
@@ -348,9 +349,6 @@ button
     
 }
 
-
-
-
 .btn-mica-o {
     border: 1px solid $btn-mica;
     color: $btn-mica;
@@ -390,17 +388,6 @@ button
     box-shadow: none !important;
     border: none !important;
 }
-
-.manejador-botones {
-    position: fixed;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-}
-
 
 .btn-grupo,
 .btn-grupo-lg,

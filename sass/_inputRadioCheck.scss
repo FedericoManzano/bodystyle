@@ -1,6 +1,7 @@
 .check-radio-grupo input[type="checkbox"],
 .check-radio-grupo input[type="radio"] {
     display: none;
+    
 }
 
 .cb-rojo,
@@ -33,6 +34,7 @@
     -moz-transition: all .5s ease;
     -webkit-transition: all .5s ease;
     user-select: none;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     
 }
 

@@ -5,7 +5,6 @@ import Waves from  "./modulos/Waves"
 import DropDown from "./modulos/Dropdown"
 import BotonFlotante from "./modulos/BotonFlotante"
 import Toast from "./modulos/Toast"
-import TemplateForm from "./modulos/Template-form"
 import SidebarBarra from "./modulos/Sidebar-barra"
 import SidebarLateral from "./modulos/Sidebar-lateral"
 import SidebarFija from "./modulos/SidebarFija"
@@ -16,18 +15,20 @@ import Imagenes from "./modulos/Imagenes"
 import Range from "./modulos/Range"
 import Slider from "./modulos/Slider"
 import Lista from "./modulos/Lista"
-import Select from "./modulos/Select"
 import Descripcion from "./modulos/Descripcion"
 import Paralax from "./modulos/Paralax"
+import InputFile from "./modulos/InputFile"
+
+
 
 (function(){
     Waves.iniciar()
-    TemplateForm.iniciar()
     MenuColapso.iniciar()
     ToolTips.iniciar()
     Range.iniciar()
     Descripcion.iniciar()
-    Select.iniciar()
+    InputFile.iniciar()
+
 
     var focusInput = () => {
         $(".input-icon input").focus(function() {

@@ -13,7 +13,7 @@
     padding: 0.6em;
     border-radius: 3px;
     font-size: 1.1em;
-    font-family: "HelveticaNeue", Helvetica, sans-serif;
+    font-family: "Roboto", Helvetica, sans-serif;
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -60,14 +60,14 @@ textarea{
 }
 
 
-.f-label::before {
-    content: "Seleccione un Archivo";
+.archivo-seleccionado {
     overflow: auto;
     width: 300%;
     height: 70%;
     position: absolute;
     border-bottom: 1px solid rgb(136, 136, 136);
-    color: rgb(136, 136, 136);;
+    color: rgb(56, 56, 56);;
+    
     left: calc(100% + 10px);
     bottom: 0;
     padding-bottom: 1px;
@@ -75,9 +75,10 @@ textarea{
 }
 
 @media (max-width: 500px ){
-    .f-label::before {
+    .f-label .archivo-seleccionado {
         left: 0;
         top: calc(100% + 10px);
+        width: 500%;
     }
 }
 
@@ -101,7 +102,9 @@ input[type='url']::placeholder,
 input[type='search']::placeholder,
 textarea::placeholder {
     color: $gris;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
+
 
 .i-error {
     box-shadow: 0 0 3px 3px rgba(253, 61, 61, 0.5);
