@@ -11957,6 +11957,52 @@ table tbody tr td {
   box-shadow: 0px 0px 14px 4px rgba(117, 117, 117, 0.71);
 }
 
+.dec-rojo,
+.dec-verde,
+.dec-azul,
+.dec-negro,
+.dec-gris,
+.dec-blanco {
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.dec-rojo::before,
+.dec-azul::before,
+.dec-verde::before,
+.dec-negro::before,
+.dec-gris::before,
+.dec-blanco::before {
+  content: "";
+  position: absolute;
+  background-color: #bb1818;
+  height: 4px;
+  width: 50px;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.dec-azul::before {
+  background-color: #1045b7;
+}
+
+.dec-verde::before {
+  background-color: #006e5c;
+}
+
+.dec-negro::before {
+  background-color: black;
+}
+
+.dec-blanco::before {
+  background-color: white;
+}
+
+.dec-gris::before {
+  background-color: gray;
+}
+
 /**
     JS 
 */
