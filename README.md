@@ -1,14 +1,10 @@
 # BodyStyle
 
-_Librería de estilos css_
+Librería de estilos css
 
 ## Autor
 
 [FedericoManzano](https://github.com/FedericoManzano)
-
-## Licencia
-
-_MIT_ 
 
 ## Comenzando
 
@@ -16,103 +12,59 @@ Para poder descargar la librería con su código fuente para modificar o agregar
 
 [BodyStyle](https://github.com/FedericoManzano/BodyStyle---Librer-a-de-estilos)
 
-### Pre-requisitos
+### Descarga
 
 _Para poder utilizar sólo necesitaremos disponer de jquery_
 
-- [jquery-3.4.1](https://code.jquery.com/jquery-3.4.1.min.js)
+[jquery-3.4.1](https://code.jquery.com/jquery-3.4.1.min.js)
+
+También podemos agregarlo via CDN a través del siguiente enlace  
+
+[https://code.jquery.com/jquery-3.4.1.min.js](https://code.jquery.com/jquery-3.4.1.min.js)
+
+Luego descargar la librería **BodyStyle** del siguiente enlace:
+
+[BodyStyle](https://code.jquery.com/jquery-3.4.1.min.js)
 
 
+### Descarga Actualización
 
 _Para poder modificarla o añadirle funcionalidades vamos a necesitar:_
 
-- Instalar Sass [sass](https://sass-lang.com/install)
-- Instalar node [node v8.10.0](https://nodejs.org/es/download/)
-- Instalar npm [npm v3.5.2](https://www.npmjs.com/get-npm)
+- Descargar [sass](https://sass-lang.com/install)
+- Descargar [node v8.10.0](https://nodejs.org/es/download/)
+- Descargar [npm v3.5.2](https://www.npmjs.com/get-npm)
 
 ### Instalación
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+Para Intalar la librería en un proyecto tenemos que crear la siguiente estructura básica.
 
-_Dí cómo será ese paso_
+- Nombre del Proyecto
+  - css
+    - bodystyle.min.css
+  - js
+    - bodystyle..min.js
+  - index.html
 
-```
-Da un ejemplo
-```
+Para facilitar el trabajo de instalación puede descargar una plantilla predefinida.  
 
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
+[plantilla](plantilla)
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+* [node v8.10.0](https://nodejs.org/es/download/)
+  * babel-cli v7.7.7
+  * babel-core v7.7.7
+  * babel-loader v7.7.7
+  * webpack v4.41.5
+  * webpack-cli v3.3.10
+* [sass](https://sass-lang.com/install)
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+## Scripts
 
-## Contribuyendo 🖇️
+- npm run build **Archivos Js**
+- sass sass:css -watch **Archivos scss**
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
+## Licencia
 
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
-
-
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+Este proyecto está bajo la Licencia (MIT)
