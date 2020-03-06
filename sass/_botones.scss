@@ -389,6 +389,11 @@ button
     border: none !important;
 }
 
+.btn-complemento {
+    @include posicionamiento-fixed(0,0,0,0);
+    z-index: superposicion(co);
+}
+
 .btn-grupo,
 .btn-grupo-lg,
 .btn-grupo-sm {

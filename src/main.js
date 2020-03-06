@@ -18,7 +18,7 @@ import Lista from "./modulos/Lista"
 import Descripcion from "./modulos/Descripcion"
 import Paralax from "./modulos/Paralax"
 import InputFile from "./modulos/InputFile"
-
+import Boton from "./modulos/Boton"
 
 
 (function(){
@@ -28,7 +28,7 @@ import InputFile from "./modulos/InputFile"
     Range.iniciar()
     Descripcion.iniciar()
     InputFile.iniciar()
-
+    Boton.iniciar()
 
     var focusInput = () => {
         $(".input-icon input").focus(function() {

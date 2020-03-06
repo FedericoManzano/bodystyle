@@ -2,6 +2,8 @@
 
 (function () {
     
+
+    const comp = $("<div class='btn-complemento'></div>")
     // Boton Rojo
     const btnRojoSombra = "0 0 0px 3px rgba(187, 24, 24, 0.5)";
     
@@ -21,83 +23,93 @@
     const btnBlancoSombra = "0 0 0 3px rgba(999, 999, 999, 0.5)"; 
 
 
-    const menejador = ()=> {
-        $("body").append("<div class='manejador-botones'></div>");
-        $(".manejador-botones").hide()
+    var inicializar = () => {
+        $("body").append(comp)
+        $(comp).hide()
     }
 
-    const cortar = ()=> {
-        $(".manejador-botones").click(function(){
+
+    var salir = ()=> {
+        $(comp).click(function() {
             deselccionado()
-            $(this).hide()
+            $(".btn-complemento").hide()
         })
     }
 
     const seleccionado = () => {
-
-        $(".btn-rojo").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnRojoSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-verde").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnVerdeSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-azul").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnAzulSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-gris").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnGrisSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-negro").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnNegroSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-rojo-o").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnRojoSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-verde-o").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnVerdeSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-azul-o").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnAzulSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-gris-o").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnGrisSombra)
-            $(".manejador-botones").show()
-        })
-        $(".btn-negro-o").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnNegroSombra)
-            $(".manejador-botones").show()
-        })
-
-        $(".btn-blanco-o").click(function () {
-            deselccionado()
-            $($(this)).css("box-shadow", btnBlancoSombra)
-            $(".manejador-botones").show()
+        $(".activo").click(function(){
+            $(".btn-rojo").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnRojoSombra)
+            })
+    
+            $(".btn-verde").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnVerdeSombra)
+            })
+    
+            $(".btn-azul").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnAzulSombra)
+                
+            })
+    
+            $(".btn-gris").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnGrisSombra)
+                
+            })
+    
+            $(".btn-negro").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnNegroSombra)
+                
+            })
+    
+            $(".btn-rojo-o").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnRojoSombra)
+                
+            })
+    
+            $(".btn-verde-o").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnVerdeSombra)
+               
+            })
+    
+            $(".btn-azul-o").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnAzulSombra)
+                
+            })
+    
+            $(".btn-gris-o").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnGrisSombra)
+                
+            })
+            $(".btn-negro-o").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnNegroSombra)
+              
+            })
+    
+            $(".btn-blanco-o").click(function () {
+                deselccionado()
+                $(comp).show()
+                $($(this)).css("box-shadow", btnBlancoSombra)
+            })
         })
     }
 
@@ -111,9 +123,9 @@
 
     const Boton = {
         iniciar: function () {
-            menejador()
-            cortar()
+            inicializar()
             seleccionado()
+            salir()
         }
     }
 

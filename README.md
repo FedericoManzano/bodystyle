@@ -41,6 +41,9 @@ Para Intalar la librería en un proyecto tenemos que crear la siguiente estructu
 
 - Nombre del Proyecto
   - css
+    - fonts
+        - HelveticaNeue.ttf
+        - Roboto.ttf
     - bodystyle.min.css
   - js
     - bodystyle..min.js
