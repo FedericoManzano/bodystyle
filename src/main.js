@@ -19,7 +19,7 @@ import Descripcion from "./modulos/Descripcion"
 import Paralax from "./modulos/Paralax"
 import InputFile from "./modulos/InputFile"
 import Boton from "./modulos/Boton"
-
+import BotonInicio from "./modulos/BotonInicio"
 
 (function(){
     Waves.iniciar()
@@ -29,6 +29,7 @@ import Boton from "./modulos/Boton"
     Descripcion.iniciar()
     InputFile.iniciar()
     Boton.iniciar()
+    
 
     var focusInput = () => {
         $(".input-icon input").focus(function() {
@@ -87,6 +88,11 @@ import Boton from "./modulos/Boton"
 
     var ImagenesInit = ()=> {
         Imagenes.iniciar()
+    }
+
+
+    var BotonInicioInit = () => {
+        BotonInicio.iniciar()
     }
 
     var AutoInit = ()=> {
@@ -169,7 +175,8 @@ import Boton from "./modulos/Boton"
         FocusInput: () => focusInput(),
         SliderInit: (config) => SliderInit(config),
         ListaInit: () => ListaInit(),
-        ParalaxInit: () => ParalaxInit()
+        ParalaxInit: () => ParalaxInit(),
+        BotonInicioInit: () => BotonInicioInit()
     }
 
     window.BS = BS

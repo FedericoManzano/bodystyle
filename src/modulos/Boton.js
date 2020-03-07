@@ -37,80 +37,80 @@
     }
 
     const seleccionado = () => {
-        $(".activo").click(function(){
-            $(".btn-rojo").click(function () {
+       
+            $(".btn-rojo.activo").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnRojoSombra)
             })
     
-            $(".btn-verde").click(function () {
+            $(".activo.btn-verde").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnVerdeSombra)
             })
     
-            $(".btn-azul").click(function () {
+            $(".activo.btn-azul").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnAzulSombra)
                 
             })
     
-            $(".btn-gris").click(function () {
+            $(".activo.btn-gris").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnGrisSombra)
                 
             })
     
-            $(".btn-negro").click(function () {
+            $(".activo.btn-negro").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnNegroSombra)
                 
             })
     
-            $(".btn-rojo-o").click(function () {
+            $(".activo.btn-rojo-o").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnRojoSombra)
                 
             })
     
-            $(".btn-verde-o").click(function () {
+            $(".activo.btn-verde-o").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnVerdeSombra)
                
             })
     
-            $(".btn-azul-o").click(function () {
+            $(".activo.btn-azul-o").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnAzulSombra)
                 
             })
     
-            $(".btn-gris-o").click(function () {
+            $(".activo.btn-gris-o").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnGrisSombra)
                 
             })
-            $(".btn-negro-o").click(function () {
+            $(".activo.btn-negro-o").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnNegroSombra)
               
             })
     
-            $(".btn-blanco-o").click(function () {
+            $(".activo.btn-blanco-o").click(function () {
                 deselccionado()
                 $(comp).show()
                 $($(this)).css("box-shadow", btnBlancoSombra)
             })
-        })
+        
     }
 
     const deselccionado = () => {

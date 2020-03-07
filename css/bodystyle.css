@@ -175,6 +175,40 @@ a.link:hover {
   }
 }
 
+@media (min-width: 400px) {
+  .mostar-solo-x-chicos {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .mostar-solo-chicos {
+    display: none !important;
+  }
+}
+@media (max-width: 400px) {
+  .mostar-solo-chicos {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mostar-solo-medianos {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .mostar-solo-medianos {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mostar-solo-grandes {
+    display: none !important;
+  }
+}
+
 .derecha {
   justify-content: flex-end !important;
 }
@@ -13566,6 +13600,38 @@ table tbody tr td {
 .paralax {
   width: 100%;
   height: 100%;
+}
+
+.boton-inicio {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.5;
+  background-color: #303030;
+  box-shadow: 0.5px 2px 1px black;
+  cursor: pointer;
+}
+.boton-inicio::before, .boton-inicio::after {
+  content: "";
+  width: 20px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  top: calc(50% - 5px);
+}
+.boton-inicio::before {
+  left: 10px;
+  transform: rotate(-45deg);
+}
+.boton-inicio::after {
+  left: calc(100% - 29px);
+  transform: rotate(45deg);
+}
+.boton-inicio:hover {
+  opacity: 1;
 }
 
 /**
