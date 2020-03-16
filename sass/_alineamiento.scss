@@ -1,11 +1,4 @@
-/**
-    Alineamiento de elementos dentro de un contenedor
-    Teniendo en cuenta que 1em = 16px
-*/
 
-/**
-    Clase contenedor para centrar el contenido dentro de la pagina
-*/
 .contenedor {
     width: 70% ;
     margin: auto ;
@@ -32,10 +25,7 @@
         margin: auto ;
     }  
 }
-/***
-    Utilizando flexbox para centrar el contenido
-    del contenedor
-*/
+
 .a-items-cent, 
 .a-items-just,
 .a-items-cent-just {
@@ -397,11 +387,6 @@ $m: inicializarVariable();
     -ms-display: flex;
 }
 
-/****
-
-    Display flex tipos
-
-*/
 .flex-fila {
     flex-direction: row;
 }
@@ -431,9 +416,6 @@ $m: inicializarVariable();
 }
 
 
-/***
-    Justificación 
-*/
 .just-inicio {
     justify-content: flex-start;
 }
@@ -453,10 +435,6 @@ $m: inicializarVariable();
 .just-cobertura-tope {
     justify-content: space-between;
 }
-
-/***
-    Alineamiento
-*/
 
 .ali-centrada {
     align-items: center;
@@ -505,11 +483,6 @@ $m: inicializarVariable();
         -ms-display: flex;
     }
     
-    /****
-    
-        Display flex tipos
-    
-    */
     .flex-fila-m {
         flex-direction: row;
     }
@@ -539,9 +512,6 @@ $m: inicializarVariable();
     }
     
     
-    /***
-        Justificación 
-    */
     .just-inicio-m {
         justify-content: flex-start;
     }
@@ -561,10 +531,6 @@ $m: inicializarVariable();
     .just-cobertura-tope-m {
         justify-content: space-between;
     }
-    
-    /***
-        Alineamiento
-    */
     
     .ali-centrada-m {
         align-items: center;
@@ -613,11 +579,6 @@ $m: inicializarVariable();
         -ms-display: flex;
     }
     
-    /****
-    
-        Display flex tipos
-    
-    */
     .flex-fila-s {
         flex-direction: row;
     }
@@ -646,10 +607,6 @@ $m: inicializarVariable();
         flex-wrap: wrap-reverse;
     }
     
-    
-    /***
-        Justificación 
-    */
     .just-inicio-s {
         justify-content: flex-start;
     }
@@ -669,10 +626,6 @@ $m: inicializarVariable();
     .just-cobertura-tope-s {
         justify-content: space-between;
     }
-    
-    /***
-        Alineamiento
-    */
     
     .ali-centrada-s {
         align-items: center;
@@ -722,11 +675,6 @@ $m: inicializarVariable();
         -ms-display: flex;
     }
     
-    /****
-    
-        Display flex tipos
-    
-    */
     .flex-fila-xs {
         flex-direction: row;
     }
@@ -755,10 +703,6 @@ $m: inicializarVariable();
         flex-wrap: wrap-reverse;
     }
     
-    
-    /***
-        Justificación 
-    */
     .just-inicio-xs {
         justify-content: flex-start;
     }
@@ -778,10 +722,7 @@ $m: inicializarVariable();
     .just-cobertura-tope-xs {
         justify-content: space-between;
     }
-    
-    /***
-        Alineamiento
-    */
+
     
     .ali-centrada-xs {
         align-items: center;

@@ -225,6 +225,38 @@ table tbody tr td {
     padding: 0.5em 1em;
 }
 
+.tabla-bor-rojo thead{
+    border-top: 3px solid $fd-rojo;
+    border-radius: 3px  !important;
+}
+
+.tabla-bor-verde thead{
+    border-top: 3px solid $fd-verde;
+    border-radius: 3px  !important;
+}
+
+.tabla-bor-azul thead{
+    border-top: 3px solid $fd-azul;
+    border-radius: 3px  !important;
+}
+
+
+.tabla-bor-gris thead{
+    border-top: 3px solid $fd-gris;
+    border-radius: 3px  !important;
+}
+
+
+.tabla-bor-negro thead{
+    border-top: 3px solid $fd-negro;
+    border-radius: 3px  !important;
+}
+
+.tabla-bor-blanco thead{
+    border-top: 3px solid $fd-blanco;
+    border-radius: 3px  !important;
+}
+
 @media (max-width: 1200px) {
     .tabla-responsive {
         width: 100%;

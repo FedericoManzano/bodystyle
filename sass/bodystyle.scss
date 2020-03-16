@@ -1,14 +1,13 @@
-/*****************************************************************
-    Libreria de estilos en css3
-    Nombre: BodyStyle
-    Autor: Fedrico Manzano
-    Version: 1.0.0
-*******************************************************************/
+/*!
+ * BodyStyle v1.0.0
+ * Copyright Federico Manzano
+ * Licencia MIT
+ * Repositorio (https://github.com/FedericoManzano/BodyStyle---Librer-a-de-estilos)
+ */
 
 
-/**
-    Generales 
-*/
+
+//Generales 
 @import "generales";
 @import "config";
 @import "mixin-generales";
@@ -17,23 +16,15 @@
 @import "colores";
 @import "fondos";
 
-/**
-    Aliniamiento 
-*/
+//Aliniamiento 
 @import "alineamiento";
 @import "grilla";
 
-/**
-    Utilitarios 
-*/
+//Utilitarios 
 @import "texto";
 @import "css";
 
-
-/**
-    CSS 
-*/
-
+//CSS 
 @import "efecto-borde";
 @import "tabla";
 @import "alertas";
@@ -43,10 +34,9 @@
 @import "decoracionTitulo";
 @import "formas";
 @import "footer";
+@import "conEtiquetados";
 
-/**
-    JS 
-*/
+// JS
 @import "dropdown";
 @import "efecto-waves";
 @import "imagenes";
@@ -57,9 +47,7 @@
 @import "paralax";
 @import "botonInicio";
 
-/**
-    Componentes
-*/
+// Componentes
 @import "preloader";
 @import "progressBar";
 @import "botones";
@@ -73,9 +61,8 @@
 @import "sidebarFija";
 @import "slider";
 @import "colecciones";
-/***
-    Formularios
-*/
+
+// Formularios
 @import "switch";
 @import "inputText";
 @import "inputRadioCheck";

@@ -1,8 +1,4 @@
 
-/**
-    Estilos generales afectan a toda la pagina
-*/
-
 @font-face {
     font-family: "Roboto";
     src: url("./fonts/Roboto-Regular.ttf");
@@ -88,9 +84,9 @@ a{
 }
 
 a:not[href]{
-    color: rgb(156, 156, 156);
-    cursor: none;
-
+    color: rgb(156, 156, 156) !important;
+    cursor: none !important;
+    border: none !important;
 }
 
 p, .p {

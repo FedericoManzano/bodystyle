@@ -35,6 +35,66 @@
 .alerta-blanca{
     border-left: 4px solid rgb(240, 240, 240) !important;
 }
+
+.alerta-op-rojo,
+.alerta-op-verde,
+.alerta-op-azul,
+.alerta-op-negro,
+.alerta-op-blanco,
+.alerta-op-gris {
+    padding: 15px;
+    font-size: 0.8sem;
+    line-height: 25px;
+    font-weight: 500;
+    border-radius: 3px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+}
+
+.alerta-op-rojo {
+    background-color: rgb(255, 223, 223);
+    border: 1px solid $fd-rojo;
+    color: $fd-rojo;
+}
+
+.alerta-op-verde {
+    background-color: rgb(226, 255, 226);
+    border: 1px solid $fd-verde;
+    color: $fd-verde;
+}
+
+.alerta-op-azul {
+    background-color: rgb(225, 236, 252);
+    border: 1px solid $fd-azul;
+    color: $fd-azul;
+}
+
+.alerta-op-negro {
+    background-color: rgb(212, 212, 212);
+    border: 1px solid $fd-negro;
+    color: $fd-negro;
+}
+
+.alerta-op-gris {
+    background-color: rgb(240, 240, 240);
+    border: 1px solid $fd-gris;
+    color: $fd-gris-o;
+}
+
+.alerta-op-blanco {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid $fd-gris-c;
+    color: $fd-gris-o;
+}
+  
   
   
   

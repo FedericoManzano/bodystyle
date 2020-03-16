@@ -1,7 +1,6 @@
 .check-radio-grupo input[type="checkbox"],
 .check-radio-grupo input[type="radio"] {
     display: none;
-    
 }
 
 .cb-rojo,
@@ -216,4 +215,71 @@
 .check-radio-grupo input[type="radio"]:checked + .rd-blanco {
     background-color: rgb(255, 255, 255);
     color: black;
+}
+
+.checkbox, .radiobtn {
+    display: inline-block;
+    font-size: 1em;
+    padding: 5px;
+    padding-left: 25px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    color: rgb(26, 26, 26);
+    &:active {
+        color: black;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        border-radius: 2px;
+        border: 1px solid rgb(214, 214, 214);
+        left: 0;
+        top: 5px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 1em;
+        height: 1em;
+        clip-path: polygon(30% 36%, 17% 52%, 49% 77%, 87% 30%, 72% 17%, 47% 50%);
+        background-color: black;
+        display: none;
+    }
+
+
+}
+
+.radiobtn {
+    &::before {
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 9px;
+        clip-path: none;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        display: none;
+    }
+}
+
+
+.check-radio-grupo input[type="checkbox"]:checked + .checkbox::after,
+.check-radio-grupo input[type="radio"]:checked + .radiobtn::after{
+    display: inline-block;
+}
+
+.check-radio-grupo input[type="checkbox"]:checked + .checkbox::before, 
+.check-radio-grupo input[type="radio"]:checked + .radiobtn::before {
+    border: 1px solid rgba(45, 206, 255, 0.418);
 }

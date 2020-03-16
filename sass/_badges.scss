@@ -269,73 +269,13 @@
     &::before {
         content: "";
         background-color: rgb(231, 231, 231);
-        
     }
-
-
     &:hover {
         background-color: rgb(196, 196, 196);
     }
-
-
     &:hover::before {
         background-color: rgb(196, 196, 196);
     }
-}
-
-
-
-
-.badges-sub {
-    @include ancho-alto(200px, 50px);
-    display: flex;
-    max-width: 200px;
-    user-select: none;
-
-    input[type="text"] {
-        display: flex;
-        min-width: 100px;
-        height: 30px;
-        box-shadow: none;
-        border-radius: 3px 0 0 3px ;
-        color: grey;
-        font-size: 10px;
-        align-items: center;
-    }
-
-    input[type="text"]:focus {
-        border: 1px solid grey;
-    }
-
-    input[type="text"]:read-only {
-        cursor: pointer;
-    }
-
-    
-    .btn-sm,
-    .btn,
-    .btn-lg,
-    .btn-cubrir,
-    .btn-cubrir-sm,
-    .btn-cubrir-lg{
-        @include flex-box-centrado();
-        border-radius: 0 0 0 0;
-        box-shadow: none !important;
-        height: 30px;
-        text-transform: uppercase;
-        font-size: 15px;
-        z-index: 0;
-        padding: 10px;
-    }
-
-    .btn-sm {
-        font-size: 12px;
-    }
-
-    .btn {
-        font-size: 15px;
-    }
-
 }
 
 .badges-parrafo {
@@ -369,4 +309,624 @@
         background: none !important;
     }
 }
+
+
+.badge-mje-gris, 
+.badge-mje-rojo,
+.badge-mje-verde,
+.badge-mje-negro,
+.badge-mje-azul,
+.badge-mje-blanco {
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 11px;
+    border-radius: 5px;
+    z-index: 4;
+    margin-top: 12px;
+    &::before {
+        content: "";
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        left: calc(50% - 5px);
+        top: -6px;
+        transform: rotate(45deg);
+        background-color: rgb(255, 255, 255);
+        z-index: -1;
+    }
+}
+
+.badge-mje-gris {
+    color: #383838;
+    border: 1px solid #747474;
+    &::before {
+        content: "";
+        border-top: 1px solid #747474;
+        border-left: 1px solid #747474;
+    }
+}
+
+.badge-mje-rojo {
+    color: $fd-rojo;
+    border: 1px solid $fd-rojo;
+    &::before {
+        content: "";
+        border-top: 1px solid $fd-rojo;
+        border-left: 1px solid $fd-rojo;
+    }
+}
+
+
+.badge-mje-verde {
+    color: $fd-verde;
+    border: 1px solid $fd-verde;
+    &::before {
+        content: "";
+        border-top: 1px solid $fd-verde;
+        border-left: 1px solid $fd-verde;
+    }
+}
+
+
+.badge-mje-azul {
+    color: $fd-azul;
+    border: 1px solid $fd-azul;
+    &::before {
+        content: "";
+        border-top: 1px solid $fd-azul;
+        border-left: 1px solid $fd-azul;
+    }
+}
+
+.badge-mje-negro {
+    color: $fd-negro;
+    border: 1px solid $fd-negro;
+    &::before {
+        content: "";
+        border-top: 1px solid $fd-negro;
+        border-left: 1px solid $fd-negro;
+    }
+}
+
+.badge-social {
+    overflow: hidden;
+    display: flex;
+    .badge-like {
+        background-color: $fd-azul;
+        color: white;
+        font-size: 70%;
+        vertical-align: middle;
+        font-weight: 600;
+        padding: 4px;
+        border-radius: 3px;
+        min-width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            background-color: $fd-azul-o;
+        }
+    }
+
+    .badge-cantidad{
+        border: 1px solid rgba(0, 0, 0, 0.336);
+        padding: 5px;
+        font-size: 10px;
+        background-color: rgb(241, 241, 241);
+        text-align: center;
+        min-width: 70px;
+        margin-left: 7px;
+        position: relative;
+        font-weight: 600;
+        border-radius: 3px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+            border-left: 1px solid rgba(0, 0, 0, 0.336);
+            transform: rotate(45deg);
+            background-color: rgb(241, 241, 241);
+            left: -5px;
+            top: calc(50% - 3.5px);
+        }
+    }
+}
+
+.badge-compartir-gris,
+.badge-compartir-rojo,
+.badge-compartir-verde,
+.badge-compartir-azul,
+.badge-compartir-negro,
+.badge-compartir-blanco {
+    padding: 9px;
+    background-color: rgb(218, 218, 218);
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 75%;
+    text-transform: uppercase;
+    min-width: 60px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    letter-spacing: 0;
+    color: rgb(34, 34, 34);
+    position: relative;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.219);
+    }
+
+    span {
+        display: inline-block;
+        position: absolute;
+        min-width: 100%;
+        max-width: 100%;
+        border: 1px solid rgb(121, 121, 121);
+        text-align: center;
+        white-space: nowrap;
+        bottom: 130%;
+        left: 0;
+        padding: 7px 5px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.493);
+        &::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            transform: rotate(45deg);
+            bottom: -4px;
+            left: calc(50% - 3.5px);
+            border-right: 1px solid rgb(121, 121, 121);
+            border-bottom: 1px solid rgb(121, 121, 121);
+            background-color: white;
+        }
+    }
+}
+
+.badge-compartir-rojo {
+    background-color: $fd-rojo;
+    color: white;
+    span {
+        color: rgb(34, 34, 34);
+    }
+    &:hover {
+        background-color: $fd-rojo-o;
+    }
+}
+
+.badge-compartir-verde {
+    background-color: $fd-verde;
+    color: white;
+    span {
+        color: rgb(34, 34, 34);
+    }
+
+    &:hover {
+        background-color: $fd-verde-o;
+    }
+}
+
+.badge-compartir-azul {
+    background-color: $fd-azul;
+    color: white;
+    span {
+        color: rgb(34, 34, 34);
+    }
+
+    &:hover {
+        background-color: $fd-azul-o;
+    }
+}
+
+
+.badge-compartir-negro {
+    background-color: $fd-negro;
+    color: white;
+    span {
+        color: rgb(34, 34, 34);
+    }
+    &:hover {
+        background-color: $fd-gris-o;
+    }
+}
+
+.badge-compartir-blanco {
+    background-color: $fd-blanco;
+    color: black;
+    span {
+        color: rgb(34, 34, 34);
+    }
+    &:hover {
+        background-color: $fd-gris-o;
+        color: white;
+    }
+}
+
+.badge-solapa-rojo,
+.badge-solapa-azul,
+.badge-solapa-verde,
+.badge-solapa-blanco,
+.badge-solapa-negro,
+.badge-solapa-gris {
+    position: absolute;
+    padding: 5px 20px;
+    padding-left: 30px;
+    @include flex-box-centrado();
+    background-color: $fd-rojo;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 600;
+    color: white;
+    border-radius: 0 3px 3px 0;
+    top: 30px;
+    left: -19px;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
+        -webkit-clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
+        background-color: $fd-rojo-o;
+        left: 0;
+        bottom: -9px;
+        z-index: -1;
+    }
+}
+
+
+.badge-solapa-azul {
+    background-color: $fd-azul;
+    &::before {
+        background-color: $fd-azul-o;
+    }
+}
+
+.badge-solapa-verde {
+    background-color: $fd-verde;
+    &::before {
+        background-color: $fd-verde-o;
+    }
+}
+
+.badge-solapa-gris {
+    background-color: $fd-gris-c;
+    color: black;
+    &::before {
+        background-color: $fd-gris-o;
+    }
+}
+
+.badge-solapa-blanco {
+    background-color: $fd-blanco;
+    color: black;
+    &::before {
+        background-color: $fd-gris-c;
+    }
+}
+
+.badge-solapa-negro {
+    background-color: $fd-negro;
+    &::before {
+        background-color: $fd-gris-o;
+    }
+}
+
+.contenedor-relativo {
+    position:  relative !important;
+}
+
+.badge-red-rojo,
+.badge-red-gris, 
+.badge-red-blanco,
+.badge-red-verde,
+.badge-red-azul, 
+.badge-red-negro{
+    display: inline-block;
+    min-width: 25px;
+    min-height: 25px;
+    padding: 10px;
+    font-size:70%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    span {
+        display: inline-block;
+        position: absolute;
+        color: white;
+        width: 15px;
+        height: 15px;
+        top: calc(50% - 7.5px);
+        left: calc(50% - 7.5px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+    }
+}
+
+.badge-red-rojo{
+    background-color: $fd-rojo;
+}
+
+.badge-red-verde{
+    background-color: $fd-verde;
+}
+
+.badge-red-azul{
+    background-color: $fd-azul;
+}
+
+.badge-red-gris{
+    background-color: $fd-gris;
+}
+
+.badge-red-negro{
+    background-color: $fd-negro;
+}
+
+.badge-red-blanco{
+    background-color: $fd-blanco;
+    span {
+        color: black;
+    }
+}
+
+.badge-imagen {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(233, 233, 233);
+    max-width: 300px;
+    min-width: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    &:active {
+        background-color: rgb(212, 212, 212);
+    }
+
+    &:hover .elementos span {
+        color: #212121;
+    }
+    .elementos {
+        @include flex-box-centrado();
+        img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+    
+        span {
+            font-size: 15px;
+            font-weight: 600;
+            color: #555555;
+        }
+    }
+
+    .seguidores {
+        position: absolute;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 10px;
+        width: 80px;
+        text-align: center;
+        background-color: rgb(247, 247, 247);
+        border: 1px solid rgba(0, 0, 0, 0.288);
+        top: -50px;
+        left: calc(50% - 40px);
+        font-size: 13px;
+        font-weight: 600;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            background-color: rgb(247, 247, 247);
+            transform: rotate(45deg);
+            bottom: -5px;
+            left: calc(50% - 5px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+            border-right: 1px solid rgba(0, 0, 0, 0.288);
+        }
+    }
+}
+
+.badge-cierre-rojo,
+.badge-cierre-verde,
+.badge-cierre-azul,
+.badge-cierre-gris,
+.badge-cierre-blanco,
+.badge-cierre-negro {
+    
+    padding: 5px;
+    padding-right: 20px;
+    border-radius: 3px;
+    background-color: $fd-rojo;
+    color: white;
+    font-size: 10px;
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    &:hover {
+        background-color: $fd-rojo-o;
+    }
+    .cerrar {
+        width: 10px;
+        height: 2px;
+        border-radius: 10px;
+        position: absolute;
+        right: 4px;
+        top: calc(50% - 1.5px);
+        transform: rotate(45deg);
+        background-color: white;
+
+        &::before {
+            content: "";
+            width: 10px;
+            height: 2px;
+            border-radius: 10px;
+            position: absolute;
+            right: 0px;
+            top: calc(50%  - 1px);
+            transform: rotate(-90deg);
+            background-color: white;
+        }
+    }
+}
+
+
+.badge-cierre-verde {
+    background-color: $fd-verde;
+    &:hover {
+        background-color: $fd-verde-o;
+    }
+}
+
+
+.badge-cierre-azul {
+    background-color: $fd-azul;
+    &:hover {
+        background-color: $fd-azul-o;
+    }
+}
+
+
+.badge-cierre-gris {
+    background-color: $fd-gris;
+    &:hover {
+        background-color: $fd-gris-o;
+    }
+}
+
+
+.badge-cierre-negro {
+    background-color: $fd-gris-n;
+    &:hover {
+        background-color: $fd-negro;
+    }
+}
+
+
+.badge-cierre-blanco {
+    background-color: $fd-blanco;
+    color: black;
+    &:hover {
+        background-color: $fd-gris-c;
+    }
+    .cerrar {
+        background-color: black;
+        &::before {
+            background-color: black;
+        }
+    }
+}
+.badge-xs,
+.badge-md,
+.badge-sm,
+.badge-lg,
+.badge-xl {
+    display: inline-block;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.badge-xs {
+    padding: 3px 6px;
+    font-size: 10px;
+}
+
+
+.badge-md {
+    padding: 7px 10px;
+    font-size: 15px;
+}
+
+.badge-sm {
+    padding: 5px 7px;
+    font-size: 12px;
+}
+
+.badge-lg {
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.badge-xl {
+    padding: 12px 18px;
+    font-size: 20px;
+}
+
+.badge-sub {
+    display: inline-block;
+    padding: 7px;
+    font-size: 70%;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    position: relative;
+    background-color: $fd-rojo;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: rgb(170, 31, 31);
+    }
+
+    &:active {
+        background-color: $fd-rojo-c;
+    }
+
+    span {
+        position: absolute;
+        padding: 7px 10px;
+        background-color: whitesmoke;
+        right: -107px;
+        top: 0;
+        max-width: 100%;
+        min-width: 100px;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.192);
+        border-radius: 3px;
+        &::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            background-color: whitesmoke;
+            transform: rotate(45deg);
+            left: -4px;
+            top: calc(50% - 3.5px);
+            border-left: 1px solid rgba(0, 0, 0, 0.192);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.192);
+        }
+    }
+}
+
+.badge-flot {
+    position: absolute !important;
+    top: -10px !important;
+    right: 5px !important;
+}
+
 
