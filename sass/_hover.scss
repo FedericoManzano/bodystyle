@@ -1,0 +1,65 @@
+.hover-contenedor {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    * {
+        @include ancho-alto(100%, 100%);
+        @include posicionamiento-absoluto(0, 0, 0, 0);
+    }
+    &:hover .lateral-derecha {
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    &:hover .lateral-izquierda {
+        left: -100%;
+        transition: left 0.3s;
+    }
+
+    &:hover .arriba {
+        top: -100%;
+        transition: top 0.3s;
+    }
+
+    &:hover .abajo {
+        top: 100%;
+        transition: top 0.3s;
+    }
+
+    &:hover .girar-derecha {
+        left: 100%;
+        animation: girar-derecha 0.3s 0s 1 linear;
+        transition: top 0.3s;
+    }
+
+    &:hover .girar-izquierda {
+        left: -100%;
+        animation: girar-izquierda 0.3s 0s 1 linear;
+        transition: top 0.3s;
+    }
+
+}
+
+
+@keyframes girar-derecha {
+    from {
+        transform: rotate(0deg);
+        left: 0;
+    }to {
+        transform: rotate(180deg);
+        left: 100%;
+    }
+}
+
+
+@keyframes girar-izquierda {
+    from {
+        transform: rotate(0deg);
+        left: 0;
+    }to {
+        transform: rotate(-180deg);
+        left: -100%;
+    }
+}
+
