@@ -20,6 +20,8 @@ import Paralax from "./modulos/Paralax"
 import InputFile from "./modulos/InputFile"
 import Boton from "./modulos/Boton"
 import BotonInicio from "./modulos/BotonInicio"
+import Alerta from "./modulos/Alerta"
+import Template from "./modulos/Template"
 
 (function(){
     Waves.iniciar()
@@ -29,8 +31,8 @@ import BotonInicio from "./modulos/BotonInicio"
     Descripcion.iniciar()
     InputFile.iniciar()
     Boton.iniciar()
-    
-
+    Alerta.iniciar()
+    Template.iniciar()
     var focusInput = () => {
         $(".input-icon input").focus(function() {
             $(this).parent().css("border", "1px solid rgba(135, 217, 255)")

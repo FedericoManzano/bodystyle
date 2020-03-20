@@ -94,7 +94,26 @@
     border: 1px solid $fd-gris-c;
     color: $fd-gris-o;
 }
-  
+
+.alerta-cerrar {
+    position: relative;
+    cursor: pointer;
+    &::before, 
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: black;
+        width: 12px;
+        height: 3px;
+        right: 7px;
+        top: 10px;
+        transform:  rotate(45deg);
+    }
+
+    &::after {
+        transform:  rotate(-45deg);
+    }
+}
   
   
   

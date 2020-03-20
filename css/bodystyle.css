@@ -421,6 +421,10 @@ a.link:hover {
   background-color: #e79f04 !important;
 }
 
+.fd-trasparente {
+  background-color: transparent !important;
+}
+
 .contenedor {
   width: 70%;
   margin: auto;
@@ -11591,6 +11595,24 @@ table tbody tr td {
   color: #212121;
 }
 
+.alerta-cerrar {
+  position: relative;
+  cursor: pointer;
+}
+.alerta-cerrar::before, .alerta-cerrar::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 12px;
+  height: 3px;
+  right: 7px;
+  top: 10px;
+  transform: rotate(45deg);
+}
+.alerta-cerrar::after {
+  transform: rotate(-45deg);
+}
+
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
@@ -12865,16 +12887,16 @@ table tbody tr td {
 .con-simbolo {
   position: relative;
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.116);
-  padding: 40px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.308);
+  padding: 30px 30px;
   background-color: #fafafa;
   overflow: auto;
 }
 .con-simbolo .etiqueta,
 .con-simbolo .etiqueta-total {
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.027);
   padding: 5px 10px;
-  background-color: #f1f1f1;
   text-align: center;
   color: #757575;
   font-size: 13px;
@@ -15754,7 +15776,7 @@ textarea {
   border: 1px solid #a3a3a3;
   padding: 0.6em;
   border-radius: 3px;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-family: "Roboto", Helvetica, sans-serif;
   transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -15855,7 +15877,7 @@ textarea::placeholder {
   border: 1px solid #a3a3a3;
   padding: 0.6em;
   border-radius: 3px;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-family: "Roboto", Helvetica, sans-serif;
   transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -16553,6 +16575,88 @@ select:focus {
 }
 .input-range input[type=range]::-webkit-slider-thumb:hover {
   box-shadow: 1px 0 10px 5px rgba(12, 151, 144, 0.349);
+}
+
+.tem-formulario {
+  font-family: "Roboto";
+}
+.tem-formulario h3 {
+  font-size: 1.5em !important;
+  margin-bottom: 30px !important;
+  font-weight: 300 !important;
+  color: #141414 !important;
+  letter-spacing: 0 !important;
+}
+.tem-formulario h4 {
+  font-size: 1.2em !important;
+  margin-bottom: 15px !important;
+  font-weight: 300 !important;
+  color: #494949 !important;
+  letter-spacing: 0 !important;
+}
+.tem-formulario .division {
+  border: 0.5px solid rgba(0, 0, 0, 0.075);
+  margin: 40px 0;
+}
+.tem-formulario .tem-input {
+  position: relative;
+  width: 100%;
+  height: 3em;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  border-radius: 5px;
+  font-family: "Roboto";
+}
+.tem-formulario .tem-input input, .tem-formulario .tem-input select {
+  border: none;
+  background: none;
+  position: absolute;
+  z-index: 1;
+  top: 0.2em;
+  font-size: 15px;
+  color: #3b3b3b;
+}
+.tem-formulario .tem-input .flechas {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-top: 5px solid grey;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  right: 30px;
+  top: calc(50% - 2.5px);
+}
+.tem-formulario .tem-input .flechas::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2.5em;
+  background-color: white;
+  right: -30px;
+  top: -25px;
+  z-index: 2;
+}
+.tem-formulario .tem-input input:focus {
+  box-shadow: none;
+  border: none;
+}
+.tem-formulario .tem-input label {
+  position: absolute;
+  font-size: 15px;
+  top: calc(50% - 9px);
+  left: 8px;
+  color: gray !important;
+  transition: all 0.3s;
+}
+.tem-formulario small {
+  margin: 0;
+  padding: 0;
+  font-size: 12px !important;
+  color: #494949;
+}
+.tem-formulario .checkbox,
+.tem-formulario .radiobtn {
+  color: #585858 !important;
 }
 
 /*# sourceMappingURL=bodystyle.css.map */

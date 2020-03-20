@@ -12,7 +12,7 @@
     border: 1px solid $gris-input;
     padding: 0.6em;
     border-radius: 3px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-family: "Roboto", Helvetica, sans-serif;
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -66,8 +66,7 @@ textarea{
     height: 70%;
     position: absolute;
     border-bottom: 1px solid rgb(136, 136, 136);
-    color: rgb(56, 56, 56);;
-    
+    color: rgb(56, 56, 56);
     left: calc(100% + 10px);
     bottom: 0;
     padding-bottom: 1px;
