@@ -13006,6 +13006,63 @@ table tbody tr td {
     left: -100%;
   }
 }
+.breadcrumb-negro,
+.breadcrumb-blanco {
+  display: flex;
+}
+.breadcrumb-negro a,
+.breadcrumb-blanco a {
+  display: block;
+  text-decoration: none;
+  color: #353535;
+  position: relative;
+  font-size: 15px;
+}
+.breadcrumb-negro a:hover,
+.breadcrumb-blanco a:hover {
+  color: black;
+}
+.breadcrumb-negro a:nth-child(n-1),
+.breadcrumb-blanco a:nth-child(n-1) {
+  padding-right: 30px;
+}
+.breadcrumb-negro a:nth-child(n):not(:last-child)::before, .breadcrumb-negro a:nth-child(n):not(:last-child)::after,
+.breadcrumb-blanco a:nth-child(n):not(:last-child)::before,
+.breadcrumb-blanco a:nth-child(n):not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 2px;
+  transform: rotate(45deg);
+  background-color: #222222;
+  right: 13px;
+  top: calc(50% - 2px);
+}
+.breadcrumb-negro a:nth-child(n):not(:last-child)::after,
+.breadcrumb-blanco a:nth-child(n):not(:last-child)::after {
+  transform: rotate(-45deg);
+  top: 60%;
+}
+.breadcrumb-negro .br-activo,
+.breadcrumb-blanco .br-activo {
+  color: black !important;
+  font-weight: 600;
+}
+
+.breadcrumb-blanco a {
+  color: #ebebeb;
+}
+.breadcrumb-blanco a:hover {
+  color: #b9b9b9;
+}
+.breadcrumb-blanco a:nth-child(n):not(:last-child)::before, .breadcrumb-blanco a:nth-child(n):not(:last-child)::after {
+  background-color: white;
+}
+.breadcrumb-blanco .br-activo {
+  color: white !important;
+  font-weight: 600;
+}
+
 .dropdown-toggle {
   position: relative !important;
   display: flex !important;
@@ -15776,7 +15833,7 @@ textarea {
   border: 1px solid #a3a3a3;
   padding: 0.6em;
   border-radius: 3px;
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-family: "Roboto", Helvetica, sans-serif;
   transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -15877,7 +15934,7 @@ textarea::placeholder {
   border: 1px solid #a3a3a3;
   padding: 0.6em;
   border-radius: 3px;
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-family: "Roboto", Helvetica, sans-serif;
   transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -16615,6 +16672,11 @@ select:focus {
   top: 0.2em;
   font-size: 15px;
   color: #3b3b3b;
+  appearance: none;
+}
+.tem-formulario .tem-input select {
+  top: 0.35em;
+  height: 86%;
 }
 .tem-formulario .tem-input .flechas {
   position: absolute;
@@ -16629,10 +16691,10 @@ select:focus {
 .tem-formulario .tem-input .flechas::before {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 2.5em;
+  width: 30px;
+  height: 2.8em;
   background-color: white;
-  right: -30px;
+  right: -35px;
   top: -25px;
   z-index: 2;
 }
@@ -16657,6 +16719,12 @@ select:focus {
 .tem-formulario .checkbox,
 .tem-formulario .radiobtn {
   color: #585858 !important;
+}
+.tem-formulario .tem-error {
+  border: 2px solid #ff4b4b !important;
+}
+.tem-formulario .tem-ok {
+  border: 2px solid #17dd91 !important;
 }
 
 /*# sourceMappingURL=bodystyle.css.map */

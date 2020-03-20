@@ -4,8 +4,8 @@
     var inicializar = () => {
         $(".tem-input select").parent().children("label").css("top", 5)
         $(".tem-input select").parent().children("label").css("font-size", 10)
-        $(".tem-input select").css("top", "calc(50% - 10px)")
         $(".tem-input select").parent().append("<span class='flechas'></span>")
+        
     }
 
     var focus = () => {
@@ -21,8 +21,8 @@
         })
 
         $(".tem-input input").blur(function() {
+            $(this).parent().css("border", "1px solid rgba(0, 0, 0, 0.171)")
             if($(this).val() === ""){
-                $(this).parent().css("border", "1px solid rgba(0, 0, 0, 0.171)")
                 $(this).parent().children("label").css("top", "calc(50% - 9px)")
                 $(this).parent().children("label").css("font-size", 15)
                 $(this).css("top", "calc(50% - 10px)")

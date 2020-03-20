@@ -41,6 +41,13 @@
             top: 0.2em;
             font-size: 15px;
             color: rgb(59, 59, 59);
+            appearance:none;
+        }
+
+
+        select {
+            top: 0.35em;
+            height: 86%;
         }
 
         .flechas {
@@ -58,10 +65,10 @@
         .flechas::before {
             content: "";
             position: absolute;
-            width:20px;
-            height: 2.5em;
+            width:30px;
+            height: 2.8em;
             background-color: white;
-            right: -30px;
+            right: -35px;
             top: -25px;
             z-index: 2;
         }
@@ -92,6 +99,17 @@
     .radiobtn {
         color: rgb(88, 88, 88) !important;
     }
+
+    .tem-error {
+        border: 2px solid rgb(255, 75, 75) !important;
+    }
+    
+    
+    .tem-ok {
+        border: 2px solid rgb(23, 221, 145) !important;
+    }
+    
 }
+
 
     
