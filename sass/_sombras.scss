@@ -1,0 +1,521 @@
+@function sombra3d-xy($color, $grosor){
+    $bsw: 1px 1px #{$color};
+    @for $i from 2 through $grosor {
+        $bsw: "#{$bsw}, #{$i}px #{$i}px #{$color}";
+    }
+    @return unquote($bsw);
+}
+
+@function sombra3d-xy-neg($color, $grosor){
+    $bsw: -1px -1px #{$color};
+    @for $i from 2 through $grosor {
+        $bsw: "#{$bsw}, -#{$i}px -#{$i}px #{$color}";
+    }
+    @return unquote($bsw);
+}
+
+@function sombra3d-x($color, $grosor){
+    $bsw: 1px 0px #{$color};
+    @for $i from 2 through $grosor {
+        $bsw: "#{$bsw}, #{$i}px 0px #{$color}";
+    }
+    @return unquote($bsw);
+}
+
+@function sombra3d-x-neg($color, $grosor){
+    $bsw: -1px 0px #{$color};
+    @for $i from 2 through $grosor {
+        $bsw: "#{$bsw}, -#{$i}px 0px #{$color}";
+    }
+    @return unquote($bsw);
+}
+
+@function sombra3d-y($color, $grosor){
+    $bsw: 0px 1px #{$color};
+    @for $i from 2 through $grosor {
+        $bsw: "#{$bsw}, 0px #{$i}px #{$color}";
+    }
+    @return unquote($bsw);
+}
+
+
+@function sombra3d-y-neg($color, $grosor){
+    $bsw: 0px -1px #{$color};
+    @for $i from 2 through $grosor {
+        $bsw: "#{$bsw}, 0px -#{$i}px #{$color}";
+    }
+    @return unquote($bsw);
+}
+
+
+
+@for $i from 1 through 50 {
+    .bs-negro-xy-#{$i} {
+        box-shadow: sombra3d-xy(#000, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-blanco-xy-#{$i} {
+        box-shadow: sombra3d-xy(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-rojo-xy-#{$i} {
+        box-shadow: sombra3d-xy($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-verde-xy-#{$i} {
+        box-shadow: sombra3d-xy($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .bs-azul-xy-#{$i} {
+        box-shadow: sombra3d-xy($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-gris-xy-#{$i} {
+        box-shadow: sombra3d-xy($fd-gris, $i);
+    }
+}
+
+
+/**************/
+
+@for $i from 1 through 50 {
+    .bs-negro-xy-neg-#{$i} {
+        box-shadow: sombra3d-xy-neg(#000, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-blanco-xy-neg-#{$i} {
+        box-shadow: sombra3d-xy-neg(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-rojo-xy-neg-#{$i} {
+        box-shadow: sombra3d-xy-neg($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-verde-xy-neg-#{$i} {
+        box-shadow: sombra3d-xy-neg($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .bs-azul-xy-neg-#{$i} {
+        box-shadow: sombra3d-xy-neg($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-gris-xy-neg-#{$i} {
+        box-shadow: sombra3d-xy-neg($fd-gris, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-negro-x-#{$i} {
+        box-shadow: sombra3d-x(#000, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .bs-blanco-x-#{$i} {
+        box-shadow: sombra3d-x(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-rojo-x-#{$i} {
+        box-shadow: sombra3d-x($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-verde-x-#{$i} {
+        box-shadow: sombra3d-x($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .bs-azul-x-#{$i} {
+        box-shadow: sombra3d-x($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-gris-x-#{$i} {
+        box-shadow: sombra3d-x($fd-gris, $i);
+    }
+}
+
+
+/**********************************/
+
+@for $i from 1 through 50 {
+    .bs-negro-x-neg-#{$i} {
+        box-shadow: sombra3d-x-neg(#000, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-blanco-x-neg-#{$i} {
+        box-shadow: sombra3d-x-neg(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-rojo-x-neg-#{$i} {
+        box-shadow: sombra3d-x-neg($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-verde-x-neg-#{$i} {
+        box-shadow: sombra3d-x-neg($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .bs-azul-x-neg-#{$i} {
+        box-shadow: sombra3d-x-neg($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-gris-x-neg-#{$i} {
+        box-shadow: sombra3d-x-neg($fd-gris, $i);
+    }
+}
+
+
+/*******************/
+
+@for $i from 1 through 50 {
+    .bs-negro-y-#{$i} {
+        box-shadow: sombra3d-y(#000, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .bs-blanco-y-#{$i} {
+        box-shadow: sombra3d-y(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-rojo-y-#{$i} {
+        box-shadow: sombra3d-y($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-verde-y-#{$i} {
+        box-shadow: sombra3d-y($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .bs-azul-y-#{$i} {
+        box-shadow: sombra3d-y($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-gris-y-#{$i} {
+        box-shadow: sombra3d-y($fd-gris, $i);
+    }
+}
+
+/*********************************/
+
+@for $i from 1 through 50 {
+    .bs-negro-y-neg-#{$i} {
+        box-shadow: sombra3d-y-neg(black, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-blanco-y-neg-#{$i} {
+        box-shadow: sombra3d-y-neg(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-rojo-y-#{$i} {
+        box-shadow: sombra3d-y-neg($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-verde-y-neg-#{$i} {
+        box-shadow: sombra3d-y-neg($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .bs-azul-y-neg-#{$i} {
+        box-shadow: sombra3d-y-neg($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .bs-gris-y-neg-#{$i} {
+        box-shadow: sombra3d-y-neg($fd-gris, $i);
+    }
+}
+
+
+
+
+
+
+/************************* TEXTO ****************************************/
+
+@for $i from 1 through 50 {
+    .ts-blanco-xy-#{$i} {
+        text-shadow: sombra3d-xy(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-rojo-xy-#{$i} {
+        text-shadow: sombra3d-xy($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-verde-xy-#{$i} {
+        text-shadow: sombra3d-xy($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .ts-azul-xy-#{$i} {
+        text-shadow: sombra3d-xy($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-gris-xy-#{$i} {
+        text-shadow: sombra3d-xy($fd-gris, $i);
+    }
+}
+
+
+/**************/
+
+@for $i from 1 through 50 {
+    .bs-negro-xy-neg-#{$i} {
+        text-shadow: sombra3d-xy-neg(#000, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-blanco-xy-neg-#{$i} {
+        text-shadow: sombra3d-xy-neg(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-rojo-xy-neg-#{$i} {
+        text-shadow: sombra3d-xy-neg($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-verde-xy-neg-#{$i} {
+        text-shadow: sombra3d-xy-neg($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .ts-azul-xy-neg-#{$i} {
+        text-shadow: sombra3d-xy-neg($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-gris-xy-neg-#{$i} {
+        text-shadow: sombra3d-xy-neg($fd-gris, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-negro-x-#{$i} {
+        text-shadow: sombra3d-x(#000, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .ts-blanco-x-#{$i} {
+        text-shadow: sombra3d-x(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-rojo-x-#{$i} {
+        text-shadow: sombra3d-x($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-verde-x-#{$i} {
+        text-shadow: sombra3d-x($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .ts-azul-x-#{$i} {
+        text-shadow: sombra3d-x($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-gris-x-#{$i} {
+        text-shadow: sombra3d-x($fd-gris, $i);
+    }
+}
+
+
+/**********************************/
+
+@for $i from 1 through 50 {
+    .ts-negro-x-neg-#{$i} {
+        text-shadow: sombra3d-x-neg(#000, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-blanco-x-neg-#{$i} {
+        text-shadow: sombra3d-x-neg(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-rojo-x-neg-#{$i} {
+        text-shadow: sombra3d-x-neg($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-verde-x-neg-#{$i} {
+        text-shadow: sombra3d-x-neg($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .ts-azul-x-neg-#{$i} {
+        text-shadow: sombra3d-x-neg($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-gris-x-neg-#{$i} {
+        text-shadow: sombra3d-x-neg($fd-gris, $i);
+    }
+}
+
+
+/*******************/
+
+@for $i from 1 through 50 {
+    .ts-negro-y-#{$i} {
+        text-shadow: sombra3d-y(#000, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .ts-blanco-y-#{$i} {
+        text-shadow: sombra3d-y(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-rojo-y-#{$i} {
+        text-shadow: sombra3d-y($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-verde-y-#{$i} {
+        text-shadow: sombra3d-y($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .ts-azul-y-#{$i} {
+        text-shadow: sombra3d-y($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-gris-y-#{$i} {
+        text-shadow: sombra3d-y($fd-gris, $i);
+    }
+}
+
+/*********************************/
+
+@for $i from 1 through 50 {
+    .ts-negro-y-neg-#{$i} {
+        text-shadow: sombra3d-y-neg(black, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-blanco-y-neg-#{$i} {
+        text-shadow: sombra3d-y-neg(#fff, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-rojo-y-#{$i} {
+        text-shadow: sombra3d-y-neg($fd-rojo, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-verde-y-neg-#{$i} {
+        text-shadow: sombra3d-y-neg($fd-verde, $i);
+    }
+}
+
+
+@for $i from 1 through 50 {
+    .ts-azul-y-neg-#{$i} {
+        text-shadow: sombra3d-y-neg($fd-azul, $i);
+    }
+}
+
+@for $i from 1 through 50 {
+    .ts-gris-y-neg-#{$i} {
+        text-shadow: sombra3d-y-neg($fd-gris, $i);
+    }
+}
