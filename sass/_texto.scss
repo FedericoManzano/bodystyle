@@ -269,3 +269,35 @@
         }
     }
 }
+
+
+@media (max-width: dameMedida(m)){
+    @for $i from 10 through 100 {
+        @if multiplo5($i) {
+            .fz-m-#{$i} {
+                font-size: #{$i}px !important;
+            }
+        }
+    }
+}
+
+
+@media (max-width: dameMedida(s)){
+    @for $i from 10 through 100 {
+        @if multiplo5($i) {
+            .fz-s-#{$i} {
+                font-size: #{$i}px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: dameMedida(xs)){
+    @for $i from 10 through 100 {
+        @if multiplo5($i) {
+            .fz-xs-#{$i} {
+                font-size: #{$i}px !important;
+            }
+        }
+    }
+}

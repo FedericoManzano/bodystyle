@@ -2,10 +2,6 @@
     Colores de fondo para los componentes
 */
 
-
-/***
-    Fondos color rojo
-*/
 .fd-rojo {
     background-color: $fd-rojo !important;
 }
@@ -29,10 +25,6 @@
 .fd-rojo-ro {
     background-color: $fd-rojo-ro !important;
 }
-
-
-
-/**********************************************************************/
 
 .fd-azul {
     background-color: $fd-azul !important;
@@ -66,10 +58,6 @@
     background-color: $fd-azul-vi !important;
 }
 
-
-/*************************************************
-    Verder
-*/
 .fd-verde {
     background-color: $fd-verde !important;
 }
@@ -91,9 +79,6 @@
 .fd-verde-am {
     background-color: $fd-verde-am !important;
 }
-
-
-/******************************************/
 
 .fd-gris {
     background-color: $fd-gris !important;
@@ -133,9 +118,6 @@
     background-color: $negro !important;
 }
 
-
-// Escalas de violeta
-
 .fd-violeta {
     background-color: $fd-violeta !important;
 }
@@ -159,8 +141,6 @@
 .fd-violeta-ro {
     background-color: $fd-violeta-ro !important;
 }
-
-// Escalas de naranja 
 
 .fd-naranja {
     background-color: $fd-naranja !important;
@@ -217,4 +197,6 @@
 }
 
 
-
+.fd-negro-trasp {
+    background-color: rgba(0, 0, 0, 0.075) !important;
+}

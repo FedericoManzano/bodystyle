@@ -26,25 +26,6 @@
     }  
 }
 
-.a-items-cent, 
-.a-items-just,
-.a-items-cent-just {
-    display: flex !important;
-}
-
-.a-items-cent {
-    align-items: center !important;
-}
-.a-items-just {
-    justify-content: center !important;
-}
-
-.a-items-cent-just {
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-
 @function inicializarVariable() {
     @return 0;
 }
@@ -137,7 +118,7 @@ $m: inicializarVariable();
 }
 
 .m-a {
-    margin:auto;
+    margin:auto !important;
 }
 
 @media (max-width: dameMedida(m)){

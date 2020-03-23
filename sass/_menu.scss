@@ -26,6 +26,39 @@
     }
 }
 
+@mixin  menu-ext {
+    background-color: white;
+    display: block;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.212);
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+            min-width:100px ;
+            a {
+                display: flex;
+                flex-direction: column;
+                color: rgb(78, 78, 78);
+                text-align: center;
+                padding: 10px 0;
+                &:hover {
+                    color: black;
+                }
+
+                & span:first-child {
+                    font-size: 30px;
+                    margin-bottom: 7px;
+                }
+                & span:last-child {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
 
 @mixin menu-lateral-boton() {
     display: flex;
@@ -69,11 +102,6 @@
         @include menu-lista();
     }
 
-    .selector-colapso{
-        position: relative;
-        overflow: hidden;
-    }
-
     .borde-seleccionado {
         position: absolute;
         width: 100%;
@@ -93,8 +121,16 @@
     @include posicionamiento-fixed(0,0,null, 0);
 }
 
+.menu-ext {
+    @include menu-ext();
+}
 
 .colapso {
     display: none;
     opacity: 0;
+}
+
+.selector-colapso{
+    position: relative;
+    overflow: hidden;
 }

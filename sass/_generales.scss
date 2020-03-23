@@ -17,10 +17,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    font-size: 16px;
-    font-family: "HelveticaNeue","Roboto",Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    letter-spacing: 1px;
 }
 
 *::before {
@@ -38,8 +34,10 @@
 }
 
 html, body {
-    width: 100% !important;
-    height: 100% !important;
+    font-size: 16px;
+    font-family: "HelveticaNeue","Roboto",Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 h1, .h1 {
