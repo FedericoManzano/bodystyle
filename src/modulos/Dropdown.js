@@ -6,6 +6,7 @@
 
     var configurarDropDown = ({color} = {color: "#fff"}) => {
         
+        $(".dropdown ul li a").addClass("dd-a")
         $(".dropdown-toggle").append("<span class='f-abajo'></span>")
         $(".dropdown-toggle").append("<span class='f-derecha'></span>")
 

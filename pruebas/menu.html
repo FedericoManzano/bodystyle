@@ -45,46 +45,18 @@
 -->
    
     <nav>
-        <div class="menu fd-negro-trasp bor-negro-trasp">
+        <div class="menu">
             
-                <a href="" class="menu-logo c-gris-o">BodyStyle</a>
-                <ul class="lista derecha">
-                    <div class="usuario-imagen">
-                        <img src="https://www.softzone.es/app/uploads-softzone.es/2018/04/guest.png" alt="usuario imagen">
-                        <a href="#">AlbertoManzano</a>
-                    </div>
-                    <div class="divisorH"></div>
-                    
-                    <a href="#" class="btn-sm fd-rojo fz-13 bor-pill md-1 bor-rad-5  bor-rojo-o-1">LogIn</a>
-                    <a href="#" class="btn-sm fd-blanco c-negro fz-13 bor-rad-5  bor-gris-1">Registro</a>
+            <a href="" class="menu-logo">BodyStyle</a>
+            <ul class="lista derecha">
+                <li><a href="#">Sevicios</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#" class="dropdown-toggle" data-target="#contacto">Contacto</a></li>
                 
-                </ul>
-        </div>
-        
-    </nav>
-    <div class="menu-ext">
-        <div class="contenedor">
-            <ul>
-                <li><a href="#" class="selector-colapso">
-                    <span class="fz-25 icon-home3"></span>
-                    <span>Inicio</span>
-                </a></li>
-                <li><a href="#" class="selector-colapso" data-target="#inicio">
-                    <span class="fz-25 icon-cloud-download"></span>
-                    <span>Descargas</span>
-                </a></li>
-                <li><a href="#" class="selector-colapso" data-target="#inicio">
-                    <span class="fz-25 icon-cloud-check"></span>
-                    <span>Estado</span>
-                </a></li>
-                <li><a href="#" class="selector-colapso" data-target="#inicio">
-                    <span class="fz-25 icon-checkmark"></span>
-                    <span>Completado</span>
-                </a></li>
             </ul>
         </div>
         
-    </div>
+    </nav>
 
     <div class="contenedor mar-10">
         <div id="1" class="box-prueba fd-rojo colapso">
@@ -120,7 +92,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../js/bodystyle.js"></script>
     <script>
-        BS.MenuSuperior({color: "#000"})
+        BS.AutoInit()
     </script>
 </body>
 

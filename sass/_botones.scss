@@ -1,7 +1,20 @@
-
+@mixin inicializar-botones {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer;
+    border-radius: 2px;
+    user-select: none;
+    font-size: 18px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    position: relative;
+    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397); 
+    user-select: none;
+    appearance: none;
+    white-space: nowrap; 
+}
 @mixin configuracion-botones() {
     //Inicializar componentes de html puro
-    appearance: none;
     border-style: none;
     outline: none;
     line-height: 0;
@@ -11,32 +24,12 @@
     max-width: unset;
     min-height: unset;
     max-height: unset;
-    width: 100%;
-    height: 100%;
     display: flex;
-    padding: 0;
-    margin: 0;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 2px;
-    user-select: none;
-    font-size: 18px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    position: relative;
-    box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397); 
-    overflow: hidden;  
-    user-select: none;
-    appearance: none;
-    white-space: nowrap;
 }
 
 @mixin estilos-individuales($patb, $palr, $mw, $maxh, $minw,$fz) {
-    padding: $patb $palr !important;
-    min-width: 100px;
+    padding: $patb $palr ;
+    min-width: 35px;
     max-width: 200px !important;
     max-height: $maxh !important;
     min-height: $maxh !important;
@@ -44,7 +37,7 @@
 }
 
 @mixin btn-cubrir ($pbt, $plr, $fz, $display, $w, $m) {
-    padding: $pbt $plr !important;
+    padding: $pbt $plr;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,12 +62,65 @@
 @mixin btn-colores-outline($bgr, $btipo, $bcolor, $color, $fzm) {
     border: $bgr $btipo $bcolor !important;
     background-color: transparent !important;
+    min-width: unset;
+    max-width: unset;
+    min-height: unset;
+    max-height: unset;
+    min-width: 35px;
+    max-width: 200px;
     box-shadow: none !important;
     color: $color !important;
     transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
+}
+
+
+.btn,
+.btn-lg, 
+.btn-sm, 
+.btn-cubrir, 
+.btn-cubrir-sm, 
+.btn-cubrir-lg,
+.btn-o, 
+.btn-lg-o, 
+.btn-sm-o, 
+.btn-cubrir-o, 
+.btn-cubrir-sm-o, 
+.btn-cubrir-lg-o {
+    @include inicializar-botones();
+}
+
+button.btn,
+button.btn-lg , 
+button.btn-sm , 
+button.btn-cubrir, 
+button.btn-cubrir-sm, 
+button.btn-cubrir-lg,
+button.btn-o, 
+button.btn-lg-o, 
+button.btn-sm-o, 
+button.btn-cubrir-o, 
+button.btn-cubrir-sm-o, 
+button.btn-cubrir-lg-o {
+    width: 100%;
+}
+
+
+input.btn,
+input.btn-lg , 
+input.btn-sm , 
+input.btn-cubrir, 
+input.btn-cubrir-sm, 
+input.btn-cubrir-lg,
+input.btn-o, 
+input.btn-lg-o, 
+input.btn-sm-o, 
+input.btn-cubrir-o, 
+input.btn-cubrir-sm-o, 
+input.btn-cubrir-lg-o {
+    width: 100%;
 }
 
 .btn, 
@@ -84,12 +130,11 @@
 .btn-cubrir-sm, 
 .btn-cubrir-lg{
     @include configuracion-botones();
-    &:hover::before,
-    &:active::after  {
+    &:hover::before {
         content: "";
         @include posicionamiento-absoluto(0,0,0,0);
         background-color: rgba(0, 0, 0, 0.226);
-        z-index: 300;
+        border-radius: 2px;
     }
     &:focus{
         border: none !important;
@@ -103,17 +148,20 @@
 .btn-sm:hover {
     z-index: 10;
 }
-
-.btn{
+ 
+.btn,
+.btn-o{
     @include estilos-individuales(15px, 25px,130px ,2.1em , 130px, 1.2em);
 }
 
 
-.btn-lg {
+.btn-lg,
+.btn-lg-o {
     @include estilos-individuales(24px, 40px,160px ,45px , 150px, 1.2em);
 }
 
-.btn-sm {
+.btn-sm,
+.btn-sm-o {
     @include estilos-individuales(10px, 18px,110px ,30px , 110px, 0.9em);
 }
 
@@ -128,6 +176,7 @@
 .btn-cubrir-lg {
     @include btn-cubrir(24px, 40px , 1em,flex ,100% , auto);
 }
+
 
 //Botones fondo rojo
 .btn-rojo-o {
