@@ -3,7 +3,7 @@
     justify-content: center !important;
     align-items: center !important;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 4px;
     user-select: none;
     font-size: 18px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -130,16 +130,41 @@ input.btn-cubrir-lg-o {
 .btn-cubrir-sm, 
 .btn-cubrir-lg{
     @include configuracion-botones();
-    &:hover::before {
-        content: "";
-        @include posicionamiento-absoluto(0,0,0,0);
-        background-color: rgba(0, 0, 0, 0.226);
-        border-radius: 2px;
-    }
     &:focus{
         border: none !important;
     }
 
+    &:hover[class*="fd-rojo"] {
+        background-color: rgb(117, 0, 0) !important;
+    }
+
+    &:hover[class*="fd-verde"] {
+        background-color: rgb(0, 112, 88) !important;
+    }
+
+    &:hover[class*="fd-azul"] {
+        background-color: rgb(18, 65, 153) !important;
+    }
+
+    &:hover[class*="fd-gris"] {
+        background-color: rgb(34, 34, 34) !important;
+    }
+
+    &:hover[class*="fd-negro"] {
+        background-color: rgb(34, 34, 34) !important;
+    }
+
+    &:hover[class*="fd-blanco"] {
+        background-color: rgb(201, 201, 201) !important;
+    }
+
+    &:hover[class*="fd-violeta"] {
+        background-color: rgb(35, 0, 80) !important;
+    }
+
+    &:hover[class*="fd-amarillo"] {
+        background-color: rgb(80, 72, 0) !important;
+    }
     @include btn-colores($fd-azul-c,$blanco , 1.1em);
 }
 
@@ -242,7 +267,6 @@ input.btn-cubrir-lg-o {
     color: $negro !important;
     box-shadow: 0 0 3px 3px rgba(238, 238, 238, 0.5) !important;
 }
-
 
 /***
     Botones estilo desabilidado

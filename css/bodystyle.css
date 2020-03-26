@@ -14648,14 +14648,14 @@ table tbody tr td {
   width: 100%;
 }
 
-.dd-a {
+a.dd-a {
   width: 100%;
   display: block !important;
   color: black !important;
-  padding: 13px 20px !important;
+  padding: 1.2em 20px !important;
   font-size: 0.9em !important;
   cursor: pointer !important;
-  margin: 0;
+  margin: 0 !important;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -16161,7 +16161,7 @@ table tbody tr td {
   justify-content: center !important;
   align-items: center !important;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 4px;
   user-select: none;
   font-size: 18px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -16226,21 +16226,6 @@ input.btn-cubrir-lg-o {
   -moz-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
 }
-.btn:hover::before,
-.btn-lg:hover::before,
-.btn-sm:hover::before,
-.btn-cubrir:hover::before,
-.btn-cubrir-sm:hover::before,
-.btn-cubrir-lg:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.226);
-  border-radius: 2px;
-}
 .btn:focus,
 .btn-lg:focus,
 .btn-sm:focus,
@@ -16248,6 +16233,70 @@ input.btn-cubrir-lg-o {
 .btn-cubrir-sm:focus,
 .btn-cubrir-lg:focus {
   border: none !important;
+}
+.btn:hover[class*=fd-rojo],
+.btn-lg:hover[class*=fd-rojo],
+.btn-sm:hover[class*=fd-rojo],
+.btn-cubrir:hover[class*=fd-rojo],
+.btn-cubrir-sm:hover[class*=fd-rojo],
+.btn-cubrir-lg:hover[class*=fd-rojo] {
+  background-color: #750000 !important;
+}
+.btn:hover[class*=fd-verde],
+.btn-lg:hover[class*=fd-verde],
+.btn-sm:hover[class*=fd-verde],
+.btn-cubrir:hover[class*=fd-verde],
+.btn-cubrir-sm:hover[class*=fd-verde],
+.btn-cubrir-lg:hover[class*=fd-verde] {
+  background-color: #007058 !important;
+}
+.btn:hover[class*=fd-azul],
+.btn-lg:hover[class*=fd-azul],
+.btn-sm:hover[class*=fd-azul],
+.btn-cubrir:hover[class*=fd-azul],
+.btn-cubrir-sm:hover[class*=fd-azul],
+.btn-cubrir-lg:hover[class*=fd-azul] {
+  background-color: #124199 !important;
+}
+.btn:hover[class*=fd-gris],
+.btn-lg:hover[class*=fd-gris],
+.btn-sm:hover[class*=fd-gris],
+.btn-cubrir:hover[class*=fd-gris],
+.btn-cubrir-sm:hover[class*=fd-gris],
+.btn-cubrir-lg:hover[class*=fd-gris] {
+  background-color: #222222 !important;
+}
+.btn:hover[class*=fd-negro],
+.btn-lg:hover[class*=fd-negro],
+.btn-sm:hover[class*=fd-negro],
+.btn-cubrir:hover[class*=fd-negro],
+.btn-cubrir-sm:hover[class*=fd-negro],
+.btn-cubrir-lg:hover[class*=fd-negro] {
+  background-color: #222222 !important;
+}
+.btn:hover[class*=fd-blanco],
+.btn-lg:hover[class*=fd-blanco],
+.btn-sm:hover[class*=fd-blanco],
+.btn-cubrir:hover[class*=fd-blanco],
+.btn-cubrir-sm:hover[class*=fd-blanco],
+.btn-cubrir-lg:hover[class*=fd-blanco] {
+  background-color: #c9c9c9 !important;
+}
+.btn:hover[class*=fd-violeta],
+.btn-lg:hover[class*=fd-violeta],
+.btn-sm:hover[class*=fd-violeta],
+.btn-cubrir:hover[class*=fd-violeta],
+.btn-cubrir-sm:hover[class*=fd-violeta],
+.btn-cubrir-lg:hover[class*=fd-violeta] {
+  background-color: #230050 !important;
+}
+.btn:hover[class*=fd-amarillo],
+.btn-lg:hover[class*=fd-amarillo],
+.btn-sm:hover[class*=fd-amarillo],
+.btn-cubrir:hover[class*=fd-amarillo],
+.btn-cubrir-sm:hover[class*=fd-amarillo],
+.btn-cubrir-lg:hover[class*=fd-amarillo] {
+  background-color: #504800 !important;
 }
 
 .btn:hover,
@@ -16699,7 +16748,6 @@ input.btn-cubrir-lg-o {
 }
 .modal .modal-cuerpo {
   padding: 1.5em;
-  line-height: 25px;
 }
 .modal .modal-titulo {
   font-size: 22px;
@@ -17967,7 +18015,43 @@ textarea::placeholder {
     max-width: 240px !important;
   }
 }
-.select, .select-sm, .select-lg {
+.select-contenedor {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.select-contenedor::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  z-index: 200;
+  background-color: white;
+  border-radius: 5px;
+}
+.select-contenedor::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 6px solid #6b6b6b;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  top: calc(50% - 2.5px);
+  right: 20px;
+}
+.select-contenedor:hover::after {
+  border-bottom: none;
+  border-top: 6px solid black;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+.select,
+.select-sm,
+.select-lg {
   outline: none;
   background-color: white;
   line-height: 0;

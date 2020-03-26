@@ -39,14 +39,14 @@
     width: 100%;
 }
 
-.dd-a {
+a.dd-a {
     width: 100%;
     display: block !important;
     color: black !important;
-    padding: 13px 20px !important;
+    padding: 1.2em 20px !important;
     font-size: 0.9em !important;
     cursor: pointer !important;
-    margin: 0;
+    margin: 0 !important;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
