@@ -1,0 +1,50 @@
+.social {
+    position: fixed;
+    right: 0;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10000;
+    a {
+        padding: 15px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $fd-azul;
+        text-align: center;
+        font-size: 1.2em;
+        position: relative;
+
+        span {
+            position: absolute;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+            left: 100%;
+            padding: 0 15px;
+            border-radius: 7px 0 0 7px;
+            transition: all 0.3s;
+            z-index: -1;
+            min-width: 100px;
+            max-width: 135px;
+            white-space: nowrap;
+        }
+
+        &:hover span {
+            left: -185%;
+        }
+    }
+
+    & a:first-child {
+        border-radius: 5px 0 0 0;
+    }
+
+    & a:last-child {
+        border-radius: 0 0 0 5px;
+    }
+}

@@ -6,8 +6,11 @@
             $("html").append("<div class='contenedor-imagen'></div>")
             var ruta = $(this).attr("src")
             $(".contenedor-imagen").append(`<img src= ${ruta.toString()}></img>`)
+            $(".contenedor-imagen").animate({
+                opacity: 1
+            }, 500)
             $(".contenedor-imagen").click(function(){
-                $(".contenedor-imagen").hide() 
+                $(".contenedor-imagen").fadeOut(300) 
             })
        })
    }

@@ -6,16 +6,13 @@
     @include posicionamiento-fixed(0,0,0,0);
     @include flex-box-centrado();
     @include ancho-alto(100%, 100%);
-
-    background-color: rgb(100, 100, 100);
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.925);
     z-index:  superposicion(ms);
-    .img-exp img {
-        transform: scale(0.8);
-        -webkit-transform: scale(0.8);
-        -moz-transform: scale(0.8);
-        -o-transform: scale(0.8);
+    padding: 0 30px;
+    img {
+        transform: scale(0.7);
     }
-
 }
 
 .img-red-bor {

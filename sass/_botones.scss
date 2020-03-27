@@ -165,6 +165,10 @@ input.btn-cubrir-lg-o {
     &:hover[class*="fd-amarillo"] {
         background-color: rgb(80, 72, 0) !important;
     }
+
+    &:hover[class*="fd-naranja"] {
+        background-color: rgb(143, 57, 0) !important;
+    }
     @include btn-colores($fd-azul-c,$blanco , 1.1em);
 }
 

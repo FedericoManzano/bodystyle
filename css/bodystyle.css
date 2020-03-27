@@ -419,6 +419,74 @@ a.link:hover {
   background-color: rgba(0, 0, 0, 0.075) !important;
 }
 
+.fd-facebook {
+  background-color: #3b5998 !important;
+}
+
+.fd-youtube {
+  background-color: #bb0000 !important;
+}
+
+.fd-twiter {
+  background-color: #55acee !important;
+}
+
+.fd-linkedin {
+  background-color: #007bb5 !important;
+}
+
+.fd-instagram {
+  background-color: #125688 !important;
+}
+
+.fd-pinterest {
+  background-color: #cb2027 !important;
+}
+
+.fd-tumblr {
+  background-color: #32506d !important;
+}
+
+.fd-imgur {
+  background-color: #32506d !important;
+}
+
+.fd-telegram {
+  background-color: #32506d !important;
+}
+
+.fd-flickr {
+  background-color: #ff0084 !important;
+}
+
+.fd-vimeo {
+  background-color: #aad450 !important;
+}
+
+.fd-whatsapp {
+  background-color: #4dc247 !important;
+}
+
+.fd-whatsapp {
+  background-color: #4dc247 !important;
+}
+
+.fd-soundcloud {
+  background-color: #fffc00 !important;
+}
+
+.fd-snapchat {
+  background-color: #fffc00 !important;
+}
+
+.fd-periscope {
+  background-color: #35A3C6 !important;
+}
+
+.fd-tinder {
+  background-color: #E34514 !important;
+}
+
 .contenedor {
   width: 70%;
   margin: auto;
@@ -14603,6 +14671,53 @@ table tbody tr td {
   font-weight: 600;
 }
 
+.social {
+  position: fixed;
+  right: 0;
+  top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10000;
+}
+.social a {
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1045b7;
+  text-align: center;
+  font-size: 1.2em;
+  position: relative;
+}
+.social a span {
+  position: absolute;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  left: 100%;
+  padding: 0 15px;
+  border-radius: 7px 0 0 7px;
+  transition: all 0.3s;
+  z-index: -1;
+  min-width: 100px;
+  max-width: 135px;
+  white-space: nowrap;
+}
+.social a:hover span {
+  left: -185%;
+}
+.social a:first-child {
+  border-radius: 5px 0 0 0;
+}
+.social a:last-child {
+  border-radius: 0 0 0 5px;
+}
+
 .dropdown-toggle {
   position: relative !important;
   display: flex !important;
@@ -14700,14 +14815,13 @@ a.dd-a {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #646464;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.925);
   z-index: 100000;
+  padding: 0 30px;
 }
-.contenedor-imagen .img-exp img {
-  transform: scale(0.8);
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
+.contenedor-imagen img {
+  transform: scale(0.7);
 }
 
 .img-red-bor {
@@ -15851,7 +15965,7 @@ a.dd-a {
   background-color: rgba(0, 0, 0, 0.863);
   border-radius: 3px;
   font-size: 16px;
-  z-index: 10;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16297,6 +16411,14 @@ input.btn-cubrir-lg-o {
 .btn-cubrir-sm:hover[class*=fd-amarillo],
 .btn-cubrir-lg:hover[class*=fd-amarillo] {
   background-color: #504800 !important;
+}
+.btn:hover[class*=fd-naranja],
+.btn-lg:hover[class*=fd-naranja],
+.btn-sm:hover[class*=fd-naranja],
+.btn-cubrir:hover[class*=fd-naranja],
+.btn-cubrir-sm:hover[class*=fd-naranja],
+.btn-cubrir-lg:hover[class*=fd-naranja] {
+  background-color: #8f3900 !important;
 }
 
 .btn:hover,
