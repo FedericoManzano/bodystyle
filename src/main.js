@@ -21,6 +21,7 @@ import InputFile from "./modulos/InputFile"
 import BotonInicio from "./modulos/BotonInicio"
 import Alerta from "./modulos/Alerta"
 import Template from "./modulos/Template"
+import Tab from "./modulos/Tabs"
 
 (function(){
     Waves.iniciar()
@@ -95,6 +96,10 @@ import Template from "./modulos/Template"
 
     var BotonInicioInit = () => {
         BotonInicio.iniciar()
+    }
+
+    var TabInit = () => {
+        return new Tab
     }
 
     var AutoInit = ()=> {
@@ -178,7 +183,8 @@ import Template from "./modulos/Template"
         SliderInit: (config) => SliderInit(config),
         ListaInit: () => ListaInit(),
         ParalaxInit: () => ParalaxInit(),
-        BotonInicioInit: () => BotonInicioInit()
+        BotonInicioInit: () => BotonInicioInit(),
+        TabInit: () => TabInit()
     }
 
     window.BS = BS
