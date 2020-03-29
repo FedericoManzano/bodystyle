@@ -26,7 +26,7 @@ import Tab from "./modulos/Tabs"
 (function(){
     Waves.iniciar()
     MenuColapso.iniciar()
-    ToolTips.iniciar()
+    
     Range.iniciar()
     Descripcion.iniciar()
     InputFile.iniciar()
@@ -116,6 +116,7 @@ import Tab from "./modulos/Tabs"
         SliderInit()
         ListaInit()
         ParalaxInit()
+        ToolTipsInit()
     }
 
 
@@ -167,6 +168,10 @@ import Tab from "./modulos/Tabs"
         DropDown.iniciar(config)
     }
 
+    var ToolTipsInit = () => {
+        ToolTips.iniciar()
+    }
+
     var BS = {
         MenuSuperior: (config) => MenuSuperior(config),
         ModalInit: (config) => ModalInit(config),
@@ -184,7 +189,8 @@ import Tab from "./modulos/Tabs"
         ListaInit: () => ListaInit(),
         ParalaxInit: () => ParalaxInit(),
         BotonInicioInit: () => BotonInicioInit(),
-        TabInit: () => TabInit()
+        TabInit: () => TabInit(),
+        ToolTipsInit: () =>  ToolTipsInit()
     }
 
     window.BS = BS

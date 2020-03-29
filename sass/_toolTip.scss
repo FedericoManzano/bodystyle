@@ -1,9 +1,8 @@
 .tips {
     position: absolute;
-    min-width: 120px;
-    min-height: 100%;
-    padding: 10px;
+    padding: 20px 10px;
     color: white;
+    
     background-color: rgba(0, 0, 0, 0.863);
     border-radius: 3px;
     font-size: 16px;
@@ -11,11 +10,13 @@
     @include flex-box-centrado();
     transition: all 0.3s ease;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+    transform: translate(0);
+    transition: all 0.3s;
 }
 
 .tips-ele {
     z-index: 0;
-    position: relative ;
+   // position: relative ;
 }
 
 
