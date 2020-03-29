@@ -15,7 +15,6 @@ import Imagenes from "./modulos/Imagenes"
 import Range from "./modulos/Range"
 import Slider from "./modulos/Slider"
 import Lista from "./modulos/Lista"
-import Descripcion from "./modulos/Descripcion"
 import Paralax from "./modulos/Paralax"
 import InputFile from "./modulos/InputFile"
 import BotonInicio from "./modulos/BotonInicio"
@@ -26,9 +25,7 @@ import Tab from "./modulos/Tabs"
 (function(){
     Waves.iniciar()
     MenuColapso.iniciar()
-    
     Range.iniciar()
-    Descripcion.iniciar()
     InputFile.iniciar()
     Alerta.iniciar()
     Template.iniciar()

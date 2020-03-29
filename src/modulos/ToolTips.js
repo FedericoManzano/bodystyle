@@ -1,33 +1,106 @@
 (function(){
-    var elemento;
 
+    // Elemento tips
+    var elemento = null;
 
-    var arriba = (boton) => {
-        return $(boton).offset().top - $(window).scrollTop() >  $(elemento).outerHeight() + 5
+    // Separación del tips respecto al origen
+    const margin = 5
+
+    /**
+     * Validación del espacio encima del elemento origen 
+     * respecto al elemento toolTips 
+     * @param {Elemento origen del efecto hover} origen 
+     * @return true / false
+     */
+    const arriba = (origen) => {
+        const offsetTopOrigen = $(origen).offset().top
+        const wScrollTop = $(window).scrollTop() 
+        const tipsHeight = $(elemento).outerHeight()
+        return offsetTopOrigen - wScrollTop >  tipsHeight + margin
     }
 
-    var abajo = (boton) => {
-        return $(window).height()+$(window).scrollTop() - 
-            ($(boton).offset().top + $(boton).outerHeight())  
-                > $(elemento).outerHeight() + 5
+
+    /**
+     * Validación del espacio debajo del elemento origen 
+     * respecto al elemento toolTips 
+     * @param {Elemento origen del efecto hover} origen 
+     * @return true / false
+     */
+    const abajo = (origen) => {
+        const windowHeight = $(window).height()
+        const wScrollTop = $(window).scrollTop() 
+        const origenOffsetTop = $(origen).offset().top
+        const origenHeight = $(origen).outerHeight()
+        const tipsHeight = $(elemento).outerHeight()
+        return windowHeight + wScrollTop - 
+                (origenOffsetTop + origenHeight)  
+                                > tipsHeight + margin
     }
 
-    var derecha = (boton) => {
-        return ($(window).width() - $(boton).offset().left) - $(boton).width() > $(".tips").width() + 5
+
+    /**
+     * Validación del espacio derecha del elemento origen 
+     * respecto al elemento toolTips 
+     * @param {Elemento origen del efecto hover} origen 
+     * @return true / false
+     */
+    const derecha = (origen) => {
+        const windowWidth = $(window).width()
+        const origenOffsetLeft = $(origen).offset().left
+        const origenWidth = $(origen).width()
+        const tipsWidth = $(".tips").width()
+        return windowWidth - origenOffsetLeft - origenWidth - 80 > tipsWidth + 5
     }
 
-    var izquierda = (boton) => {
+
+    /**
+     * Validación del espacio izquierda del elemento origen 
+     * respecto al elemento toolTips 
+     * @param {Elemento origen del efecto hover} origen 
+     * @return true / false
+     */
+    const izquierda = (boton) => {
         return $(boton).offset().left > $(".tips").width() + 5
     }
 
 
-    var inicializar = () => {
+    /**
+     * Validar los datos de entrada posición e información
+     * @param {Posición del tips } posicion 
+     * @param {Info a mostrar por el tips} info 
+     */
+    const validarTips = (posicion, info) => {
+        if( posicion !== "arriba"       && 
+            posicion !== "abajo"        &&
+            posicion !== "izquierda"    && 
+            posicion !== "derecha" )
+                return false
+        if(info === "" || info === undefined)
+            return false
+        return true
+    }
+
+    const inicializar = () => {
+
+        /** Efecto hover  */
         $(".tips-ele").hover(function() {
             var posicion = $(this).data("posicion");
             var contenido = $(this).data("tips");
+
+            // Validar campos de entrada
+            if(!validarTips(posicion, contenido))
+                return 
+
+            // Crear elemento tips de manera dinámica
             elemento = $("<div class='tips'></div>")
             elemento.html(contenido)
             elemento.appendTo($(this))
+
+
+            /**
+             * Selección de la ubicación del tips dentro 
+             * del elemento origen
+             */
             switch (posicion) {
                 case "arriba":
                     if(arriba(this)){
@@ -93,8 +166,9 @@
 
             
         }, function() {
-            elemento.fadeOut(200)
-            elemento.remove()
+            if(elemento === null)
+                return
+            elemento.remove() // Destrucción del tips
             elemento = null;
         })
     }
