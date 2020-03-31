@@ -6,7 +6,8 @@
     padding-bottom: 40px;
     user-select: none;
     border-right: 2px solid rgb(0, 140, 255);
-    
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
     .sedebarLogo {
         @include flex-box-centrado();
         width: 100%;

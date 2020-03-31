@@ -89,6 +89,7 @@
 
 .menu {
     @include menu-general();
+    font-family: "Roboto", sans-serif;
     .menu-logo {
         @include menu-logo();
     }
