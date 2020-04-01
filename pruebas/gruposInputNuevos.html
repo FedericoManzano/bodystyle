@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/bodystyle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div class="contenedor mar-10">
+        <div class="input-g">
+            <div class="grupo">
+                
+                <input type="text">
+                <a class="btn-o btn-gris-c-o">Enviar</a>
+                <a class="btn-o btn-gris-c-o">Enviar</a>
+            </div>
+        </div>
+
+
+        <div class="input-g mar-3">
+            <div class="grupo">
+                <span class="span-grupo">
+                    @
+                </span>
+                <input type="text">
+             
+            </div>
+        </div>
+        <div class="input-g mar-3">
+            <div class="grupo-sm">
+                <span class="span-grupo">
+                    http://usuarios/previo
+                </span>
+                <input type="text">
+                <span class="span-grupo">
+                    Int
+                </span>
+                <a href="" class="btn fd-blanco c-negro">Enviar</a>
+            </div>
+        </div>
+
+        <div class="input-g mar-3">
+            <div class="grupo-lg">
+                <span class="span-grupo">
+                    @
+                </span>
+                <input type="text">
+                <a class="btn-o btn-gris-c-o"><span class="icon-github"></span></a>
+                <a class="btn-o btn-gris-c-o">Enviar</a>
+            </div>
+        </div>
+
+
+        <div class="input-g mar-3">
+            <div class="grupo">
+                <span class="span-grupo">
+                    Precio
+                </span>
+                <input type="text">
+                <span class="span-grupo">
+                    300.00
+                </span>
+                <a class="btn-o btn-gris-c-o fd-rojo dropdown-toggle" data-target="#menu">
+                    ARTICULOS
+                    <span class="f-abajo-grupo"></span>
+                </a>
+            </div>
+        </div>
+<!--
+        <div class="input-g mar-3">
+            <div class="grupo">
+                <span class="span-grupo">
+                    Precio
+                </span>
+                <input type="text">
+                <a class="btn-o btn-gris-c-o fd-rojo dropdown-toggle" data-target="#centavos">
+                    300
+                    <span class="f-abajo-grupo"></span>
+                </a>
+                <span class="span-grupo">
+                    .
+                </span>
+                <a class="btn-o btn-gris-c-o fd-rojo dropdown-toggle" data-target="#centavos">
+                    00 
+                    <span class="f-abajo-grupo"></span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="input-g mar-3">
+            <div class="grupo">
+                <span class="span-grupo">
+                    <input type="checkbox" name="" id="">
+                </span>
+                <input type="text">
+                <a class="btn-o btn-gris-c-o ">
+                    Registrar
+                </a>
+            </div>
+        </div>
+        <div class="input-g mar-3">
+            <div class="grupo">
+                <span class="span-grupo">
+                    <input type="radio" name="" id="">
+                </span>
+                <input type="text">
+                <a class="btn-o btn-gris-c-o ">
+                    Registrar
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+-->
+    <div id="menu" class="dropdown">
+        <ul>
+            <li><a href="#" >ARS</a></li>
+            <li><a href="#">BR</a></li>
+            <li><a href="#">EUR</a></li>
+           
+        </ul>
+    </div>
+    <div id="centavos" class="dropdown">
+        <ul>
+            <li><a href="#" >10</a></li>
+            <li><a href="#">20</a></li>
+            <li><a href="#">50</a></li>
+            <li><a href="#">80</a></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/bodystyle.js"></script>
+    <script>
+        BS.DropDownInit({color: "#000"})
+    </script>
+</body>
+</html>

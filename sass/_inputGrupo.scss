@@ -1,249 +1,228 @@
 
+$borde: 1px solid rgb(206, 212, 218);
+$borde-boton: 1px solid  rgb(63, 63, 63);
+$bg-span: rgb(230, 237, 238);
+$letra-span: rgb(81, 85, 90);
 
-// Input G tipo 1
-$altura-input: 2.1em;
-$altura-span: 2.32em;
-$altura-boton: 2.05em;
-$borde: 1px solid $gris-input;
-$radio-bordes-input: 0 3px 3px 0;
-$radio-bordes-span: 6px 0 0 6px;
+$min-h: 40px;
+$min-h-lg: 50px;
+$min-h-sm: 30px;
+
+$fz: 1em;
+$fz-lg: 1.3em;
+$fz-sm: 0.9em;
 
 
-// Input G tipo 2
-$radio-bordes-input-2: 3px 0px 0px 3px;
-$radio-bordes-span-2: 0px 6px 6px 0px;
 
 
-@mixin elementoDerecha() {
-    border-radius: $radio-bordes-span-2;
-    border-bottom: $borde;
-    border-top: $borde;
-    border-right: $borde;
-}
+.input-g {
 
-@mixin elementoIzquierda() {
-    border-radius: $radio-bordes-span;
-    border-left: $borde;
-    border-top: $borde;
-    border-bottom: $borde;
-}
+    // 1 EM 
+    font-size: 16px;
+    font-family: "HelveticaNeue", "Roboto", Helvetica, sans-serif;
+    
 
-@mixin elementoCentro() {
-    border-radius: 0;
-    border-top: $borde;
-    border-bottom: $borde;
-    border-right: $borde;
-}
-
-.g-input {
-    display: flex;
-    user-select: none;
-    flex-wrap: nowrap;
-
-    input[type="text"],
-    input[type="email"],
-    input[type="search"],
-    input[type="url"],
-    input[type="number"] {
-        height: $altura-input;
-        z-index: 1;
+    input[type='text'], 
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='url'],
+    input[type='search'], 
+    textarea {
         
-    }
+        border: none ;
+        font-size: $fz;
 
-    .span-g {
-        height: $altura-span;
-        display: flex;
-        align-items: center;
-        padding: 0.6em;
-        text-align: center;
-    }
-
-    .btn {
-        height: $altura-boton;
-        display: flex;
-        align-items: center;
-        padding: 0.6em;
-        text-align: center;
-        box-shadow: none !important;
-        z-index: 0;
-    }
-}
-
-.g-input-1 input[type="text"],
-.g-input-1 input[type="email"],
-.g-input-1 input[type="search"],
-.g-input-1 input[type="url"],
-.g-input-1 input[type="number"] {
-    border-radius: $radio-bordes-input;
-    height: $altura-input;
-}
-
-
-.g-input-1 .span-g  {
-    background-color: rgb(204, 204, 204);
-    @include elementoIzquierda();
-}
-
-.g-input-2 input[type="text"],
-.g-input-2 input[type="email"],
-.g-input-2 input[type="search"],
-.g-input-2 input[type="url"],
-.g-input-2 input[type="number"] {
-    border-radius: $radio-bordes-input-2;
-    height: $altura-input;
-}
-
-.g-input-2 .span-g  {
-    background-color: rgb(204, 204, 204);
-    @include elementoDerecha();
-}
-
-
-.g-input-3 input[type="text"],
-.g-input-3 input[type="email"],
-.g-input-3 input[type="search"],
-.g-input-3 input[type="url"],
-.g-input-3 input[type="number"] {
-    border-radius: 0;
-    height: $altura-input;
-}
-
-
-.g-input-3 .span-g:first-child{
-    background-color: rgb(204, 204, 204);
-    @include elementoIzquierda();
-}
-
-.g-input-3 .span-g:last-child{
-    background-color: rgb(204, 204, 204);
-    @include elementoDerecha();
-}
-
-
-
-.g-input-4 input[type="text"],
-.g-input-4 input[type="email"],
-.g-input-4 input[type="search"],
-.g-input-4 input[type="url"],
-.g-input-4 input[type="number"] {
-    border-radius: $radio-bordes-input-2;
-    height: $altura-input;
-}
-
-
-.g-input-4 .btn {
-    @include elementoDerecha();
-}
-
-
-
-.g-input-5 input[type="text"],
-.g-input-5 input[type="email"],
-.g-input-5 input[type="search"],
-.g-input-5 input[type="url"],
-.g-input-5 input[type="number"] {
-    border-radius: $radio-bordes-input-2;
-    height: $altura-input;
-}
-
-
-.g-input-5 .btn {
-    @include elementoCentro();
-}
-
-.g-input-5 .btn:last-child {
-    @include elementoDerecha();
-}
-
-
-
-
-.g-input-6 input[type="text"],
-.g-input-6 input[type="email"],
-.g-input-6 input[type="search"],
-.g-input-6 input[type="url"],
-.g-input-6 input[type="number"] {
-    border-radius: $radio-bordes-input-2;
-    height: $altura-input;
-}
-
-
-.g-input-6 .btn {
-    @include elementoCentro();
-}
-
-
-
-
-.g-input-6 .dropdown-toggle {
-    padding-right: 33px !important;
-}
-
-.g-input-6 .dropdown-toggle:hover {
-    background-color: rgb(204, 204, 204);
-    color: black !important;
-}
-
-.g-input-6 .btn:last-child {
-    @include elementoDerecha();
-}
-
-
-
-
-.contenedor-busqueda {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    background-color: $fd-azul-ve;
-    width: 100%;
-    height: 52.5px;
-}
-
-.campo-busqueda {
-    position: relative;
-    width: 450px;
-    .boton-busqueda {
-        padding: 5.8px 10px ;
-        width: 80px;
-        border-radius: 0 1px 1px 0;
-        background-color: rgb(71, 71, 71);
-        position: absolute;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgb(255, 255, 255);
-        cursor: pointer;
-        &:hover {
-            background-color: rgba(0, 0, 0, 0.575) !important;
+        &:focus {
+            z-index: 2000;
         }
     }
 
-    input[type="search"] {
-        height: 30px !important;
-        max-width: 370px !important;
-        position: absolute;
-        border-radius: 1px 0 0 1px;
-        border: 1px solid rgb(71, 71, 71);;
-        left: 0;
-    }
+    .grupo,
+    .grupo-sm,
+    .grupo-lg{
+        display: flex;
+        border-radius: 4px;
+        .span-grupo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 16px !important;
+            font-size: $fz;
+            background-color: $bg-span;
+            white-space: nowrap;
+            font-weight: 500;
+            color: $letra-span;
+            min-height: $min-h;
 
-    input[type="search"]:focus {
-        box-shadow: none !important;
-        border: 1px solid rgb(0, 120, 201);
-    }
-}
-
-@media (max-width:500px){
-    .campo-busqueda {
-        width: 320px;
-        .boton-busqueda {
-            width: 80px;
+            *{
+                border: none !important;
+            }
         }
 
-        input[type="search"] {
-            max-width: 240px !important;
+
+        input[type='text'], 
+        input[type='email'],
+        input[type='number'],
+        input[type='password'],
+        input[type='url'],
+        input[type='search'], 
+        textarea {
+            min-height: $min-h !important;
+        }
+
+
+        
+
+        .btn,
+        .btn-o,
+        .btn-sm,
+        .btn-sm-o,
+        .btn-lg,
+        .btn-lg-o{
+            border-radius: 4px 0 0 4px;
+            padding: 0 16px !important; 
+            box-shadow: none;
+            border: $borde-boton;
+            min-height: $min-h;
+            z-index: 0;
+
+            *{
+               border: none !important;
+            }
+            .f-abajo-grupo {
+                height: 0;
+                width: 0;
+                border-top: 4px solid $letra-span !important;
+                border-left: 4px solid transparent !important;
+                border-right: 4px solid transparent !important;
+                letter-spacing: 2px;
+            }
+        }
+
+        
+
+        & *:first-child:not(input) {
+            border: $borde;
+            border-right: none;
+            border-radius: 4px 0 0 4px !important;
+        }
+
+        & input:first-child {
+            border: $borde;
+            border-right: none;
+            border-radius: 4px 0 0 4px !important;
+        }
+
+        & *:last-child {
+            border-radius:  0 4px 4px 0 !important;
+            border: $borde;
+            border-left: none;
+        }
+
+
+        input:not(:first-child):not(:last-child) {
+            border-top: $borde;
+            border-bottom: $borde;
+            border-left: $borde;
+            border-radius:  0!important;
+        }
+
+        input:not(:first-child) {
+            border-top: $borde;
+            border-bottom: $borde;
+            border-left: $borde;
+        }
+
+        *:not(:first-child):not(:last-child):not(input) {
+            border-top: $borde;
+            border-bottom: $borde;
+            border-left: $borde;
+            border-right: none;
+            border-radius:  0!important;
+        }
+
+        .span-grupo,
+        .btn,
+        .btn-sm,
+        .btn-lg,
+        .btn-o,
+        .btn-o-lg, 
+        .btn-o-sm{
+            border-top: $borde;
+            border-bottom: $borde;
+            border-left: $borde;
+        }
+
+        .dropdown {
+            border: 1px solid rgb(209, 209, 209) !important; 
+            background-color: white !important;
+            z-index: superposicion(ms);
+        }
+
+        .dropdown-toggle {
+            z-index: superposicion(ms);
+        }
+    }
+
+    .grupo-sm {
+        input[type='text'], 
+        input[type='email'],
+        input[type='number'],
+        input[type='password'],
+        input[type='url'],
+        input[type='search'], 
+        textarea {
+            font-size: $fz-sm;
+            min-height: $min-h-sm !important;
+        }
+
+        .span-grupo {
+            font-size: $fz-sm;
+            min-height: $min-h-sm;
+            padding: 0 13px !important;
+        }
+
+        .btn,
+        .btn-o,
+        .btn-sm,
+        .btn-sm-o,
+        .btn-lg,
+        .btn-lg-o{
+            border-radius: 4px 0 0 4px;
+            font-size: $fz-sm;
+            min-height: $min-h-sm;
+            padding: 0 13px !important;
+        }
+    }
+
+    .grupo-lg {
+        input[type='text'], 
+        input[type='email'],
+        input[type='number'],
+        input[type='password'],
+        input[type='url'],
+        input[type='search'], 
+        textarea {
+            font-size: $fz-lg;
+            min-height: $min-h-lg !important;
+        }
+
+        .span-grupo {
+            padding: 0 20px !important;
+            font-size: $fz-lg;
+            min-height: $min-h-lg;
+        }
+
+        .btn,
+        .btn-o,
+        .btn-sm,
+        .btn-sm-o,
+        .btn-lg,
+        .btn-lg-o{
+            font-size: $fz-lg;
+            min-height: $min-h-lg;
+            padding: 0 20px !important;
         }
     }
 }

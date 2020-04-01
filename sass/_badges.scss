@@ -64,7 +64,7 @@
     cursor: pointer;
     user-select: none;
     z-index: 10;
-
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 
     &::before {
         content: "";
@@ -326,6 +326,7 @@
     border-radius: 5px;
     z-index: 4;
     margin-top: 12px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &::before {
         content: "";
         height: 10px;
@@ -394,6 +395,7 @@
 .badge-social {
     overflow: hidden;
     display: flex;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     .badge-like {
         background-color: $fd-azul;
         color: white;
@@ -458,7 +460,7 @@
     letter-spacing: 0;
     color: rgb(34, 34, 34);
     position: relative;
-
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &:hover {
         background-color: rgba(0, 0, 0, 0.219);
     }
@@ -568,6 +570,7 @@
     border-radius: 0 3px 3px 0;
     top: 30px;
     left: -19px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &::before {
         content: "";
         position: absolute;
@@ -638,6 +641,7 @@
     border-radius: 50%;
     position: relative;
     box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     span {
         display: inline-block;
         position: absolute;
@@ -691,6 +695,7 @@
     cursor: pointer;
     position: relative;
     user-select: none;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &:active {
         background-color: rgb(212, 212, 212);
     }
@@ -761,6 +766,7 @@
     cursor: pointer;
     user-select: none;
     box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &:hover {
         background-color: $fd-rojo-o;
     }
@@ -846,6 +852,7 @@
     font-weight: 600;
     cursor: pointer;
     user-select: none;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 
@@ -887,7 +894,7 @@
     color: white;
     user-select: none;
     cursor: pointer;
-
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 
     &:hover {
         background-color: rgb(170, 31, 31);
@@ -927,6 +934,7 @@
     position: absolute !important;
     top: -10px !important;
     right: 5px !important;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 

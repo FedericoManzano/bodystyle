@@ -269,6 +269,17 @@ input.btn-cubrir-lg-o {
     box-shadow: 0 0 3px 3px rgba(238, 238, 238, 0.5) !important;
 }
 
+
+.btn-gris-c-o {
+    @include btn-colores-outline(1px, solid, 1px solid rgb(63, 63, 63), rgb(89, 100, 110), 1em);
+}
+
+.btn-gris-c-o:hover {
+    background-color: rgb(230, 237, 238) !important;
+    color: $negro !important;
+    box-shadow: 0 0 3px 3px rgba(206, 210, 212, 0.856) !important;
+}
+
 /***
     Botones estilo desabilidado
 */
