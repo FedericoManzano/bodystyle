@@ -66,3 +66,136 @@
     }
 }
 
+
+
+@for $i from 1 to 10 {
+    
+    .e-borde-izq-rojo-#{$i},
+    .e-borde-izq-verde-#{$i},
+    .e-borde-izq-azul-#{$i},
+    .e-borde-izq-gris-#{$i},
+    .e-borde-izq-negro-#{$i},
+    .e-borde-izq-blanco-#{$i} {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: #{$i}px;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 0.3s;
+            background-color: $fd-rojo;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+
+    .e-borde-izq-verde-#{$i}{
+        &::before {
+            background-color: $fd-verde;
+        }
+    }
+
+
+    .e-borde-izq-azul-#{$i}{
+        &::before {
+            background-color: $fd-azul;
+        }
+    }
+
+
+    .e-borde-izq-gris-#{$i}{
+        &::before {
+            background-color: $fd-gris;
+        }
+    }
+
+
+    .e-borde-izq-negro-#{$i}{
+        &::before {
+            background-color: $fd-negro;
+        }
+    }
+
+    .e-borde-izq-blanco-#{$i}{
+        &::before {
+            background-color: $fd-blanco;
+        }
+    }
+
+}
+
+
+@for $i from 1 to 10 {
+    
+    .e-borde-der-rojo-#{$i},
+    .e-borde-der-verde-#{$i},
+    .e-borde-der-azul-#{$i},
+    .e-borde-der-gris-#{$i},
+    .e-borde-der-negro-#{$i},
+    .e-borde-der-blanco-#{$i} {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: #{$i}px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 0.3s;
+            background-color: $fd-rojo;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+
+    .e-borde-der-verde-#{$i}{
+        &::before {
+            background-color: $fd-verde;
+        }
+    }
+
+
+    .e-borde-der-azul-#{$i}{
+        &::before {
+            background-color: $fd-azul;
+        }
+    }
+
+
+    .e-borde-der-gris-#{$i}{
+        &::before {
+            background-color: $fd-gris;
+        }
+    }
+
+
+    .e-borde-der-negro-#{$i}{
+        &::before {
+            background-color: $fd-negro;
+        }
+    }
+
+    .e-borde-der-blanco-#{$i}{
+        &::before {
+            background-color: $fd-blanco;
+        }
+    }
+
+}
+
+
+
+
+

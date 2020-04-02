@@ -1,7 +1,7 @@
 
 
 (function(){
-
+    
     var presionado = 0;
     const margin = 10
 
@@ -30,6 +30,19 @@
         $(".drop").hide()
     }
 
+
+    var posicionInicialX = (origen, dropdown) => {
+        var x = $(origen).offset().left
+        $(dropdown).css("left", x)
+        return x;
+    }
+
+    var posicionInicialY = (origen, dropdown) => {
+        var y = $(origen).offset().top
+        $(dropdown).css("top", y+$(origen).outerHeight() + 5)
+        return y;
+    }
+
     var disabled = () => {
         $(".dropdown ul li .disabled").removeAttr("href")
     }
@@ -48,20 +61,22 @@
         var oi = effsetIzquierda(dropdown)
         var od = offsetDerecha(dropdown)
         if(oi !== 0)
-            $(dropdown).css("left", oi);
+            $(dropdown).css("left",posicionInicialX(origen, dropdown) +  oi);
         if(od !== 0)
-            $(dropdown).css("left", od);
+            $(dropdown).css("left", posicionInicialX(origen, dropdown) + od);
     }
     
-    var reiniciarPosicion = (dopdown) => {
-        $(dopdown).css("left", 0)
+    var reiniciarPosicion = (dropdown, origen) => {
+        posicionInicialX(origen, dropdown)
+        posicionInicialY(origen, dropdown)
     }
     var dropDown = () => {
         $(".dropdown-toggle").click(function(){
             var boton = $(this);
             var dropdown = $($(this).data("target"))
+            reiniciarPosicion(dropdown, this)
             if(presionado === 0 || presionado === undefined){
-                dropdown.fadeIn(300).appendTo(boton)
+                dropdown.fadeIn(300)
                 posicionamientoDropDown(this, dropdown)
                 boton.children(".f-derecha").hide()
                 boton.children(".f-abajo").show()
@@ -69,8 +84,7 @@
                 presionado = 1
             }else {
                 dropdown.hide()
-                reiniciarPosicion(dropdown)
-                boton.remove(dropdown)
+                reiniciarPosicion(dropdown, this)
                 boton.children(".f-derecha").show()
                 boton.children(".f-abajo").hide()
                 $(".drop").hide()
@@ -79,14 +93,27 @@
 
             $(".drop").click(function(){
                 dropdown.hide()
-                reiniciarPosicion(dropdown)
-                boton.remove(dropdown)
+                reiniciarPosicion(dropdown, this)
                 boton.children(".f-derecha").show()
                 boton.children(".f-abajo").hide()
                 $(".drop").hide()
                 presionado = 0 
             })
+
+            $(dropdown).click(function(){
+                if(presionado === 1){
+                    dropdown.hide()
+                    reiniciarPosicion(dropdown, this)
+                    boton.children(".f-derecha").show()
+                    boton.children(".f-abajo").hide()
+                    $(".drop").hide()
+                    presionado = 0 
+                }
+
+            })
         })
+
+        
     }
 
     var DropDown = {

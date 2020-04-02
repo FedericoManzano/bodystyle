@@ -17,8 +17,13 @@ import DropDown from "./Dropdown"
             var idDrop = $($(this)).data("target")
         
             $(idDrop).children().children().children().click(function(){
-        
-                $(this).parent().parent().parent().parent(".combo-box").children(".c-drop-grupo").text($(this).text())
+                var combobox = null
+
+                $(".combo-box").each(function() {
+                    if($(this).attr("data-target") === idDrop)
+                        combobox = this
+                })
+                $(combobox).children(".c-drop-grupo").text($(this).text())
             })
         })
         

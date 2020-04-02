@@ -168,7 +168,7 @@
 
 
     var posicionamientoIzquierda = (origen) => {
-        elemento.css("left", reacomodamientoHorizontal(origen) $(origen).width()>$(elemento).width() ? -$(origen).width() - 40 : $(elemento).width())
+        elemento.css("left", reacomodamientoHorizontal(origen) - $(elemento).width() - 20)
         elemento.append(dameMueca("mueca-der","right", -5, "top", "calc(50% - 3.5px)"))
         var da = topeArriba()
         if(da !== 0)
@@ -178,7 +178,7 @@
 
 
     var posicionamientoDerecha = (origen) => {
-        elemento.css("left", reacomodamientoHorizontal(origen) + $(elemento).width() )
+        elemento.css("left", reacomodamientoHorizontal(origen) + $(elemento).width() + 20)
         elemento.append(dameMueca("mueca-izq","left", -5, "top", "calc(50% - 3.5px)"))
         var da = topeArriba()
         if(da !== 0)
@@ -202,12 +202,13 @@
             // Crear elemento tips de manera dinámica
             elemento = $("<div class='tips'></div>")
             elemento.html(contenido)
-           elemento.appendTo("body")
+            elemento.css("min-width", $(this).outerWidth())
+            elemento.appendTo("body")
 
 
             /**
-             * Selección de la ubicación del tips dentro 
-             * del elemento origen
+             * Selección de la ubicación del tips donde 
+             * está el elemento origen
              */
             elemento.css("left",reacomodamientoHorizontal(this))
             elemento.css("top",reacomodamientoVertical(this))
