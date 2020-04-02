@@ -6,6 +6,22 @@
     // Separación del tips respecto al origen
     const margin = 10
 
+
+    const posicionamientoInicialX = (origen)=> {
+        var x = $(origen).offset().left
+        $(elemento).css("left", x)
+        return x
+    }
+
+    const posicionamientoInicialY = (origen)=> {
+        var y = $(origen).offset().top
+        $(elemento).css("top", y)
+        return y
+    }
+
+
+
+
     /**
      * Validación del espacio encima del elemento origen 
      * respecto al elemento toolTips 
@@ -45,10 +61,10 @@
      * @return true / false
      */
     const derecha = (origen) => {
-        const windowWidth = $(window).outerWidth()
+        const windowWidth = $(window).width()
         const origenOffsetLeft = $(origen).offset().left
-        const origenWidth = $(origen).outerWidth()
-        const tipsWidth = $(".tips").outerWidth()
+        const origenWidth = $(origen).width()
+        const tipsWidth = $(".tips").width()
         return windowWidth - origenOffsetLeft - origenWidth - 80 > tipsWidth + 5
     }
 
@@ -90,12 +106,12 @@
 
     var reacomodamientoHorizontal = (origen)=> {
         var corr = ($(origen).outerWidth() ) - $(elemento).outerWidth()
-        return Math.round(corr / 2)
+        return posicionamientoInicialX(origen) +  Math.round(corr / 2)
     }
 
     var reacomodamientoVertical = (origen)=> {
         var corr = ($(origen).outerHeight() ) - $(elemento).outerHeight()
-        return Math.round(corr / 2)
+        return posicionamientoInicialY(origen) + Math.round(corr / 2)
     }
 
     var topeIzquierda = ()=> {
@@ -117,7 +133,7 @@
     var posicionamientoArriba = (origen) => {
 
         /** Coloacar el elemento por encima del origen */
-        elemento.css("top", -$(elemento).outerHeight())
+        elemento.css("top", reacomodamientoVertical(origen) - $(elemento).outerHeight() - 5)
         elemento.append(dameMueca("mueca-aba","bottom", -5, "left", "calc(50% - 2.5px)"))
 
         // Calculo del offset respecto a la derecha y a la izquierda 
@@ -126,7 +142,7 @@
         var td = topeDerecha() 
 
         if(di !== 0){
-            elemento.css("left",  di)
+            elemento.css("left",  reacomodamientoHorizontal(origen) + di)
             td=0
         }
         if(td !== 0)
@@ -137,12 +153,12 @@
     }
 
     var posicionamientoAbajo = (origen) => {
-        elemento.css("top", $(origen).outerHeight())
+        elemento.css("top", reacomodamientoVertical(origen) + $(origen).outerHeight() + 5)
         elemento.append(dameMueca("mueca-arr","top", -5, "left", "calc(50% - 2.5px)"))
         var di = topeIzquierda()
         var td = topeDerecha() 
         if(di !== 0){
-            elemento.css("left",  di)
+            elemento.css("left",  reacomodamientoHorizontal(origen) + di)
             td=0
         }
         if(td !== 0)
@@ -152,21 +168,21 @@
 
 
     var posicionamientoIzquierda = (origen) => {
-        elemento.css("left", -$(elemento).width() - 20)
+        elemento.css("left", reacomodamientoHorizontal(origen) -$(origen).width() - 40)
         elemento.append(dameMueca("mueca-der","right", -5, "top", "calc(50% - 3.5px)"))
         var da = topeArriba()
         if(da !== 0)
-            $(elemento).css("top", da)
+            $(elemento).css("top", reacomodamientoVertical(origen) + da)
         $(".tips").css({transform: 'translateX(-12px)'})
     }
 
 
     var posicionamientoDerecha = (origen) => {
-        elemento.css("left", $(origen).outerWidth() + 5)
+        elemento.css("left", reacomodamientoHorizontal(origen) + $(origen).width() + 40)
         elemento.append(dameMueca("mueca-izq","left", -5, "top", "calc(50% - 3.5px)"))
         var da = topeArriba()
         if(da !== 0)
-            $(elemento).css("top", da)
+            $(elemento).css("top", reacomodamientoVertical(origen) + da)
         $(".tips").css({transform: 'translateX(12px)'})
     } 
 
@@ -186,7 +202,7 @@
             // Crear elemento tips de manera dinámica
             elemento = $("<div class='tips'></div>")
             elemento.html(contenido)
-            elemento.appendTo($(this))
+           elemento.appendTo("body")
 
 
             /**
