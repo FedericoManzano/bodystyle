@@ -168,7 +168,7 @@
 
 
     var posicionamientoIzquierda = (origen) => {
-        elemento.css("left", reacomodamientoHorizontal(origen) -$(origen).width() - 40)
+        elemento.css("left", reacomodamientoHorizontal(origen) $(origen).width()>$(elemento).width() ? -$(origen).width() - 40 : $(elemento).width())
         elemento.append(dameMueca("mueca-der","right", -5, "top", "calc(50% - 3.5px)"))
         var da = topeArriba()
         if(da !== 0)
@@ -178,7 +178,7 @@
 
 
     var posicionamientoDerecha = (origen) => {
-        elemento.css("left", reacomodamientoHorizontal(origen) + $(origen).width() + 40)
+        elemento.css("left", reacomodamientoHorizontal(origen) + $(elemento).width() )
         elemento.append(dameMueca("mueca-izq","left", -5, "top", "calc(50% - 3.5px)"))
         var da = topeArriba()
         if(da !== 0)
