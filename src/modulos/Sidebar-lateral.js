@@ -1,12 +1,12 @@
 (function() {
 
-    var visible = 0;
-    var elementos = new Array($(".sidebar-lateral .titulo").lenght)
+    var visible = false;
+    var elementos = new Array()
 
     var inicializarElementos = () => {
-        for(var i = 0; i < elementos.length; i ++){
-            elementos[i] = false;
-        }
+        $(".sidebar-lateral .titulo").each(function(index){
+            elementos[index] = false
+        })
     }
 
     var inicializarColumna = () => {
@@ -21,12 +21,12 @@
 
     var desplazar = () => {
         $(".sidebar-barra .sidebar-menu").click(function() {
-            if(visible === 0){
+            if(visible === false){
                 $(".sidebar-lateral").css("left", 0);
-                visible = 1
+                visible = true
             } else {
                 $(".sidebar-lateral").css("left", -240);
-                visible = 0
+                visible = false
             }
         })
     }
@@ -34,7 +34,8 @@
     var desplegar = () => {
         $(".sidebar-lateral > .titulo").click(function() {
 
-            if(elementos[$(this).index()- 1] === false          || 
+            if(
+                elementos[$(this).index()- 1]  === false          || 
                 elementos[$(this).index()- 1]  === undefined
             )
             {

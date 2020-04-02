@@ -1,11 +1,13 @@
 .tab {
     box-sizing: border-box;
+    $borde: 1px solid rgba(0, 0, 0, 0.185);
+
     .op-tab {
         overflow-y: auto; 
         .op-listado{
             max-height: 100%;
             display: flex;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+            border-bottom: $borde;
             label{
                 white-space: nowrap;
                 display: block;
@@ -19,9 +21,8 @@
             }
 
             .activo {
-                border-left: 1px solid rgba(0, 0, 0, 0.185);
-                border-top: 1px solid rgba(0, 0, 0, 0.185);
-                border-right: 1px solid rgba(0, 0, 0, 0.185);
+                border: $borde;
+                border-bottom: none;
                 border-radius: 5px 5px 0 0;
                 position: relative;
                 font-weight: 600;
@@ -44,9 +45,8 @@
 
     .contenido-tab {
         padding: 15px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.185);
-        border-left: 1px solid rgba(0, 0, 0, 0.185);
-        border-right: 1px solid rgba(0, 0, 0, 0.185);
+        border: $borde;
+        border-top: none;
         border-radius: 0 0 5px 5px;
         background-color: white;
     }

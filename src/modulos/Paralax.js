@@ -2,13 +2,11 @@
 
     var inicializar = () => {
         $(".paralax-contenedor img").css("opacity", 0)
-        var cantidad = $(".paralax-contenedor").length
-        for(var i = 0; i < cantidad; i ++){
-            var ruta = $(".paralax-contenedor:nth-child(+ " + (i+1) + ")").children(".paralax").attr("src")
-            $(".paralax-contenedor:nth-child(+ " + (i+1) + ")").css("background-image", "url("+ ruta +")")
-            $(".paralax-contenedor:nth-child(+ " + (i+1) + ")").css("background-attachment", "fixed")
-
-        }
+        $(".paralax-contenedor").each(function(e, i){
+            var ruta = $(this).children(".paralax").attr("src")
+            $(this).css("background-image", "url("+ ruta +")")
+            $(this).css("background-attachment", "fixed")
+        })
     }
 
     var Paralax = {

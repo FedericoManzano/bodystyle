@@ -5,9 +5,6 @@
             $(this).hide(300);
         })
     }
-
-
-
     var Alerta = {
         iniciar: function() {
             cerrar ();

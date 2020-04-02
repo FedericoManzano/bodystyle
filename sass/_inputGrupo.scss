@@ -1,21 +1,26 @@
 
-$borde: 1px solid rgb(206, 212, 218);
-$borde-boton: 1px solid  rgb(63, 63, 63);
-$bg-span: rgb(230, 237, 238);
-$letra-span: rgb(81, 85, 90);
-
-$min-h: 40px;
-$min-h-lg: 50px;
-$min-h-sm: 30px;
-
-$fz: 1em;
-$fz-lg: 1.3em;
-$fz-sm: 0.9em;
-
-
-
-
 .input-g {
+
+    // Bordes de los elemento
+    $borde: 1px solid rgb(206, 212, 218);
+    $borde-boton: 1px solid  rgb(63, 63, 63);
+
+    // Fondo
+    $bg-span: rgb(230, 237, 238);
+    $letra-span: rgb(81, 85, 90);
+    
+    // Tamaños
+    $min-h: 40px;
+    $min-h-lg: 50px;
+    $min-h-sm: 30px;
+    
+    $fz: 1em;
+    $fz-lg: 1.3em;
+    $fz-sm: 0.9em;
+
+    $padding: 0 16px !important;
+    $padding-sm: 0 13px !important;
+    $padding-lg: 0 20px !important;
 
     // 1 EM 
     font-size: 16px;
@@ -44,17 +49,20 @@ $fz-sm: 0.9em;
         display: flex;
         border-radius: 4px;
         .span-grupo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 16px !important;
+            // Flex box just center align center
+            @include flex-box-centrado();
+
+            // Tamaño
+            padding:$padding;
             font-size: $fz;
-            background-color: $bg-span;
-            white-space: nowrap;
-            font-weight: 500;
-            color: $letra-span;
             min-height: $min-h;
 
+            // Color
+            background-color: $bg-span;
+            color: $letra-span;
+
+            white-space: nowrap;
+            
             *{
                 border: none !important;
             }
@@ -68,11 +76,14 @@ $fz-sm: 0.9em;
         input[type='url'],
         input[type='search'], 
         textarea {
+
+            // Define el tamaño mediano
             min-height: $min-h !important;
+
+            &:focus {
+                z-index: 100000;
+            }
         }
-
-
-        
 
         .btn,
         .btn-o,
@@ -80,88 +91,76 @@ $fz-sm: 0.9em;
         .btn-sm-o,
         .btn-lg,
         .btn-lg-o{
+            // Bordes
             border-radius: 4px 0 0 4px;
-            padding: 0 16px !important; 
-            box-shadow: none;
             border: $borde-boton;
-            min-height: $min-h;
-            z-index: 0;
 
+            // Tamaño
+            padding: $padding; 
+            min-height: $min-h;
+            font-size: $fz !important;
+
+            box-shadow: none;
+            min-width: none !important;
+            
+            background-color: rgb(250, 253, 255) !important;
+            &:hover {
+                background-color: $bg-span !important;
+                z-index: 1000000;
+            }
             *{
                border: none !important;
             }
             .f-abajo-grupo {
-                height: 0;
-                width: 0;
                 border-top: 4px solid $letra-span !important;
                 border-left: 4px solid transparent !important;
                 border-right: 4px solid transparent !important;
-                letter-spacing: 2px;
             }
         }
 
-        
-
-        & *:first-child:not(input) {
-            border: $borde;
-            border-right: none;
-            border-radius: 4px 0 0 4px !important;
+        .a-ajuste-btn {
+            min-width: 130px !important;
+            display: flex !important;
+            justify-content: space-between !important;
         }
 
-        & input:first-child {
+        *:first-child {
+            border-radius: 4px 0 0 4px;
             border: $borde;
             border-right: none;
-            border-radius: 4px 0 0 4px !important;
         }
 
-        & *:last-child {
-            border-radius:  0 4px 4px 0 !important;
+        *:last-child {
+            border-radius: 0 4px 4px 0;
             border: $borde;
             border-left: none;
         }
 
-
-        input:not(:first-child):not(:last-child) {
-            border-top: $borde;
-            border-bottom: $borde;
-            border-left: $borde;
-            border-radius:  0!important;
+        *:not(:first-child):not(:last-child) {
+            border-radius: 0;
+            border: $borde;
+            border-left: none;
         }
 
-        input:not(:first-child) {
-            border-top: $borde;
-            border-bottom: $borde;
-            border-left: $borde;
+        *:nth-child(2) {
+            border-left: $borde !important;
         }
-
-        *:not(:first-child):not(:last-child):not(input) {
-            border-top: $borde;
-            border-bottom: $borde;
-            border-left: $borde;
-            border-right: none;
-            border-radius:  0!important;
-        }
-
-        .span-grupo,
-        .btn,
-        .btn-sm,
-        .btn-lg,
-        .btn-o,
-        .btn-o-lg, 
-        .btn-o-sm{
-            border-top: $borde;
-            border-bottom: $borde;
-            border-left: $borde;
-        }
+        
+        
 
         .dropdown {
             border: 1px solid rgb(209, 209, 209) !important; 
             background-color: white !important;
             z-index: superposicion(ms);
+
+            *{
+                border: none !important;
+            }
         }
 
         .dropdown-toggle {
             z-index: superposicion(ms);
+            
         }
     }
 
@@ -180,7 +179,7 @@ $fz-sm: 0.9em;
         .span-grupo {
             font-size: $fz-sm;
             min-height: $min-h-sm;
-            padding: 0 13px !important;
+            padding: $padding-sm;
         }
 
         .btn,
@@ -190,9 +189,9 @@ $fz-sm: 0.9em;
         .btn-lg,
         .btn-lg-o{
             border-radius: 4px 0 0 4px;
-            font-size: $fz-sm;
             min-height: $min-h-sm;
-            padding: 0 13px !important;
+            padding: $padding-sm;
+            font-size: $fz-sm !important;
         }
     }
 
@@ -209,7 +208,7 @@ $fz-sm: 0.9em;
         }
 
         .span-grupo {
-            padding: 0 20px !important;
+            padding: $padding-lg;
             font-size: $fz-lg;
             min-height: $min-h-lg;
         }
@@ -220,9 +219,9 @@ $fz-sm: 0.9em;
         .btn-sm-o,
         .btn-lg,
         .btn-lg-o{
-            font-size: $fz-lg;
             min-height: $min-h-lg;
-            padding: 0 20px !important;
+            padding: $padding-lg;
+            font-size: $fz-lg !important;
         }
     }
 }

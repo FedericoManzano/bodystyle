@@ -1,4 +1,11 @@
+/*!
+ * BodyStyle v1.0.0
+ * Copyright Federico Manzano
+ * Licencia MIT
+ * Repositorio (https://github.com/FedericoManzano/BodyStyle---Librer-a-de-estilos)
+ */
 
+ 
 import MenuResp from "./modulos/MenuSuperior"
 import Modal from "./modulos/Modal"
 import Waves from  "./modulos/Waves"
@@ -21,6 +28,7 @@ import BotonInicio from "./modulos/BotonInicio"
 import Alerta from "./modulos/Alerta"
 import Template from "./modulos/Template"
 import Tab from "./modulos/Tabs"
+import GruposInput from "./modulos/GruposInput"
 
 (function(){
     Waves.iniciar()
@@ -29,7 +37,7 @@ import Tab from "./modulos/Tabs"
     InputFile.iniciar()
     Alerta.iniciar()
     Template.iniciar()
-
+    GruposInput.iniciar()
     
     var focusInput = () => {
         $(".input-icon input").focus(function() {

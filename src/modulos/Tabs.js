@@ -1,6 +1,11 @@
 
 
 class Tab {
+
+    /**
+     * Inicializa el Tab de tipo solapa
+     * @param {ID del contenedor padre de todo el tab} contexto 
+     */
     inicializar(contexto) {
         $(contexto + " .tab .op-tab label:nth-child(1)").addClass("activo")
         $(contexto + " .contenido-tab").hide()
@@ -8,6 +13,11 @@ class Tab {
         $(id).show()
     }
 
+
+    /**
+     * Inicializa el Tab tipo borde
+     * @param {Obj Json con la configuración} c 
+     */
     inicializarBorde(c){
         $(c.contexto + " .tab-borde .op-tab-borde ul").addClass(c.colorFondo)
         $(c.contexto + " .tab-borde .op-tab-borde label").addClass(c.colorFuente)
@@ -45,6 +55,7 @@ class Tab {
     }
 
     iniciarBorde({contexto, colorFuente, colorFondo, colorBorde} = {
+        /** Valores por defecto */
         contexto: "vacio", 
         colorFuente: "c-negro",
         colorFondo: "fd-blanco",
@@ -52,12 +63,16 @@ class Tab {
     }){
 
         var c = {
-            contexto,
-            colorFuente,
-            colorFondo,
-            colorBorde
+            contexto,       // ID del contenido
+            colorFuente,    // Color de la fuente de los Tabs
+            colorFondo,     // Color de Fondo de la barra 
+            colorBorde      // Color del borde seleccionado
         }
+
+        // Inicializa el Tab con borde
         this.inicializarBorde(c)
+
+        // Inicializa el Tab con solapa
         this.cambiarBorde(c)
     }
 
