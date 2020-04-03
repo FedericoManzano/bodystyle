@@ -29,6 +29,9 @@ import Alerta from "./modulos/Alerta"
 import Template from "./modulos/Template"
 import Tab from "./modulos/Tabs"
 import GruposInput from "./modulos/GruposInput"
+import EfectoScroll from "./modulos/EfectoScroll"
+
+
 
 (function(){
     Waves.iniciar()
@@ -105,6 +108,10 @@ import GruposInput from "./modulos/GruposInput"
 
     var TabInit = () => {
         return new Tab
+    }
+
+    var EfectoScrollInit = () => {
+        return new EfectoScroll
     }
 
     var AutoInit = ()=> {
@@ -195,7 +202,8 @@ import GruposInput from "./modulos/GruposInput"
         ParalaxInit: () => ParalaxInit(),
         BotonInicioInit: () => BotonInicioInit(),
         TabInit: () => TabInit(),
-        ToolTipsInit: () =>  ToolTipsInit()
+        ToolTipsInit: () =>  ToolTipsInit(),
+        EfectoScrollInit: () => EfectoScrollInit()
     }
 
     window.BS = BS

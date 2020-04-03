@@ -13,6 +13,7 @@
 .modal {
 
     // Generales
+    font-size: 16px;
     width: 70%;
     border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: 5px;
@@ -20,22 +21,18 @@
     z-index: 10000000;
     background-color: white;
 
-    .modal-cabecera {
+    .modal-cabecera,
+    .modal-pie {
         padding: 0.8em 1.5em;
         background-color: rgba(0, 0, 0, 0.034);
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid rgba(0, 0, 0, 0.24);
-        font-size: 20px;
+        font-size: 1.25em;
     }
 
     .modal-pie {
-        padding: 0.8em 1.5em;
-        background-color: rgba(0, 0, 0, 0.034);
-        display: flex;
-        justify-content: space-around;
         border-top: 1px solid rgba(0, 0, 0, 0.24);
-        font-size: 20px;
     }
 
     .modal-cuerpo {
@@ -44,7 +41,7 @@
     }
 
     .modal-titulo {
-        font-size: 22px;
+        font-size: 1.375em;
         color: black;
         font-weight: 300;
         margin-bottom: 1em;

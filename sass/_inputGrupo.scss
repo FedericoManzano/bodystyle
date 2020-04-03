@@ -4,6 +4,9 @@
     // Bordes de los elemento
     $borde: 1px solid rgb(206, 212, 218);
     $borde-boton: 1px solid  rgb(63, 63, 63);
+    $bor-rad-izq: 4px 0 0 4px; // Radios elementos izquierda
+    $bor-rad-der: 0 4px 4px 0; // Radios elementos izquierda
+
 
     // Fondo
     $bg-span: rgb(230, 237, 238);
@@ -125,13 +128,13 @@
         }
 
         *:first-child {
-            border-radius: 4px 0 0 4px;
+            border-radius: $bor-rad-izq;
             border: $borde;
             border-right: none;
         }
 
         *:last-child {
-            border-radius: 0 4px 4px 0;
+            border-radius: $bor-rad-der;
             border: $borde;
             border-left: none;
         }
@@ -188,7 +191,7 @@
         .btn-sm-o,
         .btn-lg,
         .btn-lg-o{
-            border-radius: 4px 0 0 4px;
+            border-radius: $bor-rad-izq;
             min-height: $min-h-sm;
             padding: $padding-sm;
             font-size: $fz-sm !important;

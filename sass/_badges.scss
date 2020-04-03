@@ -311,86 +311,134 @@
 }
 
 
-.badge-mje-gris, 
-.badge-mje-rojo,
-.badge-mje-verde,
-.badge-mje-negro,
-.badge-mje-azul,
-.badge-mje-blanco {
+
+.badge-mje-izq,
+.badge-mje-der,
+.badge-mje-arr,
+.badge-mje-aba,
+.badge-mje-aba{
     display: inline-block;
     position: relative;
-    padding: 5px;
+    padding: 7px;
     text-align: center;
     font-weight: 300;
-    font-size: 11px;
+    font-size: 15px;
     border-radius: 5px;
-    z-index: 4;
+    z-index: 10;
     margin-top: 12px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-color: white !important;
     &::before {
         content: "";
         height: 10px;
         width: 10px;
         position: absolute;
-        left: calc(50% - 5px);
-        top: -6px;
         transform: rotate(45deg);
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255) !important;
         z-index: -1;
     }
 }
 
-.badge-mje-gris {
-    color: #383838;
-    border: 1px solid #747474;
+
+.badge-mje-izq {
     &::before {
-        content: "";
-        border-top: 1px solid #747474;
-        border-left: 1px solid #747474;
+        left: -6px;
+        top: calc(50% - 5px);
+        z-index: -1;
+        border-top: 1px solid transparent !important;
+        border-right: 1px solid transparent !important;
     }
 }
 
-.badge-mje-rojo {
-    color: $fd-rojo;
+
+.badge-mje-der {
+    &::before {
+        right: -6px;
+        top: calc(50% - 5px);
+        z-index: -1;
+        border-bottom: 1px solid transparent !important;
+        border-left: 1px solid transparent !important;
+    }
+}
+
+.badge-mje-arr {
+    &::before {
+        left: calc(50% - 5px);
+        top: -6px;
+        z-index: -1;
+        border-bottom: 1px solid transparent !important;
+        border-right: 1px solid transparent !important;
+    }
+}
+
+.badge-mje-aba {
+    &::before {
+        left: calc(50% - 5px);
+        bottom: -6px;
+        z-index: -1;
+        border-top: 1px solid transparent !important;
+        border-left: 1px solid transparent !important;
+    }
+}
+
+
+.badge-mje-rojo{
     border: 1px solid $fd-rojo;
+    color: $fd-rojo;
     &::before {
-        content: "";
-        border-top: 1px solid $fd-rojo;
-        border-left: 1px solid $fd-rojo;
+        background-color: white;
+        border: 1px solid $fd-rojo;
     }
 }
 
-
-.badge-mje-verde {
-    color: $fd-verde;
-    border: 1px solid $fd-verde;
-    &::before {
-        content: "";
-        border-top: 1px solid $fd-verde;
-        border-left: 1px solid $fd-verde;
-    }
-}
-
-
-.badge-mje-azul {
-    color: $fd-azul;
+.badge-mje-azul{
     border: 1px solid $fd-azul;
+    color: $fd-azul;
     &::before {
-        content: "";
-        border-top: 1px solid $fd-azul;
-        border-left: 1px solid $fd-azul;
+        background-color: white;
+        border: 1px solid $fd-azul;
     }
 }
 
-.badge-mje-negro {
-    color: $fd-negro;
-    border: 1px solid $fd-negro;
+.badge-mje-verde{
+    border: 1px solid $fd-verde;
+    color: $fd-verde;
     &::before {
-        content: "";
-        border-top: 1px solid $fd-negro;
-        border-left: 1px solid $fd-negro;
+        background-color: white;
+        border: 1px solid $fd-verde;
     }
 }
+
+
+.badge-mje-negro{
+    border: 1px solid $fd-negro;
+    color: $fd-negro;
+    &::before {
+        background-color: white;
+        border: 1px solid $fd-negro;
+    }
+}
+
+.badge-mje-blanco{
+    border: 1px solid $fd-blanco;
+    color: $fd-blanco;
+    &::before {
+        background-color: white;
+        border: 1px solid $fd-blanco;
+    }
+}
+
+.badge-mje-gris{
+    border: 1px solid $fd-gris;
+    color: $fd-gris;
+    &::before {
+        background-color: white;
+        border: 1px solid $fd-gris;
+    }
+}
+
+
+
 
 .badge-social {
     overflow: hidden;
@@ -624,8 +672,168 @@
 }
 
 .contenedor-relativo {
+
     position:  relative !important;
 }
+
+.ov-hidden {
+    overflow: hidden !important;
+}
+
+.ov-visible {
+    overflow: visible !important;
+}
+
+.badge-esquina-sup-izq-rojo,
+.badge-esquina-sup-izq-verde,
+.badge-esquina-sup-izq-azul,
+.badge-esquina-sup-izq-gris,
+.badge-esquina-sup-izq-blanco,
+.badge-esquina-sup-izq-negro,
+.badge-esquina-sup-der-rojo,
+.badge-esquina-sup-der-verde,
+.badge-esquina-sup-der-azul,
+.badge-esquina-sup-der-gris,
+.badge-esquina-sup-der-blanco,
+.badge-esquina-sup-der-negro,
+.badge-esquina-inf-der-rojo,
+.badge-esquina-inf-der-verde,
+.badge-esquina-inf-der-azul,
+.badge-esquina-inf-der-gris,
+.badge-esquina-inf-der-blanco,
+.badge-esquina-inf-der-negro,
+.badge-esquina-inf-izq-rojo,
+.badge-esquina-inf-izq-verde,
+.badge-esquina-inf-izq-azul,
+.badge-esquina-inf-izq-gris,
+.badge-esquina-inf-izq-blanco,
+.badge-esquina-inf-izq-negro {
+    font-size: 16px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 10000;
+    left: -50px;
+    top: -50px;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.904);
+    * {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 45px;
+        left: 70px;
+    }
+}
+
+.badge-esquina-sup-der-rojo,
+.badge-esquina-sup-der-verde,
+.badge-esquina-sup-der-azul,
+.badge-esquina-sup-der-gris,
+.badge-esquina-sup-der-blanco,
+.badge-esquina-sup-der-negro {
+    transform: rotate(-45deg);
+    left: calc(100% - 50px);
+    background-color: $fd-rojo;
+
+    * {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+}
+
+.badge-esquina-inf-der-rojo,
+.badge-esquina-inf-der-verde,
+.badge-esquina-inf-der-azul,
+.badge-esquina-inf-der-gris,
+.badge-esquina-inf-der-blanco,
+.badge-esquina-inf-der-negro {
+    transform: rotate(45deg);
+    left: calc(100% - 50px);
+    top: calc(100% - 50px);
+    background-color: $fd-rojo;
+
+    * {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 40px;
+        left: 10px;
+    }
+}
+
+.badge-esquina-inf-izq-rojo,
+.badge-esquina-inf-izq-verde,
+.badge-esquina-inf-izq-azul,
+.badge-esquina-inf-izq-gris,
+.badge-esquina-inf-izq-blanco,
+.badge-esquina-inf-izq-negro {
+    transform: rotate(-45deg);
+    left: -50px;
+    top: calc(100% - 50px);
+    background-color: $fd-rojo;
+
+    * {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 40px;
+        left: 70px;
+    }
+}
+
+
+.badge-esquina-sup-der-rojo,
+.badge-esquina-sup-izq-rojo,
+.badge-esquina-inf-der-rojo,
+.badge-esquina-inf-izq-rojo {
+    background-color: $fd-rojo;
+    color: white;
+}
+
+.badge-esquina-sup-der-azul,
+.badge-esquina-sup-izq-azul,
+.badge-esquina-inf-der-azul,
+.badge-esquina-inf-izq-azul {
+    background-color: $fd-azul;
+    color: white;
+}
+
+.badge-esquina-sup-der-verde,
+.badge-esquina-sup-izq-verde,
+.badge-esquina-inf-der-verde,
+.badge-esquina-inf-izq-verde {
+    background-color: $fd-verde;
+    color: white;
+}
+
+.badge-esquina-sup-der-gris,
+.badge-esquina-sup-izq-gris,
+.badge-esquina-inf-der-gris,
+.badge-esquina-inf-izq-gris {
+    background-color: $fd-gris;
+    color: black;
+}
+
+.badge-esquina-sup-der-negro,
+.badge-esquina-sup-izq-negro,
+.badge-esquina-inf-der-negro,
+.badge-esquina-inf-izq-negro {
+    background-color: $fd-negro;
+    color: white;
+}
+
+.badge-esquina-sup-der-blanco,
+.badge-esquina-sup-izq-blanco,
+.badge-esquina-inf-der-blanco,
+.badge-esquina-inf-izq-blanco {
+    background-color: $fd-blanco;
+    color: black;
+}
+
+
 
 .badge-red-rojo,
 .badge-red-gris, 

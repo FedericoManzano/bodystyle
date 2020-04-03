@@ -1,21 +1,30 @@
 .tips {
-    position: absolute !important; 
-    padding: 20px 10px !important;
-    color: white !important;
-    background-color: rgba(0, 0, 0, 0.863) !important;
-    border-radius: 5px !important;
-    font-size: 16px !important;
-    font-weight: 100 !important;
-    z-index: 1000 !important;
+
+
+    // 16px 1em
+    font-size: 16px;
+
     @include flex-box-centrado();
-    transition: all 0.3s ease;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    transform: translate(0);
-    transition: transform 0.3s;
+
+
+    position: absolute; 
+    padding: 20px 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.863);
+    border-radius: 5px;
+    
     white-space: nowrap;
     max-height: 40px !important;
     min-height: 40px !important;
-    z-index: superposicion(ms);
+
+    z-index: superposicion(ms) !important;
+
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    transform: translate(0);
+    transition: transform 0.3s ease;
+
+
+
     .mueca-aba,
     .mueca-izq,
     .mueca-der,

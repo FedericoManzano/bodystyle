@@ -1,40 +1,40 @@
 .tarjeta {
 
+    font-size: 16px;  // 1EM
+
     border-radius: 5px;
     overflow: hidden;
     box-sizing: content-box;
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.24);
     position: relative;
-    top: 0;
     background-color: white;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
 
     .tarjeta-titulo {
-        font-size:24px;
+        font-size: 1.5em;
         font-weight: 500;
-        letter-spacing: 1.2px;
+        letter-spacing: 0.075em;
         margin-bottom: 0.7em;
     }
  
-    .tarjeta-cabecera {
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.03);
-        font-size: 15px;
+    .tarjeta-cabecera,
+    .tarjeta-pie {
+        padding: .9375em;
+        font-size: .9375em;
         border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        background-color: rgba(0, 0, 0, 0.03);
     }
 
     .tarjeta-cuerpo {
-        padding: 15px;
-        line-height: 25px;
+        padding: .9375em;
+        line-height: 1.5625em;
         font-size: 1em !important;
     }
 
     .tarjeta-pie {
-        padding: 15px;
-        background-color: rgba(0, 0, 0, 0.03);
-        font-size: 15px;
         border-top: 1px solid rgba(0, 0, 0, 0.125);
+        border-bottom: none;
     }
 
     .tarjeta-link {
@@ -42,8 +42,6 @@
         font-size: 1.2em;
         color: rgb(0, 80, 185);
         letter-spacing: 1.2px;
-
-
     }
     .tarjeta-link:hover {
         color: rgb(26, 110, 219);
@@ -53,25 +51,28 @@
         overflow: hidden;
      
         width: 100%;
+
+
         max-height: 30%;
         min-height: 30%;
+
+
         cursor: pointer;
         color: white;
         position: relative;
+
+
         img {
             max-width: 100%;
             max-height: 100%;
         }
 
         .tarjeta-capa {
-            position: absolute;
+            @include posicionamiento-absoluto(0, null, 0, -100%);
             width: 100%;
             max-height: 100%;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.795);
-            top: 0;
-            left: -100%;
-            bottom: 0;
             z-index: 10;
             transition: left 0.3s ease;
         }
@@ -82,23 +83,19 @@
     }
 
     small{
-        font-size: 13px;
+        font-size: .8125em;
         color: rgb(143, 143, 143);
     }
 
 
     .tarjeta-cobertura {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 100%;
-        left: 0;
-        right: 0;
+        @include posicionamiento-absoluto(100%, 0,null, 0);
+        @include ancho-alto(100%, 100%);
         transition: top 0.3s ease;
         background-color: white;
         z-index: 10;
         color: black;
-        line-height: 24px;
+        line-height: 1.5em;
         overflow: auto;
     }
 

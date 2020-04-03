@@ -68,7 +68,7 @@
 
 
 
-@for $i from 1 to 10 {
+@for $i from 1 to 11 {
     
     .e-borde-izq-rojo-#{$i},
     .e-borde-izq-verde-#{$i},
@@ -132,7 +132,7 @@
 }
 
 
-@for $i from 1 to 10 {
+@for $i from 1 to 11 {
     
     .e-borde-der-rojo-#{$i},
     .e-borde-der-verde-#{$i},
