@@ -27,6 +27,17 @@ input[type='url'],
 input[type='search'], 
 textarea{
     @include configInput();
+
+    &.desactivado {
+        background-color: $fd-gris-c !important;
+        border: 1px solid rgb(224, 224, 224) !important;
+    }
+
+    &:focus.desactivado {
+        background-color: $fd-gris-c !important;
+        box-shadow: none !important;
+        border: 1px solid rgb(224, 224, 224) !important;
+    }
 }
 
 .input-file {
@@ -54,6 +65,8 @@ textarea{
     box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
     border-radius: 3px;
 }
+
+
 
 .f-label:hover {
     background-color: rgb(0, 55, 175);
@@ -88,10 +101,11 @@ input[type='password']:focus,
 input[type='url']:focus,
 input[type='search']:focus,
 textarea:focus {
-    box-shadow: 0 0 0 3px rgba(79, 190, 255, 0.582);
-    border: 1px solid rgba(135, 217, 255);
+    box-shadow: 0 0 0 3px rgba(111, 196, 245, 0.582) !important;
+    border: 1px solid rgba(111, 196, 245) !important;
     z-index: 2;
 }
+
 
 input[type='text']::placeholder, 
 input[type='email']::placeholder,
@@ -106,7 +120,7 @@ textarea::placeholder {
 
 
 .i-error {
-    box-shadow: 0 0 3px 3px rgba(253, 61, 61, 0.5);
+    border: 2px solid rgb(250, 92, 92) !important;
     z-index: 2;
 }
 
@@ -148,7 +162,7 @@ textarea::placeholder {
 
         &:focus {
             box-shadow: none !important;
-            border: none;
+            border: none !important;
         }
 
         

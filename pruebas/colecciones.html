@@ -12,72 +12,73 @@
     <title>Document</title>
 </head>
 
-<body>
+<body >
 
 
     <div class="contenedor mar-1">
-        <div class="lista-contenedor l-colapso activo">
-            <div class="lista-cabecera ">
+        <div id="c-1">
+            <div class="lista-contenedor l-colapso" style="width:13rem">
+                <div class="lista-cabecera ">
+                    Cabecera
+                </div>
+                <div class="lista-item" data-target="#1">
+                    <a>Elemento 1 </a>
+                </div>
+                <div class="desplegable" id="1">
+                    <ul>
+                        <li><a  href="#">Servicios</a></li>
+                        <li><a  href="#">Porfolio</a></li>
+                        <li><a  href="#">Salir</a></li>
+                    </ul>
+                 </div>
+                <div class="lista-item">
+                    <a >Elemento 2</a>
+                </div>
+                <div class="lista-item">
+                    <a>Elemento 3</a>
+                </div>
+                <div class="lista-pie ">
+                    Pie de la lista
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="contenedor mar-1">
+        <div class="lista-contenedor fd-verde c-blanco">
+            <div class="lista-cabecera">
                 Cabecera
             </div>
-            <div class="lista-item" data-target="#1">
+            <div class="lista-item desactivado" >
                 <a>Elemento 1 </a>
             </div>
-            <div class="desplegable" id="1">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At commodi tenetur quidem necessitatibus delectus excepturi quia labore nesciunt aspernatur? Voluptatum amet dolore in et veniam doloribus quod debitis minus modi.</p>
-            </div>
-            <div class="lista-item" data-target="#2">
+
+            <div class="lista-item" >
                 <a>Elemento 2</a>
             </div>
-            <div class="desplegable" id="2">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At commodi tenetur quidem necessitatibus delectus excepturi quia labore nesciunt aspernatur? Voluptatum amet dolore in et veniam doloribus quod debitis minus modi.</p>
-            </div>
-            <div class="lista-item" data-target="#3">
+
+            <div class="lista-item" >
                 <a>Elemento 3</a>
             </div>
-            <div class="desplegable" id="3">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At commodi tenetur quidem necessitatibus delectus excepturi quia labore nesciunt aspernatur? Voluptatum amet dolore in et veniam doloribus quod debitis minus modi.</p>
-            </div>
-            <div class="lista-pie ">
+
+            <div class="lista-pie">
                 Pie de la lista
             </div>
         </div>
     </div>
 
-
     <div class="contenedor mar-1">
-        <div class="lista-contenedor activo">
-            <div class="lista-cabecera fd-verde">
-                Cabecera
-            </div>
-            <div class="lista-item" >
-                <a>Elemento 1 </a>
-            </div>
-
-            <div class="lista-item" >
-                <a>Elemento 2</a>
-            </div>
-
-            <div class="lista-item" >
-                <a>Elemento 3</a>
-            </div>
-
-            <div class="lista-pie fd-verde">
-                Pie de la lista
-            </div>
-        </div>
-    </div>
-
-    <div class="contenedor mar-1">
-        <div class="lista-contenedor l-colapso activo">
+        <div class="lista-contenedor l-colapso activo fd-blanco c-negro">
             <div class="lista-item" data-target="#5">
                 <a>Elemento 1 </a>
             </div>
             <div class="desplegable" id="5">
                <ul>
-                   <li><a href="#">Servicios</a></li>
-                   <li><a href="#">Porfolio</a></li>
-                   <li><a href="#">Salir</a></li>
+                   <li><a class="c-negro" href="#">Servicios</a></li>
+                   <li><a class="c-negro" href="#">Porfolio</a></li>
+                   <li><a class="c-negro" href="#">Salir</a></li>
                </ul>
             </div>
             <div class="lista-item" data-target="#6">
@@ -97,6 +98,9 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../js/bodystyle.js"></script>
-    <script>BS.AutoInit()</script>
+    <script>BS.ColeccionInit().iniciar({contexto: "#c-1",
+                                        colorFlechas: "#000"
+                                        
+                                        })</script>
 </body>
 </html>

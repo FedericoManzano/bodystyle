@@ -36,6 +36,12 @@
                 &:hover {
                     color: $fd-azul;
                 }
+                &.desactivado {
+                    color: rgb(175, 175, 175) !important;
+                    &:hover{
+                        background-color: transparent !important;
+                    }
+                }
             }
         }
     }

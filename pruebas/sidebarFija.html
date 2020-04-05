@@ -134,74 +134,17 @@
     </div>
 
 
-    <div class="contenido-pagina">
-        <article id="introduccion" class="article scroll-item">
-            <h1>Introducción</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Distinctio optio quaerat magni, reprehenderit
-                enim delectus minus voluptas necessitatibus inventore aut eligendi labore dolores,
-                accusantium quos
-                nobis iste at veritatis vitae!</p>
-        </article>
-        <article id="botones" class="article scroll-item">
-            <h2>Botones</h2>
-            <p>En esta sección vamos a ver los diferentes botones de los cuales
-                dispone la libreria <i>BodyStyle</i>.
-            </p>
-            <div class="tabla-responsive">
-                <table class="tabla-sm tabla-azul">
-                    <thead>
-                        <tr>
-                            <td>Clase</td>
-                            <td>Tamaños</td>
-                            <td>Colores</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>.btn{tam} .btn-{color}</td>
-                            <td>sm md lg</td>
-                            <td>rojo, verde, azul, negro</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <h3>Muestra de botones de la librería</h3>
-            <div class="ejemplo d-flex flex-wrap just-cobertura-tope">
-                <a href="" class="btn btn-rojo mar-1 tips-ele" data-posicion="derecha" data-tips="Soy un tips!">Rojo</a>
-                <a href="" class="btn btn-verde mar-1 tips-ele" data-posicion="arriba" data-tips="Soy un tips!">Verde</a>
-                <a href="" class="btn btn-negro mar-1 tips-ele" data-posicion="abajo" data-tips="Soy un tips!">Negro</a>
-                <a href="" class="btn btn-azul mar-1 tips-ele" data-posicion="izquierda" data-tips="Soy un tips!">Azul</a>
-                <a href="" class="btn btn-gris mar-1">Gris</a>
-            </div>
-            <span>La alineación establecida en el ejemplo
-                podemos encontrarla en la sección <i>Alineación</i> de esta
-                documentación
-            </span>
-            <div class="codigo">
-                <a href="" class="boton-copiar"> Copiar</a>
 
-            </div>
-
-        </article>
     </div>
-    <div class="lista-scroll ocultar-desde-medianos">
-            <ul>
-                <li><a href="#introduccion">Inicio</a></li>
-                <li><a href="#botones">Servicios</a></li>
-                <li><a href="#introduccion">Inicio</a></li>
-                <li><a href="#botones">Servicios</a></li>
-                <li><a href="#introduccion">Inicio</a></li>
-                <li><a href="#botones">Servicios</a></li>
-            </ul>
-        </div>
+   
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../js/bodystyle.js"></script>
     <script>
     
     BS.AutoInit()
-    BS.ScrollSpyInit()
+    BS.DesplegarSidebarFija().desplegar("#menuComp")
+
     </script>
 
 

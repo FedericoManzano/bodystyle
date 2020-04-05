@@ -42,6 +42,11 @@
             font-size: 15px;
             color: rgb(59, 59, 59);
             appearance:none;
+
+            &:focus {
+                border: none !important;
+                box-shadow: none !important;
+            }
         }
 
 
@@ -74,8 +79,8 @@
         }
 
         input:focus {
-            box-shadow: none;
-            border: none;
+            box-shadow: none !important;
+            border: none !important;
         }
 
         label {

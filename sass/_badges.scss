@@ -327,22 +327,22 @@
     z-index: 10;
     margin-top: 12px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    background-color: white !important;
+    background-color: white;
     &::before {
         content: "";
         height: 10px;
         width: 10px;
         position: absolute;
         transform: rotate(45deg);
-        background-color: rgb(255, 255, 255) !important;
         z-index: -1;
+        background-color: white;
     }
 }
 
 
 .badge-mje-izq {
     &::before {
-        left: -6px;
+        left: -5px;
         top: calc(50% - 5px);
         z-index: -1;
         border-top: 1px solid transparent !important;
@@ -353,7 +353,7 @@
 
 .badge-mje-der {
     &::before {
-        right: -6px;
+        right: -5px;
         top: calc(50% - 5px);
         z-index: -1;
         border-bottom: 1px solid transparent !important;
@@ -364,7 +364,7 @@
 .badge-mje-arr {
     &::before {
         left: calc(50% - 5px);
-        top: -6px;
+        top: -5px;
         z-index: -1;
         border-bottom: 1px solid transparent !important;
         border-right: 1px solid transparent !important;
@@ -374,7 +374,7 @@
 .badge-mje-aba {
     &::before {
         left: calc(50% - 5px);
-        bottom: -6px;
+        bottom: -5px;
         z-index: -1;
         border-top: 1px solid transparent !important;
         border-left: 1px solid transparent !important;
@@ -386,7 +386,6 @@
     border: 1px solid $fd-rojo;
     color: $fd-rojo;
     &::before {
-        background-color: white;
         border: 1px solid $fd-rojo;
     }
 }
@@ -395,7 +394,6 @@
     border: 1px solid $fd-azul;
     color: $fd-azul;
     &::before {
-        background-color: white;
         border: 1px solid $fd-azul;
     }
 }
@@ -404,7 +402,6 @@
     border: 1px solid $fd-verde;
     color: $fd-verde;
     &::before {
-        background-color: white;
         border: 1px solid $fd-verde;
     }
 }
@@ -414,7 +411,6 @@
     border: 1px solid $fd-negro;
     color: $fd-negro;
     &::before {
-        background-color: white;
         border: 1px solid $fd-negro;
     }
 }
@@ -423,7 +419,6 @@
     border: 1px solid $fd-blanco;
     color: $fd-blanco;
     &::before {
-        background-color: white;
         border: 1px solid $fd-blanco;
     }
 }
@@ -432,7 +427,6 @@
     border: 1px solid $fd-gris;
     color: $fd-gris;
     &::before {
-        background-color: white;
         border: 1px solid $fd-gris;
     }
 }

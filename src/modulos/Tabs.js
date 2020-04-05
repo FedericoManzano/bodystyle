@@ -7,10 +7,16 @@ class Tab {
      * @param {ID del contenedor padre de todo el tab} contexto 
      */
     inicializar(contexto) {
-        $(contexto + " .tab .op-tab label:nth-child(1)").addClass("activo")
+        var encontrado = 0
         $(contexto + " .contenido-tab").hide()
-        var id = $($(contexto + " .tab .op-tab label:nth-child(1)")).data("target")
-        $(id).show()
+        $(contexto + " .tab .op-tab label").each(function(){
+            if( !$(this).hasClass("desactivado") && encontrado === 0){
+                $(this).addClass("activo")
+                var idCont = $($(this)).data("target")
+                $(idCont).show()
+                encontrado = 1
+            }
+        })
     }
 
 
@@ -22,30 +28,42 @@ class Tab {
         $(c.contexto + " .tab-borde .op-tab-borde ul").addClass(c.colorFondo)
         $(c.contexto + " .tab-borde .op-tab-borde label").addClass(c.colorFuente)
         $(c.contexto + " .contenido-tab").hide()
-        var borde = $("<span class='activo "+ c.colorBorde +"' ></span>")
-        $(c.contexto + " .tab-borde .op-tab-borde label:nth-child(1)").append(borde)
-        var id = $($(c.contexto + " .tab-borde .op-tab-borde label:nth-child(1)")).data("target")
-        $(id).show()
+        var encontrado = 0
+        $(c.contexto + " .tab-borde .op-tab-borde label").each(function(){
+            
+            if(!$(this).hasClass("desactivado") && encontrado === 0 ){
+                var borde = $("<span class='activo "+ c.colorBorde +"' ></span>")
+                $(this).append(borde)
+                var id = $($(this)).data("target")
+                $(id).show()
+                encontrado = 1
+            }
+        })
     }
 
     cambiarBorde(c) {
         $(c.contexto + " .tab-borde .op-tab-borde label").click(function() {
-            $(c.contexto + " .tab-borde .op-tab-borde label span").remove()
-            var borde = $("<span class='activo "+ c.colorBorde +"' ></span>")
-            $(this).append(borde)
-            $(c.contexto + " .contenido-tab").hide()
-            var id = $($(this)).data("target")
-            $(id).show()
+
+            if(!$(this).hasClass("desactivado")) {
+                $(c.contexto + " .tab-borde .op-tab-borde label span").remove()
+                var borde = $("<span class='activo "+ c.colorBorde +"' ></span>")
+                $(this).append(borde)
+                $(c.contexto + " .contenido-tab").hide()
+                var id = $($(this)).data("target")
+                $(id).show()
+            }
         })
     }
 
     cambiarSolapa(contexto){
         $(contexto + " .tab .op-tab label").click(function() {
-            $(contexto + " .tab .op-tab label").removeClass("activo")
-            $(this).addClass("activo")
-            var idInfo = $($(this)).data("target")
-            $(contexto + " .contenido-tab").hide()
-            $(idInfo).show()
+            if(!$(this).hasClass("desactivado")){
+                $(contexto + " .tab .op-tab label").removeClass("activo")
+                $(this).addClass("activo")
+                var idInfo = $($(this)).data("target")
+                $(contexto + " .contenido-tab").hide()
+                $(idInfo).show()
+            }
         })
     } 
 

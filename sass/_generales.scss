@@ -101,12 +101,18 @@ a.link {
     color: rgb(0, 102, 185);
     border-bottom: 1.45px solid rgb(0, 102, 185);
     line-height: 25px;
+
+    &.desactivado {
+        color: rgb(197, 197, 197) !important;
+        border-bottom: 1.45px solid rgb(197, 197, 197) !important;
+    }
+
+    &:hover {
+        color: rgb(16, 148, 255);
+        border-bottom: 1.45px solid rgb(16, 148, 255);
+    }
 }
 
-a.link:hover {
-    color: rgb(16, 148, 255);
-    border-bottom: 1.45px solid rgb(16, 148, 255);
-    line-height: 25px;
-}
+
 
 

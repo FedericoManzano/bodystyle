@@ -1,6 +1,54 @@
+.check-radio-grupo,
+.check-radio-grupo{
+    &.desactivado [class^=cb],
+    &.desactivado [class^=rd]{
+        background-color: rgb(231, 231, 231) !important;
+        color: rgb(211, 211, 211) !important;
+    }
+
+    &.desactivado [class^=cb]::before,
+    &.desactivado [class^=rd]::before{
+        border: 2px solid rgb(194, 194, 194) !important;
+    }
+
+    &.desactivado .checkbox,
+    &.desactivado .radiobtn{
+        color: rgb(211, 211, 211) !important;
+    }
+
+    &.desactivado .checkbox::before,
+    &.desactivado .radiobtn::before{
+        border: 2px solid rgb(228, 228, 228) !important;
+        background-color: rgb(236, 236, 236) !important;
+    }
+}
+
+
 .check-radio-grupo input[type="checkbox"],
 .check-radio-grupo input[type="radio"] {
     display: none;
+
+    &.desactivado + [class^=cb],
+    &.desactivado + [class^=rd]{
+        background-color: rgb(231, 231, 231) !important;
+        color: rgb(211, 211, 211) !important;
+    }
+
+    &.desactivado + [class^=cb]::before,
+    &.desactivado + [class^=rd]::before{
+        border: 2px solid rgb(194, 194, 194) !important;
+    }
+
+    &.desactivado + .checkbox,
+    &.desactivado + .radiobtn{
+        color: rgb(211, 211, 211) !important;
+    }
+
+    &.desactivado + .checkbox::before,
+    &.desactivado + .radiobtn::before{
+        border: 2px solid rgb(228, 228, 228) !important;
+        background-color: rgb(236, 236, 236) !important;
+    }
 }
 
 .cb-rojo,
@@ -216,6 +264,7 @@
     background-color: rgb(255, 255, 255);
     color: black;
 }
+
 
 .checkbox, .radiobtn {
     display: inline-block;

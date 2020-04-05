@@ -116,7 +116,7 @@
         <div class="mar-2 mab-5 fila">
                 <a class="btn-rojo-o mi-1 cs-12 dropdown-toggle" data-target="#menu">Rojo</a>
                 <a class="btn-verde-o mi-1 cs-12">Verde</a>
-                <a class="btn-gris-o mi-1 cs-12">Gris</a>
+                <a class="btn-gris-o mi-1 cs-12 disabled">Gris</a>
                 <a class="btn-azul-o mi-1 cs-12">Azul</a>
             </div>
     </div>
@@ -159,13 +159,24 @@
     
 
     <div class="contenedor mar-10 mab-15">
-        <button class=" btn-sm btn-azul">Des</button>
+        <button class=" btn-sm btn-azul desactivado"  onclick="alert('Saludo')">Des</button>
+        <a class="btn-o btn-rojo-o mi-1 cs-12 disabled">Gris</a>
+        <input type="submit" class="btn btn-rojo mi-1 cs-12 disabled" value="Boton" />
+        <input type="text">
     </div>
+    <div class="contenedor mar-2 desactivado">
+        <input type="text" class="desactivado">
+    </div>
+
+    <input type="checkbox" name="" id="c" class="desactivado">
+    <label for="c">Label</label>
+
+    <a href="#" class="link desactivado">sdasda</a>
 
 
     <div class="contenedor mar-10 mab-15">
         <div class="btn-grupo-sm mab-1">
-            <a href="#" class="btn-sm fd-azul">Boton</a>
+            <a href="#" class="btn-sm fd-azul desactivado">Boton</a>
             <a href="#" class="btn-sm fd-azul">Boton</a>
             <a href="#" class="btn-sm fd-azul">Boton</a>
             <a href="#" class="btn-sm fd-azul">Boton</a>
@@ -180,7 +191,7 @@
             <a href="#" class="btn-sm fd-azul">Boton</a>
         </div>
         <div class="btn-grupo mab-1">
-            <a href="#" class="btn-sm fd-azul">Boton</a>
+            <a href="#" class="btn-sm fd-azul ">Boton</a>
             <a href="#" class="btn-sm fd-azul">Boton</a>
             <a href="#" class="btn-sm fd-azul">Boton</a>
             <a href="#" class="btn-sm fd-azul">Boton</a>

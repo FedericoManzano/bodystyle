@@ -2,8 +2,14 @@
 
 
     var inicializar = () => {
-        $(".l-colapso > .lista-item").append("<i class='f-derecha'></i>");
-        $(".l-colapso > .lista-item").append("<i class='f-abajo'></i>");
+
+        $(".l-colapso > .lista-item").each(function() {
+            if(!$(this).hasClass("desactivado")){
+                $(this).append("<i class='f-derecha'></i>");
+                $(this).append("<i class='f-abajo'></i>");
+            }
+        })
+
         $(".l-colapso > .lista-item .f-derecha").css("top", 13);
         $(".l-colapso > .lista-item .f-abajo").css("top", 13);
         $(".l-colapso > .lista-item .f-derecha").css("border-left","5px solid #000");
@@ -13,8 +19,20 @@
 
     }
 
+
+    var cerrarTodos = () => {
+        $(".l-colapso .lista-item").each(function(){
+            $(($(this)).data("target")).slideUp(300)
+            $(this).children(".f-abajo").hide()
+            $(this).children(".f-derecha").show()
+        })
+    }
+
     var desplegable = () => {
         $(".l-colapso .lista-item").click(function(){
+            if($(this).hasClass("desactivado"))
+                return
+            cerrarTodos()
             var desplegable = $($(this).data("target"))
             if($(desplegable).is(":visible")){
                 $(this).children(".f-abajo").hide()

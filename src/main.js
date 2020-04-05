@@ -21,7 +21,6 @@ import ToolTips from "./modulos/ToolTips"
 import Imagenes from "./modulos/Imagenes"
 import Range from "./modulos/Range"
 import Slider from "./modulos/Slider"
-import Lista from "./modulos/Lista"
 import Paralax from "./modulos/Paralax"
 import InputFile from "./modulos/InputFile"
 import BotonInicio from "./modulos/BotonInicio"
@@ -30,8 +29,8 @@ import Template from "./modulos/Template"
 import Tab from "./modulos/Tabs"
 import GruposInput from "./modulos/GruposInput"
 import EfectoScroll from "./modulos/EfectoScroll"
-
-
+import Desactivado from "./modulos/Desactivado"
+import Coleccion from "./modulos/Colecciones"
 
 (function(){
     Waves.iniciar()
@@ -41,7 +40,9 @@ import EfectoScroll from "./modulos/EfectoScroll"
     Alerta.iniciar()
     Template.iniciar()
     GruposInput.iniciar()
-    
+    Desactivado.iniciar();
+
+
     var focusInput = () => {
         $(".input-icon input").focus(function() {
             $(this).parent().css("border", "1px solid rgba(135, 217, 255)")
@@ -55,29 +56,32 @@ import EfectoScroll from "./modulos/EfectoScroll"
             else 
                 $(this).parent().children(".elemento").css("color", "#212121")
         })
-
-
-
     }
     var MenuSuperior = (config)=> MenuResp.iniciar(config)
 
+    var ColeccionInit = () => {
+        return new Coleccion
+    } 
 
     /**
      * Sidebar fija 
      */
+    
     var SidebarFijaInit = () => SidebarFija.iniciar()
-    var ParalaxInit = () => Paralax.iniciar()
 
+
+    var DesplegarSidebarFija = ()=> {
+        return SidebarFija
+    }
+    
+    var ParalaxInit = () => Paralax.iniciar()
+    
     /**
      * Sidebar movil 
      */
     var SidebarInit = () => {
         SidebarBarra.iniciar()
         SidebarLateral.iniciar()
-    }
-
-    var ListaInit = () => {
-        Lista.iniciar()
     }
 
 
@@ -123,42 +127,12 @@ import EfectoScroll from "./modulos/EfectoScroll"
         ScrollSpyInit()
         BotonFlotanteInit()
         ImagenesInit()
-        Deshabilitar()
         focusInput()
         SliderInit()
-        ListaInit()
         ParalaxInit()
         ToolTipsInit()
     }
 
-
-    var desactivar = (clase) => {
-        $(clase).removeAttr("href")
-        $(clase).removeAttr("onclick")
-        $(clase).attr("readonly","readonly")
-        $(clase).attr("readonly","readonly")
-        $(clase).click(function(e){
-            e.preventDefault()
-            return
-        })
-        $(clase).on("hover" , function(e){e.preventDefault(); return})
-        $(clase).on("onblur",()=>{e.preventDefault(); return})
-        $(clase).on("onchange",()=>{e.preventDefault(); return})
-        $(clase).on("onfocus",()=>{e.preventDefault(); return})
-        $(clase).on("onreset",()=>{e.preventDefault(); return})
-        $(clase).on("onselect",()=>{e.preventDefault(); return})
-        $(clase).on("onsubmit",()=>{e.preventDefault(); return})
-        $(clase).on("onkeydown",()=>{e.preventDefault(); return})
-        $(clase).on("onkeypress",()=>{e.preventDefault(); return})
-        $(clase).on("onkeyup",()=>{e.preventDefault(); return})
-        $(clase).on("onclick",()=>{e.preventDefault(); return})
-        $(clase).on("ondblclick",()=>{e.preventDefault(); return})
-        $(clase).on("onmousedown",()=>{e.preventDefault(); return})
-        $(clase).on("onmousemove",()=>{e.preventDefault(); return})
-        $(clase).on("onmouseout",()=>{e.preventDefault(); return})
-        $(clase).on("onmouseover",()=>{e.preventDefault(); return})
-        $(clase).on("onmouseup",()=>{e.preventDefault(); return})
-    }
 
     var SliderInit = (config) => {
         Slider.iniciar(config)
@@ -198,12 +172,13 @@ import EfectoScroll from "./modulos/EfectoScroll"
         Deshabilitar: () => Deshabilitar(),
         FocusInput: () => focusInput(),
         SliderInit: (config) => SliderInit(config),
-        ListaInit: () => ListaInit(),
         ParalaxInit: () => ParalaxInit(),
         BotonInicioInit: () => BotonInicioInit(),
         TabInit: () => TabInit(),
         ToolTipsInit: () =>  ToolTipsInit(),
-        EfectoScrollInit: () => EfectoScrollInit()
+        EfectoScrollInit: () => EfectoScrollInit(),
+        DesplegarSidebarFija: () => DesplegarSidebarFija(),
+        ColeccionInit: () => ColeccionInit()
     }
 
     window.BS = BS

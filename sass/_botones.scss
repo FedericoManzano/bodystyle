@@ -280,32 +280,45 @@ input.btn-cubrir-lg-o {
     box-shadow: 0 0 5px 3px rgba(206, 210, 212, 0.856) !important;
 }
 
-/***
-    Botones estilo desabilidado
-*/
-.deshabilitado {
-    background: $fd-gris-c !important;
-    color: $fd-gris !important;
-    cursor: default !important;
-    box-shadow: none !important;
-    border: none !important;
-    outline: none;
-}
-
-.deshabilitado:hover{
-    box-shadow: none !important;
-    border: none !important;
-}
-
-.deshabilitado:focus{
-    box-shadow: none !important;
-    border: none !important;
-}
 
 .btn-complemento {
     @include posicionamiento-fixed(0,0,0,0);
     z-index: superposicion(co);
 }
+
+
+.btn.desactivado,
+.btn-sm.desactivado,
+.btn-lg.desactivado,
+.btn-cubrir.desactivado,
+.btn-cubrir-sm.desactivado,
+.btn-cubrir-lg.desactivado {
+    background-color: $fd-gris-c !important;
+    color: $fd-gris !important;
+    box-shadow: none !important;
+    
+    &:hover {
+        background-color: $fd-gris-c !important;
+        color: $fd-gris !important;
+        box-shadow: none !important;
+        cursor: default !important;
+    }
+}
+
+.btn-o.desactivado,
+.btn-o-sm.desactivado,
+.btn-o-lg.desactivado {
+    border: 1px solid rgb(170, 170, 170)  !important;
+    color: rgb(170, 170, 170) !important;
+    
+
+    &:hover {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        cursor: default !important;
+    }
+}
+
 
 .btn-grupo,
 .btn-grupo-lg,

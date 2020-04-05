@@ -1,4 +1,6 @@
 
+$borde: 1px solid rgba(0, 0, 0, 0.2);
+
 table, 
 .tabla-oscura, 
 .tabla-roja,
@@ -53,12 +55,10 @@ table tbody tr td,
 .tabla-oscura  thead tr td,
 .tabla-oscura  tbody tr td{
     padding: 1em 1em;
-    border-bottom:  1px solid #212121;
-    border-top:  1px solid #212121;
+    border-bottom:  $borde;
+    border-top:  $borde;
     border-left:  none;
     font-weight: 600;
-    
-    
 }
 
 table tbody tr td{
@@ -67,30 +67,25 @@ table tbody tr td{
     color: #212121;
 }
 
+table thead{
+    background-color: rgba(0, 0, 0, .1) !important;
+}
 
 table tbody tr td {
     border-radius: 0;
     font-weight: 500;
 }
-
-
-.tabla-oscura thead tr td,
-.tabla-oscura tbody tr td{
-    border: none;
-    border-bottom:  1px solid #212121;
-    border-top:  1px solid #212121;
-} 
-
+.tabla-oscura {
+    background-color: $fd-gris-az-c;
+}
 .tabla-oscura tbody tr td {
     border-top:  none;
-    background-color: $fd-gris-az-c;
     color: white;
     font-weight: 500;
 }
 
 .tabla-oscura thead tr,
 .tabla-oscura tbody tr {
-   background-color: $fd-gris-az;
    color: white;
 }
 
@@ -106,26 +101,19 @@ table tbody tr td {
 
 // Tabla roja
 
+.tabla-roja {
+    background-color: $fd-rojo !important;
+}
 
 .tabla-roja tbody tr td {
     border-top:  none;
-    background-color: $fd-rojo;
     color: white;
     font-weight: 500;
 }
 
-
-.tabla-roja thead tr td,
-.tabla-roja tbody tr td{
-    border: none;
-    border-bottom:  1px solid #ff3737;
-    border-top:  1px solid #ff3737;
-} 
-
 .tabla-roja tbody tr td {
     border-top:  none;
-    background-color: rgb(255, 153, 153);
-    color: black;
+    color: white;
     font-weight: 500;
 }
 
@@ -146,30 +134,25 @@ table tbody tr td {
 
 // tabla azul
 
+
+.tabla-azul{
+    background-color: $fd-azul-c !important;
+}
+
 .tabla-azul tbody tr td {
     border-top:  none;
-    background-color: $fd-azul-c;
     color: white;
     font-weight: 500;
 }
 
 
-.tabla-azul thead tr td,
-.tabla-azul tbody tr td{
-    border: none;
-    border-bottom:  1px solid #3787ff;
-    border-top:  1px solid #3787ff;
-} 
-
 .tabla-azul thead tr,
 .tabla-azul tbody tr {
-   background-color: $fd-azul-ve;
    color: white;
 }
 
 .tabla-azul thead tr td:nth-child(1),
 .tabla-azul tbody tr td:nth-child(1){
-    
     border-left: none;
 }
 .tabla-azul thead tr {
@@ -178,30 +161,23 @@ table tbody tr td {
 }
 
 .selector tbody tr:nth-child(2n+1) >td{
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: rgba(0, 0, 0, .05) !important;;
 }
 
 
 // verde 
 
-
-.tabla-verde thead tr td,
-.tabla-verde tbody tr td{
-    border: none;
-    border-bottom:  1px solid #006269;
-    border-top:  1px solid #006269;
-} 
-
+.tabla-verde {
+    background-color: rgb(0, 117, 133) !important;
+}
 .tabla-verde tbody tr td {
     border-top:  none;
-    background-color: rgb(0, 117, 133);
     color: white;
     font-weight: 500;
 }
 
 .tabla-verde thead tr,
 .tabla-verde tbody tr {
-   background-color: $fd-verde-az;
    color: white;
 }
 
@@ -217,7 +193,7 @@ table tbody tr td {
 
 
 .hover tbody tr:hover > td{
-    background-color: rgba(0, 0, 0, 0.356)
+    background-color: rgba(0, 0, 0, .03) !important;
 }
 
 .tabla-sm thead tr td,

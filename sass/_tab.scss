@@ -18,6 +18,14 @@
                 &:hover {
                     color: black;
                 }
+
+                &.desactivado {
+                    color: rgb(196, 196, 196) !important;
+                    &:hover {
+                        color: rgb(196, 196, 196) !important; 
+                        font-weight: 100 !important;
+                    }
+                }
             }
 
             .activo {
@@ -71,6 +79,15 @@
                 padding: 15px;
                 color: rgb(68, 68, 68);
                 cursor: pointer;
+
+                &.desactivado {
+                    color: rgb(196, 196, 196) !important;
+                    &:hover {
+                        color: rgb(196, 196, 196) !important; 
+                        font-weight: 100 !important;
+                    }
+                }
+
                 &:hover {
                     color: rgba(0, 0, 0, 0.63);
                 }
