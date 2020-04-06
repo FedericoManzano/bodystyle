@@ -16022,6 +16022,93 @@ table tbody tr td {
   background-color: white !important;
 }
 
+.lista-float-izq,
+.lista-float-der {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 100000;
+  transition: all 0.5s;
+}
+.lista-float-izq .lista-item,
+.lista-float-der .lista-item {
+  position: relative;
+  min-width: 240px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 0 5px 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.lista-float-izq .lista-item:last-child,
+.lista-float-der .lista-item:last-child {
+  border-bottom: none !important;
+}
+.lista-float-izq .lista-item .borde,
+.lista-float-der .lista-item .borde {
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 0;
+  transition: all 0.3s;
+}
+.lista-float-izq .lista-item a,
+.lista-float-der .lista-item a {
+  display: block;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lista-float-izq .lista-item:hover .borde,
+.lista-float-der .lista-item:hover .borde {
+  width: 100%;
+}
+.lista-float-izq .lista-item:hover a,
+.lista-float-der .lista-item:hover a {
+  z-index: 20000;
+}
+.lista-float-izq .abrir,
+.lista-float-izq .cerrar,
+.lista-float-der .abrir,
+.lista-float-der .cerrar {
+  padding: 5px;
+  position: absolute;
+  top: -30px;
+}
+
+.lista-float-izq {
+  left: 0;
+}
+.lista-float-izq .abrir,
+.lista-float-izq .cerrar {
+  right: -15px;
+}
+
+.lista-float-der {
+  right: 0;
+  z-index: 100000;
+}
+.lista-float-der .lista-item {
+  border-radius: 5px 0 0 5px;
+}
+.lista-float-der .lista-item .borde {
+  left: 0;
+}
+.lista-float-der .abrir,
+.lista-float-der .cerrar {
+  left: -15px;
+}
+
 .dropdown-toggle {
   position: relative !important;
   display: flex !important;
@@ -20042,8 +20129,8 @@ select:focus {
   z-index: 2;
 }
 .tem-formulario .tem-input input:focus {
-  box-shadow: none;
-  border: none;
+  box-shadow: none !important;
+  border: none !important;
 }
 .tem-formulario .tem-input label {
   position: absolute;

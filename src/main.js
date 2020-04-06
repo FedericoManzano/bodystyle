@@ -31,6 +31,9 @@ import GruposInput from "./modulos/GruposInput"
 import EfectoScroll from "./modulos/EfectoScroll"
 import Desactivado from "./modulos/Desactivado"
 import Coleccion from "./modulos/Colecciones"
+import ColeccionFlotante from "./modulos/coleccionFlotante"
+
+
 
 (function(){
     Waves.iniciar()
@@ -118,6 +121,10 @@ import Coleccion from "./modulos/Colecciones"
         return new EfectoScroll
     }
 
+    var ColeccionFlotanteInit = () => {
+        return new ColeccionFlotante
+    }
+
     var AutoInit = ()=> {
         MenuSuperior()
         SidebarInit() // Sidebar Movil
@@ -158,6 +165,7 @@ import Coleccion from "./modulos/Colecciones"
         ToolTips.iniciar()
     }
 
+
     var BS = {
         MenuSuperior: (config) => MenuSuperior(config),
         ModalInit: (config) => ModalInit(config),
@@ -178,7 +186,8 @@ import Coleccion from "./modulos/Colecciones"
         ToolTipsInit: () =>  ToolTipsInit(),
         EfectoScrollInit: () => EfectoScrollInit(),
         DesplegarSidebarFija: () => DesplegarSidebarFija(),
-        ColeccionInit: () => ColeccionInit()
+        ColeccionInit: () => ColeccionInit(),
+        ColeccionFlotanteInit: () => ColeccionFlotanteInit()
     }
 
     window.BS = BS

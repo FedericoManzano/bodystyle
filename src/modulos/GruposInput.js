@@ -1,4 +1,3 @@
-import DropDown from "./Dropdown"
 
 (function(){
 

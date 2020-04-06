@@ -27,7 +27,7 @@
     var desplegar = (id) => {
         cerrarTodas()
         
-        $(".titulo").each(function(index){
+        $(".titulo").each(function(){
             
             if($($(this)).data("target") === id){
                 $(this).children(".f-derecha").hide()
