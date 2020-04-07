@@ -29,6 +29,40 @@
         </div>
     </div>
 
-    
+    <div class="contenedor mar-2">
+        <div id="borde" class="box efecto-hover-borde" style="width: 200px; height: 200px;" >
+            <p>LOrem</p>
+        </div>
+    </div>
+
+    <div class="contenedor mar-2">
+        <div id="borde2" class="box efecto-hover-borde" style="width: 200px; height: 200px;" >
+            <p>LOrem</p>
+        </div>
+    </div>
+
+    <div class="contenedor mar-2">
+        <div id="borde3" class="box efecto-hover-borde" style="width: 200px; height: 200px;" >
+            <p>LOrem</p>
+        </div>
+    </div>
+
+
+    <div class="contenedor mar-2">
+        <div id="borde4" class="box efecto-hover-borde" style="width: 200px; height: 200px;" >
+            <p>LOrem</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/bodystyle.js"></script>
+
+    <script>
+
+        BS.EfectoHoverBordeInit().iniciar({contexto: "#borde"})
+        BS.EfectoHoverBordeInit().iniciar({contexto: "#borde2", posicion: "derecha", color: "fd-amarillo"})
+        BS.EfectoHoverBordeInit().iniciar({contexto: "#borde3", posicion: "abajo", color: "fd-naranja"})
+        BS.EfectoHoverBordeInit().iniciar({contexto: "#borde4", posicion: "arriba", color: "fd-verde"})
+    </script>
 </body>
 </html>

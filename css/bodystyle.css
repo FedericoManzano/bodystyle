@@ -15846,6 +15846,51 @@ table tbody tr td {
     left: -100%;
   }
 }
+.efecto-hover-borde {
+  position: relative;
+  z-index: 0;
+}
+.efecto-hover-borde *:not([class^=borde-]) {
+  z-index: 20;
+}
+.efecto-hover-borde .borde-izq,
+.efecto-hover-borde .borde-der,
+.efecto-hover-borde .borde-aba,
+.efecto-hover-borde .borde-arr {
+  position: absolute;
+  transition: all 0.3s;
+  z-index: 0;
+}
+.efecto-hover-borde .borde-der,
+.efecto-hover-borde .borde-izq {
+  height: 100%;
+  width: 5px;
+  transition: all 0.3s;
+}
+.efecto-hover-borde .borde-izq {
+  left: 0;
+}
+.efecto-hover-borde .borde-der {
+  right: 0;
+}
+.efecto-hover-borde .borde-aba,
+.efecto-hover-borde .borde-arr {
+  height: 5px;
+  width: 100%;
+}
+.efecto-hover-borde .borde-aba {
+  bottom: 0;
+}
+.efecto-hover-borde .borde-arr {
+  top: 0;
+}
+.efecto-hover-borde:hover .borde-izq, .efecto-hover-borde:hover .borde-der {
+  width: 100%;
+}
+.efecto-hover-borde:hover .borde-arr, .efecto-hover-borde:hover .borde-aba {
+  height: 100%;
+}
+
 .breadcrumb-negro,
 .breadcrumb-blanco {
   display: flex;

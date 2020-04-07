@@ -31,8 +31,8 @@ import GruposInput from "./modulos/GruposInput"
 import EfectoScroll from "./modulos/EfectoScroll"
 import Desactivado from "./modulos/Desactivado"
 import Coleccion from "./modulos/Colecciones"
-import ColeccionFlotante from "./modulos/coleccionFlotante"
-
+import ColeccionFlotante from "./modulos/ColeccionFlotante"
+import EfectoHoverBorde from "./modulos/EfectoHoverBorde"
 
 
 (function(){
@@ -125,6 +125,10 @@ import ColeccionFlotante from "./modulos/coleccionFlotante"
         return new ColeccionFlotante
     }
 
+    var EfectoHoverBordeInit = () => {
+        return new EfectoHoverBorde
+    }
+
     var AutoInit = ()=> {
         MenuSuperior()
         SidebarInit() // Sidebar Movil
@@ -187,7 +191,8 @@ import ColeccionFlotante from "./modulos/coleccionFlotante"
         EfectoScrollInit: () => EfectoScrollInit(),
         DesplegarSidebarFija: () => DesplegarSidebarFija(),
         ColeccionInit: () => ColeccionInit(),
-        ColeccionFlotanteInit: () => ColeccionFlotanteInit()
+        ColeccionFlotanteInit: () => ColeccionFlotanteInit(),
+        EfectoHoverBordeInit: () => EfectoHoverBordeInit()
     }
 
     window.BS = BS
