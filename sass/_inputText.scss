@@ -101,8 +101,8 @@ input[type='password']:focus,
 input[type='url']:focus,
 input[type='search']:focus,
 textarea:focus {
-    box-shadow: 0 0 0 3px rgba(111, 196, 245, 0.582) !important;
-    border: 1px solid rgba(111, 196, 245) !important;
+    box-shadow: 0 0 0 3px rgba(111, 196, 245, 0.582);
+    border: 1px solid rgba(111, 196, 245);
     z-index: 2;
 }
 

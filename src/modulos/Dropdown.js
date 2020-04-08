@@ -5,7 +5,7 @@
     var presionado = 0;
     const margin = 10
 
-    var configurarDropDown = ({color} = {color: "#fff"}) => {
+    var configurarDropDown = ({color = "#fff"}) => {
         
         $(".dropdown ul li a").addClass("dd-a")
         $(".dropdown-toggle").append("<span class='f-abajo'></span>")

@@ -292,7 +292,19 @@ input.btn-cubrir-lg-o {
 .btn-lg.desactivado,
 .btn-cubrir.desactivado,
 .btn-cubrir-sm.desactivado,
-.btn-cubrir-lg.desactivado {
+.btn-cubrir-lg.desactivado,
+.btn:disabled,
+.btn-sm:disabled,
+.btn-lg:disabled,
+.btn-cubrir:disabled,
+.btn-cubrir-sm:disabled,
+.btn-cubrir-lg:disabled, 
+.btn[disabled],
+.btn-sm[disabled],
+.btn-lg[disabled],
+.btn-cubrir[disabled],
+.btn-cubrir-sm[disabled],
+.btn-cubrir-lg[disabled]{
     background-color: $fd-gris-c !important;
     color: $fd-gris !important;
     box-shadow: none !important;
@@ -307,7 +319,10 @@ input.btn-cubrir-lg-o {
 
 .btn-o.desactivado,
 .btn-o-sm.desactivado,
-.btn-o-lg.desactivado {
+.btn-o-lg.desactivado,
+.btn-o:disabled,
+.btn-o-sm:disabled,
+.btn-o-lg:disabled{
     border: 1px solid rgb(170, 170, 170)  !important;
     color: rgb(170, 170, 170) !important;
     

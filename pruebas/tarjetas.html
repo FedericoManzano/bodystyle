@@ -42,7 +42,7 @@
 
 
 
-        <div class="tarjeta fd-azul c-blanco mar-2" style="width: 18rem">
+        <div id="hover" class="tarjeta fd-azul c-blanco mar-2 efecto-hover-borde" style="width: 18rem">
             <div class="tarjeta-cabecera">
                 Cabecera
             </div>
@@ -180,7 +180,7 @@
         </div>
 
 
-        <div class="tarjeta  mar-2" style="width: 18rem">
+        <div  class="tarjeta  mar-2" style="width: 18rem">
             <div class="tarjeta-cuerpo ">
                 <h4 class="tarjeta-titulo">
                     Titulo tarjeta
@@ -189,7 +189,7 @@
                     facilis consequatur provident.</p>
             </div>
         </div>
-        <div class="tarjeta fd-azul c-blanco mar-2" style="width: 18rem">
+        <div id="hover2" class="tarjeta fd-azul efecto-hover-borde c-blanco mar-2" style="width: 18rem">
             <div class="tarjeta-cuerpo ">
                 <h4 class="tarjeta-titulo">
                     Titulo tarjeta
@@ -376,6 +376,8 @@
     <script src="../js/bodystyle.js"></script>
     <script>
         BS.ImagenesInit()
+        BS.EfectoHoverBordeInit().iniciar({contexto: "#hover", color: "fd-naranja"})
+        BS.EfectoHoverBordeInit().iniciar({contexto: "#hover2", posicion: "arriba"})
     </script>
 </body>
 

@@ -67,8 +67,7 @@
 .efecto-hover-borde {
     position: relative;
     z-index: 0;
-
-    *:not([class^=borde-]) {
+    * {
         z-index: 20;
     }
 
@@ -78,13 +77,14 @@
     .borde-arr {
         position: absolute;
         transition: all 0.3s;
-        z-index: 0;
+        z-index:-1!important;
     }
 
     .borde-der,
     .borde-izq{
         height: 100%;
         width: 5px;
+        top: 0;
         transition: all 0.3s;
     }
 

@@ -1,26 +1,3 @@
-/**
- * 
- * 
- * <div id="contexto">
-        <div class="lista-float-der">
-            <span class="cerrar icon-cross"></span>
-            <span class="abrir icon-arrow-left"></span>
-            <div class="lista-item fd-gris-az-o">
-                <a href="" class="c-blanco">Elemento</a>
-                <span class="borde fd-rojo"></span>
-            </div>
-            <div class="lista-item fd-gris-az-o">
-                <a href="" class="c-blanco">Elemento</a>
-                <span class="borde fd-verde"></span>
-            </div>
-            <div class="lista-item fd-gris-az-o">
-                <a href="" class="c-blanco">Elemento</a>
-                <span class="borde fd-naranja"></span>
-            </div>
-        </div>
-    </div>
- */
-
 
 class ColeccionFlotante {
 
