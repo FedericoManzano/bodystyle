@@ -65,7 +65,7 @@
 
     
 
-    @media (max-width: dameMedida(m)){
+    @media (max-width: 1024px){
 
         @for $i from 1 through 12 {
             .cxs-#{$i} { 
@@ -113,7 +113,7 @@
         }
     }
 
-    @media (max-width: dameMedida(s)){
+    @media (max-width: 768px){
        
         @for $i from 1 through 12 {
             .cxs-#{$i} { 
@@ -144,7 +144,7 @@
         }
     }
 
-    @media (max-width: dameMedida(xs)){
+    @media (max-width: 400px){
 
         
         @for $i from 1 through 12 {

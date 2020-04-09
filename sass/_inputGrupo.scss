@@ -196,6 +196,12 @@
             padding: $padding-sm;
             font-size: $fz-sm !important;
         }
+
+        *:last-child {
+            border-radius: $bor-rad-der;
+            border: $borde;
+            border-left: none;
+        }
     }
 
     .grupo-lg {

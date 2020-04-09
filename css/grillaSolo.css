@@ -1875,7 +1875,7 @@
 .fila .offset-l-12-12 {
   grid-column: 13/span 12;
 }
-@media (max-width: dameMedida(m)) {
+@media (max-width: 1024px) {
   .fila .cxs-1 {
     grid-column: span 1;
   }
@@ -3281,7 +3281,7 @@
     grid-column: 13/span 12;
   }
 }
-@media (max-width: dameMedida(s)) {
+@media (max-width: 768px) {
   .fila .cxs-1 {
     grid-column: span 1;
   }
@@ -4219,7 +4219,7 @@
     grid-column: 13/span 12;
   }
 }
-@media (max-width: dameMedida(xs)) {
+@media (max-width: 400px) {
   .fila .cxs-1 {
     grid-column: span 1;
   }

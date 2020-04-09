@@ -217,7 +217,10 @@ a.link:hover {
 
 /* Colores Botones */
 /* Fondos */
-/***********************************************************************************
+/********************************
+******************
+******************
+***************
     Colores de fondo para los componentes
 */
 .fd-rojo {
@@ -20032,6 +20035,11 @@ textarea::placeholder {
   min-height: 30px;
   padding: 0 13px !important;
   font-size: 0.9em !important;
+}
+.input-g .grupo-sm *:last-child {
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #ced4da;
+  border-left: none;
 }
 .input-g .grupo-lg input[type=text],
 .input-g .grupo-lg input[type=email],
