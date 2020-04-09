@@ -6,35 +6,12 @@ Librería de estilos css
 
 [http://qusdfmtv.lucusvirtual.es/](http://qusdfmtv.lucusvirtual.es/)
 
+Toda la información de descarga e instalación se encuentra en la documentación 
 
 ## Autor
 
 [FedericoManzano](https://github.com/FedericoManzano)
 
-## Comenzando
-
-Para poder descargar la librería con su código fuente para modificar o agregar funcionalidades lo podemos hacer del siguiente link  
-
-[BodyStyle](https://github.com/FedericoManzano/BodyStyle---Librer-a-de-estilos)
-
-## Descarga
-
-_Para poder utilizar sólo necesitaremos disponer de jquery_
-_A través de su CDN_
-
-[https://code.jquery.com/jquery-3.4.1.min.js](https://code.jquery.com/jquery-3.4.1.min.js)
-
-
-### Luego descargar la librería **BodyStyle** del siguiente enlace:
-
-[BodyStyle](https://github.com/FedericoManzano/BodyStyle---Librer-a-de-estilos/archive/master.zip)
-
-CDN
-
-### bodystyle.min.css
-[https://rawcdn.githack.com/FedericoManzano/BodyStyle-CSS-V1.0.0/19fee9beb00c36e4f9359135df174d98ec560c39/css/bodystyle.min.css](https://github.com/FedericoManzano/BodyStyle---Librer-a-de-estilos/archive/master.zip)
-
-[https://rawcdn.githack.com/FedericoManzano/BodyStyle-CSS-V1.0.0/19fee9beb00c36e4f9359135df174d98ec560c39/js/bodystyle.min.js](https://rawcdn.githack.com/FedericoManzano/BodyStyle-CSS-V1.0.0/19fee9beb00c36e4f9359135df174d98ec560c39/js/bodystyle.min.js)
 
 ### Descarga Actualización
 
