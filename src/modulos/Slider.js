@@ -23,6 +23,10 @@
         config.automatico = automatico === undefined ?  false : automatico
         config.tiempo = tiempo === undefined ? 3000: tiempo
         config.select = select === undefined ? true : select
+
+        $("html, body").css("height","100%")
+
+
         for(var i = 0; i < cantidadElementos; i ++){
             if(config.select === true){
                 selectores[i] = $("<span class='selectores'></span>")
