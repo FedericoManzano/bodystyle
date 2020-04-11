@@ -4,7 +4,7 @@ Librería de estilos css
 
 # Documentación
 
-[http://qusdfmtv.lucusvirtual.es/](http://qusdfmtv.lucusvirtual.es/)
+[https://bodystyle.000webhostapp.com/](https://bodystyle.000webhostapp.com/)
 
 Toda la información de descarga e instalación se encuentra en la documentación 
 
