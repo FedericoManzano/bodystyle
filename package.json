@@ -1,12 +1,11 @@
 {
   "name": "body-ui",
-  "version": "3.5.3",
+  "version": "3.5.4",
   "description": "v3.5.1 de la librería de estilos CSS BodyStyle",
   "main": "dist/js/bodystyle.js",
   "scripts": {
     "build": "webpack"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FedericoManzano/bodystyle"
