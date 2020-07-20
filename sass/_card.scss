@@ -9,11 +9,10 @@
     border: 1px solid rgba(0, 0, 0, 0.24);
     position: relative;
     background-color: white;
-    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
 
     .tarjeta-titulo {
-        font-size: 1.5em;
-        font-weight: 500;
+        font-size: 1.3em;
+        font-weight: 600;
         letter-spacing: 0.075em;
         margin-bottom: 0.7em;
     }
@@ -21,7 +20,7 @@
     .tarjeta-cabecera,
     .tarjeta-pie {
         padding: .9375em;
-        font-size: .9375em;
+        font-size: 1em;
         border-bottom: 1px solid rgba(0, 0, 0, 0.125);
         background-color: rgba(0, 0, 0, 0.03);
     }
@@ -29,6 +28,7 @@
     .tarjeta-cuerpo {
         padding: .9375em;
         line-height: 1.5625em;
+        color: $fd-gris-az;
         font-size: 1em !important;
     }
 

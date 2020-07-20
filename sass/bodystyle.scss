@@ -1,28 +1,22 @@
 /*!
- * BodyStyle v1.0.0
+ * BodyStyle v3.5.0
  * Copyright Federico Manzano
  * Licencia MIT
- * Repositorio (https://github.com/FedericoManzano/BodyStyle---Librer-a-de-estilos)
+ * Repositorio (https://github.com/FedericoManzano/bodystyle-v3.5.0-fuente)
  */
 
 
 
 //Generales 
+@import "globales";
 @import "generales";
-@import "config";
-@import "mixin-generales";
+@import "utilitariosExp";
 @import "iconos";
-@import "screenUtilitarios";
-@import "colores";
 @import "fondos";
 
 //Aliniamiento 
 @import "alineamiento";
-@import "grilla";
 
-//Utilitarios 
-@import "texto";
-@import "css";
 
 //CSS 
 @import "efecto-borde";
@@ -38,20 +32,18 @@
 @import "breadcrumbs";
 @import "social";
 @import "coleccionesFlotantes";
-@import "sombras";
 
 
 // JS
-@import "dropdown";
+
 @import "efecto-waves";
 @import "imagenes";
-@import "toolTip";
-@import "toast";
 @import "botonFlotante";
 @import "scroollSpy";
 @import "paralax";
 @import "botonInicio";
 @import "efecto-scroll";
+
 
 // Componentes
 @import "preloader";
@@ -60,11 +52,6 @@
 @import "card";
 @import "modal";
 @import "menu";
-@import "menu-colapso";
-@import "menu-lateral";
-@import "sidebar-barra";
-@import "sidebar-lateral";
-@import "sidebarFija";
 @import "slider";
 @import "colecciones";
 @import "tab";
@@ -82,3 +69,5 @@
 @import "templateFormularios";
 
 
+@import url("https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.8.0-fuente/master/dist/css/estilos-dynamics.min.css");
+@import url("https://ghcdn.rawgit.org/FedericoManzano/bodystyle-iconos-v1.0.0/master/iconos/bs-iconos.min.css")

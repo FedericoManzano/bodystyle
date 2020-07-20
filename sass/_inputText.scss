@@ -4,21 +4,6 @@
     que la informacion del campo es erronea
 */
 
-
-@mixin configInput() {
-    outline: none;
-    height: 2.1em;
-    width: 100%;
-    border: 1px solid $gris-input;
-    padding: 0.6em;
-    border-radius: 3px;
-    font-size: 1.1em;
-    font-family: "Roboto", Helvetica, sans-serif;
-    transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-}
-
 input[type='text'], 
 input[type='email'],
 input[type='number'],
@@ -26,6 +11,7 @@ input[type='password'],
 input[type='url'],
 input[type='search'], 
 textarea{
+    // sass/globales/mixim
     @include configInput();
 
     &.desactivado {
@@ -114,8 +100,7 @@ input[type='password']::placeholder,
 input[type='url']::placeholder,
 input[type='search']::placeholder,
 textarea::placeholder {
-    color: $gris;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    color: $fd-gris;
 }
 
 
@@ -136,8 +121,6 @@ textarea::placeholder {
 }
 
 .input-icon {
-
-
     @include configInput();
     position: relative;
     display: flex;
@@ -145,6 +128,9 @@ textarea::placeholder {
     justify-content: space-between;
     height: 2.1em;
     background-color: white;
+
+
+
     input[type='text'], 
     input[type='email'],
     input[type='number'], 
@@ -158,17 +144,11 @@ textarea::placeholder {
         font-size: 1.1em;
         top: 0.25em;
         left: 0;
-
-
         &:focus {
             box-shadow: none !important;
             border: none !important;
         }
-
-        
     }
-
-
     & .elemento:first-child {
         color: rgb(131, 131, 131);
         font-size: 1.1em;
@@ -197,7 +177,6 @@ textarea::placeholder {
 
 .input-cargando {
     background-color: rgb(192, 192, 192) !important;
-
 }
 
 .input-cargando:focus {

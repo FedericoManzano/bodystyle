@@ -12,7 +12,6 @@ table,
     border-collapse:collapse; 
     border: none;
     width: 100%;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .centrada {
@@ -68,7 +67,7 @@ table tbody tr td{
 }
 
 table thead{
-    background-color: rgba(0, 0, 0, .1) !important;
+    background-color: rgba(0, 0, 0, 0.034) !important;
 }
 
 table tbody tr td {
@@ -239,7 +238,6 @@ table tbody tr td {
         margin-bottom: 15px;
         overflow-y: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;
-        border: 1px solid #ddd;
     }
     .tabla-responsive > table {
         margin-bottom: 0;
@@ -251,5 +249,18 @@ table tbody tr td {
     .tabla-responsive > table > tbody > tr > td,
     .tabla-responsive > table > tfoot > tr > td {
         white-space: nowrap;
+    }
+}
+
+.borde-vertical  thead ,
+.borde-vertical  tbody{
+    tr {
+        td {
+            border-left: $borde;
+        }
+
+        & td:last-child {
+            border-right: $borde;
+        }
     }
 }

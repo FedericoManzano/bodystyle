@@ -2,69 +2,71 @@
 .badge {
     display: inline-block;
     padding: 0.25em 0.4em;
-    font-size: 75%;
-    font-weight: 700;
+    font-size: $b-fz;
+    font-weight: $b-grosor;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
     vertical-align: auto;
-    border-radius: 0.25rem;
+    border-radius: $b-bor-rad;
     margin-left: 3px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .badge-verde {
-    background-color: rgb(30, 190, 142);
+    background-color: $b-verde;
     color: white;
 }
 
 .badge-rojo {
-    background-color: rgb(212, 28, 28);
+    background-color: $b-rojo;
     color: white;
 }
 
 .badge-gris {
-    background-color: rgb(63, 63, 63);
+    background-color: $b-gris;
     color: white
 }
 
 .badge-azul {
-    background-color: rgb(0, 71, 153);
+    background-color: $b-azul;
     color: white
 }
 
 .badge-negro {
-    background-color: rgb(0, 0, 0);
+    background-color: $b-negro;
     color: white
 }
 
 .badge-blanco {
-    background-color: rgb(255, 255, 255);
+    background-color: $b-blanco;
     color: rgb(0, 0, 0)
 }
+
 
 .b-redondo {
     border-radius: 50%;
 }
 
 
+
 .badges-etiqueta,
 .badges-etiqueta-sm,
 .badges-etiqueta-lg{
-    font-size: 14px;
-    padding: 5px 11px;
-    height: 30px;
-    min-width: 170px;
-    max-width: 200px;
+
     display: inline-block;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-box-centrado();
+
+    font-size: $b-etiqueta-fz;
+    padding: 5px 11px;
+    height: $b-etiqueta-altura;
+    min-width: $b-etiqueta-minw;
+    max-width: $b-etiqueta-maxw;
+    
+    
     cursor: pointer;
     user-select: none;
     z-index: 10;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 
     &::before {
         content: "";
@@ -90,6 +92,7 @@
         z-index: 4;
     }
 }
+
 
 
 .badges-etiqueta-lg {
@@ -156,160 +159,129 @@
 .badges-etiqueta-gris,
 .badges-etiqueta-negro,
 .badges-etiqueta-blanco{
-    font-weight: 600;
+    font-weight: $b-etiqueta-fw;
     text-align: center;
     border-radius: 0 5px 5px 0;
-    background-color: red;
+    background-color: $b-etiqueta-rojo;
     color: white;
 
 
     &:hover {
-        background-color: rgb(201, 0, 0);
+        background-color: $b-etiqueta-rojo-h;
     }
 
     &:hover::before {
-        background-color: rgb(201, 0, 0);
+        background-color: $b-etiqueta-rojo-h;
     }
 
 
     &::before {
         content: "";
-        background-color: red;
+        background-color: $b-etiqueta-rojo;
         z-index: 2;
     }
-
-    
 }
+
 
 
 .badges-etiqueta-verde {
-    background-color: rgb(0, 109, 94);
+    background-color: $b-etiqueta-verde;
 
     &::before {
         content: "";
-        background-color: rgb(0, 109, 94);
+        background-color: $b-etiqueta-verde;
         
     }
 
 
     &:hover {
-        background-color: rgb(0, 77, 66);
+        background-color: $b-etiqueta-verde;
     }
 
 
     &:hover::before {
-        background-color: rgb(0, 77, 66);
+        background-color: $b-etiqueta-verde-h;
     }
 }
-
 
 .badges-etiqueta-azul {
-    background-color: rgb(34, 72, 145);
+    background-color: $b-etiqueta-azul;
 
     &::before {
         content: "";
-        background-color: rgb(34, 72, 145);
+        background-color: $b-etiqueta-azul;
         
     }
 
 
     &:hover {
-        background-color: rgb(16, 44, 95);
+        background-color: $b-etiqueta-azul-h;
     }
 
 
     &:hover::before {
-        background-color: rgb(16, 44, 95);
+        background-color: $b-etiqueta-azul-h;
     }
 }
 
+
 .badges-etiqueta-negro {
-    background-color: rgb(0, 0, 0);
+    background-color: $b-etiqueta-negro;
 
     &::before {
         content: "";
-        background-color: rgb(0, 0, 0);
+        background-color: $b-etiqueta-negro;
         
     }
 
 
     &:hover {
-        background-color: rgb(29, 29, 29);
+        background-color: $b-etiqueta-negro-h;
     }
 
 
     &:hover::before {
-        background-color: rgb(29, 29, 29);
+        background-color: $b-etiqueta-negro-h;
     }
 }
 
 .badges-etiqueta-blanco {
-    background-color: rgb(255, 255, 255);
+    background-color: $b-etiqueta-blanco;
     color: black;
     &::before {
         content: "";
-        background-color: rgb(255, 255, 255);
+        background-color: $b-etiqueta-blanco;
         
     }
 
 
     &:hover {
-        background-color: rgb(228, 228, 228);
+        background-color: $b-etiqueta-blanco-h;
     }
 
 
     &:hover::before {
-        background-color: rgb(228, 228, 228);
+        background-color: $b-etiqueta-blanco-h;
     }
 }
 
+
+
+
 .badges-etiqueta-gris {
-    background-color: rgb(231, 231, 231);
+    background-color: $b-etiqueta-gris;
     color: black;
     &::before {
         content: "";
-        background-color: rgb(231, 231, 231);
+        background-color: $b-etiqueta-gris;
     }
     &:hover {
-        background-color: rgb(196, 196, 196);
+        background-color: $b-etiqueta-gris-h;
     }
     &:hover::before {
-        background-color: rgb(196, 196, 196);
+        background-color: $b-etiqueta-gris-h;
     }
 }
-
-.badges-parrafo {
-    @include ancho-alto(270px, 120px);
-    display: flex !important;
-    max-width: 270px !important;
-    user-select: none !important;
-    padding: 20px !important;
-    background-color: rgba(245, 245, 245, 0.274) !important;
-    border-radius: 3px !important;
-    cursor: pointer !important;
-    .contenedor-img {
-        padding: 1px !important;
-        overflow: hidden !important;
-        background-color: rgb(19, 61, 88) !important;
-        width: 40% !important;
-        img {
-            height: 100% !important;
-            width: 100% !important;
-        }
-    }
-
-    p {
-        width: 60% !important;
-        display: flex !important;
-        align-items: center !important;
-        margin-left: 5px !important;
-        font-size: 12px !important;
-        color: rgb(22, 22, 22) !important;
-        line-height: 18px !important;
-        background: none !important;
-    }
-}
-
 
 
 .badge-mje-izq,
@@ -326,7 +298,6 @@
     border-radius: 5px;
     z-index: 10;
     margin-top: 12px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     background-color: white;
     &::before {
         content: "";
@@ -437,7 +408,6 @@
 .badge-social {
     overflow: hidden;
     display: flex;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     .badge-like {
         background-color: $fd-azul;
         color: white;
@@ -452,7 +422,7 @@
         align-items: center;
         cursor: pointer;
         &:hover {
-            background-color: $fd-azul-o;
+            background-color: $fd-azul-o-2;
         }
     }
 
@@ -502,7 +472,6 @@
     letter-spacing: 0;
     color: rgb(34, 34, 34);
     position: relative;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &:hover {
         background-color: rgba(0, 0, 0, 0.219);
     }
@@ -542,7 +511,7 @@
         color: rgb(34, 34, 34);
     }
     &:hover {
-        background-color: $fd-rojo-o;
+        background-color: $fd-rojo-o-1;
     }
 }
 
@@ -554,7 +523,7 @@
     }
 
     &:hover {
-        background-color: $fd-verde-o;
+        background-color: $fd-verde-o-2;
     }
 }
 
@@ -566,7 +535,7 @@
     }
 
     &:hover {
-        background-color: $fd-azul-o;
+        background-color: $fd-azul-o-2;
     }
 }
 
@@ -578,7 +547,7 @@
         color: rgb(34, 34, 34);
     }
     &:hover {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
     }
 }
 
@@ -589,7 +558,7 @@
         color: rgb(34, 34, 34);
     }
     &:hover {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
         color: white;
     }
 }
@@ -600,29 +569,24 @@
 .badge-solapa-blanco,
 .badge-solapa-negro,
 .badge-solapa-gris {
-    position: absolute;
+
+    @include posicionamiento-absoluto(30px, null, null, -19px);
+    @include flex-box-centrado();
     padding: 5px 20px;
     padding-left: 30px;
-    @include flex-box-centrado();
     background-color: $fd-rojo;
     display: inline-block;
     font-size: 75%;
     font-weight: 600;
     color: white;
     border-radius: 0 3px 3px 0;
-    top: 30px;
-    left: -19px;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &::before {
         content: "";
-        position: absolute;
-        width: 20px;
-        height: 30px;
+        @include posicionamiento-absoluto(null, null, -9px,0);
+        @include ancho-alto(20px, 30px);
         clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
         -webkit-clip-path: polygon(0% 1%, 0 70%, 100% 100%, 100% 30%, );
-        background-color: $fd-rojo-o;
-        left: 0;
-        bottom: -9px;
+        background-color: $fd-rojo-o-2;
         z-index: -1;
     }
 }
@@ -631,14 +595,14 @@
 .badge-solapa-azul {
     background-color: $fd-azul;
     &::before {
-        background-color: $fd-azul-o;
+        background-color: $fd-azul-o-2;
     }
 }
 
 .badge-solapa-verde {
     background-color: $fd-verde;
     &::before {
-        background-color: $fd-verde-o;
+        background-color: $fd-verde-o-2;
     }
 }
 
@@ -646,7 +610,7 @@
     background-color: $fd-gris-c;
     color: black;
     &::before {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
     }
 }
 
@@ -661,22 +625,14 @@
 .badge-solapa-negro {
     background-color: $fd-negro;
     &::before {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
     }
 }
 
 .contenedor-relativo {
-
     position:  relative !important;
 }
 
-.ov-hidden {
-    overflow: hidden !important;
-}
-
-.ov-visible {
-    overflow: visible !important;
-}
 
 .badge-esquina-sup-izq-rojo,
 .badge-esquina-sup-izq-verde,
@@ -702,23 +658,15 @@
 .badge-esquina-inf-izq-gris,
 .badge-esquina-inf-izq-blanco,
 .badge-esquina-inf-izq-negro {
-    font-size: 16px;
-    position: absolute;
-    width: 100px;
-    height: 100px;
+    @include posicionamiento-absoluto(-50px, null, null, -50px);
+    @include flex-box-centrado();
+    @include ancho-alto(100px, 100px);
     z-index: 10000;
-    left: -50px;
-    top: -50px;
     transform: rotate(45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.904);
     * {
+        @include posicionamiento-absoluto(45px, null, null, 70px);
         transform: rotate(-45deg);
-        position: absolute;
-        top: 45px;
-        left: 70px;
     }
 }
 
@@ -733,10 +681,8 @@
     background-color: $fd-rojo;
 
     * {
+        @include posicionamiento-absoluto(40px, null, null, 10px);
         transform: rotate(45deg);
-        position: absolute;
-        top: 40px;
-        left: 10px;
     }
 }
 
@@ -752,10 +698,8 @@
     background-color: $fd-rojo;
 
     * {
+        @include posicionamiento-absoluto(40px, null, null, 10px);
         transform: rotate(-45deg);
-        position: absolute;
-        top: 40px;
-        left: 10px;
     }
 }
 
@@ -771,10 +715,8 @@
     background-color: $fd-rojo;
 
     * {
+        @include posicionamiento-absoluto(40px, null, null, 70px);
         transform: rotate(45deg);
-        position: absolute;
-        top: 40px;
-        left: 70px;
     }
 }
 
@@ -897,7 +839,6 @@
     cursor: pointer;
     position: relative;
     user-select: none;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
     &:active {
         background-color: rgb(212, 212, 212);
     }
@@ -968,9 +909,9 @@
     cursor: pointer;
     user-select: none;
     box-shadow: 0.5px 2px 2px rgba(0, 0, 0, 0.397);
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
+
     &:hover {
-        background-color: $fd-rojo-o;
+        background-color: $fd-rojo-o-1;
     }
     .cerrar {
         width: 10px;
@@ -1000,7 +941,7 @@
 .badge-cierre-verde {
     background-color: $fd-verde;
     &:hover {
-        background-color: $fd-verde-o;
+        background-color: $fd-verde-o-2;
     }
 }
 
@@ -1008,7 +949,7 @@
 .badge-cierre-azul {
     background-color: $fd-azul;
     &:hover {
-        background-color: $fd-azul-o;
+        background-color: $fd-azul-o-2;
     }
 }
 
@@ -1016,7 +957,7 @@
 .badge-cierre-gris {
     background-color: $fd-gris;
     &:hover {
-        background-color: $fd-gris-o;
+        background-color: $fd-gris-o-1;
     }
 }
 
@@ -1054,7 +995,6 @@
     font-weight: 600;
     cursor: pointer;
     user-select: none;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 
@@ -1096,8 +1036,6 @@
     color: white;
     user-select: none;
     cursor: pointer;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-
     &:hover {
         background-color: rgb(170, 31, 31);
     }
@@ -1136,7 +1074,6 @@
     position: absolute !important;
     top: -10px !important;
     right: 5px !important;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 
