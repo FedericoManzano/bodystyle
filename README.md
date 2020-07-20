@@ -1,59 +1,137 @@
-# BodyStyle
+# Bodystyle UI 
 
-Librería de estilos css
+## Librería de estilos en CSS (v3.5.0)
 
-# Documentación
+Librería pensada para la creación y el desarrollo del frontend de sitios o aplicaciones web.
 
-[https://bodystyle.000webhostapp.com/](https://bodystyle.000webhostapp.com/)
+## Documentación
 
-Toda la información de descarga e instalación se encuentra en la documentación 
+Para conocer todas las funcionalidades de la librería acudir a su documentación en: 
 
-## Autor
+[https://bodystyle.000webhostapp.com](https://bodystyle.000webhostapp.com)
 
-[FedericoManzano](https://github.com/FedericoManzano)
+## Comenzar 
+
+La forma más rápida y sencilla de disponer de la librería es a través del CDN que enlaza con el código de los archivos minificados. 
+La forma de utilizar estos enlaces es agregandolos dentro de la etiqueta `<head>...</head>` de nuestro documento html.
+
+### CDN
+
+#### bodystyle.min.css
+[https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/css/bodystyle.min.css](https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/css/bodystyle.min.css)
+
+#### bodystyle.min.js
+[https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/js/bodystyle.min.js](https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/js/bodystyle.min.js)
+
+#### Solo la grilla 
+
+Podemos añadir solo la grilla de bodystyle dejando de lado todo lo demas si no lo necesitamos.
+
+[https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/css/grillaSolo.min.css](https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/css/grillaSolo.min.css)
+
+#### Solo los utilitarios 
+
+[https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/css/utilitarios.min.css](https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/css/utilitarios.min.css)
+
+#### Cabecera
+```html
+<!DOCTYPE html>
+<head>
+
+    <!-- META obligatorio para poder utilizar la libreria -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link con el CDN de los estilos css  -->
+    <link rel="stylesheet" href="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/css/bodystyle.min.css">
+
+</head>
+
+<!-- Resto de la página -->
+```
+
+#### Pie
+```html
+<script src="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/js/bodystyle.min.js"></script>
+</body>
+```
+
+## Plantilla 
+
+Dejamos una plantilla para copiar y pegar para poder cargar la librería con lo que mencionamos antes.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META obligatorio para poder utilizar la libreria -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link con el CDN de los estilos css  -->
+        <link rel="stylesheet" href="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/css/bodystyle.min.css">
+    </head>
+    <body>
+        <h1>Hola Mundo !!! <span class="badge badge-rojo">New</h1>
+        <script src="https://ghcdn.rawgit.org/FedericoManzano/bodystyle-v3.5.0-fuente/master/dist/js/bodystyle.min.js"></script>
+    </body>
+</html>
+```
 
 
-### Descarga Actualización
+## Descarga 
 
-_Para poder modificarla o añadirle funcionalidades vamos a necesitar:_
+Podemos disponer de la librería a través de su código fuente, el archivo pre-compilado o instalarla como una dependencia de nuestro proyecto con los gestores de paquetes 
+de Node.
 
-- Descargar [sass](https://sass-lang.com/install)
-- Descargar [node v8.10.0](https://nodejs.org/es/download/)
-- Descargar [npm v3.5.2](https://www.npmjs.com/get-npm)
+### Archivo Precompilado
 
-### Instalación
+[bodystyle-v3.5.0-precompilado-master.zip](https://github.com/FedericoManzano/bodystyle-v3.5.0-precompilado/archive/master.zip)
 
-Para Intalar la librería en un proyecto tenemos que crear la siguiente estructura básica.
 
-- Nombre del Proyecto
-  - css
-    - fonts
-        - HelveticaNeue.ttf
-        - Roboto.ttf
-    - bodystyle.min.css
-  - js
-    - bodystyle..min.js
-  - index.html
+### Archivo Fuente
 
-Para facilitar el trabajo de instalación puede descargar una plantilla predefinida.  
+[bodystyle-v3.5.0-fuente-master.zip](https://github.com/FedericoManzano/bodystyle-v3.5.0-fuente/archive/master.zip)
 
-[plantilla](plantilla)
+### Node package
+Ingresar por el terminal los siguientes comandos para instalar la dependencia de la librería.
 
-## Construido con 🛠️
+#### NPM 
+```
+npm i body-ui
+```
 
-* [node v8.10.0](https://nodejs.org/es/download/)
-  * babel-cli v7.7.7
-  * babel-core v7.7.7
-  * babel-loader v7.7.7
-  * webpack v4.41.5
-  * webpack-cli v3.3.10
-* [sass](https://sass-lang.com/install)
+#### Yarn 
+```
+yarn add body-ui
+```
 
-## Scripts
+## Dependencias
 
-- npm run build **Archivos Js**
-- sass sass:css -watch **Archivos scss**
+### Producción 
+- [jquery](https://jquery.com/)
+- [show-code](https://github.com/FedericoManzano/show-code-v1.1.0-fuente)
+- [dynamics-tips](https://github.com/FedericoManzano/dynamics-tips-v1.8.0-fuente)
+
+### Desarrollo 
+- [babeljs](https://babeljs.io/)
+- [webpack](https://webpack.js.org/) v4.43.0
+- [css-loader](https://github.com/webpack-contrib/css-loader/) v3.6.0
+- [style-loader](https://github.com/webpack-contrib/style-loader) v1.2.1
+
+## Cambios desde la versión 2.x.x a 3.x.x
+
+- Capacidad deresaltar el código fuente de `html`, `js`, `css`, `java`, `c`.
+- Dependencia dynamics-tips para los tooltips, comentarios y dropdown.
+- Mejoramiento de las barras de navegación.
+- Dropdown refactorizado y depurado respecto versiones anteriores.
+- Archivo bodystyle.bundle.js con todos los archivos de estilo y módulos de js en un sólo archivo.
+- Se incorporan íconos de fuente para añadirle a los elementos.
+ > Se eliminaron las funcionalidades de resaltar el código fuente y se los reemplazó con una dependecia show-code-v1.1.1. 
+
+[show-code](https://github.com/FedericoManzano/show-code-v1.1.0-fuente)
+[dynamics-tips](https://github.com/FedericoManzano/dynamics-tips-v1.1.0-fuente)
 
 ## Licencia
 
-Este proyecto está bajo la Licencia (MIT)
+MIT 
+
+bodystyle (c) 2020
