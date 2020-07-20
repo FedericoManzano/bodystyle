@@ -1,13 +1,38 @@
+import $ from 'jquery'
+import ERR from "./Errores"
 
 (function(){
     var presionado = 0;
-    var c = {}
 
 
+    const destroy = () => {
+        $(".btn-flotante .boton-menu").off()
+    }
 
-    var iniciar =  ({colorMenu, alineacion, altura} = 
-        {colorMenu: "fd-rojo", alineacion: "vertical", altura: 200}) => 
+    var validarBoton = (colorMenu, alineacion, altura) => {
+        const MODULO = "Error BodyStyle dice: M02"
+
+        if( !ERR.clasesColorFondo.validacion.test(colorMenu) ) {
+            console.error(MODULO + ERR.clasesColorFondo.mensaje)
+            return false
+        }
+
+
+        if( !ERR.positivos.validacion(altura) ) {
+            console.error(MODULO + ERR.clasesColorFondo.mensaje)
+            return false
+        }
+
+        return true
+    }
+
+
+    var iniciar =  ({colorMenu = "fd-rojo", alineacion = "vertical", altura = 200} = {}) => 
     {
+
+        if(!validarBoton( colorMenu,alineacion, altura ) ){
+            return
+        }
         switch(alineacion) {
             case "horizontal": 
                 $(".btn-flotante").css({
@@ -64,7 +89,9 @@
         iniciar: function(config){
             iniciar(config);
             eventoClic();
-        }
+        },
+
+        destroy: () => destroy()
     }
 
     window.BotonFlotante = BotonFlotante;

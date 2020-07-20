@@ -1,4 +1,14 @@
+
+import $ from 'jquery'
+
 (function(){
+
+
+    const destroy = () => {
+        $(".activar-modal").off()
+        $(".complemento").off()
+    }
+
 
     var estadoInicial = () => {
         $(".modal-fondo").css("opacity", 1)
@@ -23,7 +33,9 @@
             estadoInicial(conf)
             aparecerModal()
             desaparecerModal()
-        }
+        },
+
+        destroy: () => destroy()
     }
 
     window.Modal = Modal

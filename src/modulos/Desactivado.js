@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 
 (function(){
 
@@ -21,8 +23,6 @@
         $("*.desactivado *").attr("readonly", true)
         $("*.desactivado *").addClass("desactivado")
         $("input.desactivado").siblings("label").removeAttr("for")
-        
-        
     }
 
     var Desactivado = {

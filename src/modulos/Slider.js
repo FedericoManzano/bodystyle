@@ -1,185 +1,207 @@
-(function(){
+
+import $ from 'jquery'
+import ERR from "./GestionErrores"
 
 
 
-    var cantidadElementos = $(".slider li").length
-    var elementos = new Array(cantidadElementos)
-    var selectores = new Array(cantidadElementos)
-    var seleccionado = 0
-    var config = {}
-    var timer = null
+(function () {
+
+    let seleccionado = 1
+    let intervalo = null
+    let config = null
+    let cantidad = 0
+
+    // Mover El Slider
+    const adelante = () => {
+        return seleccionado === cantidad ? 1 : seleccionado + 1
+    }
+
+    const atras = () => {
+        return seleccionado === 1 ? cantidad : seleccionado - 1
+    }
 
 
-    var Inicializar = ({
-        efecto, automatico, tiempo, select
-    } = {
-        efecto: "lateral",
-        automatico: false,
-        tiempo: 3000,
-        select: true
-    }) => {
-        if(cantidadElementos === 0) return
-        config.efecto = efecto === undefined ? "lateral": efecto
-        config.automatico = automatico === undefined ?  false : automatico
-        config.tiempo = tiempo === undefined ? 3000: tiempo
-        config.select = select === undefined ? true : select
+    const efectofadeAdelante = () => {
+        $(config.contexto + " .slider-show .slider .item:nth-child(" + (seleccionado) + ")").fadeOut(500)
+        $(config.contexto + " .slider-show .slider .selectores span:nth-child(" + seleccionado + ")")
+            .removeClass("activo")
+        seleccionado = adelante()
+        $(config.contexto + " .slider-show .slider .item:nth-child(" + (seleccionado) + ")").fadeIn(500)
+        $(config.contexto + " .slider-show .slider .selectores span:nth-child(" + seleccionado + ")")
+            .addClass("activo")
+    }
 
-        $("html, body").css("height","100%")
+    const efectofadeAtras = () => {
+        $(config.contexto + " .slider-show .slider .item:nth-child(" + (seleccionado) + ")").fadeOut(500)
+        $(config.contexto + " .slider-show .slider .selectores span:nth-child(" + seleccionado + ")")
+            .removeClass("activo")
+        seleccionado = atras()
+        $(config.contexto + " .slider-show .slider .item:nth-child(" + (seleccionado) + ")").fadeIn(500)
+        $(config.contexto + " .slider-show .slider .selectores span:nth-child(" + seleccionado + ")")
+            .addClass("activo")
+    }
+
+    const eventoSelectores = (e) => {
+        if (config.automatico)
+            pararCronometro()
+        let ind = $(e.target).index()
+        $(config.contexto + " .slider-show .slider .item:nth-child(" + (seleccionado) + ")")
+            .fadeOut(500)
+        $(config.contexto + " .slider-show .slider .selectores span:nth-child(" + seleccionado + ")")
+            .removeClass("activo")
+        seleccionado = ind + 1
+        $(config.contexto + " .slider-show .slider .item:nth-child(" + (seleccionado) + ")")
+            .fadeIn(500)
+        $(config.contexto + " .slider-show .slider .selectores span:nth-child(" + seleccionado + ")")
+            .addClass("activo")
+        if (config.automatico)
+            activarCronometo()
+    }
 
 
-        for(var i = 0; i < cantidadElementos; i ++){
-            if(config.select === true){
-                selectores[i] = $("<span class='selectores'></span>")
-                $(".selectores-contenedor").append(selectores[i])
+    const activarCronometo = () => {
+        intervalo = setInterval(() => {
+            efectofadeAdelante()
+        }, config.tiempo);
+    }
+
+    const pararCronometro = () => {
+        clearInterval(intervalo)
+    }
+
+    const flechaDerecha = (e) => {
+        if (config.automatico)
+            pararCronometro()
+        efectofadeAdelante()
+        if (config.automatico)
+            activarCronometo()
+    }
+
+    const flechaIzquierda = (e) => {
+        if (config.automatico)
+            pararCronometro()
+        efectofadeAtras()
+        if (config.automatico)
+            activarCronometo()
+    }
+
+    const focoVentana = () => {
+        activarCronometo()
+    }
+
+    const blurVentana = () => {
+        pararCronometro()
+    }
+
+    const inicializar = ({
+
+        contexto = "sinid",
+        selectores = true,
+        flechas = true,
+        automatico = false,
+        tiempo = 3000 } = {}) => {
+
+        if (!ERR.contexto.val(contexto)) {
+            console.error("(SLIDER)" + ERR.contexto.mje)
+            $(".slider-show").hide()
+            return
+        }
+
+        if (!ERR.bool.val(selectores)) {
+            console.error("(SLIDER)" + ERR.bool.mje)
+            $(".slider-show").hide()
+            return
+        }
+
+        if (!ERR.bool.val(flechas)) {
+            console.error("(SLIDER)" + ERR.bool.mje)
+            $(".slider-show").hide()
+            return
+        }
+
+        if (!ERR.bool.val(automatico)) {
+            console.error("(SLIDER)" + ERR.bool.mje)
+            $(".slider-show").hide()
+            return
+        }
+
+        if (!ERR.positivo.val(tiempo)) {
+            console.error("(SLIDER)" + ERR.positivo.mje + " Tiempo en ms")
+            $(".slider-show").hide()
+            return
+        }
+
+
+        config = {
+            contexto,
+            selectores,
+            flechas,
+            automatico,
+            tiempo
+        }
+
+
+        cantidad = $(contexto + " .slider-show .slider .item").length
+
+
+        $("html").css("height", "100%")
+        $("body").css("height", "100%")
+
+        $(".slider-show .slider .item").css("display", "none")
+        $(".slider-show .slider .item:nth-child(1)").show()
+
+
+        if (selectores) {
+            $(".slider-show .slider").append(`
+            <div class='selectores'>
+            </div>
+            `)
+
+            for (let i = 0; i < cantidad; i++) {
+                $(contexto + " .slider-show .slider .selectores").append("<span></span>")
             }
-            elementos[i] = $(".slider li:nth-child(" + (i + 1) + ")")
-            elementos[i].hide()
+
+            $(contexto + " .slider-show .slider .selectores span").click(eventoSelectores)
+            $(".slider-show .slider .selectores span:nth-child(1)").addClass("activo")
         }
-        elementos[0].show()
-        if(config.select === true){
-            selectores[0].css("background-color", "orangered")
+
+        if (flechas) {
+            $(".slider-show .slider").append(`
+            <div class='f'>
+                <div class='f-der'></div>
+                <div class='f-izq'></div>
+            </div>
+            `)
+            $(contexto + " .slider-show .slider .f .f-der").click(flechaDerecha)
+            $(contexto + " .slider-show .slider .f .f-izq").click(flechaIzquierda)
         }
-        if(config.automatico){
-            arrancarCronometro()
+
+
+        if (automatico) {
+            activarCronometo()
+            $(window).focus(focoVentana)
+            $(window).blur(blurVentana)
         }
+    }
+
+    const destroy = () => {
+        $(config.contexto + " .slider-show .slider .selectores span").off("click", eventoSelectores)
+        $(config.contexto + " .slider-show .slider .f .f-der").off("click",flechaDerecha)
+        $(config.contexto + " .slider-show .slider .f .f-izq").off("click", flechaIzquierda)
+        $(window).off("focus", focoVentana)
+        $(window).off("blur", blurVentana)
+        pararCronometro()
+        seleccionado = 1
+        intervalo = null
+        config = null
+        cantidad = 0
     } 
-
-
-    var salida = () => {
-        $(window).blur(function(){
-            if(config.automatico)
-                pararCronometro()
-        })
-
-        $(window).focus(function(){
-            if(config.automatico)
-                arrancarCronometro()
-        })
-    }
-
-    var siguiente = (seleccionado) => {
-        return seleccionado + 1 >= cantidadElementos ? 0: seleccionado + 1;
-    }
-
-    var atras = (seleccionado) => {
-        return seleccionado - 1 <= -1 ? cantidadElementos- 1 : seleccionado - 1;
-    }
-
-    var efectoFade = ( direccion) => {
-        if(config.automatico)
-            pararCronometro()
-        if(direccion === "derecha") {
-            $(elementos[seleccionado]).fadeOut(300)
-            $(elementos[siguiente(seleccionado)]).fadeIn(300)
-            $(selectores[seleccionado]).css("background-color", "grey")
-            $(selectores[siguiente(seleccionado)]).css("background-color", "orangered")
-            seleccionado = siguiente(seleccionado)
-        }else {
-            $(elementos[seleccionado]).fadeOut(300)
-            $(elementos[atras(seleccionado)]).fadeIn(300)
-            $(selectores[seleccionado]).css("background-color", "grey")
-            $(selectores[atras(seleccionado)]).css("background-color", "orangered")
-            seleccionado = atras(seleccionado)
-        }
-        if(config.automatico)
-            arrancarCronometro()
-    }
-
-    var efectoLateral = (sel, direccion) => {
-        if(config.automatico)
-            pararCronometro()
-        if(direccion === "izquierda"){
-            $(elementos[sel]).animate({
-                left: "-100%"
-            }, 500, function() {
-                $(elementos[sel]).hide()
-                $(elementos[sel]).css("left", 0)
-                $(elementos[siguiente(sel)]).fadeIn()
-                $(selectores[sel]).css("background-color", "grey")
-                $(selectores[siguiente(sel)]).css("background-color", "orangered")
-                seleccionado = siguiente(sel)
-            })
-
-        }else {
-            $(elementos[sel]).animate({
-                left: "100%"
-            }, 500, function() {
-                $(elementos[sel]).hide()
-                $(elementos[sel]).css("left", 0)
-                $(elementos[atras(sel)]).fadeIn()
-                $(selectores[sel]).css("background-color", "grey")
-                $(selectores[atras(sel)]).css("background-color", "orangered")
-                seleccionado = atras(sel)
-
-            })
-        }
-        if(config.automatico)
-            arrancarCronometro()
-    }
-
-    var pararCronometro = () => {
-        clearInterval(timer)
-        timer = null
-    } 
-
-    var arrancarCronometro = () => {
-        if(!timer)
-            timer = setInterval(efectoCronometro, config.tiempo)
-    }
-
-    var efectoCronometro = () => {
-        $(elementos[seleccionado]).fadeOut(500)
-        $(elementos[siguiente(seleccionado)]).fadeIn(500)
-        $(selectores[seleccionado]).css("background-color", "grey")
-        $(selectores[siguiente(seleccionado)]).css("background-color", "orangered")
-        seleccionado = siguiente(seleccionado)
-    }
-
-    var selectores = () => {
-        $(".selectores").click(function(){
-            if(config.automatico)
-                pararCronometro()
-            var ind = $(this).index()
-            $(elementos[seleccionado]).fadeOut(300)
-            $(elementos[ind]).fadeIn(300)
-            $(selectores[seleccionado]).css("background-color", "grey")
-            $(selectores[ind]).css("background-color", "orangered")
-            seleccionado = ind
-            if(config.automatico)
-                arrancarCronometro()
-        })
-    }
-
-
-    var botones = () => {
-
-        if(config.efecto === "lateral"){
-            $(".botones span:first-child").click(function(){
-                efectoLateral(seleccionado,"izquierda")
-            })
-    
-            $(".botones span:last-child").click(function(){
-                efectoLateral(seleccionado,"derecha")
-                
-            })
-        }else {
-            $(".botones span:first-child").click(function(){
-                efectoFade("izquierda")
-            })
-    
-            $(".botones span:last-child").click(function(){
-                efectoFade("derecha")
-            })
-        }
-    }
 
     var Slider = {
-        iniciar: (config)=> {
-            Inicializar(config)
-            botones()
-            selectores()
-            salida()
-        }
+        iniciar: (config) => {
+            inicializar(config)
+        },
+        destroy: () => destroy()
     }
 
     window.Slider = Slider
