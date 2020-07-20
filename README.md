@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://bodystyle.000webhostapp.com/assets/bodystylelogo.png">
+</p>
 # Bodystyle UI 
 
 ## Librería de estilos en CSS (v3.5.0)
