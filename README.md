@@ -1,7 +1,6 @@
 <p align="center"> 
-<img src="logo/BS.png" width="350px">
+    <img src="logo/BS.png" width="270px">
 </p>
-
 
 # Bodystyle UI 
 
