@@ -1,5 +1,5 @@
 <p align="center">
-  <img scr="./logo/BS.png" />
+  <img scr="https://github.com/FedericoManzano/bodystyle/blob/master/logo/BS.png"/> 
 </p>
 
 
