@@ -1,5 +1,5 @@
 <p align="center"> 
-    <img src="logo/BS.png" width="270px">
+    <img src="logo/BS2.png" width="200px">
 </p>
 
 # Bodystyle UI 
