@@ -1,3 +1,8 @@
+<p align="center">
+  <img scr="./logo/BS.png" />
+</p>
+
+
 # Bodystyle UI 
 
 [![Documentación](https://img.shields.io/badge/bodystyle-v3.5.0-<COLOR>.svg)](https://bodystyle.000webhostapp.com)
