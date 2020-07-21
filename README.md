@@ -1,10 +1,7 @@
 # Bodystyle UI 
 
-### Release
-[![GDocumentación](https://img.shields.io/badge/bodystyle-v3.5.0-<COLOR>.svg)](https://bodystyle.000webhostapp.com)
+[![Documentación](https://img.shields.io/badge/bodystyle-v3.5.0-<COLOR>.svg)](https://bodystyle.000webhostapp.com)
 [![Licencia](https://img.shields.io/badge/MIT-3.5.0-blue.svg)](https://github.com/FedericoManzano/bodystyle/blob/master/LICENCE)
-
-### Dependencias
 [![show-code](https://img.shields.io/badge/showcode-1.1.1-red.svg)](https://github.com/FedericoManzano/show-code)
 [![dynamics-tips](https://img.shields.io/badge/dynamicstips-1.8.0-red.svg)](https://github.com/FedericoManzano/dynamics-tips)
 [![jquery](https://img.shields.io/badge/jquery-3.5.0-yellow.svg)](https://jquery.com/)
