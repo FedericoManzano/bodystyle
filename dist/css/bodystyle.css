@@ -3,10 +3,10 @@
  * BodyStyle v3.5.0
  * Copyright Federico Manzano
  * Licencia MIT
- * Repositorio (https://github.com/FedericoManzano/bodystyle-v3.5.0-fuente)
+ * Repositorio (https://github.com/FedericoManzano/bodystyle)
  */
 @import url("https://ghcdn.rawgit.org/FedericoManzano/dynamics-tips-v1.8.0-fuente/master/dist/css/estilos-dynamics.min.css");
-@import url("https://ghcdn.rawgit.org/FedericoManzano/bodystyle-iconos/master/iconos/bs-iconos.min.css");
+@import url("https://rawcdn.githack.com/FedericoManzano/bodystyle-iconos/67ed1347160750e506d5153c8ae523057db50b03/iconos/bs-iconos.min.css");
 * {
   padding: 0;
   margin: 0;
