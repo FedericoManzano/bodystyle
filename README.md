@@ -8,6 +8,7 @@
 [![Licencia](https://img.shields.io/badge/MIT-3.5.0-blue.svg)](https://github.com/FedericoManzano/bodystyle/blob/master/LICENCE)
 [![show-code](https://img.shields.io/badge/showcode-1.1.1-red.svg)](https://github.com/FedericoManzano/show-code)
 [![dynamics-tips](https://img.shields.io/badge/dynamicstips-1.8.0-red.svg)](https://github.com/FedericoManzano/dynamics-tips)
+[![show-code](https://img.shields.io/badge/bodystyleiconos-1.1.0-red.svg)](https://github.com/FedericoManzano/bodystyle-iconos)
 [![jquery](https://img.shields.io/badge/jquery-3.5.0-yellow.svg)](https://jquery.com/)
 [![Npm](https://img.shields.io/badge/NPM-3.5.4-blue.svg)](https://www.npmjs.com/package/body-ui)
 [![webpack](https://img.shields.io/badge/webpack-4.43.0-blue.svg)](https://github.com/FedericoManzano/bodystyle/blob/master/webpack.config.js)
@@ -138,8 +139,8 @@ yarn add body-ui
 - Se incorporan íconos de fuente para añadirle a los elementos.
  > Se eliminaron las funcionalidades de resaltar el código fuente y se los reemplazó con una dependecia show-code-v1.1.1. 
 
-[show-code](https://github.com/FedericoManzano/show-code-v1.1.0-fuente)
-[dynamics-tips](https://github.com/FedericoManzano/dynamics-tips-v1.1.0-fuente)
+[show-code](https://github.com/FedericoManzano/show-code)
+[dynamics-tips](https://github.com/FedericoManzano/dynamics-tips)
 
 ## Licencia
 
