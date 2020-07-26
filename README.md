@@ -17,7 +17,7 @@
 [![package](https://img.shields.io/badge/size-3.98MB-purple.svg)](https://www.npmjs.com/package/body-ui)
 
 ## Contenido
-
+- [Estructura]()
 - [Documentación]()
 - [Comenzar]() 
     - [CDN]()
@@ -25,6 +25,25 @@
         - [js]()
         - [grilla]()
         - [utilitarios]()
+        - [cabecera]()
+        - [pie]()
+- [plantilla]()
+- [Descarga]()
+    - [pre-compilado]()
+    - [repositorio]()
+    - [npm]()
+    - [npm git]()
+    - [yarn]()
+- [Cambios]()
+- [Licencia]()
+   
+## Estructura
+
+```txt
+bodystyle
+    | dist
+        |
+```
 
 ## Documentación
 
@@ -125,19 +144,6 @@ npm i body-ui
 ```
 yarn add body-ui
 ```
-
-## Dependencias
-
-### Producción 
-- [jquery](https://jquery.com/)
-- [show-code](https://github.com/FedericoManzano/show-code-v1.1.0-fuente)
-- [dynamics-tips](https://github.com/FedericoManzano/dynamics-tips-v1.8.0-fuente)
-
-### Desarrollo 
-- [babeljs](https://babeljs.io/)
-- [webpack](https://webpack.js.org/) v4.43.0
-- [css-loader](https://github.com/webpack-contrib/css-loader/) v3.6.0
-- [style-loader](https://github.com/webpack-contrib/style-loader) v1.2.1
 
 ## Cambios desde la versión 2.x.x a 3.x.x
 
