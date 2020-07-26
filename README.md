@@ -42,7 +42,35 @@
 ```txt
 bodystyle
     | dist
-        |
+        | css
+            | bodystyle.css
+            | bodystyle.min.css
+            | grillaSolo.css
+            | grillaSolo.min.css
+            |utilitarios.css
+            |utilitarios.min.css
+            |tema-claro.css
+            |tema-claro.min.css
+            |tema-oscuro.css
+            |tema-oscuro.min.css
+        | js
+            | bodystyle.js
+            | bodystyle.min.js
+            | bodystyle.bundle.js
+            | bodystyle.bundle.min.js
+     | sass
+        | globales
+            | _variables.scss (Las variables globales de la librería)
+        | tema-oscuro.scss
+        | tema-claro.scss
+        | utilitarios.scss
+        | bodystyle.scss
+     | js
+        | src
+            | modulos
+                | (modulos).js
+            | app.js
+                
 ```
 
 ## Documentación
