@@ -80,6 +80,12 @@ bodystyle
                 
 ```
 
+Para clonar la librería desde el repositorio de github:
+
+```bash
+git clone https://github.com/FedericoManzano/bodystyle
+```
+
 ### Pre-compilado
 
 Archivos pre-compilados no incluye código `sass` ni los módulos `js` por separado.
@@ -107,14 +113,7 @@ bodystyle
     | README.md 
 ```
 
-
-
-
-Para clonar la librería desde el repositorio de github:
-
-```bash
-git clone https://github.com/FedericoManzano/bodystyle
-```
+[bodystyle-v3.5.0-precompilado](https://www.dropbox.com/s/v6sgxtzw3w7ksrr/bodystyle-v3.5.0-precompilado.zip?dl=0)
 
 ## Documentación
 
