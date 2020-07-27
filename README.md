@@ -19,6 +19,7 @@
 ## Contenido
 - [Estructura]()
 - [Documentación]()
+    - [contenido]()
 - [Comenzar]() 
     - [CDN]()
         - [css]()
@@ -72,12 +73,90 @@ bodystyle
             | app.js
                 
 ```
+Para clonar la librería desde el repositorio de github:
+
+```bash
+git clone https://github.com/FedericoManzano/bodystyle
+```
 
 ## Documentación
 
 Para conocer todas las funcionalidades de la librería acudir a su documentación en: 
 
 [https://bodystyle.000webhostapp.com](https://bodystyle.000webhostapp.com)
+
+### Contenido Documentación
+
+- Inicio
+    - [Home](https://bodystyle.000webhostapp.com/)
+    - [Repositorio](https://github.com/FedericoManzano/bodystyle)
+- Introducción
+    - [GetStarted](https://bodystyle.000webhostapp.com/inicio/#/documentacion/GetStarted)
+    - [Descarga](https://bodystyle.000webhostapp.com/inicio/#/documentacion/descarga)
+    - [Tipgrafía](https://bodystyle.000webhostapp.com/inicio/#/documentacion/tipografia)
+    - [Webpack](https://bodystyle.000webhostapp.com/inicio/#/documentacion/webpack)
+- Alineamiento
+    - [Contenedor](https://bodystyle.000webhostapp.com/inicio/#/documentacion/contenedor)
+    - [Flexbox](https://bodystyle.000webhostapp.com/inicio/#/documentacion/flexbox)
+    - [Grilla](https://bodystyle.000webhostapp.com/inicio/#/documentacion/grilla)
+- CSS 
+    - [Alertas](https://bodystyle.000webhostapp.com/inicio/#/documentacion/alertas)
+    - [Ayudantes](https://bodystyle.000webhostapp.com/inicio/#/documentacion/ayudantes)
+    - [breadcrumbs](https://bodystyle.000webhostapp.com/inicio/#/documentacion/breadcrumbs)
+    - [badges](https://bodystyle.000webhostapp.com/inicio/#/documentacion/badges)
+    - [colores](https://bodystyle.000webhostapp.com/inicio/#/documentacion/colores)
+    - [decorarTitulos](https://bodystyle.000webhostapp.com/inicio/#/documentacion/decorarTitulos)
+    - [efecto3d](https://bodystyle.000webhostapp.com/inicio/#/documentacion/efecto3d)
+    - [efectoBorde](https://bodystyle.000webhostapp.com/inicio/#/documentacion/efectoBorde)
+    - [fondos](https://bodystyle.000webhostapp.com/inicio/#/documentacion/fondos)
+    - [formas](https://bodystyle.000webhostapp.com/inicio/#/documentacion/formas)
+    - [iconos](https://bodystyle.000webhostapp.com/inicio/#/documentacion/iconos)
+    - [imagenes](https://bodystyle.000webhostapp.com/inicio/#/documentacion/imagenes)
+    - [links](https://bodystyle.000webhostapp.com/inicio/#/documentacion/links)
+    - [redesSociales](https://bodystyle.000webhostapp.com/inicio/#/documentacion/redesSociales)
+    - [tablas](https://bodystyle.000webhostapp.com/inicio/#/documentacion/tablas)
+- JS
+    - [BotonInicio](https://bodystyle.000webhostapp.com/inicio/#/documentacion/botonInicio)
+    - [comentarioDinamico](https://bodystyle.000webhostapp.com/inicio/#/documentacion/comentarioDinamico)
+    - [Dropdown](https://bodystyle.000webhostapp.com/inicio/#/documentacion/dropdown)
+    - [Paralax](https://bodystyle.000webhostapp.com/inicio/#/documentacion/paralax)
+    - [Personalizado](https://bodystyle.000webhostapp.com/inicio/#/documentacion/personalizado)
+    - [Resaltar Sintaxis](https://bodystyle.000webhostapp.com/inicio/#/documentacion/resaltarSintaxis)
+    - [Tabs](https://bodystyle.000webhostapp.com/inicio/#/documentacion/tabs)
+    - [Toast](https://bodystyle.000webhostapp.com/inicio/#/documentacion/toast)
+    - [Tooltips](https://bodystyle.000webhostapp.com/inicio/#/documentacion/tooltips)
+    - [Waves](https://bodystyle.000webhostapp.com/inicio/#/documentacion/waves)
+- Componentes
+    - [Botones](https://bodystyle.000webhostapp.com/inicio/#/documentacion/botones)
+    - [Colecciones](https://bodystyle.000webhostapp.com/inicio/#/documentacion/colecciones)
+    - [ColeccionesFlotantes](https://bodystyle.000webhostapp.com/inicio/#/documentacion/coleccionesFlotantes)
+    - [Grupos Botones](https://bodystyle.000webhostapp.com/inicio/#/documentacion/gruposBotones)
+    - [Menu](https://bodystyle.000webhostapp.com/inicio/#/documentacion/menu)
+    - [Modal](https://bodystyle.000webhostapp.com/inicio/#/documentacion/modal)
+    - [Preloader](https://bodystyle.000webhostapp.com/inicio/#/documentacion/preloader)
+    - [Progress Bar](https://bodystyle.000webhostapp.com/inicio/#/documentacion/progressBar)
+    - [Sidebar](https://bodystyle.000webhostapp.com/inicio/#/documentacion/sidebar)
+    - [Slider](https://bodystyle.000webhostapp.com/inicio/#/documentacion/slider)
+    - [Tarjetas](https://bodystyle.000webhostapp.com/inicio/#/documentacion/tarjetas)
+- Formularios
+    - [checkbox](https://bodystyle.000webhostapp.com/inicio/#/documentacion/checkbox)
+    - [file](https://bodystyle.000webhostapp.com/inicio/#/documentacion/file)
+    - [formularios](https://bodystyle.000webhostapp.com/inicio/#/documentacion/formularios)
+    - [gruposInput](https://bodystyle.000webhostapp.com/inicio/#/documentacion/gruposInput)
+    - [inputText](https://bodystyle.000webhostapp.com/inicio/#/documentacion/inputText)
+    - [radio](https://bodystyle.000webhostapp.com/inicio/#/documentacion/radio)
+    - [range](https://bodystyle.000webhostapp.com/inicio/#/documentacion/range)
+    - [select](https://bodystyle.000webhostapp.com/inicio/#/documentacion/select)
+    - [switch](https://bodystyle.000webhostapp.com/inicio/#/documentacion/switch)
+    - [templates](https://bodystyle.000webhostapp.com/inicio/#/documentacion/templates)
+- Utilitarios
+    - [Bordes](https://bodystyle.000webhostapp.com/inicio/#/documentacion/bordes)
+    - [Margin](https://bodystyle.000webhostapp.com/inicio/#/documentacion/margin)
+    - [Medidas](https://bodystyle.000webhostapp.com/inicio/#/documentacion/medidas)
+    - [Overflow](https://bodystyle.000webhostapp.com/inicio/#/documentacion/overflow)
+    - [Padding](https://bodystyle.000webhostapp.com/inicio/#/documentacion/padding)
+    - [Sass](https://bodystyle.000webhostapp.com/inicio/#/documentacion/sass)
+    - [Texto](https://bodystyle.000webhostapp.com/inicio/#/documentacion/texto)
 
 ## Comenzar 
 
@@ -92,15 +171,13 @@ La forma de utilizar estos enlaces es agregandolos dentro de la etiqueta `<head>
 #### bodystyle.min.js
 [https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/js/bodystyle.min.js](https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/js/bodystyle.min.js)
 
-#### Solo la grilla 
+#### Repositorios adjuntos
 
-Podemos añadir solo la grilla de bodystyle dejando de lado todo lo demas si no lo necesitamos.
 
-[https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/css/grillaSolo.min.css](https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/css/grillaSolo.min.css)
+[![grilla](https://img.shields.io/badge/bodystyle-grid-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-grid)
+[![utilitarios](https://img.shields.io/badge/bodystyle-utility-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-utility)
 
-#### Solo los utilitarios 
 
-[https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/css/utilitarios.min.css](https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/css/utilitarios.min.css)
 
 #### Cabecera
 ```html
