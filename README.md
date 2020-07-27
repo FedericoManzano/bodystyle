@@ -42,6 +42,10 @@ Bodystyle es una librería con licencia MIT [info](https://github.com/FedericoMa
    
 ## Estructura
 
+### Directorio Fuente
+
+Código fuente de la librería Boodystyle.
+
 ```txt
 bodystyle
     | dist
@@ -75,6 +79,37 @@ bodystyle
             | app.js
                 
 ```
+
+### Pre-compilado
+
+Archivos pre-compilados no incluye código `sass` ni los módulos `js` por separado.
+
+```txt
+bodystyle
+    | dist
+        | css
+            | bodystyle.css
+            | bodystyle.min.css
+            | grillaSolo.css
+            | grillaSolo.min.css
+            |utilitarios.css
+            |utilitarios.min.css
+            |tema-claro.css
+            |tema-claro.min.css
+            |tema-oscuro.css
+            |tema-oscuro.min.css
+        | js
+            | bodystyle.js
+            | bodystyle.min.js
+            | bodystyle.bundle.js
+            | bodystyle.bundle.min.js
+    | LICENSE
+    | README.md 
+```
+
+
+
+
 Para clonar la librería desde el repositorio de github:
 
 ```bash
