@@ -16,6 +16,11 @@
 [![style-loader](https://img.shields.io/badge/styleloader-1.2.1-blue.svg)](https://github.com/webpack-contrib/style-loader)
 [![package](https://img.shields.io/badge/size-3.98MB-purple.svg)](https://www.npmjs.com/package/body-ui)
 
+## Introducción
+
+Bodystyle es una librería con licencia MIT [info](https://github.com/FedericoManzano/bodystyle/blob/master/LICENCE) para la creación del los elementos del front-end en sitios, páginas y/o aplicaciones web. Entre las diversas funcionalidades encontramos la generación de formularios, alertas, tips dinámicos, grilla, flexbox etc.
+
+
 ## Contenido
 - [Estructura]()
 - [Documentación]()
@@ -179,31 +184,6 @@ A través de estos repositorios podemos acceder a la grilla y a los utilitarios 
 [![utilitarios](https://img.shields.io/badge/utility-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-utility)
 
 
-
-#### Cabecera
-```html
-<!DOCTYPE html>
-<head>
-
-    <!-- META obligatorio para poder utilizar la libreria -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Link con el CDN de los estilos css  -->
-    <link rel="stylesheet" href="https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/css/bodystyle.min.css">
-
-</head>
-
-<!-- Resto de la página -->
-```
-
-#### Pie
-```html
-<script src="https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/js/bodystyle.min.js"></script>
-</body>
-```
-
-## Plantilla 
-
 Dejamos una plantilla para copiar y pegar para poder cargar la librería con lo que mencionamos antes.
 
 ```html
@@ -243,13 +223,20 @@ Ingresar por el terminal los siguientes comandos para instalar la dependencia de
 
 #### NPM 
 ```
-npm i body-ui
+$ npm i body-ui
 ```
 
 #### Yarn 
 ```
-yarn add body-ui
+$ yarn add body-ui
 ```
+
+### NPM Git 
+```
+$ npm install @federicomanzano/bodystyle@3.5.6
+```
+
+
 
 ## Cambios desde la versión 2.x.x a 3.x.x
 
