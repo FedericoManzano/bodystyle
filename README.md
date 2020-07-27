@@ -173,9 +173,10 @@ La forma de utilizar estos enlaces es agregandolos dentro de la etiqueta `<head>
 
 #### Repositorios adjuntos
 
+A través de estos repositorios podemos acceder a la grilla y a los utilitarios de la librería unicamente.
 
-[![grilla](https://img.shields.io/badge/bodystyle-grid-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-grid)
-[![utilitarios](https://img.shields.io/badge/bodystyle-utility-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-utility)
+[![grilla](https://img.shields.io/badge/grid-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-grid)
+[![utilitarios](https://img.shields.io/badge/utility-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-utility)
 
 
 
@@ -230,7 +231,7 @@ de Node.
 
 ### Archivo Precompilado
 
-[bodystyle-v3.5.0-precompilado-master.zip](https://github.com/FedericoManzano/bodystyle-v3.5.0-precompilado/archive/master.zip)
+[bodystyle-v3.5.0-precompilado](https://www.dropbox.com/s/v6sgxtzw3w7ksrr/bodystyle-v3.5.0-precompilado.zip?dl=0)
 
 
 ### Archivo Fuente
