@@ -173,13 +173,14 @@ La forma de utilizar estos enlaces es agregandolos dentro de la etiqueta `<head>
 #### bodystyle.min.js
 [https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/js/bodystyle.min.js](https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/js/bodystyle.min.js)
 
-#### Repositorios adjuntos
+### Repositorios adjuntos
 
 A través de estos repositorios podemos acceder a la grilla y a los utilitarios de la librería unicamente.
 
 [![grilla](https://img.shields.io/badge/grid-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-grid)
 [![utilitarios](https://img.shields.io/badge/utility-3.5.0-red.svg)](https://github.com/FedericoManzano/bodystyle-utility)
 
+### Plantilla
 
 Dejamos una plantilla para copiar y pegar para poder cargar la librería con lo que mencionamos antes.
 
@@ -228,7 +229,7 @@ $ npm i body-ui
 $ yarn add body-ui
 ```
 
-### NPM Git 
+#### NPM Git 
 ```
 $ npm install @federicomanzano/bodystyle@3.5.6
 ```
