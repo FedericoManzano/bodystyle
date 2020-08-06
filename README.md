@@ -4,8 +4,7 @@
 
 # Bodystyle UI 
 
-[![Documentación](https://img.shields.io/badge/bodystyle-v3.5.0-<COLOR>.svg)](https://bodystyle.000webhostapp.com)
-[![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg?style=flat)](https://github.com/FedericoManzano) 
+[![Read the Docs](https://readthedocs.org/projects/yt2mp3/badge/?version=latest)](https://bodystyle.000webhostapp.com)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/FedericoManzano/bodystyle/blob/master/LICENSE)
 [![show-code](https://img.shields.io/badge/showcode-1.1.1-red.svg)](https://github.com/FedericoManzano/show-code)
 [![dynamics-tips](https://img.shields.io/badge/dynamicstips-1.8.0-red.svg)](https://github.com/FedericoManzano/dynamics-tips)
