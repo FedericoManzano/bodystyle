@@ -5,12 +5,13 @@
 # Bodystyle UI 
 
 [![Documentación](https://img.shields.io/badge/bodystyle-v3.5.0-<COLOR>.svg)](https://bodystyle.000webhostapp.com)
+[![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg?style=flat)](https://github.com/FedericoManzano) 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/FedericoManzano/bodystyle/blob/master/LICENSE)
 [![show-code](https://img.shields.io/badge/showcode-1.1.1-red.svg)](https://github.com/FedericoManzano/show-code)
 [![dynamics-tips](https://img.shields.io/badge/dynamicstips-1.8.0-red.svg)](https://github.com/FedericoManzano/dynamics-tips)
 [![show-code](https://img.shields.io/badge/bodystyleiconos-1.1.0-red.svg)](https://github.com/FedericoManzano/bodystyle-iconos)
 [![jquery](https://img.shields.io/badge/jquery-3.5.0-yellow.svg)](https://jquery.com/)
-[![Npm](https://img.shields.io/badge/NPM-3.5.4-blue.svg)](https://www.npmjs.com/package/body-ui)
+[![NPM Version](https://img.shields.io/npm/v/npm.svg?style=flat)](https://www.npmjs.com/package/body-ui)
 [![webpack](https://img.shields.io/badge/webpack-4.43.0-blue.svg)](https://github.com/FedericoManzano/bodystyle/blob/master/webpack.config.js)
 [![css-loader](https://img.shields.io/badge/cssloader-3.6.0-blue.svg)](https://github.com/webpack-contrib/css-loader)
 [![style-loader](https://img.shields.io/badge/styleloader-1.2.1-blue.svg)](https://github.com/webpack-contrib/style-loader)
