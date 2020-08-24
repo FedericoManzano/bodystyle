@@ -6,7 +6,7 @@
 
 [![Read the Docs](https://readthedocs.org/projects/yt2mp3/badge/?version=latest)](https://bodystyle.000webhostapp.com)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/FedericoManzano/bodystyle/blob/master/LICENSE)
-[![show-code](https://img.shields.io/badge/showcode-1.1.1-red.svg)](https://github.com/FedericoManzano/show-code)
+[![show-code](https://img.shields.io/badge/showcode1.1.1-red.svg)](https://github.com/FedericoManzano/show-code)
 [![dynamics-tips](https://img.shields.io/badge/dynamicstips-1.8.0-red.svg)](https://github.com/FedericoManzano/dynamics-tips)
 [![show-code](https://img.shields.io/badge/bodystyleiconos-1.1.0-red.svg)](https://github.com/FedericoManzano/bodystyle-iconos)
 [![jquery](https://img.shields.io/badge/jquery-3.5.0-yellow.svg)](https://jquery.com/)
